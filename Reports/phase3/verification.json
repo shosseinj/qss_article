@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "unit_tests": {
+    "count": 28,
+    "failures": 0,
+    "errors": 0,
+    "type": "synthetic_fixtures_and_untrained_model_correctness_only",
+    "log": "Reports/phase3/unit-tests.log"
+  },
+  "real_experiments_completed": 0,
+  "real_pilot": {
+    "asr": null,
+    "attack_denominator": null,
+    "attack_successes": null,
+    "blockers": [
+      "missing checkpoint",
+      "missing checkpoint metadata",
+      "missing raw-event manifest/data",
+      "unknown checkpoint SHA-256",
+      "unknown checkpoint metadata SHA-256",
+      "unknown manifest SHA-256"
+    ],
+    "clean_accuracy": null,
+    "clean_prediction": null,
+    "elapsed_search_seconds": null,
+    "estimated_campaign_seconds": null,
+    "evidence_status": null,
+    "experimental_result_count": 0,
+    "peak_memory_bytes": null,
+    "real_checkpoint_loaded": false,
+    "real_data_loaded": false,
+    "status": "blocked_resource"
+  },
+  "recovered_source_files_verified": 26,
+  "historical_data_unchanged": true,
+  "user_deleted_guide_preserved": true,
+  "builds": {
+    "main": {
+      "status": "completed",
+      "pages": 8,
+      "sha256": "429775fd40b1a0366e205ee3b7bb95ff99c2e89c77b0866c227ce8e9ae2edf36"
+    },
+    "supplement": {
+      "status": "completed",
+      "pages": 17,
+      "sha256": "b6874e5d692c3ae56d00ac09c93e4e02d3558a2c00faa2ed4656789256822336"
+    }
+  },
+  "visual_review": [
+    "main page 3: larger circuit gates",
+    "main page 6: explicit resource key and paired-count table",
+    "grid inset inspected; no changes required"
+  ],
+  "limitations": [
+    "No actual checkpoint compatibility has been measured",
+    "No real dataset or historical trajectory available",
+    "No empirical selection difference, official-test accuracy/ASR, calibration, trained ablation or state-margin result",
+    "User explicitly deferred artifact-dependent work"
+  ]
+}

@@ -1,0 +1,12 @@
+Phase 2 execution plan — 2026-10-14
+Spec: phase2.md, stages A/B; static audit where preserved source permits.
+
+1. Rewrite abstract/introduction/results/discussion around QSNN computational matching; retain all evidence boundaries and shorten repetition.
+2. Move literature comparison, detailed validation/grid tables and readout proof into a new supplement section. Keep the main bound and essential populations/counts.
+3. Verify primary-source metadata; add targeted event-attack, quantum-defense and trace-distance references; make preprint identifiers visible with unsrt.
+4. Statically inspect low-Q TEMP, PGD candidate retention, timing, neuron/BatchNorm state, baseline provenance and B0 discrepancy. Document source facts separately from unresolved empirical effects.
+5. Generate vector method diagram, compact matched-outcome/Wilson-interval and paired-overlap plot, and two-panel grid plot from original CSVs. Preserve data/snapshot files and original figure provenance metadata; write separate phase2 metadata.
+6. Compile main/supplement; check counts, p-values, labels/citations, warnings, numerical invariants and figure exports. Visually inspect all changed figure/table pages at print layout; fix any clipping or overlap.
+7. Report diff, verified builds, static audit, and unresolved recovery/experiments. Preserve the user's deletion of guide.md; no commit/push/Overleaf upload.
+
+Completion: items 1–7 executed. C recovery and D experiments remain outstanding; see phase2-report.txt.

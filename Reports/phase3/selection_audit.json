@@ -1,0 +1,14 @@
+{
+  "status": "blocked",
+  "reason_code": "blocked_resource",
+  "deferred_by_user": true,
+  "actual_examples_compared": null,
+  "legacy_output_missed_successes": null,
+  "first_success_example_ids": null,
+  "asr_difference": null,
+  "same_candidate_audit_software": "implemented; both policies share verified logits; search-selected output recorded separately",
+  "software_evidence": "tests/phase3/test_core.py and test_runner.py",
+  "synthetic_counterexample_establishes_historical_effect": false,
+  "evidence_status": null,
+  "future_work": "Reports/phase3/future-work.md"
+}

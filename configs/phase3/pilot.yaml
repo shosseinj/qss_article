@@ -1,0 +1,36 @@
+run_id: phase3-pilot-qsnn-seed42-v1
+stage: validation
+purpose: real_checkpoint_smoke_and_selection_audit
+model:
+  model_id: QSNN-v3-seed42
+  variant: qsnn
+  training_seed: 42
+  checkpoint: null
+  checkpoint_sha256: null
+  metadata: null
+  metadata_sha256: null
+data:
+  dataset: N-MNIST
+  version: unknown
+  manifest: null
+  manifest_sha256: null
+  expected_n: 1
+  manifest_rule: separately_frozen_stratified_pilot_from_validation
+  time_unit: dataset_timestamp_unit_us_if_verified
+attack:
+  name: PGD
+  objective: ce
+  steps: 20
+  step_fraction: 0.2
+  restarts: 1
+  start_policy: clean_then_random_for_additional_restarts
+  seed: 20261014
+  epsilon_fraction: 0.10
+  chunk: 1
+device: cpu
+cpu_threads: 2
+deterministic: true
+verification_chunk: 1
+logit_tolerance: 0.00001
+state_tolerance: 0.00002
+full_trace_ids: []

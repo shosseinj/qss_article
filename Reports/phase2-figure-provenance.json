@@ -1,0 +1,113 @@
+{
+  "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+  "script": "scripts/render_phase2_figures.py",
+  "matplotlib_version": "3.11.2",
+  "data": {
+    "data/timestamp_paired.csv": "74df4e6ce480547cb2750c9863ce5564fdb2a5e18fec2bff3ca161743f472c2a",
+    "data/controlled_four_models.csv": "3d683e3e570fb1645ab3ee584486d9c69ddd1ce02c381e0b1cb1ce30eb77ef79"
+  },
+  "figure1": "TikZ source matches preserved model; schematic computation, no invented event example",
+  "figure2": "QSNN n=100, seed42 validation; candidate/forward aggregates checked equal; 95% Wilson, not paired-difference or population intervals",
+  "figure3": "n=1000 per cell, separate manifests; counts from controlled local report; no error bars or cross-representation pairing",
+  "budget_palette": {
+    "B_inf": "#007C83",
+    "B_0": "#C56E1A"
+  },
+  "intervals": [
+    {
+      "condition": "access_candidates_21",
+      "model": "QSNN",
+      "epsilon_fraction": "0.05",
+      "method": "PGD",
+      "successes": 3,
+      "n": 100,
+      "ASR_percent": 3,
+      "wilson95_low_percent": 1.0254524024038925,
+      "wilson95_high_percent": 8.45193642905276
+    },
+    {
+      "condition": "access_candidates_21",
+      "model": "QSNN",
+      "epsilon_fraction": "0.05",
+      "method": "TEMP",
+      "successes": 4,
+      "n": 100,
+      "ASR_percent": 4,
+      "wilson95_low_percent": 1.566330399154762,
+      "wilson95_high_percent": 9.83707143588792
+    },
+    {
+      "condition": "access_candidates_21",
+      "model": "QSNN",
+      "epsilon_fraction": "0.10",
+      "method": "PGD",
+      "successes": 3,
+      "n": 100,
+      "ASR_percent": 3,
+      "wilson95_low_percent": 1.0254524024038925,
+      "wilson95_high_percent": 8.45193642905276
+    },
+    {
+      "condition": "access_candidates_21",
+      "model": "QSNN",
+      "epsilon_fraction": "0.10",
+      "method": "TEMP",
+      "successes": 3,
+      "n": 100,
+      "ASR_percent": 3,
+      "wilson95_low_percent": 1.0254524024038925,
+      "wilson95_high_percent": 8.45193642905276
+    },
+    {
+      "condition": "wallclock_qsnn",
+      "model": "QSNN",
+      "epsilon_fraction": "0.05",
+      "method": "PGD",
+      "successes": 3,
+      "n": 100,
+      "ASR_percent": 3,
+      "wilson95_low_percent": 1.0254524024038925,
+      "wilson95_high_percent": 8.45193642905276
+    },
+    {
+      "condition": "wallclock_qsnn",
+      "model": "QSNN",
+      "epsilon_fraction": "0.05",
+      "method": "TEMP",
+      "successes": 4,
+      "n": 100,
+      "ASR_percent": 4,
+      "wilson95_low_percent": 1.566330399154762,
+      "wilson95_high_percent": 9.83707143588792
+    },
+    {
+      "condition": "wallclock_qsnn",
+      "model": "QSNN",
+      "epsilon_fraction": "0.10",
+      "method": "PGD",
+      "successes": 3,
+      "n": 100,
+      "ASR_percent": 3,
+      "wilson95_low_percent": 1.0254524024038925,
+      "wilson95_high_percent": 8.45193642905276
+    },
+    {
+      "condition": "wallclock_qsnn",
+      "model": "QSNN",
+      "epsilon_fraction": "0.10",
+      "method": "TEMP",
+      "successes": 5,
+      "n": 100,
+      "ASR_percent": 5,
+      "wilson95_low_percent": 2.154367915436796,
+      "wilson95_high_percent": 11.175046923191912
+    }
+  ],
+  "figure1_exports": {
+    "figures/fig01_overview.pdf": "4882c55c4c3ff8dc83b49815ae9102493d7e63b3ba0dc6d876887d66ebf03b06",
+    "figures/fig01_overview.svg": "75311ec9e6001afbbb1af97cb660a84f5f4c8039ab64f243a71084420da2a430",
+    "figures/fig01_overview.png": "88b2d1e555751681aa54eeee4f1f7c70ca41300a921f75e8e0b618e8f14b797e",
+    "figures/fig01_overview.tex": "8522f8b4ed0371f67d11f92b6ac5bb47e2da99807f03482c12580571a97f757c"
+  },
+  "figure1_generator": "pdflatex (TikZ) + pdftocairo SVG + pdftoppm PNG at 300 dpi"
+}

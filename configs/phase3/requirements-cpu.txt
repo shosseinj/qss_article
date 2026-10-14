@@ -1,0 +1,6 @@
+# Reproducible CPU correctness environment used in this session (Python 3.12).
+# This is a new environment, not a claim about every historical run.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==1.26.4
+PyYAML==6.0.3
+torch==2.5.1+cpu

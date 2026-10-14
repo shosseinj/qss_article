@@ -1,0 +1,4742 @@
+{
+  "sha": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+  "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a82c0dc43cb98ab2e63876ded4d1b635b2bd2be",
+      "size": 615,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3a82c0dc43cb98ab2e63876ded4d1b635b2bd2be"
+    },
+    {
+      "path": ".opencode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f20c0627b30832d91c1ea67a31ea6343a54a926",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/4f20c0627b30832d91c1ea67a31ea6343a54a926"
+    },
+    {
+      "path": ".opencode/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa1b7b22968771d919455d556479d896ef326a19",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/aa1b7b22968771d919455d556479d896ef326a19"
+    },
+    {
+      "path": ".opencode/agents/experiment-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90ea6a6409f660ebba417a2619603aad13ee25c7",
+      "size": 919,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/90ea6a6409f660ebba417a2619603aad13ee25c7"
+    },
+    {
+      "path": ".opencode/agents/literature-researcher.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b18eb4a26f9e870348dc860ac5f0105866e4dbc2",
+      "size": 659,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b18eb4a26f9e870348dc860ac5f0105866e4dbc2"
+    },
+    {
+      "path": ".opencode/agents/paper-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "301f2306e700786cc8906c34d2d0c39e8345ac07",
+      "size": 772,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/301f2306e700786cc8906c34d2d0c39e8345ac07"
+    },
+    {
+      "path": ".opencode/agents/qsnn-scientist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fefb703a867160b90342003a9b07175ccb6f1ebd",
+      "size": 1008,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/fefb703a867160b90342003a9b07175ccb6f1ebd"
+    },
+    {
+      "path": ".opencode/agents/results-interpreter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec4bca6e9727d509198713a0eefa84587d349769",
+      "size": 672,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ec4bca6e9727d509198713a0eefa84587d349769"
+    },
+    {
+      "path": ".opencode/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25e3531365f0295508ca31ee9f1ac21e9809f003",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/25e3531365f0295508ca31ee9f1ac21e9809f003"
+    },
+    {
+      "path": ".opencode/commands/temp-drift-loop.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11169294fad56c00d7ee29c22167c7f99d45979f",
+      "size": 2422,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/11169294fad56c00d7ee29c22167c7f99d45979f"
+    },
+    {
+      "path": ".opencode/commands/temp-drift-status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46d34b3efbf383b5b2fed8c3065fd0a4f0196bf6",
+      "size": 541,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/46d34b3efbf383b5b2fed8c3065fd0a4f0196bf6"
+    },
+    {
+      "path": ".opencode/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38795852e2060a4b3144cd8ed7c9d7a7b1ad3f4c",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/38795852e2060a4b3144cd8ed7c9d7a7b1ad3f4c"
+    },
+    {
+      "path": ".opencode/skills/cirq",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c7892c161ce22a5c440ed9c553fd650b3fa371c",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/7c7892c161ce22a5c440ed9c553fd650b3fa371c"
+    },
+    {
+      "path": ".opencode/skills/cirq/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc1c8b1b632c73e415f65a3316d0d5b76fba3e99",
+      "size": 13172,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/cc1c8b1b632c73e415f65a3316d0d5b76fba3e99"
+    },
+    {
+      "path": ".opencode/skills/cirq/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23530494be7af166a78cadd2ca75ece7670f779e",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/23530494be7af166a78cadd2ca75ece7670f779e"
+    },
+    {
+      "path": ".opencode/skills/cirq/references/building.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a94a9509d24709d5431703e0a0a4c2c41d0d9501",
+      "size": 5916,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a94a9509d24709d5431703e0a0a4c2c41d0d9501"
+    },
+    {
+      "path": ".opencode/skills/cirq/references/experiments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb1ab9ee92153f48def970a878703fc86d308aa2",
+      "size": 15487,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/fb1ab9ee92153f48def970a878703fc86d308aa2"
+    },
+    {
+      "path": ".opencode/skills/cirq/references/hardware.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e354b29005cb9283ad0ee3d040c445820d44d643",
+      "size": 12752,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e354b29005cb9283ad0ee3d040c445820d44d643"
+    },
+    {
+      "path": ".opencode/skills/cirq/references/noise.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "825878d215d6afe61ba5d1544e16ca1db0e3af72",
+      "size": 13324,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/825878d215d6afe61ba5d1544e16ca1db0e3af72"
+    },
+    {
+      "path": ".opencode/skills/cirq/references/simulation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a8d5ef99fa82403434ed80016070133b947070a",
+      "size": 8300,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5a8d5ef99fa82403434ed80016070133b947070a"
+    },
+    {
+      "path": ".opencode/skills/cirq/references/transformation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7d270ffe500a4821c00dc775e971cf20e76de47",
+      "size": 10141,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c7d270ffe500a4821c00dc775e971cf20e76de47"
+    },
+    {
+      "path": ".opencode/skills/experimental-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0fe230c326a7ff17c0201c5fd4e99cc593623fe6",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/0fe230c326a7ff17c0201c5fd4e99cc593623fe6"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "284a3803ade80424d6ba87d39535c43d486db99e",
+      "size": 14002,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/284a3803ade80424d6ba87d39535c43d486db99e"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e4e2d733cbddcd86b6ee774688fda0da0f3963aa",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/e4e2d733cbddcd86b6ee774688fda0da0f3963aa"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/references/design_types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f52ebc832b1a87e9bcbebfe5e06ab3ac0f3e4eef",
+      "size": 7323,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f52ebc832b1a87e9bcbebfe5e06ab3ac0f3e4eef"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/references/factorial_and_doe.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f0574bb11385c349eee77395904754246cd5265",
+      "size": 7073,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5f0574bb11385c349eee77395904754246cd5265"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/references/randomization_and_blocking.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c9e15e06fe30b9a7f1e9c7c761df6eb86d54d23",
+      "size": 6360,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9c9e15e06fe30b9a7f1e9c7c761df6eb86d54d23"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/references/sequential_and_adaptive.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7574996c69bbd761fa8fe27148a84eea8cff76ba",
+      "size": 5488,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7574996c69bbd761fa8fe27148a84eea8cff76ba"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa199c5418d3b07dc25abdf2e11be8802826963b",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/fa199c5418d3b07dc25abdf2e11be8802826963b"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/scripts/doe_designs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "036fa4315dc2ce740ededd0df110ed8763ca5a33",
+      "size": 7812,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/036fa4315dc2ce740ededd0df110ed8763ca5a33"
+    },
+    {
+      "path": ".opencode/skills/experimental-design/scripts/randomization.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f340eeb2080eeef94af85d2fe0265df3303f3f3",
+      "size": 7046,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8f340eeb2080eeef94af85d2fe0265df3303f3f3"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e2569c1842f9915681df9d7c9740478f031288e",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/8e2569c1842f9915681df9d7c9740478f031288e"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "545957a93a2915c4bdfde63c77aea3da0397560a",
+      "size": 13591,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/545957a93a2915c4bdfde63c77aea3da0397560a"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29134fc72a4a60fafdf06224dc9e36e6138fc2d0",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/29134fc72a4a60fafdf06224dc9e36e6138fc2d0"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/assets/report_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3810e14407be56bbf805be4c6f3e4ef2dc96c5e",
+      "size": 7873,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b3810e14407be56bbf805be4c6f3e4ef2dc96c5e"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58a8d3cb5acaa73d0144c8f62f8c624acac41ee8",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/58a8d3cb5acaa73d0144c8f62f8c624acac41ee8"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "162be12d2cba2de6fd82f324f52d90328bce06ff",
+      "size": 8882,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/162be12d2cba2de6fd82f324f52d90328bce06ff"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/references/chemistry_molecular_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcbb3e153a2d910cdd498bdbbe5156ba397e508a",
+      "size": 8568,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bcbb3e153a2d910cdd498bdbbe5156ba397e508a"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/references/general_scientific_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "936fc400ddcf26ca605c93a83584770d18f3c8ff",
+      "size": 11741,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/936fc400ddcf26ca605c93a83584770d18f3c8ff"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/references/microscopy_imaging_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adec932e0ed8cbab8f6101304f50b59a8d1e9022",
+      "size": 8585,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/adec932e0ed8cbab8f6101304f50b59a8d1e9022"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16e4b1c1d20fa34cd33788266f9ace2bbc0eb411",
+      "size": 9569,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/16e4b1c1d20fa34cd33788266f9ace2bbc0eb411"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75053b20313b8d34d58d07e472b53efe41540675",
+      "size": 9095,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/75053b20313b8d34d58d07e472b53efe41540675"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "062aa2c27e1ac77e771a5c137b92714e4668b540",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/062aa2c27e1ac77e771a5c137b92714e4668b540"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fb9dd8fa120dd2d00eb2be0c5a4c1c4349c908a",
+      "size": 69,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7fb9dd8fa120dd2d00eb2be0c5a4c1c4349c908a"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/_capabilities.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f595a2db285a460e1123d6709849fcc7f1c663c7",
+      "size": 20714,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f595a2db285a460e1123d6709849fcc7f1c663c7"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e04f0bbd26b0d36c16d8f57c6fc9ec858fa348e1",
+      "size": 14039,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e04f0bbd26b0d36c16d8f57c6fc9ec858fa348e1"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/_structured.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e96e8fd407655449e709753160f6336449160cf0",
+      "size": 14584,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e96e8fd407655449e709753160f6336449160cf0"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/_tabular.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cb1d7abaeee2eebf0d0a816f8f7d0c9f11faeb0",
+      "size": 32695,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3cb1d7abaeee2eebf0d0a816f8f7d0c9f11faeb0"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/capability_manifest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1ee36326ea6889b38428714283ce2f4952db461",
+      "size": 5433,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a1ee36326ea6889b38428714283ce2f4952db461"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/distribution_sensitivity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8db91f4b7391152ae2b808387d67543bf52bb38",
+      "size": 3304,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f8db91f4b7391152ae2b808387d67543bf52bb38"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/eda_analyzer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40781abbc7879354c3430fc6f35ebad2331f195e",
+      "size": 10547,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/40781abbc7879354c3430fc6f35ebad2331f195e"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/image_inspector.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d2937b789e60aac7c07d7bb45958b812031d448",
+      "size": 7298,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9d2937b789e60aac7c07d7bb45958b812031d448"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af3f1e98588547674dbfc6bc56644fe749b747c8",
+      "size": 3904,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/af3f1e98588547674dbfc6bc56644fe749b747c8"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/report_scaffold.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a816e5f422078b7fddbe6bd4c465422c9a5ea651",
+      "size": 4247,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a816e5f422078b7fddbe6bd4c465422c9a5ea651"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b33311068ba306949b95fb64d6e2e5d4e6bc5829",
+      "size": 8621,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b33311068ba306949b95fb64d6e2e5d4e6bc5829"
+    },
+    {
+      "path": ".opencode/skills/exploratory-data-analysis/scripts/tabular_profile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "874ef86b871eb72b8f95a87cfc4cad29f72be148",
+      "size": 3077,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/874ef86b871eb72b8f95a87cfc4cad29f72be148"
+    },
+    {
+      "path": ".opencode/skills/literature-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0e60768a73848342e1e5834fd51d9212e9fd837",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/b0e60768a73848342e1e5834fd51d9212e9fd837"
+    },
+    {
+      "path": ".opencode/skills/literature-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f85676f1a06fd71d7f9c6ebfa6d2670c099a2e1",
+      "size": 13659,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2f85676f1a06fd71d7f9c6ebfa6d2670c099a2e1"
+    },
+    {
+      "path": ".opencode/skills/literature-review/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "927b1bf72152494cf0e13f2955ddd9b717364a52",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/927b1bf72152494cf0e13f2955ddd9b717364a52"
+    },
+    {
+      "path": ".opencode/skills/literature-review/assets/review_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "601325b109b6aeda989dcdb6a1b4c4f7d1c71f7a",
+      "size": 12982,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/601325b109b6aeda989dcdb6a1b4c4f7d1c71f7a"
+    },
+    {
+      "path": ".opencode/skills/literature-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e07d59f0ef59cd2e458e9425e07e818c53433e6",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/2e07d59f0ef59cd2e458e9425e07e818c53433e6"
+    },
+    {
+      "path": ".opencode/skills/literature-review/references/citation_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a72cab86256bdda3c61f3ad13b02e58e877f6ff",
+      "size": 6112,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0a72cab86256bdda3c61f3ad13b02e58e877f6ff"
+    },
+    {
+      "path": ".opencode/skills/literature-review/references/core_workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3f229e209fcd5ef2a6fb1de975d43ce39f7a96d",
+      "size": 9923,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e3f229e209fcd5ef2a6fb1de975d43ce39f7a96d"
+    },
+    {
+      "path": ".opencode/skills/literature-review/references/database_strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45025a6d9c9faf1a5ae86d4fd100f123b446ef2a",
+      "size": 15491,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/45025a6d9c9faf1a5ae86d4fd100f123b446ef2a"
+    },
+    {
+      "path": ".opencode/skills/literature-review/references/example_workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3414d5d804081b8858513044f47f5d4b1fc2713f",
+      "size": 2332,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3414d5d804081b8858513044f47f5d4b1fc2713f"
+    },
+    {
+      "path": ".opencode/skills/literature-review/references/search_and_citation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52a9ba5ce757d52f10557fad1dcb366f2e256fe6",
+      "size": 5698,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/52a9ba5ce757d52f10557fad1dcb366f2e256fe6"
+    },
+    {
+      "path": ".opencode/skills/literature-review/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7e450d2eac6a35f3adf6cc23928c00332d173d9",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/c7e450d2eac6a35f3adf6cc23928c00332d173d9"
+    },
+    {
+      "path": ".opencode/skills/literature-review/scripts/generate_pdf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9cc7dd3814a67bff0cbe6a6021fb0782696c909",
+      "size": 5410,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b9cc7dd3814a67bff0cbe6a6021fb0782696c909"
+    },
+    {
+      "path": ".opencode/skills/literature-review/scripts/generate_schematic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6392aebf3f7d3a139ad0e56a09733695fb38692d",
+      "size": 7600,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6392aebf3f7d3a139ad0e56a09733695fb38692d"
+    },
+    {
+      "path": ".opencode/skills/literature-review/scripts/generate_schematic_ai.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86219d246aeaa85ba7f7ff25f817ae1b697de708",
+      "size": 38534,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/86219d246aeaa85ba7f7ff25f817ae1b697de708"
+    },
+    {
+      "path": ".opencode/skills/literature-review/scripts/search_databases.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19081cdca02a02cffc7dae48b11b3fd70e9b6a21",
+      "size": 9036,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/19081cdca02a02cffc7dae48b11b3fd70e9b6a21"
+    },
+    {
+      "path": ".opencode/skills/literature-review/scripts/verify_citations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6e4d5c07421783d27de70d7413b6a94635fcfb",
+      "size": 7050,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ee6e4d5c07421783d27de70d7413b6a94635fcfb"
+    },
+    {
+      "path": ".opencode/skills/peer-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa2811fe31829a32b0f11af5e5e44f7d04bf8044",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/fa2811fe31829a32b0f11af5e5e44f7d04bf8044"
+    },
+    {
+      "path": ".opencode/skills/peer-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea0ca64ff7f90784ddc61a5aed95fb6e9ce53a44",
+      "size": 12597,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ea0ca64ff7f90784ddc61a5aed95fb6e9ce53a44"
+    },
+    {
+      "path": ".opencode/skills/peer-review/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d16e1c556fd267b3b726c3ce11630e111f48104",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/1d16e1c556fd267b3b726c3ce11630e111f48104"
+    },
+    {
+      "path": ".opencode/skills/peer-review/assets/review_scaffold_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfbae11925ae96be6d6106987435f9774a43eba2",
+      "size": 3025,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/dfbae11925ae96be6d6106987435f9774a43eba2"
+    },
+    {
+      "path": ".opencode/skills/peer-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9357dce36071a5a307531c8c350ede27ac5ae858",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/9357dce36071a5a307531c8c350ede27ac5ae858"
+    },
+    {
+      "path": ".opencode/skills/peer-review/references/common_issues.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f04f8b849f179b2f69e3f247526d0ba8cfc5bfb2",
+      "size": 13999,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f04f8b849f179b2f69e3f247526d0ba8cfc5bfb2"
+    },
+    {
+      "path": ".opencode/skills/peer-review/references/ethical_review_practice.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0211caab2d98e7a699354c46961a14734df8ce3",
+      "size": 11131,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c0211caab2d98e7a699354c46961a14734df8ce3"
+    },
+    {
+      "path": ".opencode/skills/peer-review/references/reporting_standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f155b2d20243c5aecd6e4de3aa73e20d679d12e6",
+      "size": 14032,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f155b2d20243c5aecd6e4de3aa73e20d679d12e6"
+    },
+    {
+      "path": ".opencode/skills/peer-review/references/security_validation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "928c04f56a021aba104226546cd5eb2f58142cd9",
+      "size": 3547,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/928c04f56a021aba104226546cd5eb2f58142cd9"
+    },
+    {
+      "path": ".opencode/skills/peer-review/references/statistical_reproducibility.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17f73cf259395b005d705beec2c6a8631dc8de7e",
+      "size": 11712,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/17f73cf259395b005d705beec2c6a8631dc8de7e"
+    },
+    {
+      "path": ".opencode/skills/peer-review/references/tool_reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b156b11a892703cbb53b1a7e02b463ee1f43f8",
+      "size": 7781,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d9b156b11a892703cbb53b1a7e02b463ee1f43f8"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8fba585ef592b76c3cf045f3886e2455d8e8e62f",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/8fba585ef592b76c3cf045f3886e2455d8e8e62f"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f8aa2152ea785ea34933c4c6555e0e4ec85fee0",
+      "size": 13896,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3f8aa2152ea785ea34933c4c6555e0e4ec85fee0"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/audit_citations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a7d3ec1ed8eccd075793f16d9f7c35504b2751e",
+      "size": 7097,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1a7d3ec1ed8eccd075793f16d9f7c35504b2751e"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/audit_statistics_reproducibility.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "931d2145d64d1ffd1393c78492076ea23281240c",
+      "size": 10455,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/931d2145d64d1ffd1393c78492076ea23281240c"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/generate_review_scaffold.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0951a39062a3cbc92bf43bb21d8ccaae74ab81c4",
+      "size": 2634,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0951a39062a3cbc92bf43bb21d8ccaae74ab81c4"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/lint_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff2fe89818097e88eec15316f7808ef1056b4607",
+      "size": 9085,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ff2fe89818097e88eec15316f7808ef1056b4607"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/select_reporting_guidelines.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af1e99d369e60de14cd35c7c4a652272888f6ccd",
+      "size": 13594,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/af1e99d369e60de14cd35c7c4a652272888f6ccd"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/validate_claim_evidence.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f506aaf5074f278eed5257db3ac5f3649258de16",
+      "size": 7083,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f506aaf5074f278eed5257db3ac5f3649258de16"
+    },
+    {
+      "path": ".opencode/skills/peer-review/scripts/validate_review_intake.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0c229fa0b13079f68b858887904bd4a4061f9f5",
+      "size": 14466,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c0c229fa0b13079f68b858887904bd4a4061f9f5"
+    },
+    {
+      "path": ".opencode/skills/pennylane",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee67b3b16ceec7b710275fae58efeae690c83990",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/ee67b3b16ceec7b710275fae58efeae690c83990"
+    },
+    {
+      "path": ".opencode/skills/pennylane/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "432dbe7191a03ee81ccad25bbcbe3e805cff0be5",
+      "size": 9295,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/432dbe7191a03ee81ccad25bbcbe3e805cff0be5"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1aba3adb88e9218cb850a846946fcb66363992d6",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/1aba3adb88e9218cb850a846946fcb66363992d6"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references/advanced_features.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d327e62c2bafc60a4b28d2073328263b4be083e",
+      "size": 15027,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7d327e62c2bafc60a4b28d2073328263b4be083e"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references/devices_backends.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86152f1558355d88d389195388e7c5615437baca",
+      "size": 12878,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/86152f1558355d88d389195388e7c5615437baca"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references/getting_started.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52cf4e676691e086f1f2caa2c3e79949456aef8a",
+      "size": 5438,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/52cf4e676691e086f1f2caa2c3e79949456aef8a"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references/optimization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eeb9088d675dd10f00cb24e50a4736de550af77c",
+      "size": 16714,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/eeb9088d675dd10f00cb24e50a4736de550af77c"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references/quantum_chemistry.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bacd91921c8eba2ee53f2f6a6c0ae945910e75c1",
+      "size": 14903,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bacd91921c8eba2ee53f2f6a6c0ae945910e75c1"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references/quantum_circuits.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff65448fad59d2130a4839c6b67697c8f904d5cd",
+      "size": 9569,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ff65448fad59d2130a4839c6b67697c8f904d5cd"
+    },
+    {
+      "path": ".opencode/skills/pennylane/references/quantum_ml.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60ab8fb1ad95ad9028c8a45161dba9e2da238b40",
+      "size": 14380,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/60ab8fb1ad95ad9028c8a45161dba9e2da238b40"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa6b60ba5815d5517c7f4b906d249260c4263a45",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/aa6b60ba5815d5517c7f4b906d249260c4263a45"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c376afc69fd93c742972af4003da279ec1f5ef55",
+      "size": 10116,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c376afc69fd93c742972af4003da279ec1f5ef55"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d064821d0b930a2a92fb91cc8e13e81693e76b5",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/5d064821d0b930a2a92fb91cc8e13e81693e76b5"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references/common_biases.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23d67a2f7f4a43c588f689321b9b65238066729f",
+      "size": 11093,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/23d67a2f7f4a43c588f689321b9b65238066729f"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references/core_capabilities.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d13eb3542565bfb802f7caed6a587191e1039c41",
+      "size": 15984,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d13eb3542565bfb802f7caed6a587191e1039c41"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references/evidence_hierarchy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d638eb9d25e0088e7b9ef5d41dd3c730e52a125",
+      "size": 13648,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7d638eb9d25e0088e7b9ef5d41dd3c730e52a125"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references/experimental_design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c278b2d8d24d808a876bc82a29083b14872ea4a9",
+      "size": 16107,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c278b2d8d24d808a876bc82a29083b14872ea4a9"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references/logical_fallacies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9e7492138c21398bb43f0273b4f2caf8be73c9",
+      "size": 18014,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7b9e7492138c21398bb43f0273b4f2caf8be73c9"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references/scientific_method.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae43f9a0761d31324bdbb7a72a8a26b05e7b17a5",
+      "size": 6100,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ae43f9a0761d31324bdbb7a72a8a26b05e7b17a5"
+    },
+    {
+      "path": ".opencode/skills/scientific-critical-thinking/references/statistical_pitfalls.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727366d4c56f41898613136029cec31527fc2bb1",
+      "size": 15726,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/727366d4c56f41898613136029cec31527fc2bb1"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "840d17c91f76c0b64be2cbd65e78af4822021131",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/840d17c91f76c0b64be2cbd65e78af4822021131"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13f3ae9b115aefc2f15098bcfd460f0b96e047c2",
+      "size": 13577,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/13f3ae9b115aefc2f15098bcfd460f0b96e047c2"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efb1c903ba81b8a8d0fbe2b092359491f22bc08c",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/efb1c903ba81b8a8d0fbe2b092359491f22bc08c"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/assets/color_palettes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "137ef9d7aae053fb7a6dc421da6e8c5039f5a94e",
+      "size": 6756,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/137ef9d7aae053fb7a6dc421da6e8c5039f5a94e"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/assets/nature.mplstyle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b10d1249a9e6701ac0fb3e9270a40c8bf828b48e",
+      "size": 1619,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b10d1249a9e6701ac0fb3e9270a40c8bf828b48e"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/assets/presentation.mplstyle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4930f52548afed348d35f71c751dd04781ed4bd",
+      "size": 1460,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e4930f52548afed348d35f71c751dd04781ed4bd"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/assets/publication.mplstyle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "106936e07ed94b9bb68d0743aee542f91877e14f",
+      "size": 1817,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/106936e07ed94b9bb68d0743aee542f91877e14f"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1e66d3e5a9ef3280906c79accfe454476b5030b",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/b1e66d3e5a9ef3280906c79accfe454476b5030b"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/references/color_palettes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b1a6c6e0a177e20d3c30e8c11acb80b90e684b5",
+      "size": 9094,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6b1a6c6e0a177e20d3c30e8c11acb80b90e684b5"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/references/journal_requirements.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf7438c59195f5897248fcabcf9e2a1b8e9f9d61",
+      "size": 10412,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/cf7438c59195f5897248fcabcf9e2a1b8e9f9d61"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/references/matplotlib_examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a752a880079d558c200bdf49d5e0e9313a493bbf",
+      "size": 11054,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a752a880079d558c200bdf49d5e0e9313a493bbf"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/references/publication_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dea3863b9d851a42c7f7fa06779d6edc15b6a495",
+      "size": 12709,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/dea3863b9d851a42c7f7fa06779d6edc15b6a495"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/references/sources.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2025cc8e70ee66551510b6a19fe2141907f50e65",
+      "size": 8837,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2025cc8e70ee66551510b6a19fe2141907f50e65"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "feb2c07d624009de49aae240c735dadab38a8c37",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/feb2c07d624009de49aae240c735dadab38a8c37"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts/_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c8355a4ad1e6de09e045e277fd8360fa6b181ac",
+      "size": 4351,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6c8355a4ad1e6de09e045e277fd8360fa6b181ac"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts/export_plan.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24a6f18c795dbe7171a121365392e6a0aa3be5a5",
+      "size": 16700,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/24a6f18c795dbe7171a121365392e6a0aa3be5a5"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts/figure_export.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8035a2c2964faa53448a4aef1ffb330cedca4626",
+      "size": 22256,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8035a2c2964faa53448a4aef1ffb330cedca4626"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts/image_metadata.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5541e51891af8e0072fb5ce53281ebdb424307a7",
+      "size": 25029,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5541e51891af8e0072fb5ce53281ebdb424307a7"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts/palette_audit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e12e158db2098b3e3c7c976bf6889de81069bf52",
+      "size": 11654,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e12e158db2098b3e3c7c976bf6889de81069bf52"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts/style_presets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5b50fa37e92f20bc2ada900ed82e8795ad5ab86",
+      "size": 16123,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d5b50fa37e92f20bc2ada900ed82e8795ad5ab86"
+    },
+    {
+      "path": ".opencode/skills/scientific-visualization/scripts/style_preview.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b68a529de02a4c7bda9a295a60872ad86a5789b",
+      "size": 7762,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7b68a529de02a4c7bda9a295a60872ad86a5789b"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3875212f1cc884fd4d241eabbaad60a2f617c972",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/3875212f1cc884fd4d241eabbaad60a2f617c972"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb4741e7264302bc5cee6cc1a42e521117728b2a",
+      "size": 14005,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bb4741e7264302bc5cee6cc1a42e521117728b2a"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e48127aec9d900a68426ebf01f47965e374f649e",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/e48127aec9d900a68426ebf01f47965e374f649e"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/assets/REPORT_FORMATTING_GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e67f3539929acd5c95e9926e9b730090322ef9",
+      "size": 2713,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c8e67f3539929acd5c95e9926e9b730090322ef9"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/assets/manuscript_scaffold.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96cdd508ad5caed48bd97a504d3be98287b2250f",
+      "size": 1979,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/96cdd508ad5caed48bd97a504d3be98287b2250f"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd4113b80cab2143fa77fd25ce026e7e536dcb4a",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/cd4113b80cab2143fa77fd25ce026e7e536dcb4a"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/authorship_ai_confidentiality.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f310349ac8f429d13ef60fe25acaa803cbe12943",
+      "size": 4496,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f310349ac8f429d13ef60fe25acaa803cbe12943"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/citation_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce4bdd7b3b895207d315ccae35138c9796b3b3ed",
+      "size": 3777,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ce4bdd7b3b895207d315ccae35138c9796b3b3ed"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/cli_reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eaa6f371ca4618974e93bb31cabd1196df65204",
+      "size": 3558,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4eaa6f371ca4618974e93bb31cabd1196df65204"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/evidence_workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abc6e36eb0bb447e157691ea7c5f749c34866c2b",
+      "size": 3929,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/abc6e36eb0bb447e157691ea7c5f749c34866c2b"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/figures_tables.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7022338d438e439aa475b4ecacf6ba7314b26aed",
+      "size": 3915,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7022338d438e439aa475b4ecacf6ba7314b26aed"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/imrad_structure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c53506c127ee6f5feb9f6a262398dc85243e73bb",
+      "size": 4512,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c53506c127ee6f5feb9f6a262398dc85243e73bb"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/journal_policies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d68d4d8fb4c5a41d0e3fa0611e08f5159b5a923c",
+      "size": 2608,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d68d4d8fb4c5a41d0e3fa0611e08f5159b5a923c"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/professional_report_formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6238874aa69129b4f206d5b552325463a9b33653",
+      "size": 3230,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6238874aa69129b4f206d5b552325463a9b33653"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/reporting_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe55f07c153bd1e939f612247fc53ff836d34e35",
+      "size": 4785,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/fe55f07c153bd1e939f612247fc53ff836d34e35"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/research_integrity_open_science.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63eb73027c03d25170649a2d10a67c1eef365585",
+      "size": 4149,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/63eb73027c03d25170649a2d10a67c1eef365585"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/source_ledger.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5831ab511d27200552c5af2361daa056a3ee5970",
+      "size": 10175,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5831ab511d27200552c5af2361daa056a3ee5970"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/references/writing_principles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fcd5012957fe6670e1e31e103c51d8cfbefa048",
+      "size": 3904,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5fcd5012957fe6670e1e31e103c51d8cfbefa048"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eee52d3e564a1b502b1ae27a99e813843676ffe0",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/eee52d3e564a1b502b1ae27a99e813843676ffe0"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f57d5f106ee5f504179b413744456208d264eaa8",
+      "size": 7670,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f57d5f106ee5f504179b413744456208d264eaa8"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/audit_claims.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed14ff88e1115753342e8d743dc2dc4ce36d160e",
+      "size": 8834,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ed14ff88e1115753342e8d743dc2dc4ce36d160e"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/check_consistency.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "415be5ce6dae79965f00a3c7cada62a9f012e547",
+      "size": 14209,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/415be5ce6dae79965f00a3c7cada62a9f012e547"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/check_references.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbc3830643883f785ddc41a9b7a18bef1f4a7c5a",
+      "size": 7075,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/dbc3830643883f785ddc41a9b7a18bef1f4a7c5a"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/lint_manuscript.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81472e6e476a31c582a193761a03fb66e9d0fdfe",
+      "size": 5881,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/81472e6e476a31c582a193761a03fb66e9d0fdfe"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/scaffold_manuscript.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f60dd74b9b4f2c65faf1f4703e193cb7e8f1fe80",
+      "size": 4328,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f60dd74b9b4f2c65faf1f4703e193cb7e8f1fe80"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/select_reporting_guidelines.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d23b877cef342ba21074fcfaec7dd47c00a7607",
+      "size": 7580,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7d23b877cef342ba21074fcfaec7dd47c00a7607"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/validate_authorship.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa9f4961bc9a61c2796c4595d6c3f7a9f03cc42",
+      "size": 11498,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ffa9f4961bc9a61c2796c4595d6c3f7a9f03cc42"
+    },
+    {
+      "path": ".opencode/skills/scientific-writing/scripts/validate_manifest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "088ea5f1a41b3f78fd87bbe5aa355a3d9455e8bc",
+      "size": 14514,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/088ea5f1a41b3f78fd87bbe5aa355a3d9455e8bc"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b676c1e9ae80e677623b0610c17cbe0ce1cba233",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/b676c1e9ae80e677623b0610c17cbe0ce1cba233"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f6d0fa886b5f5825618af731ca77e76daea4a24",
+      "size": 20915,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6f6d0fa886b5f5825618af731ca77e76daea4a24"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "200c01c91a60ae97f6a1976238553f4ab03480eb",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/200c01c91a60ae97f6a1976238553f4ab03480eb"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62bf447ac3214f262e10b220cd232c8956a3c121",
+      "size": 12350,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/62bf447ac3214f262e10b220cd232c8956a3c121"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/references/bayesian_statistics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a1a84b3cfd55e570858eb99075f63ed3a8a3d5b",
+      "size": 20655,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2a1a84b3cfd55e570858eb99075f63ed3a8a3d5b"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/references/effect_sizes_and_power.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad9381138becdcf6b22508ac8f657e1421a5ca39",
+      "size": 18413,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ad9381138becdcf6b22508ac8f657e1421a5ca39"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/references/reporting_standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59b685ad88985c40ff3abba1cbd52514e7a66551",
+      "size": 20239,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/59b685ad88985c40ff3abba1cbd52514e7a66551"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/references/test_selection_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25e7ccb1e203134c2074de8bb2fca2a5c340a47d",
+      "size": 5077,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/25e7ccb1e203134c2074de8bb2fca2a5c340a47d"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f4aff9de6309211f28a401969f14c85def2b4ce",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/9f4aff9de6309211f28a401969f14c85def2b4ce"
+    },
+    {
+      "path": ".opencode/skills/statistical-analysis/scripts/assumption_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c477f392b375fb795846cd0254214abf6800be4",
+      "size": 20282,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6c477f392b375fb795846cd0254214abf6800be4"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31fb2357bf582530c250304f8b480f19545824be",
+      "size": 8491,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/31fb2357bf582530c250304f8b480f19545824be"
+    },
+    {
+      "path": "LICENSE_NOTE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0abd24394a8679dea2e6e9337b1a4f59b228e5d",
+      "size": 202,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f0abd24394a8679dea2e6e9337b1a4f59b228e5d"
+    },
+    {
+      "path": "MANIFEST.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fe4fb5430948e543a37eface98567432f18e89c",
+      "size": 3842,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0fe4fb5430948e543a37eface98567432f18e89c"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f7025d981c6121dad6d4a813559de01dabd9ce4",
+      "size": 25495,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4f7025d981c6121dad6d4a813559de01dabd9ce4"
+    },
+    {
+      "path": "README_FA.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b031219a57428beb7252011751ecad76a1cc1eb",
+      "size": 3418,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3b031219a57428beb7252011751ecad76a1cc1eb"
+    },
+    {
+      "path": "Reports",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db972f6ed29a25a8a20e5b6b97aae739e832b052",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/db972f6ed29a25a8a20e5b6b97aae739e832b052"
+    },
+    {
+      "path": "Reports/benchmark_specification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bfda4514949900b3e543458fc56b9cac059d87d",
+      "size": 7397,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8bfda4514949900b3e543458fc56b9cac059d87d"
+    },
+    {
+      "path": "Reports/checkpoints",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9054b2c82d63002414b6b6cfb5af97a70b001671",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/9054b2c82d63002414b6b6cfb5af97a70b001671"
+    },
+    {
+      "path": "Reports/checkpoints/runtime_profile",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "105214648250624bf605f40e536c125f95835e89",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/105214648250624bf605f40e536c125f95835e89"
+    },
+    {
+      "path": "Reports/checkpoints/runtime_profile/old_logging.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53b6f7964b3de430c9fe6a02243660cd9899cc06",
+      "size": 29,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/53b6f7964b3de430c9fe6a02243660cd9899cc06"
+    },
+    {
+      "path": "Reports/checkpoints/runtime_profile/optimized_projection_logging.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8167dfbfce3edf8056d42b4a791b83073caf2d32",
+      "size": 46,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8167dfbfce3edf8056d42b4a791b83073caf2d32"
+    },
+    {
+      "path": "Reports/cifar10_dvs_binary_true_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7019e3211adef149f93dc7f94253ceecf6769c5d",
+      "size": 865,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7019e3211adef149f93dc7f94253ceecf6769c5d"
+    },
+    {
+      "path": "Reports/clean_accuracy_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73c9c099b441ca18239d21686604069f1dd62505",
+      "size": 11883,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/73c9c099b441ca18239d21686604069f1dd62505"
+    },
+    {
+      "path": "Reports/clean_accuracy_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26206a3a8d0009d6bacef3fbae19f69534cfcc0b",
+      "size": 6958,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/26206a3a8d0009d6bacef3fbae19f69534cfcc0b"
+    },
+    {
+      "path": "Reports/diagnostic_blocker.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e7f6cfbc931f57fbb55cd8f624f2dddb8267b52",
+      "size": 1767,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0e7f6cfbc931f57fbb55cd8f624f2dddb8267b52"
+    },
+    {
+      "path": "Reports/dvs_gesture_binary_true_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6af564298412fa2dbdc9eeef522b34bdda2dbcf7",
+      "size": 766,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6af564298412fa2dbdc9eeef522b34bdda2dbcf7"
+    },
+    {
+      "path": "Reports/logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33fefa2ae5d8417f5e2264b38930458e04362a8f",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/33fefa2ae5d8417f5e2264b38930458e04362a8f"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_binary_true",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fefa08318698c2203f2d71311427a452c2f6f43a",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/fefa08318698c2203f2d71311427a452c2f6f43a"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_binary_true/training.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7fc5551a9eb544b5b2adc5a26b419457c716470",
+      "size": 27308,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e7fc5551a9eb544b5b2adc5a26b419457c716470"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_candidate2.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0aa7f4429d12ceaeb4908b1c461de5873f75a5f",
+      "size": 3474,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b0aa7f4429d12ceaeb4908b1c461de5873f75a5f"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_candidate3.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f7a0cec636340847a4bcb8a03e571cb529a3e60",
+      "size": 3474,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7f7a0cec636340847a4bcb8a03e571cb529a3e60"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_compact.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77102ccc41c3f09d99d6ef211a2ee623bf9b7777",
+      "size": 3474,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/77102ccc41c3f09d99d6ef211a2ee623bf9b7777"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_develop.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f41114b052c8d3ca6510a22cec3c7aa6e244d659",
+      "size": 3474,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f41114b052c8d3ca6510a22cec3c7aa6e244d659"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_generalization_final.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7adc7e2888759f53261b14dcbdc0da25d4c51f74",
+      "size": 4170,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7adc7e2888759f53261b14dcbdc0da25d4c51f74"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_groupnorm_onecycle.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "126562e2cce94cebffa0ba34744595673016f5b6",
+      "size": 2430,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/126562e2cce94cebffa0ba34744595673016f5b6"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_residual_regularized.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "880eeb0a78e34e9d5e52fe997d2c99d64edb716b",
+      "size": 3474,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/880eeb0a78e34e9d5e52fe997d2c99d64edb716b"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_binary_seed42_small_dropout.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "662c705bbf4c35d13390e3c469181b12b60ab77a",
+      "size": 5156,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/662c705bbf4c35d13390e3c469181b12b60ab77a"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_clean_improved_integer_seed42_develop.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "600b9f43364e37aa4579a15de5558a8ab53eba5c",
+      "size": 3534,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/600b9f43364e37aa4579a15de5558a8ab53eba5c"
+    },
+    {
+      "path": "Reports/logs/cifar10_dvs_seed42_tdbn_attention.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45826c849db00cea222dd70aa7e5cb24246a189d",
+      "size": 3184,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/45826c849db00cea222dd70aa7e5cb24246a189d"
+    },
+    {
+      "path": "Reports/logs/clean_accuracy_full_test.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02624aa8f5861416e638703919a6a893cdfc99cc",
+      "size": 194,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/02624aa8f5861416e638703919a6a893cdfc99cc"
+    },
+    {
+      "path": "Reports/logs/clean_accuracy_representation_audit.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2dbdc9a19a787cc610af65466192f6ecff9294d",
+      "size": 262,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d2dbdc9a19a787cc610af65466192f6ecff9294d"
+    },
+    {
+      "path": "Reports/logs/clean_improved_final",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "740621954c6e86ecb2d9b3edeed9fc4f3957b496",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/740621954c6e86ecb2d9b3edeed9fc4f3957b496"
+    },
+    {
+      "path": "Reports/logs/clean_improved_final/cifar10_dvs_binary_seed42.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b0a0278eaab27a24f977f197415578865ecd18e",
+      "size": 7013,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1b0a0278eaab27a24f977f197415578865ecd18e"
+    },
+    {
+      "path": "Reports/logs/clean_improved_final/cifar10_dvs_integer_seed42.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bf30a390e79c21f548891b57059ae8b3e6579f0",
+      "size": 3062,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1bf30a390e79c21f548891b57059ae8b3e6579f0"
+    },
+    {
+      "path": "Reports/logs/clean_improved_final/dvs_gesture_binary_seed42.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "175cc552c1c58e2f66ac77822b185ebe0c41a2dd",
+      "size": 7013,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/175cc552c1c58e2f66ac77822b185ebe0c41a2dd"
+    },
+    {
+      "path": "Reports/logs/clean_improved_final/dvs_gesture_integer_seed42.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d80a16b7a798179d84047a339bd9d1775e6b5c54",
+      "size": 5993,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d80a16b7a798179d84047a339bd9d1775e6b5c54"
+    },
+    {
+      "path": "Reports/logs/clean_improved_final_campaign.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19da478c9088c76efaffd7d62a9f1bf80ac18040",
+      "size": 173,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/19da478c9088c76efaffd7d62a9f1bf80ac18040"
+    },
+    {
+      "path": "Reports/logs/clean_improved_pipeline_audit.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d22e2f8c459eec2792eb368f992faf17d42da62c",
+      "size": 4435,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d22e2f8c459eec2792eb368f992faf17d42da62c"
+    },
+    {
+      "path": "Reports/logs/dvs_gesture_binary_true",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8002c842e37f5bbfd56139b92c8a7f3a0b13732",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/a8002c842e37f5bbfd56139b92c8a7f3a0b13732"
+    },
+    {
+      "path": "Reports/logs/dvs_gesture_binary_true/training.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38a5466fd4dac36aedc76bb87ca83d8634c8c4df",
+      "size": 22730,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/38a5466fd4dac36aedc76bb87ca83d8634c8c4df"
+    },
+    {
+      "path": "Reports/logs/dvs_gesture_clean_improved_binary_seed42_candidate2.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f1b2d3cdcbd87a2a0c72f04514dcde29f9d851",
+      "size": 3474,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/55f1b2d3cdcbd87a2a0c72f04514dcde29f9d851"
+    },
+    {
+      "path": "Reports/logs/dvs_gesture_clean_improved_binary_seed42_develop.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15e978623ae16a2af56b20c021eb4c3925dc57fe",
+      "size": 2024,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/15e978623ae16a2af56b20c021eb4c3925dc57fe"
+    },
+    {
+      "path": "Reports/logs/dvs_gesture_clean_improved_integer_seed42_develop.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89c5b162e77e53984ac9a886bcebf2626a4ee540",
+      "size": 3534,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/89c5b162e77e53984ac9a886bcebf2626a4ee540"
+    },
+    {
+      "path": "Reports/logs/nmnist_binary_true",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d590eecf3eb598f9b371e922d1256871137a8905",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/d590eecf3eb598f9b371e922d1256871137a8905"
+    },
+    {
+      "path": "Reports/logs/nmnist_binary_true/multiseed_training.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e84ad24f0711d06bd1d118feae8d5c6024b593d5",
+      "size": 3550,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e84ad24f0711d06bd1d118feae8d5c6024b593d5"
+    },
+    {
+      "path": "Reports/logs/nmnist_binary_true/seed42_training.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b96c67466373733e7749b5f43430909cbe41930",
+      "size": 1950,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1b96c67466373733e7749b5f43430909cbe41930"
+    },
+    {
+      "path": "Reports/logs/nmnist_integer_corrected",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94c1eb8e3053e8f5e3b0e28d20b8b0f92172373f",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/94c1eb8e3053e8f5e3b0e28d20b8b0f92172373f"
+    },
+    {
+      "path": "Reports/logs/nmnist_integer_corrected/all_conditions.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37df8c7d8e066612d467b41b49f7929143b60575",
+      "size": 16204,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/37df8c7d8e066612d467b41b49f7929143b60575"
+    },
+    {
+      "path": "Reports/logs/nmnist_integer_corrected/manifest_build.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9593e54a2abd105078db740d135d1b040731fa20",
+      "size": 4356,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9593e54a2abd105078db740d135d1b040731fa20"
+    },
+    {
+      "path": "Reports/logs/nmnist_integer_corrected/seed42_B_inf_1.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dbc0e2250cbd634424b659b09805904b2ec38e8",
+      "size": 3784,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8dbc0e2250cbd634424b659b09805904b2ec38e8"
+    },
+    {
+      "path": "Reports/logs/nmnist_seed42_verification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3fd516ea050833244743e1d3327af0e6ba9b62eb",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/3fd516ea050833244743e1d3327af0e6ba9b62eb"
+    },
+    {
+      "path": "Reports/logs/nmnist_seed42_verification/phase1_clean_20260925.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afebe89df4a18ac91e31c62567fa891e08e7290f",
+      "size": 51392,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/afebe89df4a18ac91e31c62567fa891e08e7290f"
+    },
+    {
+      "path": "Reports/logs/nmnist_seed42_verification/phase1_clean_20260925_114016.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81b9ab3c93122a26720ceb797526aafe3abb1869",
+      "size": 25456,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/81b9ab3c93122a26720ceb797526aafe3abb1869"
+    },
+    {
+      "path": "Reports/logs/nmnist_seed42_verification/phase2_attack_audit_20260925_113031.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de832122e9211c5c6e7dc727181295d52763ef7e",
+      "size": 7935,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/de832122e9211c5c6e7dc727181295d52763ef7e"
+    },
+    {
+      "path": "Reports/logs/phase1_equivalence_optimization.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "834a8149302edc11f7e58924f9bad86d2dbf1640",
+      "size": 9115,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/834a8149302edc11f7e58924f9bad86d2dbf1640"
+    },
+    {
+      "path": "Reports/logs/phase_0_5_artifact_build.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f3badd1d4412cfe0b264edb28ab8337a1e2c552",
+      "size": 136,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8f3badd1d4412cfe0b264edb28ab8337a1e2c552"
+    },
+    {
+      "path": "Reports/logs/phase_0_5_contract_tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "369014f60223bc414e4d52c52314d8d617f5e41f",
+      "size": 919,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/369014f60223bc414e4d52c52314d8d617f5e41f"
+    },
+    {
+      "path": "Reports/logs/phase_0_5_gate_attempt_1.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883e345b3e18269e800145712d0855b8f85c42eb",
+      "size": 88,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/883e345b3e18269e800145712d0855b8f85c42eb"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_checkpoint_validation.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6614615872c12368d52aff3b9825fe15ca570cd",
+      "size": 16176,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a6614615872c12368d52aff3b9825fe15ca570cd"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_cifar10_dvs_missing_seeds.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fea92293541a395f5c5ea12921b45669bbd4bfe",
+      "size": 34866,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1fea92293541a395f5c5ea12921b45669bbd4bfe"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_cifar10_dvs_resume.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "795bdfdcf41fed680ca8829df0fdedc3c468195e",
+      "size": 356,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/795bdfdcf41fed680ca8829df0fdedc3c468195e"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_dvs_gesture_training.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b4b912f56446e6a3fc512eb2d6ef174bce231cd",
+      "size": 39146,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6b4b912f56446e6a3fc512eb2d6ef174bce231cd"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_final_contract_tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d69d70c189e68ee00fa65c9d957cd563b4dd03e7",
+      "size": 1108,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d69d70c189e68ee00fa65c9d957cd563b4dd03e7"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_freeze.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e61bc5a8d8e740164fd2cf742a5fb126be0ff50",
+      "size": 368,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5e61bc5a8d8e740164fd2cf742a5fb126be0ff50"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_gate_attempt_3.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883e345b3e18269e800145712d0855b8f85c42eb",
+      "size": 88,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/883e345b3e18269e800145712d0855b8f85c42eb"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_gate_attempt_4.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883e345b3e18269e800145712d0855b8f85c42eb",
+      "size": 88,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/883e345b3e18269e800145712d0855b8f85c42eb"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_nmnist_download.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c8a0845fb0ca9441a50bb91486e9a6baf02eb93",
+      "size": 26599540,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5c8a0845fb0ca9441a50bb91486e9a6baf02eb93"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_pil_contract_tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b07ef5025adab0869f4b4a02d3b6582ae540754f",
+      "size": 1000,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b07ef5025adab0869f4b4a02d3b6582ae540754f"
+    },
+    {
+      "path": "Reports/logs/phase_0_75_preflight.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3124d2c4c3e752227fa5c92e1d4820d1fc578d",
+      "size": 794,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bf3124d2c4c3e752227fa5c92e1d4820d1fc578d"
+    },
+    {
+      "path": "Reports/logs/phase_0_environment.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36c51f32f73891cc8af42b44a1c7198f5f622877",
+      "size": 1410,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/36c51f32f73891cc8af42b44a1c7198f5f622877"
+    },
+    {
+      "path": "Reports/logs/phase_0_gate_attempt_2.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883e345b3e18269e800145712d0855b8f85c42eb",
+      "size": 88,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/883e345b3e18269e800145712d0855b8f85c42eb"
+    },
+    {
+      "path": "Reports/logs/phase_0_inventory_build.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89f0197807bc3194d00551af0e351ad3621495e2",
+      "size": 3372,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/89f0197807bc3194d00551af0e351ad3621495e2"
+    },
+    {
+      "path": "Reports/logs/phase_1_cell_packet_feasibility.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "060487d7264d8927ce1272e444eab5c1cf67b167",
+      "size": 1862,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/060487d7264d8927ce1272e444eab5c1cf67b167"
+    },
+    {
+      "path": "Reports/logs/phase_1_cell_packet_regression_tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b42fbf85b43ac2e56140aba77e172b5370072a3a",
+      "size": 1476,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b42fbf85b43ac2e56140aba77e172b5370072a3a"
+    },
+    {
+      "path": "Reports/logs/phase_1_nmnist_benchmark.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c037811854b37a12ae4230c549bff22ed103597",
+      "size": 155605,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0c037811854b37a12ae4230c549bff22ed103597"
+    },
+    {
+      "path": "Reports/logs/phase_1_representation_feasibility.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4c6bfe4d04ba71f04de3d61501603964315088b",
+      "size": 5832,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b4c6bfe4d04ba71f04de3d61501603964315088b"
+    },
+    {
+      "path": "Reports/logs/phase_1_representation_regression_tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85bd739a28216d2513958fa813812b4419c1204d",
+      "size": 1401,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/85bd739a28216d2513958fa813812b4419c1204d"
+    },
+    {
+      "path": "Reports/logs/phase_1_resume_transition.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba394fe9717d2b4025130200d9c4591addb6d12",
+      "size": 1232,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/eba394fe9717d2b4025130200d9c4591addb6d12"
+    },
+    {
+      "path": "Reports/nmnist_binary_true_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fc097cd43d076fdecd948a27bb87b8f802bed7c",
+      "size": 1452,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1fc097cd43d076fdecd948a27bb87b8f802bed7c"
+    },
+    {
+      "path": "Reports/nmnist_controlled_four_models_lr1e4_comparison.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51798e87e349f0617c72bfa1f59d0384772f0355",
+      "size": 1943,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/51798e87e349f0617c72bfa1f59d0384772f0355"
+    },
+    {
+      "path": "Reports/nmnist_controlled_four_models_status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35d58ad00bbaa470baa509f0b193f74fe3da62df",
+      "size": 3264,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/35d58ad00bbaa470baa509f0b193f74fe3da62df"
+    },
+    {
+      "path": "Reports/nmnist_fair_comparison_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0b803520146ba912b8b620b93b92b6447034ca2",
+      "size": 5415,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e0b803520146ba912b8b620b93b92b6447034ca2"
+    },
+    {
+      "path": "Reports/nmnist_integer_corrected_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "042e6bc2f4fb9e9853ab7e33f7ebe003f8d50b53",
+      "size": 444,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/042e6bc2f4fb9e9853ab7e33f7ebe003f8d50b53"
+    },
+    {
+      "path": "Reports/nmnist_paper_aligned_integer_comparison.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "959bfeeb9fe5362d2736117e0bde1f32f0cf7a25",
+      "size": 4375,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/959bfeeb9fe5362d2736117e0bde1f32f0cf7a25"
+    },
+    {
+      "path": "Reports/nmnist_paper_aligned_projection_speedup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44e2e0c55e20259152ddc2af18cf703ec4bbe777",
+      "size": 3465,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/44e2e0c55e20259152ddc2af18cf703ec4bbe777"
+    },
+    {
+      "path": "Reports/nmnist_published_reference_comparison.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a6f5f00e3039ff09ef9906533c01936c9826217",
+      "size": 3053,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4a6f5f00e3039ff09ef9906533c01936c9826217"
+    },
+    {
+      "path": "Reports/nmnist_seed42_verification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d2a9afa1e724ec5fd72feac625050eabf5a2083",
+      "size": 12085,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1d2a9afa1e724ec5fd72feac625050eabf5a2083"
+    },
+    {
+      "path": "Reports/nmnist_table1_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bb9565c0a80080ee14048501c59b83f4a0a4564",
+      "size": 11317,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4bb9565c0a80080ee14048501c59b83f4a0a4564"
+    },
+    {
+      "path": "Reports/nmnist_temporal_semantics_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d5d3aa6513bd433ee3fd5540921537e62da58d2",
+      "size": 5841,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0d5d3aa6513bd433ee3fd5540921537e62da58d2"
+    },
+    {
+      "path": "Reports/phase_0_5_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26eaea96622d6ea1b2eb15b483f1d5f17e64f2e9",
+      "size": 1569,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/26eaea96622d6ea1b2eb15b483f1d5f17e64f2e9"
+    },
+    {
+      "path": "Reports/phase_0_75_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93b4db5f7410eca9370212cdadff8a9c54275369",
+      "size": 1687,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/93b4db5f7410eca9370212cdadff8a9c54275369"
+    },
+    {
+      "path": "Reports/phase_0_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aca321644fd5570446afdf221553d972ecab7370",
+      "size": 3242,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/aca321644fd5570446afdf221553d972ecab7370"
+    },
+    {
+      "path": "Reports/phase_1_NMNIST_final_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73657db0750767797dfb2d7972580d7792fed11c",
+      "size": 982,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/73657db0750767797dfb2d7972580d7792fed11c"
+    },
+    {
+      "path": "Reports/phase_1_NMNIST_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26e6901187193f376df82b0aaccb179962b6fd0d",
+      "size": 264,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/26e6901187193f376df82b0aaccb179962b6fd0d"
+    },
+    {
+      "path": "Reports/phase_1_batch_optimization_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93b6c9251e83136af840491f7ce907db1217e089",
+      "size": 3243,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/93b6c9251e83136af840491f7ce907db1217e089"
+    },
+    {
+      "path": "Reports/phase_1_batch_profile.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38088e87cfa0ddfd85f8ad136f4ed44abb700952",
+      "size": 2301,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/38088e87cfa0ddfd85f8ad136f4ed44abb700952"
+    },
+    {
+      "path": "Reports/phase_1_gpu_vectorization_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b892b1ae06b75447e1a0341d7d23730aa888167e",
+      "size": 3762,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b892b1ae06b75447e1a0341d7d23730aa888167e"
+    },
+    {
+      "path": "Reports/phase_1_independent_batching_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea5a421a83dbf15eb7322be9bdda608d8ddf4ff2",
+      "size": 3507,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ea5a421a83dbf15eb7322be9bdda608d8ddf4ff2"
+    },
+    {
+      "path": "Reports/phase_1_optimization_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45ebd6d0c9ee4e75d625b2c568cd931a4e97bb27",
+      "size": 3599,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/45ebd6d0c9ee4e75d625b2c568cd931a4e97bb27"
+    },
+    {
+      "path": "Reports/phase_1_seed42_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4219becb3cbe9e2fd6b74aef36e46f554292c272",
+      "size": 1097,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4219becb3cbe9e2fd6b74aef36e46f554292c272"
+    },
+    {
+      "path": "START_HERE_WINDOWS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c1b41440a6bbf22f6c2e3bea3e1ba524db9b3a0",
+      "size": 517,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9c1b41440a6bbf22f6c2e3bea3e1ba524db9b3a0"
+    },
+    {
+      "path": "attacks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92f7f68d1390fbfb833f579adf8bd0919d39ba88",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/92f7f68d1390fbfb833f579adf8bd0919d39ba88"
+    },
+    {
+      "path": "attacks/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "attacks/benchmark_contract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "087f5670259b36e6fc064135e816f561e4d30780",
+      "size": 7794,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/087f5670259b36e6fc064135e816f561e4d30780"
+    },
+    {
+      "path": "attacks/classical_timing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fe63baef2f4e4e588403b099d907a88c5cf6009",
+      "size": 3589,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8fe63baef2f4e4e588403b099d907a88c5cf6009"
+    },
+    {
+      "path": "attacks/pil_pgd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bab74f17460846a6c1423779e0f9908d89157c6e",
+      "size": 18185,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bab74f17460846a6c1423779e0f9908d89157c6e"
+    },
+    {
+      "path": "attacks/random_jitter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "057bfdb820c5bb3cc64c9398a81f1aaf32ef9bc1",
+      "size": 541,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/057bfdb820c5bb3cc64c9398a81f1aaf32ef9bc1"
+    },
+    {
+      "path": "attacks/temp_drift.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c095188df9e513f4c868d55f74ca84d7688cef2",
+      "size": 48815,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5c095188df9e513f4c868d55f74ca84d7688cef2"
+    },
+    {
+      "path": "attacks/training_timing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "817140c22a6f9d509264c6bb91d5ec06df569b7c",
+      "size": 2396,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/817140c22a6f9d509264c6bb91d5ec06df569b7c"
+    },
+    {
+      "path": "defenses",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3be5af1a489e8f110620aa74844a18ea616cb0f",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/b3be5af1a489e8f110620aa74844a18ea616cb0f"
+    },
+    {
+      "path": "defenses/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "defenses/quantum_temp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d724d86e24c72b56c9121c0deca7181db203cf2",
+      "size": 5964,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9d724d86e24c72b56c9121c0deca7181db203cf2"
+    },
+    {
+      "path": "encoding",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c0a232e12d5c34db52849925190e95387ffbe19",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/6c0a232e12d5c34db52849925190e95387ffbe19"
+    },
+    {
+      "path": "encoding/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "encoding/quantum.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e2adb382993ea95a21de65296d26f7748410aef",
+      "size": 728,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0e2adb382993ea95a21de65296d26f7748410aef"
+    },
+    {
+      "path": "encoding/ttfs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2429d3591cc29c1f33e3610296c270ca432c87ab",
+      "size": 278,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2429d3591cc29c1f33e3610296c270ca432c87ab"
+    },
+    {
+      "path": "experiments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60a05e28a32463ea7b8335f58674d91e7ea4922a",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/60a05e28a32463ea7b8335f58674d91e7ea4922a"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "experiments/cifar10_dvs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "019b36248d588d5221984595ad1ccfa37f62e63d",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/019b36248d588d5221984595ad1ccfa37f62e63d"
+    },
+    {
+      "path": "experiments/cifar10_dvs/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ca31943c51214147a59dd16f0fa94e6ca467acc",
+      "size": 41,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6ca31943c51214147a59dd16f0fa94e6ca467acc"
+    },
+    {
+      "path": "experiments/cifar10_dvs/snn_baseline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3ebfa8000308a4c79a89f38e825186083fd4834",
+      "size": 16519,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e3ebfa8000308a4c79a89f38e825186083fd4834"
+    },
+    {
+      "path": "experiments/iris",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "742bf55f1452c84dd38395275e4cc2380f6cbf88",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/742bf55f1452c84dd38395275e4cc2380f6cbf88"
+    },
+    {
+      "path": "experiments/iris/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "experiments/iris/attack_evaluation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df77551175801e07b1dd070f8e3dfd702b3b7460",
+      "size": 14906,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/df77551175801e07b1dd070f8e3dfd702b3b7460"
+    },
+    {
+      "path": "experiments/iris/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fda369f1a9a9c3ab50cb811bd03f5f1c920c099",
+      "size": 3985,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5fda369f1a9a9c3ab50cb811bd03f5f1c920c099"
+    },
+    {
+      "path": "experiments/iris/multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9870143db0695379e93b0f5a7286b22564f7ba88",
+      "size": 2363,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9870143db0695379e93b0f5a7286b22564f7ba88"
+    },
+    {
+      "path": "experiments/iris/paired_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83dcb66c09d919f7a695c44367bf7914fab888bb",
+      "size": 1913,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/83dcb66c09d919f7a695c44367bf7914fab888bb"
+    },
+    {
+      "path": "experiments/iris/phase171.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bf0d5f2465a49c3ceb1dd3f9918305d54663853",
+      "size": 942,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8bf0d5f2465a49c3ceb1dd3f9918305d54663853"
+    },
+    {
+      "path": "experiments/iris/phase172.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe0dd760bcf3e4c8c6326ef548e469518acdd30f",
+      "size": 1503,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/fe0dd760bcf3e4c8c6326ef548e469518acdd30f"
+    },
+    {
+      "path": "experiments/iris/phase173.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b9558b0a2f042f3862b347844ef3138bf5fe7a",
+      "size": 2457,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/20b9558b0a2f042f3862b347844ef3138bf5fe7a"
+    },
+    {
+      "path": "experiments/iris/phase18.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d812afdd21af143d0730bb567c510ce095309051",
+      "size": 6785,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d812afdd21af143d0730bb567c510ce095309051"
+    },
+    {
+      "path": "experiments/iris/phase19.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9190bf13ec7d1b964c4eb608df09ce9f12df884d",
+      "size": 5250,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9190bf13ec7d1b964c4eb608df09ce9f12df884d"
+    },
+    {
+      "path": "experiments/iris/phase20.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4686340ac81a0f9d5491029d04bc6880a1d89a1",
+      "size": 4600,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e4686340ac81a0f9d5491029d04bc6880a1d89a1"
+    },
+    {
+      "path": "experiments/iris/phase21.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3b0acbaeef0225c6961fb9bfa2044f52a63eef4",
+      "size": 7449,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d3b0acbaeef0225c6961fb9bfa2044f52a63eef4"
+    },
+    {
+      "path": "experiments/iris/training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bef8a10b2a01d1f7a446b78d64df89a290b8001",
+      "size": 16778,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2bef8a10b2a01d1f7a446b78d64df89a290b8001"
+    },
+    {
+      "path": "experiments/mnist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14f2186db4c96765751a8790df0f5430a8828342",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/14f2186db4c96765751a8790df0f5430a8828342"
+    },
+    {
+      "path": "experiments/mnist/PLAN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d393e478ce20f60e5412540a2d471eb490d0bf",
+      "size": 187,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/90d393e478ce20f60e5412540a2d471eb490d0bf"
+    },
+    {
+      "path": "experiments/mnist/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "experiments/mnist/capacity_resume.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bde8b3775ee1941d31389c7e528f2139bfb23b0",
+      "size": 6448,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2bde8b3775ee1941d31389c7e528f2139bfb23b0"
+    },
+    {
+      "path": "experiments/mnist/capacity_training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aac111cc223709a4fd7365d5dac4e4880546e18",
+      "size": 5704,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0aac111cc223709a4fd7365d5dac4e4880546e18"
+    },
+    {
+      "path": "experiments/mnist/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33ff7b277d063767fb1b54e3e2cd4d9d8ecea8e6",
+      "size": 6760,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/33ff7b277d063767fb1b54e3e2cd4d9d8ecea8e6"
+    },
+    {
+      "path": "experiments/mnist/pca_training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27cd534cd8dccb4b16a2ea1c395a0556a130f068",
+      "size": 6724,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/27cd534cd8dccb4b16a2ea1c395a0556a130f068"
+    },
+    {
+      "path": "experiments/mnist/resolution_training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1890eb0f8125d1cb39842bbff029e3b33bd5d388",
+      "size": 5189,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1890eb0f8125d1cb39842bbff029e3b33bd5d388"
+    },
+    {
+      "path": "experiments/mnist/training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4b5d10e3c29716e5ca68281e940c53b29b6b45b",
+      "size": 9955,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a4b5d10e3c29716e5ca68281e940c53b29b6b45b"
+    },
+    {
+      "path": "experiments/mnist/training_8x8.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37e6faee81cc8204443a0dd8cca784e8c8a4eda3",
+      "size": 3969,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/37e6faee81cc8204443a0dd8cca784e8c8a4eda3"
+    },
+    {
+      "path": "experiments/mnist/training_resume_8x8.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "287be4e6df8acf8d15ff0cfc01ebd4ea9db0825b",
+      "size": 7129,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/287be4e6df8acf8d15ff0cfc01ebd4ea9db0825b"
+    },
+    {
+      "path": "experiments/nmnist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5665f250f76a91f3e066e3dd1dd94c68a2422d76",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/5665f250f76a91f3e066e3dd1dd94c68a2422d76"
+    },
+    {
+      "path": "experiments/nmnist/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f0419848389a302afcd29a7e00dfe69b0add400",
+      "size": 46,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4f0419848389a302afcd29a7e00dfe69b0add400"
+    },
+    {
+      "path": "experiments/nmnist/controlled_models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54e345968badbd5686a6ab826f6ed32885594b2a",
+      "size": 1141,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/54e345968badbd5686a6ab826f6ed32885594b2a"
+    },
+    {
+      "path": "experiments/nmnist/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cde3995de7bee7b1a796ae8d5caa81d1e624089",
+      "size": 3842,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1cde3995de7bee7b1a796ae8d5caa81d1e624089"
+    },
+    {
+      "path": "experiments/nmnist/hybrid_data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5569be6051b4e53df7b808613d2529cbee69c6eb",
+      "size": 1893,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5569be6051b4e53df7b808613d2529cbee69c6eb"
+    },
+    {
+      "path": "experiments/nmnist/official_pil_adapter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "187a3e367efc276ad55eb53ccbaaa347a43c9324",
+      "size": 5950,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/187a3e367efc276ad55eb53ccbaaa347a43c9324"
+    },
+    {
+      "path": "experiments/nmnist/official_pil_adapter_batched.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f44155e7bdf145906a5606ab83f61598b3c7193",
+      "size": 12055,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9f44155e7bdf145906a5606ab83f61598b3c7193"
+    },
+    {
+      "path": "experiments/nmnist/paper_aligned.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3629a5942271028682760fad051038a21777d05",
+      "size": 1914,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f3629a5942271028682760fad051038a21777d05"
+    },
+    {
+      "path": "experiments/nmnist/reference_models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e72b1376f01638e07ae8a072c42b23a66e7cdbc2",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/e72b1376f01638e07ae8a072c42b23a66e7cdbc2"
+    },
+    {
+      "path": "experiments/nmnist/reference_models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "experiments/nmnist/reference_models/resnet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9b6b99d49dc18ca10ea82eda7943636418f2390",
+      "size": 7384,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a9b6b99d49dc18ca10ea82eda7943636418f2390"
+    },
+    {
+      "path": "experiments/nmnist/reference_models/simplenet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4354e347f132ddba6f7634f4c85bd0156481160a",
+      "size": 5425,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4354e347f132ddba6f7634f4c85bd0156481160a"
+    },
+    {
+      "path": "experiments/nmnist/reference_models/vgg.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd15feef4d3e590e9b7709ce18608f1cbc0501ad",
+      "size": 14357,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/dd15feef4d3e590e9b7709ce18608f1cbc0501ad"
+    },
+    {
+      "path": "experiments/nmnist/snn_baseline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f72dde1f4e634d37c660eec670a7c046230dee12",
+      "size": 9560,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f72dde1f4e634d37c660eec670a7c046230dee12"
+    },
+    {
+      "path": "experiments/nmnist/training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0923c1a65b4dd2400160ddcfe650a768942b55b8",
+      "size": 5125,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0923c1a65b4dd2400160ddcfe650a768942b55b8"
+    },
+    {
+      "path": "experiments/shd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e02eb2f6b1711b832ab0458664fc40e98f3e3db8",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/e02eb2f6b1711b832ab0458664fc40e98f3e3db8"
+    },
+    {
+      "path": "experiments/shd/PLAN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24d7628f8d40ffa5e5a029ef647b4682fa8faefb",
+      "size": 145,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/24d7628f8d40ffa5e5a029ef647b4682fa8faefb"
+    },
+    {
+      "path": "experiments/shd/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "experiments/shd/snn_baseline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f2f949c27152d8e317e7d2f7bc077eeac772d31",
+      "size": 9162,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7f2f949c27152d8e317e7d2f7bc077eeac772d31"
+    },
+    {
+      "path": "metrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11a1e7fe2bfec1ef8fa22eeb6db83132c721f252",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/11a1e7fe2bfec1ef8fa22eeb6db83132c721f252"
+    },
+    {
+      "path": "metrics/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "metrics/quantum_drift.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42c79939ec9b50ab1527f8d6775fd55e11c55936",
+      "size": 1197,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/42c79939ec9b50ab1527f8d6775fd55e11c55936"
+    },
+    {
+      "path": "metrics/spike_statistics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9f62bf0ddf00dfc2c8f6b8a7a768bfedea439cb",
+      "size": 1869,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f9f62bf0ddf00dfc2c8f6b8a7a768bfedea439cb"
+    },
+    {
+      "path": "models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d6acca155aed2d3db325cc1aed756c61d921c7d",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/8d6acca155aed2d3db325cc1aed756c61d921c7d"
+    },
+    {
+      "path": "models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "models/cifar10_dvs_snn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fa233ff7e24a43c2f130a3b3c938e998f31826d",
+      "size": 3088,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2fa233ff7e24a43c2f130a3b3c938e998f31826d"
+    },
+    {
+      "path": "models/dvs_gesture_snn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c3dac33facc269b292590e533cb79fef1f1303c",
+      "size": 1708,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5c3dac33facc269b292590e533cb79fef1f1303c"
+    },
+    {
+      "path": "models/improved_event_snn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "427690e887a48671868a2a73dd583c639e1f06e9",
+      "size": 10122,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/427690e887a48671868a2a73dd583c639e1f06e9"
+    },
+    {
+      "path": "models/mnist_qsnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e0567cd25c6aa7915d39b3f22f6312cee94d4d5",
+      "size": 4270,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3e0567cd25c6aa7915d39b3f22f6312cee94d4d5"
+    },
+    {
+      "path": "models/nmnist_hybrid_qsnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46167fae8d690ab62a2ea19e928a305c5ba60db9",
+      "size": 13247,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/46167fae8d690ab62a2ea19e928a305c5ba60db9"
+    },
+    {
+      "path": "models/nmnist_qsnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b4428f9189faea6e634d336dadb50c1e76c6eec",
+      "size": 6580,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2b4428f9189faea6e634d336dadb50c1e76c6eec"
+    },
+    {
+      "path": "models/nmnist_snn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f7b9b0a29439e429ad21580e6d2c6f080bd9483",
+      "size": 2306,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7f7b9b0a29439e429ad21580e6d2c6f080bd9483"
+    },
+    {
+      "path": "models/qsnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eef3050566e7c61ae51a80944c8d50a265d5466f",
+      "size": 1448,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/eef3050566e7c61ae51a80944c8d50a265d5466f"
+    },
+    {
+      "path": "models/shd_snn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5b435633aa2af57283749d32f08fa3ecd034fa0",
+      "size": 1612,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a5b435633aa2af57283749d32f08fa3ecd034fa0"
+    },
+    {
+      "path": "paper_revision_audit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81c67e014f0976f0e92e8ce30c4c6ae1b9be9ad2",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/81c67e014f0976f0e92e8ce30c4c6ae1b9be9ad2"
+    },
+    {
+      "path": "paper_revision_audit/baseline_descriptions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52ca83cab18ed886237ff8ce113074338fe1fece",
+      "size": 3302,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/52ca83cab18ed886237ff8ce113074338fe1fece"
+    },
+    {
+      "path": "paper_revision_audit/evaluation_metrics.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ac3e165b2d2d2eb15da059cfcdf263fbc885e82",
+      "size": 2934,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4ac3e165b2d2d2eb15da059cfcdf263fbc885e82"
+    },
+    {
+      "path": "paper_revision_audit/hardware_software_versions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b7b5aa98a94e79848274a297ff0e7cf7f6cb425",
+      "size": 2172,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6b7b5aa98a94e79848274a297ff0e7cf7f6cb425"
+    },
+    {
+      "path": "paper_revision_audit/mathematical_formulation.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39ef812af13e1587541927e358ae7c2dc7bfc0b8",
+      "size": 3123,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/39ef812af13e1587541927e358ae7c2dc7bfc0b8"
+    },
+    {
+      "path": "paper_revision_audit/missing_information_and_inconsistencies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41878051367f62c6a3175949fb3eb2050a705def",
+      "size": 3765,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/41878051367f62c6a3175949fb3eb2050a705def"
+    },
+    {
+      "path": "paper_revision_audit/paper_changes_model_attack_defense.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "396825d34b7a332014af62f3085098ee71c96788",
+      "size": 5088,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/396825d34b7a332014af62f3085098ee71c96788"
+    },
+    {
+      "path": "paper_revision_audit/paper_ready_methods_section.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba102f315f3d9fa724f7f94d4c9ad3e681261f4",
+      "size": 4056,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/eba102f315f3d9fa724f7f94d4c9ad3e681261f4"
+    },
+    {
+      "path": "paper_revision_audit/seeds_and_dataset_protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "291beafb79b4ab4bb52ab35ff3139d35ceb39551",
+      "size": 2260,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/291beafb79b4ab4bb52ab35ff3139d35ceb39551"
+    },
+    {
+      "path": "paper_revision_audit/supervisor_summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45722f3e975e7a360ccc2a7a684f7b4cf9bb55b1",
+      "size": 3604,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/45722f3e975e7a360ccc2a7a684f7b4cf9bb55b1"
+    },
+    {
+      "path": "paper_revision_audit/verified_experimental_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc99da5bc9f4c54763f17145299a1a77abdda0d9",
+      "size": 3546,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/dc99da5bc9f4c54763f17145299a1a77abdda0d9"
+    },
+    {
+      "path": "phase_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "038bbb25432b35e96aaff51f6872f00c4bb8a264",
+      "size": 2683,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/038bbb25432b35e96aaff51f6872f00c4bb8a264"
+    },
+    {
+      "path": "pytest.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c34e94f460bba38af461e0d5e346ca025332a242",
+      "size": 56,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c34e94f460bba38af461e0d5e346ca025332a242"
+    },
+    {
+      "path": "readme_jafar.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cda2276d629b4e5b89da084c7387cf5b6daeb6f",
+      "size": 27588,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0cda2276d629b4e5b89da084c7387cf5b6daeb6f"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61e8abd119c0c436c4f5bcde047aaaaec69fa9a1",
+      "size": 162,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/61e8abd119c0c436c4f5bcde047aaaaec69fa9a1"
+    },
+    {
+      "path": "results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee55cca29a64596684937f86aa17890e56086dc7",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/ee55cca29a64596684937f86aa17890e56086dc7"
+    },
+    {
+      "path": "results/final_attack_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c30484fe16d1c30b6d3ec007972b513027f228e2",
+      "size": 3604,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c30484fe16d1c30b6d3ec007972b513027f228e2"
+    },
+    {
+      "path": "results/iris_phase18_beginner_summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e16a9c5267d4b17af249bc220a5ac456e8fa62d",
+      "size": 2202,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6e16a9c5267d4b17af249bc220a5ac456e8fa62d"
+    },
+    {
+      "path": "results/iris_phase18_scientific_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0085c702e064f4164718332c94de2a8b4aad97fb",
+      "size": 1370,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0085c702e064f4164718332c94de2a8b4aad97fb"
+    },
+    {
+      "path": "results/iris_phase19_beginner_summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b7cf053119dcab9239d9ded2c450fa0fd919275",
+      "size": 2237,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2b7cf053119dcab9239d9ded2c450fa0fd919275"
+    },
+    {
+      "path": "results/iris_phase19_scientific_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36d92f765e12d846bc7f6a703060ecf870ac7162",
+      "size": 1461,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/36d92f765e12d846bc7f6a703060ecf870ac7162"
+    },
+    {
+      "path": "results/iris_phase20_beginner_summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2a2f941abee6b1c06fd988652ffc152eaaad9d1",
+      "size": 1995,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a2a2f941abee6b1c06fd988652ffc152eaaad9d1"
+    },
+    {
+      "path": "results/iris_phase20_run_events.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab27e5d3179a0b58657a6dbf05ff3687bed72917",
+      "size": 2264,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ab27e5d3179a0b58657a6dbf05ff3687bed72917"
+    },
+    {
+      "path": "results/iris_phase20_scientific_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48e7625d567805a82770305324d0f1d003845d1b",
+      "size": 1602,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/48e7625d567805a82770305324d0f1d003845d1b"
+    },
+    {
+      "path": "results/iris_phase21_beginner_summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3291a472437bd7ac303b8e500953c205e753cb34",
+      "size": 1975,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3291a472437bd7ac303b8e500953c205e753cb34"
+    },
+    {
+      "path": "results/iris_phase21_run_events.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef24ecf3c0d44ab6f7a9cc3ae1fcee57fb869129",
+      "size": 265,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ef24ecf3c0d44ab6f7a9cc3ae1fcee57fb869129"
+    },
+    {
+      "path": "results/iris_phase21_scientific_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f82a61f09e95de9cb7dbe61febdb8440f044128f",
+      "size": 1196,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f82a61f09e95de9cb7dbe61febdb8440f044128f"
+    },
+    {
+      "path": "results/mnist_8x8_pca_dimension_seed42_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560625ad3a2cd660949aff54f221c0847cc995e6",
+      "size": 4840,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/560625ad3a2cd660949aff54f221c0847cc995e6"
+    },
+    {
+      "path": "results/neuromorphic_dataset_inventory.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9aff06799b7bc2ac75ed27e4656545eb303bf980",
+      "size": 1795,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9aff06799b7bc2ac75ed27e4656545eb303bf980"
+    },
+    {
+      "path": "results/nmnist_attack_calibration_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7d0a576acfb55d55c3931c9ef23c63d1f884a91",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/b7d0a576acfb55d55c3931c9ef23c63d1f884a91"
+    },
+    {
+      "path": "results/nmnist_attack_calibration_seed42/STATUS_INVALID_DEBUG_ONLY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90b631f60b2d0fa9323981d1a0420eddaa840aa9",
+      "size": 264,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/90b631f60b2d0fa9323981d1a0420eddaa840aa9"
+    },
+    {
+      "path": "results/nmnist_attack_calibration_seed42/implementation_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afe1ebdb8cb7a2627553fe9514d4406eb8540b1d",
+      "size": 2284,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/afe1ebdb8cb7a2627553fe9514d4406eb8540b1d"
+    },
+    {
+      "path": "results/nmnist_attack_comparison_seed42_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "defab30c5f94802c27d121909322bf990a47663d",
+      "size": 1666,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/defab30c5f94802c27d121909322bf990a47663d"
+    },
+    {
+      "path": "results/nmnist_attack_pipeline_sanity_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "728e60ed2a235bf4da44355cfa420ce6a8ed07d0",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/728e60ed2a235bf4da44355cfa420ce6a8ed07d0"
+    },
+    {
+      "path": "results/nmnist_attack_pipeline_sanity_seed42/finding.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8087d02bd31425a503ba305e370c583cbedae9ab",
+      "size": 1516,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8087d02bd31425a503ba305e370c583cbedae9ab"
+    },
+    {
+      "path": "results/nmnist_attack_protocol_v3_auditable_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89c045cb7f83b9ee776f7922d2983bd72e43edaf",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/89c045cb7f83b9ee776f7922d2983bd72e43edaf"
+    },
+    {
+      "path": "results/nmnist_attack_protocol_v3_auditable_seed42/statistical_analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bbe3e1152ff5540c9d068b70daa55085930d009c",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/bbe3e1152ff5540c9d068b70daa55085930d009c"
+    },
+    {
+      "path": "results/nmnist_attack_protocol_v3_auditable_seed42/statistical_analysis/statistical_report_seed42.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cade865c0cc27cf7a39993bb37a7f0cb74365d6",
+      "size": 8379,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5cade865c0cc27cf7a39993bb37a7f0cb74365d6"
+    },
+    {
+      "path": "results/nmnist_budget_matched_comparison_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f7c08fda22154c2dc2c96438e4c3444dbc3e11c5",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/f7c08fda22154c2dc2c96438e4c3444dbc3e11c5"
+    },
+    {
+      "path": "results/nmnist_budget_matched_comparison_seed42/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9557c788a82db970f87f903053ef90706bc5f260",
+      "size": 571,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9557c788a82db970f87f903053ef90706bc5f260"
+    },
+    {
+      "path": "results/nmnist_budget_matched_comparison_seed42/budget_matched_report_seed42.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74681757ca50b4d93c52957b9b1e24d890d5186d",
+      "size": 2370,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/74681757ca50b4d93c52957b9b1e24d890d5186d"
+    },
+    {
+      "path": "results/nmnist_budget_matched_comparison_v2_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc02807fd448d3bfda7c4882fbf62eb4da0c083a",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/dc02807fd448d3bfda7c4882fbf62eb4da0c083a"
+    },
+    {
+      "path": "results/nmnist_budget_matched_comparison_v2_seed42/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef2f4ed4775e2ea02f946653035282a790254091",
+      "size": 512,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ef2f4ed4775e2ea02f946653035282a790254091"
+    },
+    {
+      "path": "results/nmnist_budget_matched_comparison_v2_seed42/report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06981ccfa4bea01225d80b33ca5e525a50c0f0c",
+      "size": 2962,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b06981ccfa4bea01225d80b33ca5e525a50c0f0c"
+    },
+    {
+      "path": "results/nmnist_budget_matched_comparison_v2_seed42/resume_progress.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "814457e35607285923babe27e65133a527737af6",
+      "size": 403695,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/814457e35607285923babe27e65133a527737af6"
+    },
+    {
+      "path": "results/nmnist_common_attack_protocol_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "018b223d3f2171ea42f125e4c1766ab9d9d442f7",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/018b223d3f2171ea42f125e4c1766ab9d9d442f7"
+    },
+    {
+      "path": "results/nmnist_common_attack_protocol_seed42/STATUS_INVALID_DEBUG_ONLY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "123ee8bfcd529679e2d60e23f9b4fc207bd5b647",
+      "size": 569,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/123ee8bfcd529679e2d60e23f9b4fc207bd5b647"
+    },
+    {
+      "path": "results/nmnist_hybrid_qsnn_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99189a6068f5ae293867db73f7126c2b7538425b",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/99189a6068f5ae293867db73f7126c2b7538425b"
+    },
+    {
+      "path": "results/nmnist_hybrid_qsnn_seed42/frontend_v3_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e3f2e379d3df0f592967cb6dc3d2f325e039c71",
+      "size": 2270,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9e3f2e379d3df0f592967cb6dc3d2f325e039c71"
+    },
+    {
+      "path": "results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "234c3227d95230c085c94282973261e98f632c38",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/234c3227d95230c085c94282973261e98f632c38"
+    },
+    {
+      "path": "results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "924df8d29d7f11faa1d016982e2d9d3d9fc006d0",
+      "size": 1127,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/924df8d29d7f11faa1d016982e2d9d3d9fc006d0"
+    },
+    {
+      "path": "results/nmnist_hybrid_qsnn_seed42/quantum_head_v2_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e2299ca2c850d904747d0dcd4a7515b6f65b6b1",
+      "size": 2191,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1e2299ca2c850d904747d0dcd4a7515b6f65b6b1"
+    },
+    {
+      "path": "results/nmnist_hybrid_qsnn_seed42/report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83f1b8a50a69d11dd28fed17ba3b0d2d368d6ccd",
+      "size": 1752,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/83f1b8a50a69d11dd28fed17ba3b0d2d368d6ccd"
+    },
+    {
+      "path": "results/nmnist_low_epsilon_calibration_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5572dfafb1733e6dee8e12bf5625a6ea50fa196",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/d5572dfafb1733e6dee8e12bf5625a6ea50fa196"
+    },
+    {
+      "path": "results/nmnist_low_epsilon_calibration_seed42/compute_accounting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42dda4f2f39f2423b456d15f30efb6b3fbac97fe",
+      "size": 1201,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/42dda4f2f39f2423b456d15f30efb6b3fbac97fe"
+    },
+    {
+      "path": "results/nmnist_qsnn_ablation_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa4673f6938738ca6ece091c42ece92901321bd2",
+      "size": 1286,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/fa4673f6938738ca6ece091c42ece92901321bd2"
+    },
+    {
+      "path": "results/nmnist_temp_drift_v2_seed42",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef8447918236310576ddb753f5f682b479872e3f",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/ef8447918236310576ddb753f5f682b479872e3f"
+    },
+    {
+      "path": "results/nmnist_temp_drift_v2_seed42/STATUS_INVALID_DEBUG_ONLY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "549ef08d8bb50089111da49978e61643cf1ce23b",
+      "size": 235,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/549ef08d8bb50089111da49978e61643cf1ce23b"
+    },
+    {
+      "path": "results/nmnist_temp_drift_v2_seed42/protocol_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a011ee1269cb7d51d680d62ebfd2d1f382d04190",
+      "size": 1531,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a011ee1269cb7d51d680d62ebfd2d1f382d04190"
+    },
+    {
+      "path": "results/phase14_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b4e09fcb6040c31e98758a89a19dee2fa18124f",
+      "size": 4077,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4b4e09fcb6040c31e98758a89a19dee2fa18124f"
+    },
+    {
+      "path": "results/phase151_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91a074f17522fade245c0e45aecb2802b97488a2",
+      "size": 4597,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/91a074f17522fade245c0e45aecb2802b97488a2"
+    },
+    {
+      "path": "results/phase152_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bde25c80ebbefc3178693249203269813f83cd8",
+      "size": 3983,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4bde25c80ebbefc3178693249203269813f83cd8"
+    },
+    {
+      "path": "results/phase153_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b154b3fa163a52efdfd1fd76dbe6ea09786c4cb",
+      "size": 3655,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8b154b3fa163a52efdfd1fd76dbe6ea09786c4cb"
+    },
+    {
+      "path": "results/phase15_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93c53fee634c875da079164f3a81d373e572d8a0",
+      "size": 5511,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/93c53fee634c875da079164f3a81d373e572d8a0"
+    },
+    {
+      "path": "results/phase16_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afae106966ceec1a00641f36b2343dc9313de99e",
+      "size": 3092,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/afae106966ceec1a00641f36b2343dc9313de99e"
+    },
+    {
+      "path": "results/phase171_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "befca26e766b6d959fa94a9664d67fec87b24f51",
+      "size": 6365,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/befca26e766b6d959fa94a9664d67fec87b24f51"
+    },
+    {
+      "path": "results/phase172_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b42bcc5b25c99d1fe8853afcc254e001f5ac8802",
+      "size": 7852,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b42bcc5b25c99d1fe8853afcc254e001f5ac8802"
+    },
+    {
+      "path": "results/phase173_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e403825dc4805053495a9ef159d7f032c386e73",
+      "size": 18213,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4e403825dc4805053495a9ef159d7f032c386e73"
+    },
+    {
+      "path": "results/phase17_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c7e7fcaf17e6e506fb68b1fd756f1af2abe1781",
+      "size": 6416,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8c7e7fcaf17e6e506fb68b1fd756f1af2abe1781"
+    },
+    {
+      "path": "results/phase18_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23c8f8a41c41c9986477cf7144b2f3423696e479",
+      "size": 6620,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/23c8f8a41c41c9986477cf7144b2f3423696e479"
+    },
+    {
+      "path": "results/phase19_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa28f641104ebd3a6f3ab1daa9ca041b5608a3d2",
+      "size": 6293,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/fa28f641104ebd3a6f3ab1daa9ca041b5608a3d2"
+    },
+    {
+      "path": "results/phase20_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74bbbabebc11787999e0e6efc74bb87abf8893a4",
+      "size": 6184,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/74bbbabebc11787999e0e6efc74bb87abf8893a4"
+    },
+    {
+      "path": "results/phase21_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f5a566cded698bd2e8f616abbace20669a0e79a",
+      "size": 7204,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4f5a566cded698bd2e8f616abbace20669a0e79a"
+    },
+    {
+      "path": "results/phase22_results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1be6ad9fabeb37fc6fe8e0ae5a2fe2b69cfbd58",
+      "size": 2491,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b1be6ad9fabeb37fc6fe8e0ae5a2fe2b69cfbd58"
+    },
+    {
+      "path": "results/shd_snn_multiseed_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42bd1bd61bbcb19d7859059c737d0e00a56fd579",
+      "size": 561,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/42bd1bd61bbcb19d7859059c737d0e00a56fd579"
+    },
+    {
+      "path": "results/shd_snn_test_reaudit_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca3e60f0c48c7ad65c4dee1dd03840078f9907b",
+      "size": 564,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1ca3e60f0c48c7ad65c4dee1dd03840078f9907b"
+    },
+    {
+      "path": "run_phase.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f364e1f18ed1672bdc014fb1bce646499dea869b",
+      "size": 196,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f364e1f18ed1672bdc014fb1bce646499dea869b"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb194881b2ce0de1b6afd166528595c74682ade2",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/fb194881b2ce0de1b6afd166528595c74682ade2"
+    },
+    {
+      "path": "scripts/_gen_budget.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "485f3786492e51a1f5bf810204ce352e5d6d5b8b",
+      "size": 27465,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/485f3786492e51a1f5bf810204ce352e5d6d5b8b"
+    },
+    {
+      "path": "scripts/analyze_nmnist_seed42_statistics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a7b02d59a3c71408f30f0c508e48c6ab1debdd3",
+      "size": 26306,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6a7b02d59a3c71408f30f0c508e48c6ab1debdd3"
+    },
+    {
+      "path": "scripts/audit_clean_accuracy_representations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0583d86bcf98580b5edf82b0d43f8f4ceae558c",
+      "size": 32424,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a0583d86bcf98580b5edf82b0d43f8f4ceae558c"
+    },
+    {
+      "path": "scripts/audit_nmnist_attack_pipeline_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "847013dca83e6396103130a9df325b67413b1d63",
+      "size": 5371,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/847013dca83e6396103130a9df325b67413b1d63"
+    },
+    {
+      "path": "scripts/audit_nmnist_attack_protocol_v3_auditable_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9c7c6f9f03c7d3472f92674343b72b03b529ea8",
+      "size": 39345,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b9c7c6f9f03c7d3472f92674343b72b03b529ea8"
+    },
+    {
+      "path": "scripts/audit_nmnist_binary_true_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95010c3a7ac4aeec0a152a75ed09a1be430ec80a",
+      "size": 8473,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/95010c3a7ac4aeec0a152a75ed09a1be430ec80a"
+    },
+    {
+      "path": "scripts/audit_nmnist_controlled_attack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fac49c6b385a8a7a92d237d9321f923950045c3",
+      "size": 10862,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5fac49c6b385a8a7a92d237d9321f923950045c3"
+    },
+    {
+      "path": "scripts/audit_nmnist_integer_corrected.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16c206118cdb15d94857c5b5d2a34eae82e18284",
+      "size": 8477,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/16c206118cdb15d94857c5b5d2a34eae82e18284"
+    },
+    {
+      "path": "scripts/audit_nmnist_seed42_paper_aligned_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01b5fefe3991fc4aacd3b857e3c5b90efca98e93",
+      "size": 11841,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/01b5fefe3991fc4aacd3b857e3c5b90efca98e93"
+    },
+    {
+      "path": "scripts/audit_nmnist_seed42_paper_aligned_integer_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6354ea7dad2cd4863044a7082375195f5543e766",
+      "size": 11980,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6354ea7dad2cd4863044a7082375195f5543e766"
+    },
+    {
+      "path": "scripts/benchmark_independent_sample_batching.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87921f2f3b4845af68d32ba7db03c7a8a692cbc8",
+      "size": 11368,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/87921f2f3b4845af68d32ba7db03c7a8a692cbc8"
+    },
+    {
+      "path": "scripts/build_nmnist_controlled_manifest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "958dddc5c64589d2373ae2a16b64bbe8902365ea",
+      "size": 4304,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/958dddc5c64589d2373ae2a16b64bbe8902365ea"
+    },
+    {
+      "path": "scripts/check_environment.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fb132ecace03615ab58ba08f573b3f6302a2689",
+      "size": 521,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9fb132ecace03615ab58ba08f573b3f6302a2689"
+    },
+    {
+      "path": "scripts/compare_cifar10_dvs_resolution_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a9aae0c4a1cf8dd7d099a02b334ec6ec210de94",
+      "size": 8394,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4a9aae0c4a1cf8dd7d099a02b334ec6ec210de94"
+    },
+    {
+      "path": "scripts/complete_mnist_8x8_pca16_capacity_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a932bd3dac392edbb4f94ece1278ed7bae8f0e",
+      "size": 3648,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d9a932bd3dac392edbb4f94ece1278ed7bae8f0e"
+    },
+    {
+      "path": "scripts/demo_pipeline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbb75f5f3350c3bb0cd0eeced22b529056975248",
+      "size": 682,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/cbb75f5f3350c3bb0cd0eeced22b529056975248"
+    },
+    {
+      "path": "scripts/diagnose_clean_seed_sensitivity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2edc7d3b7ad2a7b02d43d0b2c9999a1e27c438",
+      "size": 8358,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ea2edc7d3b7ad2a7b02d43d0b2c9999a1e27c438"
+    },
+    {
+      "path": "scripts/equivalence_phase1_optimization.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f02385c03f76ddeb764b216d7008d7dde7c67f1",
+      "size": 18274,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/5f02385c03f76ddeb764b216d7008d7dde7c67f1"
+    },
+    {
+      "path": "scripts/evaluate_clean_accuracy_full_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3a3da7af024a29d7be6722dba805ccaea08960c",
+      "size": 15653,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e3a3da7af024a29d7be6722dba805ccaea08960c"
+    },
+    {
+      "path": "scripts/evaluate_iris_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cc4121804cf71a820db5c821619a827edc4c556",
+      "size": 1484,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4cc4121804cf71a820db5c821619a827edc4c556"
+    },
+    {
+      "path": "scripts/evaluate_mnist_4x4_clean_heldout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "340cc8f6064084685fab7d03bc622455edd58baa",
+      "size": 2970,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/340cc8f6064084685fab7d03bc622455edd58baa"
+    },
+    {
+      "path": "scripts/evaluate_nmnist_snn_test_once.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50f1ce3b624c9f731ea3b0c237429c85bb2540d5",
+      "size": 3909,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/50f1ce3b624c9f731ea3b0c237429c85bb2540d5"
+    },
+    {
+      "path": "scripts/evaluate_shd_resume350_test_once.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98ba397f392a32df24977de1bf8394d3c077c830",
+      "size": 5833,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/98ba397f392a32df24977de1bf8394d3c077c830"
+    },
+    {
+      "path": "scripts/finalize_nmnist_frontend_v3_artifacts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea4e2bdc235bcc0e0c9f608c766a61970a0019b1",
+      "size": 2403,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ea4e2bdc235bcc0e0c9f608c766a61970a0019b1"
+    },
+    {
+      "path": "scripts/pilot_nmnist_controlled_lr.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fe7ccf3abc4c6852e4ebc119d842d2c0120db8e",
+      "size": 3568,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3fe7ccf3abc4c6852e4ebc119d842d2c0120db8e"
+    },
+    {
+      "path": "scripts/prepare_neuromorphic_datasets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "945d14a6eabf10ccf25f17175973f326dade7057",
+      "size": 9718,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/945d14a6eabf10ccf25f17175973f326dade7057"
+    },
+    {
+      "path": "scripts/profile_phase1_batching.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "496cfef0a31d4bd1ed532a69ef1e2b040263a29b",
+      "size": 11669,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/496cfef0a31d4bd1ed532a69ef1e2b040263a29b"
+    },
+    {
+      "path": "scripts/profile_phase1_runtime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88e83ea1e9c186eb1f5ae54eedcb7e82cc52f94a",
+      "size": 6164,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/88e83ea1e9c186eb1f5ae54eedcb7e82cc52f94a"
+    },
+    {
+      "path": "scripts/reaudit_shd_snn_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8439f1300a6faa9e5a2de604e85de09c50928f2",
+      "size": 10513,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a8439f1300a6faa9e5a2de604e85de09c50928f2"
+    },
+    {
+      "path": "scripts/reconcile_phase21_contract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c885993430b864d5e9d6a49cdacce4db95d466",
+      "size": 13940,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e2c885993430b864d5e9d6a49cdacce4db95d466"
+    },
+    {
+      "path": "scripts/repair_binf3_provenance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e347976fb281bc9809d8696cd57eb07ff2dbbd1e",
+      "size": 2816,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e347976fb281bc9809d8696cd57eb07ff2dbbd1e"
+    },
+    {
+      "path": "scripts/reproduce_nmnist_table1_audit_subset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e95d83ecd0e078a76ad5d0870ecdaf4c9f75249d",
+      "size": 8644,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e95d83ecd0e078a76ad5d0870ecdaf4c9f75249d"
+    },
+    {
+      "path": "scripts/resume_mnist_4x4_clean.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2799cb26a568dbd3f78ebc7ad35c0300b9a00fa0",
+      "size": 4252,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2799cb26a568dbd3f78ebc7ad35c0300b9a00fa0"
+    },
+    {
+      "path": "scripts/resume_mnist_8x8_pca16_blocks4_seed42_to400.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3781f35d87331ceb73156748c33c64de9a192e27",
+      "size": 3163,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3781f35d87331ceb73156748c33c64de9a192e27"
+    },
+    {
+      "path": "scripts/resume_mnist_8x8_pca16_clean_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4677513ba859719da50206fb1986740f2a48228c",
+      "size": 3434,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4677513ba859719da50206fb1986740f2a48228c"
+    },
+    {
+      "path": "scripts/resume_mnist_8x8_pca16_clean_seed42_to400.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8c62216a4bb613f21c674ef8fa6d436765efd19",
+      "size": 3240,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f8c62216a4bb613f21c674ef8fa6d436765efd19"
+    },
+    {
+      "path": "scripts/resume_shd_snn_350.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b24898d625ebede7ce10062fdd1d7b394edf3f2b",
+      "size": 12092,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b24898d625ebede7ce10062fdd1d7b394edf3f2b"
+    },
+    {
+      "path": "scripts/resume_shd_snn_longer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e066610eee8c9d293a2472d2527ab9f4061f7b81",
+      "size": 11431,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e066610eee8c9d293a2472d2527ab9f4061f7b81"
+    },
+    {
+      "path": "scripts/run_and_update_nmnist_paper_tables.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3c74d5402ec72f9445a0cff581dc1fd13bc5869",
+      "size": 1785,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f3c74d5402ec72f9445a0cff581dc1fd13bc5869"
+    },
+    {
+      "path": "scripts/run_attack_demo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e76a9c174a251f676841041b35986e22b7c6cf4d",
+      "size": 1164,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e76a9c174a251f676841041b35986e22b7c6cf4d"
+    },
+    {
+      "path": "scripts/run_attack_sweep.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b31d9364c2372f3e3a1be326415e2a1dec4560b4",
+      "size": 1343,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b31d9364c2372f3e3a1be326415e2a1dec4560b4"
+    },
+    {
+      "path": "scripts/run_clean_improved_final.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8391f04d73455fe786155e53b2416f5ee776b73",
+      "size": 1796,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c8391f04d73455fe786155e53b2416f5ee776b73"
+    },
+    {
+      "path": "scripts/run_clean_qsnn_160_epoch_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c21a81c5c7224cfd56a3ca7dba5fc249dbc2a1",
+      "size": 6463,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b8c21a81c5c7224cfd56a3ca7dba5fc249dbc2a1"
+    },
+    {
+      "path": "scripts/run_clean_qsnn_240_epoch_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fb88bfcde6391b778c59c02ad6fc3022b7cb9f1",
+      "size": 6129,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9fb88bfcde6391b778c59c02ad6fc3022b7cb9f1"
+    },
+    {
+      "path": "scripts/run_clean_qsnn_380_epoch_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac1ad86b39d2e228245e43b194f0b25dfdbfe856",
+      "size": 5835,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ac1ad86b39d2e228245e43b194f0b25dfdbfe856"
+    },
+    {
+      "path": "scripts/run_clean_qsnn_600_epoch_final.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5fa7aa5194187e6aaa9e2a2fc401fd51201bcd2",
+      "size": 7170,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f5fa7aa5194187e6aaa9e2a2fc401fd51201bcd2"
+    },
+    {
+      "path": "scripts/run_clean_qsnn_lr_scheduler_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f56404b54bc49f644c8e2c86857bc892d87af06",
+      "size": 8496,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2f56404b54bc49f644c8e2c86857bc892d87af06"
+    },
+    {
+      "path": "scripts/run_clean_qsnn_multiseed_baseline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10515a0d8066614021292e64e2a0542d4b9a7a98",
+      "size": 9544,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/10515a0d8066614021292e64e2a0542d4b9a7a98"
+    },
+    {
+      "path": "scripts/run_depth_ablation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a987dac95a3c19c49d32b66876ce0cc5b765e27f",
+      "size": 1800,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a987dac95a3c19c49d32b66876ce0cc5b765e27f"
+    },
+    {
+      "path": "scripts/run_final_attack_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d6187a046f2ccfb3a6261f96c6e81e3b146ea17",
+      "size": 11227,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1d6187a046f2ccfb3a6261f96c6e81e3b146ea17"
+    },
+    {
+      "path": "scripts/run_gradient_adaptive_temp_drift_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1f7f1dc338b7428c616f98d1e1cfadce8fdb916",
+      "size": 10249,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d1f7f1dc338b7428c616f98d1e1cfadce8fdb916"
+    },
+    {
+      "path": "scripts/run_gradient_attack_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "107dcf748e9c11a30a69b1532f2513aa115009df",
+      "size": 2450,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/107dcf748e9c11a30a69b1532f2513aa115009df"
+    },
+    {
+      "path": "scripts/run_mnist_4x4_clean_multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b03790c4192c37411f83ea362efc84e069cdf3c2",
+      "size": 5864,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b03790c4192c37411f83ea362efc84e069cdf3c2"
+    },
+    {
+      "path": "scripts/run_mnist_8x8_pca16_capacity_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7471a1f003bc3268d15312f47a400ff7a6b2f99",
+      "size": 3379,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d7471a1f003bc3268d15312f47a400ff7a6b2f99"
+    },
+    {
+      "path": "scripts/run_mnist_8x8_pca16_clean_sanity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be9e5e419c43d185f1494f8e6d95e306f1515b9",
+      "size": 3112,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4be9e5e419c43d185f1494f8e6d95e306f1515b9"
+    },
+    {
+      "path": "scripts/run_mnist_8x8_pca_dimension_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4331d647d8caa9781a5bb49bb9d0df9475ffa3f9",
+      "size": 3880,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/4331d647d8caa9781a5bb49bb9d0df9475ffa3f9"
+    },
+    {
+      "path": "scripts/run_mnist_pca16_resolution_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eaf364e43f7cf314ccfa206db1557351db2aece",
+      "size": 3218,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9eaf364e43f7cf314ccfa206db1557351db2aece"
+    },
+    {
+      "path": "scripts/run_mnist_pca24_resolution_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9721a6f10c6aa208665b9ab8be8cf59c3dca3563",
+      "size": 5199,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9721a6f10c6aa208665b9ab8be8cf59c3dca3563"
+    },
+    {
+      "path": "scripts/run_nmnist_attack_calibration_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39db94560102d9c552199af419966f6bba12d7cb",
+      "size": 6123,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/39db94560102d9c552199af419966f6bba12d7cb"
+    },
+    {
+      "path": "scripts/run_nmnist_attack_comparison_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da426f940be3c40c8cc7f73ca00a53a90194b4dc",
+      "size": 33551,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/da426f940be3c40c8cc7f73ca00a53a90194b4dc"
+    },
+    {
+      "path": "scripts/run_nmnist_attack_protocol_v2_canonical_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d62bc6173ceb80da76d28790c117f6d11ca49f8",
+      "size": 8302,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1d62bc6173ceb80da76d28790c117f6d11ca49f8"
+    },
+    {
+      "path": "scripts/run_nmnist_attack_protocol_v3_auditable_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c2139e9826236f6386cdd7c9295abd952e73ba1",
+      "size": 23259,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2c2139e9826236f6386cdd7c9295abd952e73ba1"
+    },
+    {
+      "path": "scripts/run_nmnist_binary_true_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1acd05c0e7af371b8ac77a2959549dc7bcdc8f63",
+      "size": 18543,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1acd05c0e7af371b8ac77a2959549dc7bcdc8f63"
+    },
+    {
+      "path": "scripts/run_nmnist_budget_matched_comparison_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "345e869c7571e5d65389f72dcd0d1c7df9ac12a8",
+      "size": 29188,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/345e869c7571e5d65389f72dcd0d1c7df9ac12a8"
+    },
+    {
+      "path": "scripts/run_nmnist_budget_matched_comparison_v2_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f9fdf6c600fc874ae291550971f2b2d06474f46",
+      "size": 54729,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2f9fdf6c600fc874ae291550971f2b2d06474f46"
+    },
+    {
+      "path": "scripts/run_nmnist_clean_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3676ebcb79d89dbc84f6f6e541dd940d3d06de5",
+      "size": 6597,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d3676ebcb79d89dbc84f6f6e541dd940d3d06de5"
+    },
+    {
+      "path": "scripts/run_nmnist_common_attack_protocol_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "519ad1cf1934460c39b8968ade3a38d4c48f8972",
+      "size": 9084,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/519ad1cf1934460c39b8968ade3a38d4c48f8972"
+    },
+    {
+      "path": "scripts/run_nmnist_controlled_attack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3916158a13bf9feb44edc3333e814e20a7ac9847",
+      "size": 9854,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3916158a13bf9feb44edc3333e814e20a7ac9847"
+    },
+    {
+      "path": "scripts/run_nmnist_controlled_four_models.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "193c2bc20e07e2437d174575690a9ba507e55a85",
+      "size": 2947,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/193c2bc20e07e2437d174575690a9ba507e55a85"
+    },
+    {
+      "path": "scripts/run_nmnist_frontend_v3_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26f0419ae0a77dc4f4db41e0dd7253d33eb0190a",
+      "size": 8468,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/26f0419ae0a77dc4f4db41e0dd7253d33eb0190a"
+    },
+    {
+      "path": "scripts/run_nmnist_hybrid_qsnn_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f94eb7ab62c1c5dc766da8375e02c4039162922",
+      "size": 12497,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6f94eb7ab62c1c5dc766da8375e02c4039162922"
+    },
+    {
+      "path": "scripts/run_nmnist_integer_corrected.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cccaacd5ee63f672497a320de945cc88b87e49ef",
+      "size": 18697,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/cccaacd5ee63f672497a320de945cc88b87e49ef"
+    },
+    {
+      "path": "scripts/run_nmnist_low_epsilon_calibration_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9b180e81aeaeee25de2e632f8ab1ff5eb6da72b",
+      "size": 4507,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b9b180e81aeaeee25de2e632f8ab1ff5eb6da72b"
+    },
+    {
+      "path": "scripts/run_nmnist_qsnn_controlled_ablation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24f9da52b8326a82653348030ad7bb5d7432ec8a",
+      "size": 21446,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/24f9da52b8326a82653348030ad7bb5d7432ec8a"
+    },
+    {
+      "path": "scripts/run_nmnist_qsnn_seed42_sanity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "355d0d625f25916cb7d07961d760a8e5d635951c",
+      "size": 13381,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/355d0d625f25916cb7d07961d760a8e5d635951c"
+    },
+    {
+      "path": "scripts/run_nmnist_qsnn_v3_multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3c7250039af06d6aff8ed5abf9fc0cc960fdf9c",
+      "size": 19517,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e3c7250039af06d6aff8ed5abf9fc0cc960fdf9c"
+    },
+    {
+      "path": "scripts/run_nmnist_quantum_head_v2_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb6c3f3a9ab9be66ea724c3a2bd905d88b53e780",
+      "size": 9481,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/fb6c3f3a9ab9be66ea724c3a2bd905d88b53e780"
+    },
+    {
+      "path": "scripts/run_nmnist_seed42_paper_aligned_all.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28e1bffd7cf8be7719fd3f5fd9c955b9036b1dd2",
+      "size": 4123,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/28e1bffd7cf8be7719fd3f5fd9c955b9036b1dd2"
+    },
+    {
+      "path": "scripts/run_nmnist_seed42_paper_aligned_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17e8f720817bb1c50c24411f2c9cc447c218ae7b",
+      "size": 15230,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/17e8f720817bb1c50c24411f2c9cc447c218ae7b"
+    },
+    {
+      "path": "scripts/run_nmnist_seed42_paper_aligned_integer_all.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c7e226c4399738ea10b783f8c49974f37d05879",
+      "size": 5955,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6c7e226c4399738ea10b783f8c49974f37d05879"
+    },
+    {
+      "path": "scripts/run_nmnist_seed42_paper_aligned_integer_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f2308538946a584f30c023e99a422ca8569f6be",
+      "size": 15572,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6f2308538946a584f30c023e99a422ca8569f6be"
+    },
+    {
+      "path": "scripts/run_nmnist_snn_multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3c99985cae436799f5a324dc002ef896d46c775",
+      "size": 11928,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c3c99985cae436799f5a324dc002ef896d46c775"
+    },
+    {
+      "path": "scripts/run_nmnist_temp_drift_v2_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6770c9fbe401c5570e1a0793fe9160db9cfdf0d3",
+      "size": 7625,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6770c9fbe401c5570e1a0793fe9160db9cfdf0d3"
+    },
+    {
+      "path": "scripts/run_one_stage_temp_drift_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06d68583d0d0476d877a4467fac78cc6ae6a867c",
+      "size": 5492,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/06d68583d0d0476d877a4467fac78cc6ae6a867c"
+    },
+    {
+      "path": "scripts/run_phase14_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1550703c4478c1b8f22f336213d07585dfe68185",
+      "size": 1946,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1550703c4478c1b8f22f336213d07585dfe68185"
+    },
+    {
+      "path": "scripts/run_phase152_paired_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29ec75029799a2e4d0ecadb1c2b42482c2e1e1a9",
+      "size": 9340,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/29ec75029799a2e4d0ecadb1c2b42482c2e1e1a9"
+    },
+    {
+      "path": "scripts/run_phase153_multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3415cdc25cf9d6b6f90ae9b03ab0a63e893c4cfa",
+      "size": 11691,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3415cdc25cf9d6b6f90ae9b03ab0a63e893c4cfa"
+    },
+    {
+      "path": "scripts/run_phase16_decision_defense.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c131f743578624725cbf434ac1f59e02fe4ad463",
+      "size": 12471,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c131f743578624725cbf434ac1f59e02fe4ad463"
+    },
+    {
+      "path": "scripts/run_phase171_calibration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15bdedeaa779b4d1c0058c3b8d41cd7d5c979f72",
+      "size": 16122,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/15bdedeaa779b4d1c0058c3b8d41cd7d5c979f72"
+    },
+    {
+      "path": "scripts/run_phase172_diagnosis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6b4e0615c516f6711bbe70911cc0b8fa2e52b77",
+      "size": 15012,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e6b4e0615c516f6711bbe70911cc0b8fa2e52b77"
+    },
+    {
+      "path": "scripts/run_phase173_checkpoint_selection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8ed781aa4c57229db0063e829f1bfb5c143f2db",
+      "size": 21756,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f8ed781aa4c57229db0063e829f1bfb5c143f2db"
+    },
+    {
+      "path": "scripts/run_phase17_adversarial_training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e02fac986e1455110551e0dbcc638d54cd2312a",
+      "size": 17132,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1e02fac986e1455110551e0dbcc638d54cd2312a"
+    },
+    {
+      "path": "scripts/run_phase18_representation_diagnosis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58b8eec5af25882eca7c06b5cd5fc581d615e8d2",
+      "size": 35818,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/58b8eec5af25882eca7c06b5cd5fc581d615e8d2"
+    },
+    {
+      "path": "scripts/run_phase19_frozen_heads.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14e418ae391784d0680b19acccf3953847a79ad1",
+      "size": 28715,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/14e418ae391784d0680b19acccf3953847a79ad1"
+    },
+    {
+      "path": "scripts/run_phase1_nmnist_benchmark.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "195456a19438dd67a0ac0a04e77580a83aeabd58",
+      "size": 27415,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/195456a19438dd67a0ac0a04e77580a83aeabd58"
+    },
+    {
+      "path": "scripts/run_phase20_calibration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "497ccb478c65b4d98d03bf5f3887528bdd5a307b",
+      "size": 33109,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/497ccb478c65b4d98d03bf5f3887528bdd5a307b"
+    },
+    {
+      "path": "scripts/run_phase21_representation_consistency.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6e4a0c50a66c8be347349a58a3321c6fc0bf8a8",
+      "size": 41245,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/b6e4a0c50a66c8be347349a58a3321c6fc0bf8a8"
+    },
+    {
+      "path": "scripts/run_phase22_seed_sensitivity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ace5f6d6847e963687d862ceb9422bdb75e762dc",
+      "size": 9088,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ace5f6d6847e963687d862ceb9422bdb75e762dc"
+    },
+    {
+      "path": "scripts/run_quantum_refined_temp_drift_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf1437801a66e37bfe5d0716c1946a4e8ed5777e",
+      "size": 6906,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/cf1437801a66e37bfe5d0716c1946a4e8ed5777e"
+    },
+    {
+      "path": "scripts/run_quantum_temp_normalized_check.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad954e34ee3deb985f0abf38fde72a9016ba984c",
+      "size": 1512,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ad954e34ee3deb985f0abf38fde72a9016ba984c"
+    },
+    {
+      "path": "scripts/run_quantum_temp_phase15.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6205fdd1cdcb59176f5e530e10913293672f3012",
+      "size": 4255,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6205fdd1cdcb59176f5e530e10913293672f3012"
+    },
+    {
+      "path": "scripts/run_quantum_temp_phase151.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "703e104c0b5e4582dcd6d998e05ac6d8530ce6fe",
+      "size": 14113,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/703e104c0b5e4582dcd6d998e05ac6d8530ce6fe"
+    },
+    {
+      "path": "scripts/run_remaining_benchmark.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bd56554da97abb908d4e95e4fa64bd03f983d21",
+      "size": 2731,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2bd56554da97abb908d4e95e4fa64bd03f983d21"
+    },
+    {
+      "path": "scripts/run_shd_snn_multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac49724d17800d40307424d128bd19fa32460d17",
+      "size": 12632,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ac49724d17800d40307424d128bd19fa32460d17"
+    },
+    {
+      "path": "scripts/run_temp_drift_improvement_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fa9329b76a33bb9ce7927cd3e5d4e23116884fd",
+      "size": 6566,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8fa9329b76a33bb9ce7927cd3e5d4e23116884fd"
+    },
+    {
+      "path": "scripts/run_two_stage_temp_drift_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26a5c07781916d1ca17e97f13a92bceb99801cc9",
+      "size": 6153,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/26a5c07781916d1ca17e97f13a92bceb99801cc9"
+    },
+    {
+      "path": "scripts/summarize_nmnist_common_attack_protocol_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58246ec05e48a1fd23f24d5e86fb3346a4590110",
+      "size": 2502,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/58246ec05e48a1fd23f24d5e86fb3346a4590110"
+    },
+    {
+      "path": "scripts/summarize_nmnist_controlled_four_models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09f77d2ee0d349dc87892d88ddf9f744ddb57b89",
+      "size": 5544,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/09f77d2ee0d349dc87892d88ddf9f744ddb57b89"
+    },
+    {
+      "path": "scripts/test_nmnist_paper_aligned_batched_projection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cc443f522ee937a08e45756f14b232b475b6899",
+      "size": 11512,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2cc443f522ee937a08e45756f14b232b475b6899"
+    },
+    {
+      "path": "scripts/train_cifar10_dvs_binary_true.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b7b60a6d8b5833f2cbee3e5f63ea2230b8e6019",
+      "size": 10265,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/8b7b60a6d8b5833f2cbee3e5f63ea2230b8e6019"
+    },
+    {
+      "path": "scripts/train_cifar10_dvs_missing_seeds.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "529069800774033d8e61185c19f2b7675ccc4d25",
+      "size": 7053,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/529069800774033d8e61185c19f2b7675ccc4d25"
+    },
+    {
+      "path": "scripts/train_cifar10_dvs_snn_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2764df5456663043e53279c9e3e5cc3b016ee887",
+      "size": 7441,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2764df5456663043e53279c9e3e5cc3b016ee887"
+    },
+    {
+      "path": "scripts/train_clean_improved.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "263e4fe5c1bc48b2a7d57755dcb420b2ecd60cb2",
+      "size": 30770,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/263e4fe5c1bc48b2a7d57755dcb420b2ecd60cb2"
+    },
+    {
+      "path": "scripts/train_dvs_gesture_binary_true.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbea62ce2eba1914f156826f4c2d06bc7b824c3b",
+      "size": 8271,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bbea62ce2eba1914f156826f4c2d06bc7b824c3b"
+    },
+    {
+      "path": "scripts/train_dvs_gesture_snn_multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb3c1afcad95cd149e372ee1dd83b1e81559fb88",
+      "size": 8261,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/cb3c1afcad95cd149e372ee1dd83b1e81559fb88"
+    },
+    {
+      "path": "scripts/train_iris.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04c69b239c2246901030461878392c1ffe94a1ad",
+      "size": 2221,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/04c69b239c2246901030461878392c1ffe94a1ad"
+    },
+    {
+      "path": "scripts/train_nmnist_binary_true.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "083b4a726560f2308992cb441c1afbafeea4baa7",
+      "size": 10238,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/083b4a726560f2308992cb441c1afbafeea4baa7"
+    },
+    {
+      "path": "scripts/train_nmnist_controlled_four_models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "382b9872c92c2299ef33dde2547a8bebcb9189cd",
+      "size": 10806,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/382b9872c92c2299ef33dde2547a8bebcb9189cd"
+    },
+    {
+      "path": "scripts/train_nmnist_seed42_paper_aligned.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6de0de016614766065a23554de78f8e2183c9861",
+      "size": 17682,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/6de0de016614766065a23554de78f8e2183c9861"
+    },
+    {
+      "path": "scripts/train_nmnist_seed42_paper_aligned_integer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c7fa4f9c09a5fbd3aeac91ac83272720376f49e",
+      "size": 17871,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1c7fa4f9c09a5fbd3aeac91ac83272720376f49e"
+    },
+    {
+      "path": "scripts/train_nmnist_snn_seed42.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "312a09dd96a4757799dda9268fabca486c819254",
+      "size": 3077,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/312a09dd96a4757799dda9268fabca486c819254"
+    },
+    {
+      "path": "scripts/update_nmnist_paper_tables.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57f501ef1cf73ce31aac62d022c84bfff02b388c",
+      "size": 6068,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/57f501ef1cf73ce31aac62d022c84bfff02b388c"
+    },
+    {
+      "path": "scripts/validate_phase1_gpu_vectorization.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d47648ea2970578a03a5345054e4bd5adf193de6",
+      "size": 15332,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d47648ea2970578a03a5345054e4bd5adf193de6"
+    },
+    {
+      "path": "scripts/verify_nmnist_seed42_attacks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e24d8cd32ea9408e60589b151cb4992447a2570",
+      "size": 15130,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2e24d8cd32ea9408e60589b151cb4992447a2570"
+    },
+    {
+      "path": "scripts/verify_nmnist_seed42_clean.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80ebf9d67c07a2b0f65680f5820663c33122af26",
+      "size": 17911,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/80ebf9d67c07a2b0f65680f5820663c33122af26"
+    },
+    {
+      "path": "setup_windows.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41dbdc0388780388e6ceeca0996b10fa018440d0",
+      "size": 243,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/41dbdc0388780388e6ceeca0996b10fa018440d0"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81e2b263410a71c1888bc636a3f1ba83e84f889f",
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/trees/81e2b263410a71c1888bc636a3f1ba83e84f889f"
+    },
+    {
+      "path": "tests/test_benchmark_contract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86454646bc4034cfcc26411a76199ddc80e56be3",
+      "size": 3374,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/86454646bc4034cfcc26411a76199ddc80e56be3"
+    },
+    {
+      "path": "tests/test_clean_improved.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c09f615d460156a940d7b0c5bb2b096e669a4dde",
+      "size": 1438,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c09f615d460156a940d7b0c5bb2b096e669a4dde"
+    },
+    {
+      "path": "tests/test_mnist_4x4_clean.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7333c3005c08ba50506441ec81ce730d1f26a137",
+      "size": 2503,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7333c3005c08ba50506441ec81ce730d1f26a137"
+    },
+    {
+      "path": "tests/test_mnist_8x8_clean.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d32bf834a60fc9008acd9f8972c345929122d14",
+      "size": 2546,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/9d32bf834a60fc9008acd9f8972c345929122d14"
+    },
+    {
+      "path": "tests/test_nmnist_attack_auditor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82f7bfc420f83f7e63de398015ed8758c85dba8b",
+      "size": 7238,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/82f7bfc420f83f7e63de398015ed8758c85dba8b"
+    },
+    {
+      "path": "tests/test_nmnist_attack_comparison.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83e303fb3c20a8e1bf74644a0ff87f67a2e61879",
+      "size": 2697,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/83e303fb3c20a8e1bf74644a0ff87f67a2e61879"
+    },
+    {
+      "path": "tests/test_nmnist_budget_matched_atomic_writer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f50103f85bfc1da9bc572a5741c43bcdcc214351",
+      "size": 3174,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f50103f85bfc1da9bc572a5741c43bcdcc214351"
+    },
+    {
+      "path": "tests/test_nmnist_canonical_attack_preprocessing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41518e627e6462cfb0366771649041999697b64d",
+      "size": 1847,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/41518e627e6462cfb0366771649041999697b64d"
+    },
+    {
+      "path": "tests/test_nmnist_clean.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a56bf740dc437b6afea10a997d285884ab56626a",
+      "size": 4104,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/a56bf740dc437b6afea10a997d285884ab56626a"
+    },
+    {
+      "path": "tests/test_nmnist_hybrid_qsnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaa2aece7fb7961db2c96669f36545de0e4b2208",
+      "size": 2169,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/aaa2aece7fb7961db2c96669f36545de0e4b2208"
+    },
+    {
+      "path": "tests/test_nmnist_temp_drift_v2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99a736ba56e37497ecaacfdb3c09c1ff0382f228",
+      "size": 1364,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/99a736ba56e37497ecaacfdb3c09c1ff0382f228"
+    },
+    {
+      "path": "tests/test_phase01_iris.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9284db78ef2c3e01ab954560e6f2abd094a5a91",
+      "size": 601,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/e9284db78ef2c3e01ab954560e6f2abd094a5a91"
+    },
+    {
+      "path": "tests/test_phase02_ttfs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30d8f1556b75ab408b61d29f74d0871eb76d2173",
+      "size": 268,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/30d8f1556b75ab408b61d29f74d0871eb76d2173"
+    },
+    {
+      "path": "tests/test_phase03_quantum_encoding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "526111949b340262cf05e3b8e9b30bf0f85c0d51",
+      "size": 366,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/526111949b340262cf05e3b8e9b30bf0f85c0d51"
+    },
+    {
+      "path": "tests/test_phase04_qsnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adc7e096b637569ac8debccf8d1808a666fd303f",
+      "size": 278,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/adc7e096b637569ac8debccf8d1808a666fd303f"
+    },
+    {
+      "path": "tests/test_phase05_training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "110da21bacb312c4897a59d81e4aa6d2058a2295",
+      "size": 1018,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/110da21bacb312c4897a59d81e4aa6d2058a2295"
+    },
+    {
+      "path": "tests/test_phase06_evaluation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3d1f9477c469d547f7ab688855a1418c2f6a919",
+      "size": 837,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f3d1f9477c469d547f7ab688855a1418c2f6a919"
+    },
+    {
+      "path": "tests/test_phase07_depth_ablation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b7b2b878b555996856c1e7c0996be0cf9406fc",
+      "size": 772,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/35b7b2b878b555996856c1e7c0996be0cf9406fc"
+    },
+    {
+      "path": "tests/test_phase08_random_jitter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9fc7d45875fcd2d2885123d6f453a703dbdc3c6",
+      "size": 786,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c9fc7d45875fcd2d2885123d6f453a703dbdc3c6"
+    },
+    {
+      "path": "tests/test_phase09_quantum_metrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "893f852bb883c4a20cea4ce8abf5e38ecbb21055",
+      "size": 608,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/893f852bb883c4a20cea4ce8abf5e38ecbb21055"
+    },
+    {
+      "path": "tests/test_phase10_stealth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd58c4f8e9eaa445c8d363ad7ece5859a0d43b2d",
+      "size": 723,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bd58c4f8e9eaa445c8d363ad7ece5859a0d43b2d"
+    },
+    {
+      "path": "tests/test_phase11_temp_drift.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93b0e73ac1fc2b2634ba664ecaafe357c22d7a05",
+      "size": 379,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/93b0e73ac1fc2b2634ba664ecaafe357c22d7a05"
+    },
+    {
+      "path": "tests/test_phase12_attack_evaluation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c0705b4c600bde59c34864440350530273c449b",
+      "size": 554,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/0c0705b4c600bde59c34864440350530273c449b"
+    },
+    {
+      "path": "tests/test_phase13_attack_sweep.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ac92378cbd607a58eaf5ad1f54c8fa5936e5bc1",
+      "size": 701,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1ac92378cbd607a58eaf5ad1f54c8fa5936e5bc1"
+    },
+    {
+      "path": "tests/test_phase145_temp_drift_gradient.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2191663071c4ed2358c45ecde8dda1f3b3a0f04",
+      "size": 2576,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/f2191663071c4ed2358c45ecde8dda1f3b3a0f04"
+    },
+    {
+      "path": "tests/test_phase14_classical_timing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "896fc440eed3bf031077525c09186223ae6dd0d2",
+      "size": 2478,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/896fc440eed3bf031077525c09186223ae6dd0d2"
+    },
+    {
+      "path": "tests/test_phase151_quantum_temp_ablation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68f5a51c95a8f52df1fdfe948a61658f54b1535e",
+      "size": 3084,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/68f5a51c95a8f52df1fdfe948a61658f54b1535e"
+    },
+    {
+      "path": "tests/test_phase152_paired_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f276d9278e2d99dae04fafdeed5cf6bbd8b5b4d",
+      "size": 2973,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3f276d9278e2d99dae04fafdeed5cf6bbd8b5b4d"
+    },
+    {
+      "path": "tests/test_phase153_multiseed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc01f3033a7617f467e98f750574194bce81ffa6",
+      "size": 2671,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/dc01f3033a7617f467e98f750574194bce81ffa6"
+    },
+    {
+      "path": "tests/test_phase15_quantum_temp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c3eb569a234f362e262f8ca1a5fff2f9759f5ea",
+      "size": 3371,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1c3eb569a234f362e262f8ca1a5fff2f9759f5ea"
+    },
+    {
+      "path": "tests/test_phase16_decision_losses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2156b1e5e822b3c358854b3c1b4a4bbeabfff8a4",
+      "size": 2426,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/2156b1e5e822b3c358854b3c1b4a4bbeabfff8a4"
+    },
+    {
+      "path": "tests/test_phase171_calibration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db70da3b2c9f0ecefedd7ae124a20fcf0218ce48",
+      "size": 3464,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/db70da3b2c9f0ecefedd7ae124a20fcf0218ce48"
+    },
+    {
+      "path": "tests/test_phase172_diagnosis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6582c00551d981234cfc440bdecf0352ce6c0b4",
+      "size": 2844,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c6582c00551d981234cfc440bdecf0352ce6c0b4"
+    },
+    {
+      "path": "tests/test_phase173_checkpoint_selection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58762b537f8c5729242bf5a8a109140c3975d1d0",
+      "size": 2808,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/58762b537f8c5729242bf5a8a109140c3975d1d0"
+    },
+    {
+      "path": "tests/test_phase17_adversarial_training.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7b534ea4f215c7c7b8c9c72717d380f2da9fa62",
+      "size": 4562,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/c7b534ea4f215c7c7b8c9c72717d380f2da9fa62"
+    },
+    {
+      "path": "tests/test_phase18_representation_diagnosis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b8156c57a991336817b83af15492dacb23d089d",
+      "size": 8651,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/1b8156c57a991336817b83af15492dacb23d089d"
+    },
+    {
+      "path": "tests/test_phase19_frozen_heads.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3de349ddefe638d63b994687ef9de4f80ed7f2e1",
+      "size": 7627,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/3de349ddefe638d63b994687ef9de4f80ed7f2e1"
+    },
+    {
+      "path": "tests/test_phase20_calibration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18c42355820354073129633646851a367e4cc524",
+      "size": 9636,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/18c42355820354073129633646851a367e4cc524"
+    },
+    {
+      "path": "tests/test_phase21_representation_consistency.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cb6428aa9a621f53cdba04b5b3ba6716acc1d60",
+      "size": 10363,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/7cb6428aa9a621f53cdba04b5b3ba6716acc1d60"
+    },
+    {
+      "path": "tests/test_shd_reaudit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd3e304da1f74fd8ee66bf6714ebf314d50dfde8",
+      "size": 281,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/bd3e304da1f74fd8ee66bf6714ebf314d50dfde8"
+    },
+    {
+      "path": "tests/test_shd_resume.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99bd5213e29a37bf5fd9e4db766dba4beb23284c",
+      "size": 575,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/99bd5213e29a37bf5fd9e4db766dba4beb23284c"
+    },
+    {
+      "path": "tests/test_shd_resume350.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "854529963c4d2a495acb56225b07493cf6fc3601",
+      "size": 489,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/854529963c4d2a495acb56225b07493cf6fc3601"
+    },
+    {
+      "path": "tests/test_shd_resume350_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "241eadb2466127b11a7de0bf9758a76791b70e36",
+      "size": 297,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/241eadb2466127b11a7de0bf9758a76791b70e36"
+    },
+    {
+      "path": "tests/test_shd_snn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce30ec12f85e0ec5d50cd612dd3d35352fe8dc9b",
+      "size": 1455,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/ce30ec12f85e0ec5d50cd612dd3d35352fe8dc9b"
+    },
+    {
+      "path": "tests/test_temp_drift_improved.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63fe691fd4eddc9cc5583b2d6393c81042d5742",
+      "size": 5076,
+      "url": "https://api.github.com/repos/shosseinj/ABC_def1/git/blobs/d63fe691fd4eddc9cc5583b2d6393c81042d5742"
+    }
+  ],
+  "truncated": false
+}

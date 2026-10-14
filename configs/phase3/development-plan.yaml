@@ -1,0 +1,48 @@
+status: draft_pending_real_pilot
+stage: validation
+test_access_allowed: false
+development_manifest: null
+development_manifest_sha256: null
+sampling_seed: 20261014
+target_n: 100
+sampling_rule: stratified_round_robin_without_replacement_then_redistribute_shortages
+selection_rule: validation_any_valid_success_then_measured_search_cost_then_lexicographic_config_id
+steps:
+  - id: literal_baseline
+    PGD: {steps: 20, step_fraction: 0.2, restarts: 1, start_policy: clean, objective: ce}
+    TEMP: {requested_Q: [21, 41], schedule: literal_13_plus_four_generations}
+  - id: increase_iterations
+    PGD: {steps: [50, 100], step_fraction: 0.2, restarts: 1, objective: ce}
+  - id: step_size_shortlist
+    use: best_iteration_count_from_completed_validation_only
+    PGD: {step_fraction: [0.1, 0.05], restarts: 1, objective: ce}
+  - id: objective_and_restarts
+    use: best_completed_iteration_and_step_config
+    PGD: {objective: [ce, margin], restarts: [1, 5], start_policy: clean_plus_R_minus_1_uniform_starts}
+  - id: derivative_free_curve
+    TEMP: {requested_Q: [21, 41, 1600, 4000], attack_seeds: [20261014, 20261017, 20261023], chunk: 64}
+  - id: loss_matched
+    compare: [PGD_margin, TEMP_margin]
+    controls: [candidate_equivalents, individual_forward_equivalents, calibrated_elapsed_search]
+time_calibration:
+  status: not_started
+  use_disjoint_training_calibration_ids: true
+  epsilon_fraction: 0.10
+  target_n: 10
+  repeats: 2
+  warmup_each_config_and_model: true
+  synchronize_cuda: true
+  Q_requested_grid: [800, 1200, 1600, 2000, 2400, 3200, 4000, 4800, 5600, 6400]
+  selection: closest_median_ratio_to_one_then_smaller_actual_Q
+  acceptance_ratio: [0.9, 1.1]
+  report: [median, IQR, actual_repeats, warmup_cost, requested_Q, actual_Q, calls, forward_equivalents, precision, device]
+  historical_selected_Q_reused_as_time_match: false
+chunk_sensitivity:
+  stage: pilot_only
+  TEMP_chunks: [1, 8, 64]
+  preserve_proposals_and_seed: true
+  extrapolate_to_campaign: false
+radius_policy:
+  standalone: true
+  cumulative_cross_radius: not_implemented
+  cumulative_if_added_requires_prior_search_cost: true

@@ -1,0 +1,110 @@
+{
+  "phase3_complete": false,
+  "real_experiments_completed": 0,
+  "real_checkpoint_loaded": false,
+  "real_data_loaded": false,
+  "user_confirmed_artifacts_unavailable": true,
+  "counts": {
+    "completed": 4,
+    "implemented": 2,
+    "blocked": 8
+  },
+  "items": [
+    {
+      "id": "P0_inventory",
+      "status": "completed",
+      "artifact": "Reports/phase3/inventory.json"
+    },
+    {
+      "id": "P0_pinned_source_recovery",
+      "status": "completed",
+      "artifact": "Reports/phase3/recovered-source.json"
+    },
+    {
+      "id": "software_contract_tests",
+      "status": "completed",
+      "artifact": "Reports/phase3/unit-tests.log"
+    },
+    {
+      "id": "versioned_attack_runner",
+      "status": "implemented",
+      "artifact": "scripts/phase3/runner.py"
+    },
+    {
+      "id": "development_and_preregistration_configs",
+      "status": "implemented",
+      "artifact": "configs/phase3/"
+    },
+    {
+      "id": "P0_real_smoke_and_pilot",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "P1_real_selection_audit",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "P2_validation_tuning",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "P2_timing_calibration",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "P3_official_test",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "P3_independent_frontend_pipelines",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "P4_trained_ablations",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "P5_real_exemplars_and_state_margin",
+      "status": "blocked",
+      "artifact": "Reports/phase3/future-work.md",
+      "reason_code": "blocked_resource",
+      "reason": "Real checkpoints, raw N-MNIST and required manifests are absent; user confirmed absence and deferred dependent execution.",
+      "deferred_by_user": true
+    },
+    {
+      "id": "PDF_clarity_and_build",
+      "status": "completed",
+      "artifact": "Reports/phase3/figure-refinements.json"
+    }
+  ],
+  "next_action": "Provide actual checkpoints/data/manifests, then resume P0 real pilot before validation tuning or final test.",
+  "commit_or_push_performed": false
+}

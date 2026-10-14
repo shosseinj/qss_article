@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "documents": {
+    "main": {
+      "labels": 23,
+      "citations": 20,
+      "pdf_sha256": "d36463179ff24c060af620b75364e516d71628fbd82e1fb651643445e55839c2"
+    },
+    "supplement": {
+      "labels": 42,
+      "citations": 7,
+      "pdf_sha256": "b6874e5d692c3ae56d00ac09c93e4e02d3558a2c00faa2ed4656789256822336"
+    }
+  },
+  "bibliography_keys": 20,
+  "paired_rows_verified": 16,
+  "low_Q_schedules_verified": {
+    "access_candidates_21": {
+      "q": 21,
+      "initial": 13,
+      "generations": 4,
+      "per_generation": 2,
+      "match": "PGD candidate evaluations"
+    },
+    "access_forwards_41": {
+      "q": 41,
+      "initial": 13,
+      "generations": 4,
+      "per_generation": 7,
+      "match": "PGD attack-internal forwards"
+    }
+  },
+  "source_data_unchanged": true,
+  "scientific_figures_vector": true,
+  "checks": "counts, exact McNemar p-values, Wilson exports, citation/reference resolution, unique keys/labels, build logs and source data diff",
+  "not_performed": "training, attack reruns, original raw-data audit or recovery of missing run artifacts"
+}

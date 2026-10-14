@@ -1,0 +1,18 @@
+status: draft_pending_frontend_checkpoint_and_validation_data
+experiment_type: new_experiment
+frontend:
+  checkpoint: null
+  checkpoint_sha256: null
+  training_seed: null
+  frozen: true
+  source: explicitly_verified_frontend_from_one_checkpoint_shared_across_variants
+variants: [qsnn, classical_head, qsnn_no_entanglers]
+classical_proposal: {architecture: '32 -> 69 -> tanh -> 10', head_parameters: 2977, selection: validation_before_test}
+quantum_head_parameters: 2970
+quantum_without_entanglers: {retrain: true, full_256_probability_readout: true, classify_as_linear_classical_model: false}
+head_training_seeds: [42, 123, 777]
+training_budget: {max_epochs: 40, batch_size: 256, optimizer: AdamW, lr: 0.001, weight_decay: 0.0001, checkpoint_selection: highest_validation_accuracy_then_lowest_loss}
+frontend_independence: shared_frontend_is_conditional_ablation_not_independent_pipelines
+independent_pipeline_targets: [42, 123, 777]
+fine_tuning_stage: not_started
+attack_protocol: same_validation_selected_loss_matched_protocol_for_all_variants

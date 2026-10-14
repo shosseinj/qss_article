@@ -1,0 +1,37 @@
+run_id: phase3-official-test-draft
+stage: official_test
+preregistration: Reports/phase3/preregistration.yaml
+model:
+  variant: qsnn
+  training_seed: 42
+  checkpoint: null
+  checkpoint_sha256: null
+  metadata: null
+  metadata_sha256: null
+data:
+  dataset: N-MNIST
+  version: unknown
+  manifest: null
+  manifest_sha256: null
+  expected_n: 1000
+  target_n: 1000
+  required_clean_evaluation_n: 10000
+  sampling_seed: 20261014
+  sampling_rule: stratified_joint_clean_correct_without_replacement
+  shortage_rule: record_actual_n_before_attacks_and_new_config_hash_no_silent_reduction
+attack:
+  name: PGD
+  objective: margin
+  steps: null
+  step_fraction: null
+  restarts: null
+  seed: 20261014
+  epsilon_fraction: 0.10
+  chunk: 1
+device: cpu
+cpu_threads: 2
+deterministic: true
+verification_chunk: 1
+logit_tolerance: 0.00001
+state_tolerance: 0.00002
+full_trace_ids: []

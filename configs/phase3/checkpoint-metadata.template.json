@@ -1,0 +1,16 @@
+{
+  "model_id": null,
+  "variant": null,
+  "training_seed": null,
+  "frontend_seed": null,
+  "source_commit": null,
+  "source_fingerprint": null,
+  "preprocessing": {
+    "bins": 10,
+    "window": "clean_endpoints_inclusive",
+    "cap": 255,
+    "frontend_scale": 8,
+    "sensor_size": [34, 34]
+  },
+  "note": "Template only. Populate from actual checkpoint/config evidence; do not infer seed or architecture from filename."
+}

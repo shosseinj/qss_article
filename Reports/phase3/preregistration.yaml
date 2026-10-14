@@ -1,0 +1,37 @@
+status: draft
+created_local_date: '2026-10-14'
+phase3_complete: false
+reason_not_frozen: Missing real checkpoints, datasets, pilot and completed validation tuning; final settings must not be invented.
+public_registration_required: false
+historical_source_commit: 80d02f5733d4cbe7c3e69b828dff66d50ba5c211
+source_fingerprint: null
+final_config_sha256: null
+completed_validation_report_sha256: null
+dataset: {name: N-MNIST, version: unknown, official_test_n: 10000, split_artifact_sha256: null}
+architecture_selection: validation_only
+checkpoint_selection: highest_validation_accuracy_then_lowest_validation_loss
+attack_tuning: validation_only_before_test
+pipeline_training_seeds_target: [42, 123, 777]
+independent_frontends_required_for_pipeline_independence: true
+sampling_seed: 20261014
+attack_seeds: [20261014, 20261017, 20261023]
+radii_duration_fraction: [0.05, 0.10]
+primary_population: joint_clean_correct_test_subset
+primary_attack_population_target_n: 1000
+sampling_rule: stratified_round_robin_without_replacement_then_shortage_redistribution
+clean_evaluation: all_10000_official_test_examples
+primary_contrasts_proposed: PGD_margin_vs_TEMP_margin_elapsed_matched_for_each_radius_and_independent_pipeline_seed
+multiplicity_family_proposed: six_primary_contrasts_two_radii_times_three_independent_pipelines
+multiplicity_adjustment: Holm
+other_comparisons: exploratory
+paired_statistics: {test: exact_two_sided_McNemar, zero_discordance_p: 1, counts: [both, PGD_only, TEMP_only, neither]}
+rate_intervals: Wilson_95_percent_descriptive_on_selected_subset
+paired_bootstrap_if_run: example_id_is_resampling_unit_preserve_pair_and_stratification
+pool_reused_examples_as_independent: false
+unconditional_robust_accuracy_from_subset_product: forbidden
+success_rule: valid_raw_event_constraints_AND_hard_argmax_not_true_label
+argmax_tie_rule: smallest_class_index
+missing_record_rule: incomplete_cell_ASR_null_preserve_planned_denominator
+search_reporting: standalone_radius_primary_cross_radius_cumulative_separate_with_full_prior_cost
+forward_units: record_batched_calls_and_individual_candidate_equivalents_separately
+monitor_defense: outside_core_phase3

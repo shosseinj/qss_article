@@ -1,0 +1,23 @@
+{
+  "asr": null,
+  "attack_denominator": null,
+  "attack_successes": null,
+  "blockers": [
+    "missing checkpoint",
+    "missing checkpoint metadata",
+    "missing raw-event manifest/data",
+    "unknown checkpoint SHA-256",
+    "unknown checkpoint metadata SHA-256",
+    "unknown manifest SHA-256"
+  ],
+  "clean_accuracy": null,
+  "clean_prediction": null,
+  "elapsed_search_seconds": null,
+  "estimated_campaign_seconds": null,
+  "evidence_status": null,
+  "experimental_result_count": 0,
+  "peak_memory_bytes": null,
+  "real_checkpoint_loaded": false,
+  "real_data_loaded": false,
+  "status": "blocked_resource"
+}

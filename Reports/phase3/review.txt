@@ -1,0 +1,7 @@
+Fresh read-only code review: no Critical findings; three Important findings.
+1. TEMP could accept/report CE while optimizing margin. Fixed with explicit objective gate; test_temp_cannot_claim_ce_search observed failing then passing.
+2. Selection policies were using search vs verification logits. Fixed: both policies use the same verified candidate bank; search-selected output is separate, reevaluation changes are recorded, argmax changes fail the example. test_selection_effect_uses_same_verified_logits observed failing then passing.
+3. Resume could mix environments and overwrite provenance. Fixed with immutable run identity binding config/source/stable environment, original environment snapshot and per-record fingerprints. test_resume_identity_rejects_environment_or_config_change observed failing then passing.
+Additional self-check: clean-evaluation outputs now retain checkpoint/manifest/model/environment provenance and reject config changes under an existing run identity. Integration assertion observed failing then passing.
+Full suite after fixes: 28 tests passed. Tests use synthetic fixtures/untrained models only; no experimental selection difference is inferred.
+No second review dispatch; fixes verified by the regression tests and full suite. No deferred minor findings.

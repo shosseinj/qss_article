@@ -1,0 +1,52 @@
+گزارش اجرای phase2.md — ۱۴ اکتبر ۲۰۲۶
+
+وضعیت: مرحله‌های A و B انجام شد. بخش قابل بررسیِ C فقط به صورت ممیزی ایستای سورس انجام شد. بازیابی شواهد مفقود و مرحله D انجام نشده‌اند.
+
+تغییرهای مقاله
+- چکیده، پرسش اصلی، contributions، Results و Discussion حول QSNN و مقایسه محاسبات حملات بازنویسی شدند. تکرارهای shared frontend/split و شمارش‌های زوجی ادغام شدند؛ نتیجه‌گیری کوتاه شد.
+- جدول مفهومی ادبیات، جدول پنج seed، جدول کامل grid و اثبات state–margin به بخش S9 مکمل منتقل شدند. جدول کامل timestamp از قبل در مکمل وجود داشت و دوباره ساخته نشد. در main تعریف/نامساوی اصلی، شمارش‌های کلیدی و جمعیت‌ها باقی ماندند.
+- محدودیت validation، frontend/split مشترک، seed 42، نمونه‌های انتخاب‌شده، عدم برتری معنادار TEMP، تفاوت manifestها و نبود raw artifacts حفظ شد. source snapshot و داده‌های data/ تغییر نکردند.
+
+شکل‌ها
+- شکل ۱: مسیر timestamp تا logits و مدار هشت‌کیوبیتی با TikZ مطابق ترتیب encoding، variational RY/RZ، حلقه CNOT و measurement basis کد ترسیم شد؛ هیچ نمونه واقعی یا فرضی حمله به جای داده ساخته نشد.
+- شکل ۲: نمودار ASR با Wilson 95% و overlap چهارگروهی. candidate/forward فقط پس از تأیید برابری شمارش‌های aggregate در یک نمایش ادغام شدند؛ شروط محاسباتی همچنان جدا هستند. مخرج n=100 و ماهیت توصیفی interval صریح است.
+- شکل ۳: دو پنل binary/integer، رنگ و marker ثابت برای B_inf و B0، inset مشخص 0–2.1 درصد. clean accuracy در جدول جدا آمده است؛ اختلاف manifestها در caption باقی است.
+- هر سه شکل PDF/SVG برداری و PNG با 300 dpi دارند؛ نبود embedded raster در PDFها کنترل شد. scripts/render_phase2_figures.py و figures/fig01_overview.tex سورس بازتولید شکل‌ها هستند.
+- فایل‌های قدیمی data/figure_source_data.json و figure_export_checks.json به عنوان سابقه نسخه قبلی حفظ شدند؛ provenance فعلی در Reports/phase2-figure-provenance.json است.
+
+منابع
+سه منبع هدفمند افزوده شد؛ bibliography از 17 به 20 مدخل رسید:
+1. Büchel et al. 2022، event additions/removals؛ با retiming-only یکی معرفی نشده است.
+   https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.1068193/full
+2. Khatun and Usman 2025، PRR 7, L042054؛ دفاع همین مقاله یا دفاع retiming معرفی نشده است.
+   https://journals.aps.org/prresearch/abstract/10.1103/41z8-d3h9
+3. Watrous 2018، The Theory of Quantum Information؛ منبع پایه contraction، Corollary 3.40.
+   https://cs.uwaterloo.ca/~watrous/TQI/
+شناسه/URL قابل بازیابی Wendlinger و preprintهای قبلی در خروجی unsrt نمایش داده می‌شود. برای Yao نسخه رسمی کنفرانس ECCV 2024 و URL کامل نگه داشته شد؛ metadata نسخه proceedings با سال متفاوت مخلوط نشد. مرجع frozen v1 مربوط به Yu و commit شواهد حفظ شدند.
+مرجع Fang به baseline محلی نسبت داده نشد، چون کد معماری‌های grid برای تأیید این نسبت موجود نیست.
+
+ممیزی سورس؛ نه اجرای آزمایش
+- در scripts/run_nmnist_budget_matched_comparison_v2_seed42.py، خطوط 50–55: Q=21 برابر 13+4×2 و Q=41 برابر 13+4×7 است؛ elite=12 و چهار نسل حفظ می‌شوند. temp_attack/evaluate در خطوط 371–411 همه proposals را ارزیابی می‌کنند و early success stop ندارند. pseudocode کامل در S10 مکمل آمده است.
+- scaled_budget در خطوط 336–343 تعداد واقعی را ثبت می‌کند؛ بودجه‌های منتخب 1600 و 4000 دقیق هستند. درخواست warm-up برابر 400 پس از rounding به 398 proposal می‌رسد.
+- PGD در scripts/run_nmnist_common_attack_protocol_seed42.py:59–71 بیشترین CE را نگه می‌دارد؛ success-priority ندارد. امکان کنار گذاشتن یک موفقیت میانی از این قانون نتیجه می‌شود، اما وقوع یا اثر آن بر ASR بدون trajectory قابل تأیید نیست. هیچ شمارش موفقیتی تغییر داده نشد.
+- زمان‌سنجی CUDA با synchronize قبل/بعد perf_counter، warm-up، ده مثال calibration از train خارج از evaluation IDs، دو تکرار و epsilon=0.10 در کد مشخص است. TEMP chunk<=64 و PGD هر بار یک مثال دارد. precision مسیر timestamp=float32 و statevector=complex64 است؛ autocast آموزش به زمان‌سنجی نسبت داده نشد.
+- loader هر دو مدل timestamp را eval می‌کند؛ forwardهای SNN و spatial LIF membrane/accumulator را داخل هر call از نو می‌سازند. BatchNorm از آمار ثابت استفاده می‌کند. این نتیجه به مدل‌های grid غایب تعمیم داده نشد.
+- آرایه‌های timing، snapshot زمان اجرای سخت‌افزار، checkpoint/config مدل‌های grid و override ضریب B0 موجود نیستند. مشاهده RTX4090 در یادداشت محیط، سند سخت‌افزار همه اجراهای تاریخی محسوب نشد.
+این بررسی‌ها فقط کد موجود و سازگاری گزارش‌ها را پوشش می‌دهند؛ اثبات مسیر اجرای تک‌تک رکوردهای مفقود نیستند.
+
+کنترل نهایی
+فرمان‌های latexmk -pdf -outdir=build main.tex و supplement.tex با موفقیت اجرا شدند: مقاله 8 صفحه، مکمل 17 صفحه.
+Final logs: بدون undefined citation/reference، duplicate label یا Overfull box. git diff --check نیز بدون ایراد است.
+python3 scripts/verify_phase2.py پاس شد: 16 ردیف paired، exact McNemar p-valueها، بازه‌های Wilson، low-Q literal schedule، 20 کلید bibliography یکتا، resolve شدن ارجاع‌ها، vector exports و عدم تغییر data/.
+PDF مقاله در نمای کلی همه صفحات و صفحات شکل‌های 1 تا 3 و جدول‌های جدید بررسی شد. صفحات مکمل 11–14 و صفحه مراجع جدید نیز از نظر محل جدول، معادله و متن بررسی شدند. مشکل شناور شدن جدول‌ها قبل از عنوان بخش اصلاح شد. این بررسی ظاهری، تأیید نتایج تجربی نیست.
+فایل‌های تغییر متن: main.tex، supplement.tex، references.bib و sections/*.tex؛ بخش تازه sections/phase2_supplement.tex. سورس و خروجی سه شکل، اسکریپت‌ها، README و گزارش‌ها نیز اضافه/به‌روز شدند. diff متنی در Reports/phase2-source.diff و نتایج ماشینی در Reports/phase2-verification.json است.
+حذف قبلی guide.md توسط کاربر حفظ شد و بازسازی نشد. phase2.md دست‌نخورده است. هیچ commit، push یا آپلود Overleaf انجام نشد.
+
+کارهای باقی‌مانده C/D
+- بازیابی checkpoint، manifest، config، لاگ، candidate trajectory، timestampهای واقعی، probabilities و logits؛ ثبت snapshot سخت‌افزار و dispersion زمان‌سنجی.
+- ممیزی اجرایی PGD any-valid-candidate و gradient/preprocessing/reset مدل‌های grid؛ حل ضریب B0 و تأیید منبع معماری baselineها.
+- official-test QSNN clean/attack پس از model selection؛ چند frontend/head seed مستقل و جمعیت حمله بزرگ‌تر.
+- sweep iteration/step size/restart/objective/surrogate و derivative-free budget curves با hard-forward verification.
+- classical-head و circuit/entanglement ablation با frontend/split/training ثابت و گزارش هزینه.
+- state–margin و نمونه واقعی clean/retimed فقط پس از دسترسی به داده هر نمونه؛ monitor/detection/adaptive evaluation فقط پس از تعریف observables و shot/calibration policy.
+افزودن منابع، اصلاح صفحه‌آرایی یا موفقیت build جای این آزمایش‌ها را نمی‌گیرد؛ این نسخه هنوز با محدودیت‌های تجربی گزارش‌شده همراه است.

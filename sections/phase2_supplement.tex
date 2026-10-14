@@ -1,0 +1,135 @@
+\section{Positioning, final-model tables and readout analysis}
+\label{sec:revision_details}
+The following material supports the main timestamp-focused presentation. Relocation does not change the evaluation populations or add experiments.
+
+\subsection{Conceptual literature comparison}
+\begin{table}[H]
+\centering
+\small
+\caption{Conceptual positioning of related work. Entries describe research scope, not a common benchmark or an experimental ranking.}
+\label{tab:supp_literature_scope}
+\begin{tabular}{p{0.20\textwidth}p{0.32\textwidth}p{0.39\textwidth}}
+\hline
+Work & Studied interface or construction & Relation to the present study \\
+\hline
+Yao et al.\ \cite{yao2024rawevent} & Raw-event attacks with discrete-value optimization and sparsity control & Motivates the raw-event interface; not restricted to our identity-preserving retiming. \\
+Du et al.\ \cite{du2026latencies} & Raw-event attacks with configurable latencies & Related temporal attack setting; constraints and budgets require separate specification. \\
+Yu et al.\ \cite{yu2026} & Capacity-one spike-retiming constraints & Protocol reference for the separate classical packet-grid study. \\
+Jha et al.\ \cite{jha2025hybrid} & SNN features followed by quantum kernels for EEG & Hybrid temporal classification; distinct from our variational probability readout. \\
+Gong et al.\ \cite{gong2024randomized} & Randomized quantum encodings with specified attacker access & Defense assumptions differ from an attack before our classical frontend. \\
+Dowling et al.\ \cite{dowling2026guarantees} & Guarantees for specified quantum-classifier scenarios & Motivates assumption-aware interpretation; not a certificate for our timing budgets. \\
+This work & End-to-end timestamp attacks on QSNN-v3; separate classical grid controls & Paired computational controls, explicit populations and report-grounded evidence. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Individual final-model validation runs}
+\begin{table}[H]\centering
+\caption{QSNN-v3 validation on the same 5,000 examples.}\label{tab:validation}
+\small\begin{tabularx}{\linewidth}{L C C}\toprule
+\textbf{Seed} & \textbf{Accuracy (\%)} & \textbf{Epoch}\\\midrule
+42 & 97.06 & 37\\
+123 & 97.28 & 24\\
+777 & 97.52 & 40\\
+2026 & 97.44 & 38\\
+6543 & 97.06 & 40\\\midrule
+Mean $\pm$ SD & $97.272\pm0.212$ & ---\\\bottomrule
+\end{tabularx}
+\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize
+All seeds reuse one pretrained frontend and one split. Reported macro-F1 is $97.2736\%\pm0.2119\%$ [R1].
+\end{minipage}\end{table}
+\clearpage
+\subsection{Complete local packet-grid results}
+\begin{table}[H]
+\centering
+\caption{Controlled four-model packet-grid results. Clean accuracy and ASR use different stated populations.}\label{tab:grid}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabularx}{\linewidth}{L L C C C}
+\toprule
+\textbf{Grid} & \textbf{Architecture} & \textbf{Clean test \%} & \textbf{ASR $B_\infty$ = 1 \%} & \textbf{ASR $B_0$ = 200 \%}\\
+\midrule
+Binary & Custom SNN & 97.99 & 100.0 & 99.5\\
+Binary & ConvNet & 96.90 & 1.9 & 1.2\\
+Binary & Spiking ResNet18 & 98.61 & 0.1 & 0.0\\
+Binary & VGGSNN & 99.21 & 0.0 & 0.0\\
+Integer & Custom SNN & 98.14 & 99.9 & 98.0\\
+Integer & ConvNet & 96.58 & 0.6 & 1.1\\
+Integer & Spiking ResNet18 & 98.12 & 0.2 & 0.1\\
+Integer & VGGSNN & 99.30 & 0.0 & 0.0\\
+\bottomrule
+\end{tabularx}
+\vspace{3pt}
+\begin{minipage}{\linewidth}\footnotesize Clean accuracy uses the complete 10,000-example official test set. ASR uses a separate frozen 1,000-example joint-correct manifest per representation. These are local measurements, not values copied from \cite{yu2026}. Source: [R4].\end{minipage}
+\end{table}
+\subsection{Derivation for the fixed probability readout}
+\label{sec:supp_margin}
+For the fixed trained model, let $\rho$ and $\rho'$ denote the clean and retimed quantum states before the fixed readout measurement, and let $q,q'\in\mathbb{R}^{256}$ be the corresponding outcome-probability vectors. Write the logits as $z(q)=Wq+b$, and define the clean pairwise margin against class $k\ne y$ by
+\begin{equation}
+m_{yk}(q)=(w_y-w_k)^\top q+b_y-b_k.
+\end{equation}
+Here $y$ is the clean predicted class, equal to the label on the attacked clean-correct subset, and $w_k$ is row $k$ of $W$. Measurement cannot increase trace distance \cite[Corollary 3.40]{watrous2018theory}, hence
+\begin{equation}
+\tfrac12\|q-q'\|_1\leq D_{\mathrm{tr}}(\rho,\rho'),
+\qquad
+D_{\mathrm{tr}}(\rho,\rho')=\tfrac12\|\rho-\rho'\|_1.
+\end{equation}
+The state norm is the trace norm; for probability vectors it is the ordinary $\ell_1$ norm. Combining this inequality with H\"older's inequality gives
+\begin{equation}
+\begin{split}
+m_{yk}(q')\geq m_{yk}(q)\\
+{}-2\|w_y-w_k\|_\infty D_{\mathrm{tr}}(\rho,\rho').
+\end{split}
+\label{eq:supp_state_margin}
+\end{equation}
+Thus a sufficient condition for retaining class $y$ is that the right-hand side remain strictly positive for every $k\ne y$. To see this, subtract the two affine margins and bound the resulting inner product by $\|w_y-w_k\|_\infty\|q'-q\|_1$; positivity of all pairwise margins then preserves the argmax.
+
+This observation separates state displacement from decision failure. A larger state distance need not cause a label change, and a small clean margin can make a smaller displacement consequential. Equation~\eqref{eq:supp_state_margin} is a conditional interpretation of the implemented readout, not a certified timestamp radius: no uniform bound from admissible event retiming through the classical frontend to $D_{\mathrm{tr}}$ has been established here. The final-model campaign also does not report the per-example states needed to evaluate this condition. Its connection to quantum robustness theory is therefore conceptual rather than an application of an existing certificate \cite{dowling2026guarantees}.
+
+\subsection{Descriptive binomial score intervals}
+For a reported $s$ successes among $n$ selected examples, let $\widehat p=s/n$ and $z=1.959963984540054$. The plotted 95\% Wilson score interval is
+\begin{equation}
+\frac{\widehat p+z^2/(2n)\ \pm\ z\sqrt{\widehat p(1-\widehat p)/n+z^2/(4n^2)}}{1+z^2/n}.
+\end{equation}
+These intervals are computed from aggregate counts, not recovered per-example outputs. For $n=100$, the intervals for $s=0,1,3,4,5$ are approximately $[0,3.70]$, $[0.18,5.45]$, $[1.03,8.45]$, $[1.57,9.84]$ and $[2.15,11.18]$ percent. They summarize a binomial model on the selected subset; deterministic joint-correct selection, repeated conditions and shared examples do not justify coverage claims for the full validation/test population. They neither replace the paired McNemar test nor measure uncertainty of a paired difference.
+
+\section{Static inspection of the preserved attack implementation}
+\label{sec:static_audit}
+This is a source-level audit of the pinned snapshot, not an executed experiment. Code paths are distinguished from proof that particular saved records used them, since most run artifacts are absent.
+
+\subsection{Budget-scaled TEMP schedule}
+The matched runner explicitly defines the two low-access schedules, rather than truncating the historical 600-candidate initialization. Its candidate evaluator consumes all initialization proposals and all four child batches, with no early stop on success. At each generation it preserves the 12 lowest-margin elites and evaluates only new children. All proposals pass through the timestamp feasibility operator. The final minimum-margin candidate is returned.
+\begin{table}[H]\centering\small
+\caption{TEMP schedule defined in the preserved matched runner.}
+\label{tab:temp_schedule}
+\begin{tabularx}{\linewidth}{L R R R R}\toprule
+Condition & Initial & Children/generation & Generations & Total $Q$\\\midrule
+Candidate matching & 13 & 2 & 4 & 21\\
+Forward matching & 13 & 7 & 4 & 41\\
+Elapsed time, QSNN & 1,500 & 625 & 4 & 4,000\\
+Elapsed time, SNN & 600 & 250 & 4 & 1,600\\\bottomrule
+\end{tabularx}
+\end{table}
+\noindent The source algorithm can be written without implying unmeasured budgets:
+\begin{enumerate}
+\item Read the condition's $(n_0,n_g)$ from the fixed schedule. Draw $n_0$ uniform perturbations in $[-\epsilon,\epsilon]$ per timestamp, apply feasibility, and evaluate their margins.
+\item For each $\sigma\in\{0.50,0.30,0.18,0.10\}$, retain 12 lowest-margin candidates. For $j=0,\ldots,n_g-1$, use elite $j\bmod12$ as parent, add $0.5(e_a-e_b)$ with independently drawn elite indices $a,b$, then Gaussian noise of scale $\sigma\epsilon$ per timestamp. Apply feasibility and evaluate the $n_g$ new children.
+\item Replace the pool by the 12 elites plus children; preserve their already computed scores. After the fourth generation return the candidate with minimum margin. Exactly $n_0+4n_g$ proposals have been evaluated.
+\end{enumerate}
+The selected elapsed-time schedules reproduce the stated totals; the generic scaling helper records any rounding adjustment. The report and runner agree on the low-$Q$ definitions, but the saved \path{budget_definitions.json} and candidate trajectories are unavailable for run-level verification \rref{3}.
+
+\subsection{PGD candidate retention}
+The preserved \path{scripts/run_nmnist_common_attack_protocol_seed42.py} scores the clean input and 20 iterates and retains the highest true-label cross-entropy, without a success-priority rule. Cross-entropy ranks true-class probability, while a multiclass decision also depends on competing probabilities; the highest-loss candidate need not be a misclassification even if another iterate is. This establishes a possible retention failure, not its occurrence in the reported records. No success count has been corrected on this basis. A future rerun should record success at every feasible iterate and compare final-selection and any-valid-candidate success under a common documented rule.
+
+\subsection{Timing and inference state}
+The matched runner requires CUDA and synchronizes immediately before and after \texttt{perf\_counter} timing. Calibration selects ten joint-clean-correct training examples, one per class, disjoint from evaluation IDs and near each class's median event count among a bounded candidate scan. It uses $\epsilon_f=0.10$, two repeats per example, a PGD warm-up and a TEMP warm-up requested at $Q=400$ (398 actual proposals after rounding). It searches requested budgets
+\[
+Q\in\{800,1200,1600,2000,2400,3200,4000,4800,5600,6400\},
+\]
+recording actual totals after the scaling helper rounds initialization and generation sizes, then choosing the median TEMP/PGD ratio closest to one and accepting a $\pm10\%$ band. TEMP candidate chunks are at most 64; PGD forwards contain one event example. Evaluation alternates PGD/TEMP order by sample position and excludes two verification forwards from attack timing. Timestamp tensors use float32 and the quantum backend uses complex64; the attack code does not apply the training loop's float16 autocast. Saved calibration arrays are absent, so absolute times, dispersion and historical device identity cannot be newly verified. The environment note's RTX 4090 observation is a later inspection, not a run-specific timing snapshot.
+
+The timestamp loader calls \texttt{eval()} for both victims. The compact SNN and spatial LIF extractor initialize membrane/accumulator tensors inside each forward, with no persistent cross-call neuron state. BatchNorm consequently uses fixed evaluation statistics. This finding does not extend to the missing four-model grid definitions.
+
+\subsection{Unresolved baseline and artifact provenance}
+The controlled-grid report gives local architecture labels, seed 42, a common recipe, complete counts and manifest hashes. Exact ConvNet, spiking ResNet18 and VGGSNN implementations, training configs and checkpoint files are absent. A name alone does not establish that a published residual or VGG spiking architecture was used; no such reference is assigned without code verification. The reported $B_0$ coefficient discrepancy (5 versus 10) remains unresolved because the applicable override/configuration is absent. No real clean/retimed event example or state--margin scatter is constructed without its timestamps, probabilities, logits and prediction evidence.

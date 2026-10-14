@@ -1,0 +1,20 @@
+{
+  "before": {
+    "figures/fig01_overview.tex": "8522f8b4ed0371f67d11f92b6ac5bb47e2da99807f03482c12580571a97f757c",
+    "figures/fig01_overview.pdf": "4882c55c4c3ff8dc83b49815ae9102493d7e63b3ba0dc6d876887d66ebf03b06",
+    "figures/fig02_matched_evaluation.pdf": "c639cf17a6fa72fccbc9923ed873aa9a2055b60007a055115bb494568916def7",
+    "build/main.pdf": "d36463179ff24c060af620b75364e516d71628fbd82e1fb651643445e55839c2",
+    "build/supplement.pdf": "b6874e5d692c3ae56d00ac09c93e4e02d3558a2c00faa2ed4656789256822336"
+  },
+  "experimental_values_changed": false,
+  "scope": "larger circuit gate text; explicit candidate/forward key; exact overlap count table instead of dominant neither bars",
+  "after": {
+    "figures/fig01_overview.tex": "d7378b10f462ee74f95ba7d3b18b0f432aba4f10c036322ef5d48c0017504280",
+    "figures/fig01_overview.pdf": "e5f9a6d3634bf1e030b034dc218a3c0b2c4adee990d5cc4dcd669d983951a2b7",
+    "figures/fig02_matched_evaluation.pdf": "02086fbf3fc9469eadf37de47a8abccb8aff7a1c5ece3990ad50df4d28a99747",
+    "build/main.pdf": "429775fd40b1a0366e205ee3b7bb95ff99c2e89c77b0866c227ce8e9ae2edf36",
+    "build/supplement.pdf": "b6874e5d692c3ae56d00ac09c93e4e02d3558a2c00faa2ed4656789256822336"
+  },
+  "source_counts_sha256": "74df4e6ce480547cb2750c9863ce5564fdb2a5e18fec2bff3ca161743f472c2a",
+  "script": "scripts/phase3/render_refinements.py"
+}

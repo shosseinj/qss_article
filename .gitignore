@@ -17,3 +17,12 @@ __pycache__/
 !/build/review/
 /supplement.pdf
 /main.pdf
+
+# Phase 3 large raw artifacts remain outside Git; keep configs/receipts/source.
+*.pt
+*.pth
+*.npz
+*.npy
+*.parquet
+*.f64
+.venv-phase3/

@@ -1,0 +1,11 @@
+Phase 3 execution, 2026-10-14. Spec: phase3.md. No commit/push, no rewriting historical source/data.
+1. Verify Phase2 files; inventory referenced and actual artifacts, environment and local/public recovery locations. Record exact code/config hashes because current checkout is dirty.
+2. Recover missing source at the pinned historical commit into results/phase3/recovery/source; never treat source recovery as checkpoint/data recovery.
+3. TDD: raw-event feasibility, explicit argmax ties, same-trajectory selection, best-so-far, strict missing-record denominators, deterministic stratification and statistics. Keep synthetic tests separate from experiment outputs.
+4. Implement PyTorch adapter/model loader, versioned PGD/TEMP searches, separate search/verification accounting, pilot/state/gradient checks, per-candidate JSONL, resume/config gates, aggregates and state/margin diagnostics. Test on labelled fixtures only when no real checkpoint/data exist.
+5. Provide development/final-test/ablation configs and preregistration gates. Do not lock attack hyperparameters from nonexistent development results; final test remains blocked until preregistration frozen.
+6. Run independent checks, full targeted suite and resource preflight; attempt the real pilot through the runner, writing null metrics and blocked_resource when prerequisites are absent. Continue unrelated work.
+7. Make only justified small PDF corrections from section 8, without adding fabricated experimental results. Rebuild/inspect changed pages and report implemented versus measured items explicitly.
+Workspace decision: preserve the user's dirty checkout and deleted guide.md; add versioned phase3 paths in place. Worktree creation/commits conflict with the explicit no-commit instruction and would omit uncommitted Phase2 source. No historical model files are edited.
+
+Final state: inventory/source recovery, versioned runner, synthetic correctness suite, draft configs, PDF clarity and reporting completed. Real P0 pilot and P1–P5 measurements deferred after user confirmed assets absent. No ETA or scientific ASR generated. No commit/push.
