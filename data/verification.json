@@ -1,0 +1,39 @@
+{
+  "main": {
+    "pages": 8,
+    "compile_errors": 0,
+    "unresolved_references": 0,
+    "overfull_boxes": 0,
+    "latex_warnings": 0
+  },
+  "supplement": {
+    "pages": 12,
+    "compile_errors": 0,
+    "unresolved_references": 0,
+    "overfull_boxes": 0,
+    "latex_warnings": 0
+  },
+  "structure": {
+    "main_equations": 7,
+    "main_tables": 2,
+    "main_wide_tables": 3,
+    "main_figures": 3,
+    "supplement_equations": 10,
+    "supplement_tables": 9,
+    "supplement_figures": 6
+  },
+  "evidence_files_hash_verified": 33,
+  "qsnn_accuracy": {
+    "mean": 97.272,
+    "sample_sd": 0.21194338866782053
+  },
+  "parameters": 40762,
+  "paired_rows_verified": 16,
+  "scientific_review": "independent source-to-manuscript check passed",
+  "experiments_rerun": false,
+  "visual_review": {
+    "main_pages": 8,
+    "supplement_pages": 12,
+    "figures": 9
+  }
+}

@@ -1,0 +1,4 @@
+﻿PCA dimensions,Explained variance %,Validation accuracy %,Macro F1 %
+16,87.64,86.80,86.75
+24,95.42,85.30,85.24
+32,98.42,83.55,83.46

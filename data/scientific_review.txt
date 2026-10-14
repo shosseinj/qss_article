@@ -1,0 +1,17 @@
+Independent scientific consistency review of final main manuscript
+Reviewed: work/QSNN_Overleaf/main.tex and sections/*.tex, the three final figure PDFs/captions and their source-data records, and preserved manuscript/report/code evidence. Read-only review; main source unchanged.
+
+Concrete errors found: none in the reviewed scientific/numerical scope.
+
+Verified:
+- All five QSNN validation accuracies and checkpoint epochs agree with the preserved report. Mean = 97.2720%; sample SD = 0.211943 percentage points. Reported F1 aggregate is kept distinct from rounded per-run values and unavailable matched SNN validation-F1 data. Shared pretrained frontend/split and validation-selection dependence are explicit.
+- Both learned mappings (32-to-8 and inner 8-to-8) are represented; circuit uses eight qubits, two re-uploading blocks, learned measurement rotations, 256 probabilities and a linear ten-class classifier. Parameter sum is 40,762. Simulation, rather than hardware/finite-shot readout, is stated.
+- Timestamp feasibility explicitly defines D = t_N - t_1 + 1, matching the code. Event invariants, nondecreasing times/equal-time allowance, recording-window constraint and ten equal-duration bins are consistent.
+- PGD optimizes cross-entropy through the surrogate adapter; TEMP-DRIFT-v2 minimizes true-class logit margin, not quantum-state drift. PGD 21 candidates/41 forwards/20 backwards and TEMP access/time conditions are distinguished. No backward equivalence or exact runtime equality is claimed.
+- All 12 matched timestamp table cells agree with the preserved report and final Figure 2. Denominator is the same 100 seed-42 joint clean-correct validation examples. Paired totals, b/c interpretation and exact p values agree; p=0.5 only for QSNN at 10% under elapsed-time matching, otherwise p=1. Nonsignificance is not called equivalence.
+- All 16 controlled grid ASRs and all eight clean accuracies agree with the source report, Table 5 and Figure 3. Clean n=10,000 is separate from ASR n=1,000 joint-correct per representation. Binary/integer pools 9,522/9,495, within-representation matching and different manifests are explicit. The additional numerical ASR contrasts in Results recompute correctly.
+- Grid B0 penalty=5 is attributed to the preserved report; reference text value=10 and absent campaign override are disclosed. No stronger implementation verification is claimed.
+- All completed central campaigns are represented: five-seed validation, three matched timestamp controls for both models/budgets, and every cell of the four-model/two-representation/two-budget grid campaign. Original fixed-budget rows and historical studies are explicitly assigned to the supplement rather than omitted without explanation.
+- Main-text interpretations remain descriptive and bounded to the studied protocols. No isolated quantum-circuit causal benefit, general architecture ranking, certified robustness, quantum advantage, quantum-specific failure mechanism, statistical stealth or evaluated final defense is asserted. Clean-accuracy/ASR contrasts are not given causal explanations.
+
+Limits of this review: report/source arithmetic and statement consistency were checked. Original model executions, omitted per-example arrays/manifests/checkpoints, bootstrap resampling and campaign overrides were not reproduced. Visual/typographic QA is handled separately by the parent.

@@ -1,0 +1,267 @@
+--- before/references.bib
++++ after/references.bib
+@@ -3,15 +3,15 @@
+  title={Surrogate Gradient Learning in Spiking Neural Networks},
+  journal={IEEE Signal Processing Magazine}, volume={36}, number={6}, pages={51--63}, year={2019}, doi={10.1109/MSP.2019.2931595}}
+ @misc{yu2026,
+- author={Yu, Y. and Zhang, Q. and Ye, S. and Lin, X. and Wei, Q. and Wang, K. and Yang, W. and Tao, D. and Jiang, X.},
++ author={Yu, Yi and Zhang, Qixin and Ye, Shuhan and Lin, Xun and Wei, Qianshan and Wang, Kun and Yang, Wenhan and Tao, Dacheng and Jiang, Xudong},
+  title={Time Is All It Takes: Spike-Retiming Attacks on Event-Driven Spiking Neural Networks},
+- year={2026}, howpublished={arXiv:2602.03284}, note={Frozen protocol reference: v1}, url={https://arxiv.org/abs/2602.03284}}
++ year={2026}, howpublished={arXiv:2602.03284}, note={Frozen protocol reference: v1}, url={https://arxiv.org/abs/2602.03284v1}}
+ @article{brand2024,
+  author={Brand, Daniel and Petruccione, Francesco},
+  title={A Quantum Leaky Integrate-and-Fire Spiking Neuron and Network},
+  journal={npj Quantum Information}, volume={10}, pages={125}, year={2024}, doi={10.1038/s41534-024-00921-x}}
+ @misc{spate2026,
+- author={Innan, N. and Putra, R. V. W. and Shafique, M.},
++ author={Innan, Nouhaila and Putra, Rachmad Vidya Wicaksana and Shafique, Muhammad},
+  title={{SPATE}: Spiking-Phase Adaptive Temporal Encoding for Quantum Machine Learning},
+  year={2026}, howpublished={arXiv:2604.11022}, url={https://arxiv.org/abs/2604.11022}}
+ @article{perez2020,
+@@ -35,3 +35,87 @@
+  year={2026}, howpublished={\url{https://github.com/shosseinj/ABC_def1}},
+  note={Snapshot 80d02f5733d4, 28 September 2026},
+  url={https://github.com/shosseinj/ABC_def1}}
++
++@inproceedings{yao2024rawevent,
++  author = {Yao, Yanmeng and Zhao, Xiaohan and Gu, Bin},
++  title = {Exploring Vulnerabilities in Spiking Neural Networks: Direct Adversarial Attacks on Raw Event Data},
++  booktitle = {Computer Vision -- ECCV 2024},
++  year = {2024},
++  url = {https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09164.pdf}
++}
++
++@article{du2026latencies,
++  author = {Du, Xiao and Shi, Wanli and Zhao, Xiaohan and Cao, Yang and Gu, Bin and Wu, Tieru},
++  title = {Raw event-based adversarial attacks for {Spiking Neural Networks} with configurable latencies},
++  journal = {Neural Networks},
++  volume = {193},
++  pages = {108026},
++  year = {2026},
++  doi = {10.1016/j.neunet.2025.108026}
++}
++
++@article{jha2025hybrid,
++  author = {Jha, Ravi Kumar and Kasabov, Nikola and Bhattacharyya, Saugat and Coyle, Damien and Prasad, Girijesh},
++  title = {A hybrid spiking neural network - quantum framework for spatio-temporal data classification: a case study on {EEG} data},
++  journal = {EPJ Quantum Technology},
++  volume = {12},
++  pages = {130},
++  year = {2025},
++  doi = {10.1140/epjqt/s40507-025-00443-1}
++}
++
++@article{gong2024randomized,
++  author = {Gong, Weiyuan and Yuan, Dong and Li, Weikang and Deng, Dong-Ling},
++  title = {Enhancing quantum adversarial robustness by randomized encodings},
++  journal = {Physical Review Research},
++  volume = {6},
++  pages = {023020},
++  year = {2024},
++  doi = {10.1103/PhysRevResearch.6.023020}
++}
++
++@article{dowling2026guarantees,
++  author = {Dowling, Neil and West, Maxwell T. and Southwell, Angus and Nakhl, Azar C. and Sevior, Martin and Usman, Muhammad and Modi, Kavan},
++  title = {Adversarial robustness guarantees for quantum classifiers},
++  journal = {npj Quantum Information},
++  volume = {12},
++  pages = {16},
++  year = {2026},
++  doi = {10.1038/s41534-025-01129-3},
++  url = {https://arxiv.org/abs/2405.10360v2}
++}
++
++@misc{wendlinger2024comparative,
++  author = {Wendlinger, Maximilian and Tscharke, Kilian and Debus, Pascal},
++  title = {A Comparative Analysis of Adversarial Robustness for Quantum and Classical Machine Learning Models},
++  year = {2024},
++  eprint = {2404.16154},
++  archivePrefix = {arXiv},
++  primaryClass = {cs.LG},
++  note = {Preprint},
++  url = {https://arxiv.org/abs/2404.16154}
++}
++
++@inproceedings{athalye2018obfuscated,
++  author = {Athalye, Anish and Carlini, Nicholas and Wagner, David},
++  title = {Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples},
++  booktitle = {Proceedings of the 35th International Conference on Machine Learning},
++  series = {Proceedings of Machine Learning Research},
++  volume = {80},
++  pages = {274--283},
++  year = {2018},
++  publisher = {PMLR},
++  url = {https://proceedings.mlr.press/v80/athalye18a.html}
++}
++
++@inproceedings{croce2020reliable,
++  author = {Croce, Francesco and Hein, Matthias},
++  title = {Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks},
++  booktitle = {Proceedings of the 37th International Conference on Machine Learning},
++  series = {Proceedings of Machine Learning Research},
++  volume = {119},
++  pages = {2206--2216},
++  year = {2020},
++  publisher = {PMLR},
++  url = {https://proceedings.mlr.press/v119/croce20b.html}
++}
+--- before/sections/introduction.tex
++++ after/sections/introduction.tex
+@@ -3,11 +3,13 @@
+ 
+ Hybrid quantum spiking classifiers introduce an additional transformation between event timing and class logits. A classical spiking frontend summarizes the stream, a learned angle map drives a variational circuit, and quantum measurement probabilities become classifier features. This raises two distinct empirical questions: can timing-only changes disrupt the implemented hybrid classifier, and do those failures establish a specifically quantum mechanism? An attack on the classifier answers the first question; interpreting its mechanism requires additional representation-level evidence.
+ 
+-This paper studies an implemented eight-qubit model, QSNN-v3, alongside separate classical controls. Its central finding is that \textbf{the observed retiming vulnerability depends on both the representation and the computational comparison}. Native-event timestamp attacks cause 3--5 failures among 100 jointly clean-correct hybrid validation examples, with only zero to two additional failures for TEMP-DRIFT-v2 over timestamp PGD. A separate controlled packet-grid study produces 98.0--100\% attack success against the custom SNN but 0--1.9\% against three reference architectures. These are different experimental regimes; their contrast motivates a representation-aware evaluation rather than a pooled robustness score.
++This paper studies an implemented eight-qubit model, QSNN-v3, alongside separate classical controls. Its central finding is that \textbf{retiming outcomes must be interpreted within their specified input representation and computational budget}. Within the timestamp experiment, the numerical comparison changes with the definition of matched computation; across the separate timestamp and packet-grid studies, differences in victims, populations and budget units preclude a causal representation ablation or a pooled robustness ranking. Native-event timestamp attacks cause 3--5 failures among 100 jointly clean-correct hybrid validation examples, with only zero to two additional failures for TEMP-DRIFT-v2 over timestamp PGD. A separate controlled packet-grid study produces 98.0--100\% attack success against the custom SNN but 0--1.9\% against three reference architectures.
++
++The contribution is therefore an evaluation of an implemented hybrid pipeline under explicit temporal constraints, rather than a claim that quantum processing is intrinsically vulnerable or robust. Recent quantum-classifier studies examine how encodings, model structure and adversarial access affect robustness \cite{wendlinger2024comparative,gong2024randomized,dowling2026guarantees}. Our setting adds the event-to-feature transformation: the adversary changes event timing before a classical spiking frontend and a quantum probability readout. This distinction makes end-to-end feasibility and computational accounting necessary parts of the experimental claim.
+ 
+ Our contributions are:
+ \begin{enumerate}
+-\item \textbf{A fully specified hybrid evaluation target.} We document the Conv/LIF frontend, learned temporal-to-angle mapping, eight-qubit data re-uploading circuit and sole probability readout, together with a five-seed validation campaign conditional on a shared pretrained frontend.
++\item \textbf{A fully specified hybrid evaluation target.} We document the Conv/LIF frontend, learned temporal-to-angle mapping, eight-qubit data re-uploading circuit and sole probability readout, with a margin-based interpretation and five-seed validation conditional on a shared pretrained frontend.
+ \item \textbf{A paired comparison under three computational controls.} We evaluate timestamp PGD and derivative-free TEMP-DRIFT-v2 under equal candidate count, equal forward-pass count and calibrated elapsed time, reporting exact success counts and paired tests on the same examples.
+ \item \textbf{A controlled classical retiming comparison.} We quantify the large attack-outcome spread across four architectures under binary and integer packet representations, while explicitly separating clean accuracy, attack success, evaluation population and budget units.
+ \end{enumerate}
+--- before/sections/related_work.tex
++++ after/sections/related_work.tex
+@@ -1,6 +1,35 @@
+ \section{Related work}\label{sec:related}
+-\paragraph{Adversarial timing in spiking models.}
+-Surrogate gradients support optimization through nondifferentiable spiking neurons \cite{neftci2019}. Yu et al. formalize capacity-one spike-retiming constraints and budgets for maximum displacement, total delay and the number of retimed spikes \cite{yu2026}. Our grid study uses a local implementation of that framework. The native-event timestamp study has different constraints: multiple events may map to the same frame cell. Projected gradient descent provides a standard adversarial baseline \cite{madry2018}, while rigorous evaluation requires checking attack strength and comparing computational resources explicitly \cite{carlini2019}.
++\paragraph{Raw-event attacks and constrained retiming.}
++Surrogate-gradient learning provides a practical route through the nondifferentiable dynamics of spiking networks \cite{neftci2019}. However, an attack on an aggregated tensor and an attack on the underlying event stream need not have the same feasible set. Yao et al. attack raw event data using a probabilistic treatment of discrete event values and sparsity control \cite{yao2024rawevent}. Their construction permits event-value and support changes, whereas our native-event threat model preserves event identities, coordinates, polarities and count. Du et al. investigate raw-event attacks with configurable latencies \cite{du2026latencies}, providing a particularly relevant connection to temporal manipulation. These works motivate attacks at the event interface without making their constraints interchangeable with ours.
+ 
+-\paragraph{Hybrid quantum temporal representations.}
+-Quantum spiking constructions include quantum leaky integrate-and-fire neurons \cite{brand2024} and spike-derived temporal feature preparations such as SPATE \cite{spate2026}. QSNN-v3 instead uses classical LIF dynamics followed by a simulated variational circuit. Data re-uploading supplies the relevant repeated-encoding construction \cite{perez2020}. Our experiments concern the security of this implemented composition. Their classifier-level attack objective does not, by itself, measure quantum-state drift.
++\paragraph{Capacity constraints and representation-specific budgets.}
++Yu et al. formalize capacity-one spike retiming and budgets on maximum displacement, total delay and the number of retimed spikes \cite{yu2026}. Our classical packet-grid comparison uses a local implementation of this framework, with completed results for maximum displacement and retimed-packet count. The native-timestamp experiment instead permits multiple events to contribute to a frame cell. Its duration-scaled timestamp radius cannot be identified with a one-bin packet displacement. We consequently compare attacks within each stated regime and do not rank the regimes by their raw ASR values.
++
++\paragraph{Hybrid spiking and quantum models.}
++Quantum temporal models encompass distinct computational constructions. Brand and Petruccione develop a quantum leaky integrate-and-fire neuron and network \cite{brand2024}; Jha et al. combine SNN-derived EEG features with quantum-kernel classification \cite{jha2025hybrid}; and SPATE studies spike-derived temporal quantum encodings \cite{spate2026}. QSNN-v3 instead composes classical Conv/LIF dynamics, a learned angle map, a data-re-uploading variational circuit \cite{perez2020}, and a linear classifier on the complete measurement-probability vector. These differences concern the model and interface, so accuracy or security claims do not transfer directly between the constructions.
++
++\paragraph{Adversarial robustness of quantum classifiers.}
++Wendlinger et al. compare quantum and classical classifiers using transfer attacks, perturbation structure and Lipschitz-based analysis \cite{wendlinger2024comparative}. Gong et al. investigate randomized encodings under specified adversarial-access assumptions \cite{gong2024randomized}, while Dowling et al. establish robustness guarantees for particular quantum-classifier settings \cite{dowling2026guarantees}. Together, these studies motivate stating the encoding and adversary explicitly. Their guarantees and defenses cannot be assigned to QSNN-v3 without checking the corresponding assumptions, especially because our perturbation enters before a classical event-processing frontend.
++
++\paragraph{Evaluation strength and computational controls.}
++PGD is a standard iterative baseline \cite{madry2018}, but the failure of one optimizer is insufficient evidence of robustness \cite{carlini2019,athalye2018obfuscated}. Diverse attacks and improved optimization can expose failures missed by an individual configuration \cite{croce2020reliable}. We therefore report paired outcomes under candidate, forward-pass and elapsed-time controls. These controls answer different resource questions and do not establish optimality of either attack. Standard image-space attack ensembles also require adaptation before they respect our order, timing and packet constraints.
++
++\begin{table*}[t]
++\centering
++\small
++\caption{Conceptual positioning of related work. Entries describe research scope, not a common benchmark or an experimental ranking.}
++\label{tab:literature_scope}
++\begin{tabular}{p{0.20\textwidth}p{0.32\textwidth}p{0.39\textwidth}}
++\hline
++Work & Studied interface or construction & Relation to the present study \\
++\hline
++Yao et al.\ \cite{yao2024rawevent} & Raw-event attacks with discrete-value optimization and sparsity control & Motivates the raw-event interface; not restricted to our identity-preserving retiming. \\
++Du et al.\ \cite{du2026latencies} & Raw-event attacks with configurable latencies & Related temporal attack setting; constraints and budgets require separate specification. \\
++Yu et al.\ \cite{yu2026} & Capacity-one spike-retiming constraints & Protocol reference for the separate classical packet-grid study. \\
++Jha et al.\ \cite{jha2025hybrid} & SNN features followed by quantum kernels for EEG & Hybrid temporal classification; distinct from our variational probability readout. \\
++Gong et al.\ \cite{gong2024randomized} & Randomized quantum encodings with specified attacker access & Defense assumptions differ from an attack before our classical frontend. \\
++Dowling et al.\ \cite{dowling2026guarantees} & Guarantees for specified quantum-classifier scenarios & Motivates assumption-aware interpretation; not a certificate for our timing budgets. \\
++This work & End-to-end timestamp attacks on QSNN-v3; separate classical grid controls & Paired computational controls, explicit populations and report-grounded evidence. \\
++\hline
++\end{tabular}
++\end{table*}
+--- before/sections/models.tex
++++ after/sections/models.tex
+@@ -47,3 +47,27 @@
+ \includegraphics[width=\textwidth]{figures/fig01_overview.pdf}
+ \caption{Retiming protocols and implemented QSNN-v3. (a) Schematic retiming preserves event identity, coordinates, polarity, labels and count; intervals and bin counts can change. (b) The timestamp and discrete-grid studies use different representations, populations and budget units. Timestamp perturbations preserve nondecreasing order within the clean recording window; grid perturbations preserve indivisible packet amplitudes with collision-free scheduling. (c) Conv/LIF summaries pass through 32 latent features, learned 32-to-8 and 8-to-8 maps, and an eight-qubit, two-block circuit. The 256-probability readout alone feeds the ten-class classifier. The 40,762-parameter model uses analytic state-vector simulation. Circuit and event drawings are schematic. Sources: [R1--R4].}\label{fig:overview}
+ \end{figure*}
++
++\subsection{State distance and classification margin}
++\label{sec:margin_interpretation}
++For the fixed trained model, let $\rho$ and $\rho'$ denote the clean and retimed quantum states before the fixed readout measurement, and let $q,q'\in\mathbb{R}^{256}$ be the corresponding outcome-probability vectors. Write the logits as $z(q)=Wq+b$, and define the clean pairwise margin against class $k\ne y$ by
++\begin{equation}
++m_{yk}(q)=(w_y-w_k)^\top q+b_y-b_k.
++\end{equation}
++Here $y$ is the clean predicted class, equal to the label on the attacked clean-correct subset, and $w_k$ is row $k$ of $W$. Measurement cannot increase trace distance, hence
++\begin{equation}
++\tfrac12\|q-q'\|_1\leq D_{\mathrm{tr}}(\rho,\rho'),
++\qquad
++D_{\mathrm{tr}}(\rho,\rho')=\tfrac12\|\rho-\rho'\|_1.
++\end{equation}
++The state norm is the trace norm; for probability vectors it is the ordinary $\ell_1$ norm. Combining this inequality with H\"older's inequality gives
++\begin{equation}
++\begin{split}
++m_{yk}(q')\geq m_{yk}(q)\\
++{}-2\|w_y-w_k\|_\infty D_{\mathrm{tr}}(\rho,\rho').
++\end{split}
++\label{eq:state_margin}
++\end{equation}
++Thus a sufficient condition for retaining class $y$ is that the right-hand side remain strictly positive for every $k\ne y$. To see this, subtract the two affine margins and bound the resulting inner product by $\|w_y-w_k\|_\infty\|q'-q\|_1$; positivity of all pairwise margins then preserves the argmax.
++
++This observation separates state displacement from decision failure. A larger state distance need not cause a label change, and a small clean margin can make a smaller displacement consequential. Equation~\eqref{eq:state_margin} is a conditional interpretation of the implemented readout, not a certified timestamp radius: no uniform bound from admissible event retiming through the classical frontend to $D_{\mathrm{tr}}$ has been established here. The final-model campaign also does not report the per-example states needed to evaluate this condition. Its connection to quantum robustness theory is therefore conceptual rather than an application of an existing certificate \cite{dowling2026guarantees}.
+--- before/sections/results.tex
++++ after/sections/results.tex
+@@ -30,6 +30,8 @@
+ Under 21-candidate matching, QSNN-v3 PGD succeeds on 3/100 examples at both duration-scaled budgets, $\epsilon_f$ = 0.05 and 0.10; TEMP succeeds on 4/100 and 3/100. Matching 41 forwards produces the same outcomes. Elapsed-time calibration selects Q = 4,000 for QSNN-v3 and Q = 1,600 for SNN, with median TEMP/PGD runtime ratios of 0.978 and 1.083. Under this calibration TEMP succeeds on 4/100 and 5/100 QSNN examples, compared with PGD's 3/100 at each budget. Thus the two-example numerical TEMP advantage at 10\% occurs under elapsed-time matching and disappears under the two access definitions.
+ 
+ The paired counts delimit this contrast. At 5\% the QSNN attacks share three successes, with one TEMP-only success and 96 failures of both attacks. At 10\% under access matching, both attacks break the same three examples. At 10\% under elapsed-time matching, three are broken by both, two only by TEMP and 95 by neither. The respective exact paired p-values are 1, 1 and 0.5. No matched condition establishes significant TEMP superiority, and nonsignificance does not prove attack equivalence.
++
++The paired comparison is driven by discordant examples, not by treating the two ASRs as independent proportions. At the 10\% budget under elapsed-time calibration, the two TEMP-only failures account for the entire numerical difference; there are no PGD-only failures. The exact paired test therefore remains inconclusive at $p=0.5$. At the same budget under candidate or forward matching, the attacks fail on exactly the same three examples. These observations identify a budget-dependent numerical contrast within this fixed population, without establishing a generally stronger attack.
+ 
+ The compact SNN has no successes for either attack under candidate or forward matching at either budget. Elapsed-time matching yields no successes at 5\%, and 0/100 PGD versus 1/100 TEMP at 10\% (exact paired p = 1). These finite, joint-correct, single-seed observations demonstrate specific hybrid failures but neither population-wide robust accuracy nor general hybrid-versus-SNN robustness. Supporting material retains the original fixed-budget rows, reported bootstrap intervals and report-specific distortion diagnostics separately.
+ 
+@@ -74,9 +76,9 @@
+ 
+ On binary grids the custom SNN has 100.0\% and 99.5\% ASR under $B_\infty$ and B0, respectively. ConvNet has 1.9\% and 1.2\%, spiking ResNet18 has 0.1\% and 0.0\%, and VGGSNN has 0.0\% in both cells. Their full-test clean accuracies are 97.99\%, 96.90\%, 98.61\% and 99.21\%. On integer grids the corresponding ASR pairs are 99.9\%/98.0\%, 0.6\%/1.1\%, 0.2\%/0.1\% and 0.0\%/0.0\%, with clean accuracies of 98.14\%, 96.58\%, 98.12\% and 99.30\%. Each 0.1 ASR point represents one success among 1,000 attacked examples; the table gives all sixteen completed cells.
+ 
+-The largest reference-model ASR is descriptively 98.1 and 98.3 percentage points below the custom SNN for the binary budgets, and 99.3 and 96.9 points below it for the integer budgets. The custom SNN and spiking ResNet18 have almost identical integer-grid clean accuracy, 98.14\% versus 98.12\%, yet their ASRs differ by 99.7 points under $B_\infty$ and 97.9 under B0. This comparison shows that clean accuracy alone does not summarize the observed attack behavior.
++The largest reference-model ASR is descriptively 98.1 and 98.3 percentage points below the custom SNN for the binary budgets, and 99.3 and 96.9 points below it for the integer budgets. The integer-grid comparison supplies a particularly clear diagnostic: the custom SNN and spiking ResNet18 differ by only $0.02$ percentage points in clean test accuracy, but by $99.7$ and $97.9$ points in ASR under the two completed budgets. Similar clean accuracy therefore does not summarize the failure profile under this attack recipe. The source of the contrast remains unresolved, because a common recipe does not guarantee comparable optimization strength across architectures. In particular, zero observed successes should be read as failure of the evaluated attack on the selected examples, rather than as a robustness certificate \cite{athalye2018obfuscated,croce2020reliable}.
+ 
+-The source report states that every attack cell passed independent raw-data reconstruction and prediction audit. Common inputs and settings support a local architecture comparison, but do not prove equal optimization strength across models or identify the cause of the ASR gap. Zero observed successes signifies failure of the tested search, not certified robustness. The campaign has one seed and two budgets; an unresolved B0 penalty discrepancy (5 attributed to the implementation by the report versus 10 in the reference paper) also limits replication claims. These local measurements must remain separate from published-reference tables, historical custom-SNN campaigns and the native-timestamp results.
++The source report states that every attack cell passed independent raw-data reconstruction and prediction audit. Common inputs and settings support a local architecture comparison without identifying the cause of the ASR gap. The campaign has one seed and two budgets; an unresolved B0 penalty discrepancy (5 attributed to the implementation by the report versus 10 in the reference paper) also limits replication claims. These local measurements must remain separate from published-reference tables, historical custom-SNN campaigns and the native-timestamp results.
+ 
+ Figure~\ref{fig:grid} shows the full 0--100\% outcome range and explicitly labeled control expansions. Table~\ref{tab:grid} gives every completed attack cell.
+ 
+--- before/sections/protocol.tex
++++ after/sections/protocol.tex
+@@ -33,6 +33,8 @@
+ Clean accuracy is measured on the stated complete validation or test partition. Attack success rate (ASR) is conditioned on clean correctness. In joint-model studies the denominator is the shared clean-correct subset. A success is an untargeted misclassification after retiming.
+ 
+ 
++ASR is conditional on the stated clean-correct attack population. Consequently, $1-\mathrm{ASR}$ describes survival under the evaluated attack on that selected population; it is not an unconditional robust accuracy on the full validation or test set. Reusing a joint-correct population improves within-study comparability but changes the estimand relative to evaluation on all examples.
++
+ For the stated clean-correct attack population $\mathcal{P}$, we use
+ \begin{equation}\label{eq:asr}
+ \operatorname{ASR}(\mathcal{P})=
+--- before/sections/discussion.tex
++++ after/sections/discussion.tex
+@@ -5,19 +5,29 @@
+ 
+ The study does not isolate a quantum-specific failure mechanism. QSNN-v3 has a classical frontend and an analytically simulated circuit, and final TEMP-DRIFT-v2 optimizes class margin rather than quantum-state drift. Historical Iris diagnostics, retained in the supplement, show that greater mean state drift need not coincide with more classification failures. A mechanism study should relate final-model state distance to per-example outcomes while controlling clean margin and realized input distortion.
+ 
++\paragraph{Encoding-aware interpretation.}
++The quantum component is only one stage of the attacked composition. A feasible timestamp perturbation can change temporal aggregation, spiking summaries, encoded angles and the final probability vector. Without interventions that hold the frontend and training protocol fixed while replacing the readout, the observed failures cannot be attributed uniquely to quantum processing. This distinction complements comparisons of quantum and classical decision geometry \cite{wendlinger2024comparative} and avoids transferring guarantees between incompatible encoding or attacker-access settings \cite{gong2024randomized,dowling2026guarantees}.
++
++\paragraph{Optimization diagnostics.}
++The hard-forward, surrogate-backward timestamp pipeline makes attack diagnostics particularly relevant. Gradient checks, alternative surrogates, multiple initializations and gradient-free searches would help distinguish optimizer failure from difficult decision boundaries \cite{athalye2018obfuscated}. The principle of diverse attack evaluation \cite{croce2020reliable} is applicable, but an image-space ensemble cannot be imported unchanged: every candidate must obey the native event constraints or the packet-grid capacity rules. The present candidate and time controls are useful computational comparisons, not evidence that the search has exhausted either feasible set.
++
+ The remaining boundaries are concrete. Five hybrid seeds share one frontend and split; timestamp attacks reuse a selected validation population and one victim seed; grid attacks use deterministic joint-correct subsets. Official-test QSNN accuracy and robustness are absent. Tomography monitoring has no final N-MNIST detection or defense evaluation. This manuscript verifies report arithmetic rather than rerunning models or attacks, and original audit verdicts are attributed to the preserved reports because most underlying artifacts are missing.
+ 
+ \paragraph{Event preservation and stealth are distinct.}
+ An unchanged event count does not imply unchanged inter-spike intervals, frame histograms or detector behavior. The final-model experiments contain no statistical-indistinguishability test or adaptive attack against a deployed monitor. They are test-time evasion experiments; they do not modify a training set.
+ 
+ \paragraph{Next empirical steps.}
+-The immediate priorities are independent official-test QSNN evaluation, stronger and restarted attacks, multiple victim seeds, and recovery of per-example evidence. The historical corrected integer campaign reports only 8 of 33 conditions complete. A proposed tomography monitor must first specify the eight-qubit observables, clean calibration and rejection or recovery policy, then measure detection and adaptive-attack outcomes. Local single-qubit marginals do not determine the full joint state. The supplementary mathematical analysis and earlier Iris diagnostics inform that proposal without supplying a final-model defense result.
++Future evaluation should select the final model using validation, then measure QSNN clean accuracy and attacks on the official test partition with independently trained frontend and head seeds, sample identifiers and each model's clean errors. Attack diagnostics should sweep restarts, iteration counts and step sizes, cross-entropy and margin losses, alternative surrogates and derivative-free budget curves. The best valid success found up to each budget should be recorded and reconfirmed with the hard forward pass.
++
++A future component ablation should hold the frontend, split and training budget fixed while comparing a capacity-matched classical head and variational heads with and without entangling gates, reporting parameter counts and training costs. This ablation has not been performed. A state/margin study should retain each example's final state, probability vector and clean and attacked margins, comparing failures and survivors while controlling realized timestamp distortion and clean margin. Aggregate mean fidelity alone would not establish a mechanism.
++
++The historical corrected integer campaign reports only 8 of 33 conditions complete. A proposed tomography monitor must first specify eight-qubit observables, a shot budget, clean-only calibration and a rejection or recovery policy, then measure ROC/PR curves, false-positive rates and adaptive-attack outcomes. These final-model defense results are unavailable. Local single-qubit marginals do not determine the full joint state. The supplementary mathematical analysis and earlier Iris diagnostics inform that proposal without supplying a final-model defense result.
+ 
+ \paragraph{Evidence availability.}
+ The comparison report contains results although its accompanying README states that no experiment results are present. We use the populated report and disclose this inconsistency. Most original checkpoints, raw per-example arrays, attack manifests and logs are absent from the accessible snapshot. We therefore distinguish checked report arithmetic from independently reproduced model runs and attribute the historical audit verdicts to their reports.
+ 
+ \section{Conclusion}\label{sec:conclusion}
+-QSNN-v3 provides an implemented eight-qubit hybrid victim with 97.272\% $\pm$ 0.212\% validation accuracy, and constrained timestamp retiming changes its decisions on 3--5 of the 100 examined joint-correct validation examples. Paired comparisons establish no significant advantage of TEMP-DRIFT-v2 over timestamp PGD; its largest numerical gain occurs under elapsed-time matching. In the separate common-recipe packet-grid study, the custom SNN exhibits 98.0--100\% ASR while three classical reference architectures exhibit 0--1.9\% under the two completed budgets. The resulting contribution is an explicit account of measurable retiming vulnerability and its dependence on computational and representational choices. Official-test QSNN robustness, a quantum-specific failure mechanism and an effective final monitoring defense remain open empirical questions.
++QSNN-v3 provides an implemented eight-qubit hybrid victim with 97.272\% $\pm$ 0.212\% validation accuracy, and constrained timestamp retiming changes its decisions on 3--5 of the 100 examined joint-correct validation examples. Paired comparisons establish no significant advantage of TEMP-DRIFT-v2 over timestamp PGD; its largest numerical gain occurs under elapsed-time matching. In the separate common-recipe packet-grid study, the custom SNN exhibits 98.0--100\% ASR while three classical reference architectures exhibit 0--1.9\% under the two completed budgets. The resulting contribution is an explicit account of measurable retiming vulnerability within specified computational and representational settings. Official-test QSNN robustness, a quantum-specific failure mechanism and an effective final monitoring defense remain open empirical questions. The resulting evidence supports a protocol-specific account of end-to-end temporal vulnerability. It also identifies what stronger mechanistic claims would require: independent test evaluation, architecture-aware attack diagnostics, and per-example links between input distortion, quantum-state displacement and classification margin.
+ 
+ \section*{Data and code availability}
+ Implementation and preserved reports are available in the \texttt{ABC\_def1} repository \cite{repository}. The supplied supplement and data tables identify original report paths and the pinned snapshot. Tables transcribe available reports; they are not newly generated model outputs. Full experimental reproduction requires the omitted artifacts and original datasets. Author details are withheld for review, consistent with the supplied manuscript.

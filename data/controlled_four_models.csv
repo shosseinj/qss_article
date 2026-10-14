@@ -1,0 +1,9 @@
+representation,model,clean_accuracy_percent,asr_Binf_1_percent,asr_B0_200_percent,attack_denominator,evidence_level,source
+Binary,custom,97.99,100.0,99.5,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md
+Binary,convnet,96.90,1.9,1.2,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md
+Binary,resnet18,98.61,0.1,0.0,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md
+Binary,vggsnn,99.21,0.0,0.0,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md
+Integer,custom,98.14,99.9,98.0,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md
+Integer,convnet,96.58,0.6,1.1,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md
+Integer,resnet18,98.12,0.2,0.1,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md
+Integer,vggsnn,99.30,0.0,0.0,1000,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md

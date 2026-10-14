@@ -1,0 +1,6 @@
+seed,validation_accuracy_percent,macro_f1_percent,selected_epoch,runtime_seconds,evidence_level,source
+42,97.06,97.06,37,1200.00,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md
+123,97.28,97.28,24,938.80,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md
+777,97.52,97.52,40,1245.30,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md
+2026,97.44,97.44,38,1251.55,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md
+6543,97.06,97.06,40,1237.35,repository_report,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md

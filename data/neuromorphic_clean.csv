@@ -1,0 +1,7 @@
+dataset,representation,seed42_percent,seed123_percent,seed777_percent,reported_mean_sd,reported_95_t_ci,recomputed_mean,recomputed_sample_sd,source
+N-MNIST,Binary-grid,98.7300%,98.2900%,98.5300%,98.5167% ± 0.2203%,"[97.9694%, 99.0639%]",98.5167,0.2203,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/clean_accuracy_report.md
+N-MNIST,Integer-grid,98.4900%,98.1400%,98.5300%,98.3867% ± 0.2146%,"[97.8537%, 98.9196%]",98.3867,0.2146,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/clean_accuracy_report.md
+DVS-Gesture,Binary-grid,78.7879%,80.6818%,84.4697%,81.3131% ± 2.8930%,"[74.1264%, 88.4998%]",81.3131,2.8930,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/clean_accuracy_report.md
+DVS-Gesture,Integer-grid,84.0909%,78.0303%,87.1212%,83.0808% ± 4.6289%,"[71.5821%, 94.5795%]",83.0808,4.6289,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/clean_accuracy_report.md
+CIFAR10-DVS,Binary-grid,48.1000%,51.8000%,51.3000%,50.4000% ± 2.0075%,"[45.4131%, 55.3869%]",50.4000,2.0075,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/clean_accuracy_report.md
+CIFAR10-DVS,Integer-grid,39.1000%,49.2000%,50.3000%,46.2000% ± 6.1733%,"[30.8646%, 61.5354%]",46.2000,6.1733,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/clean_accuracy_report.md

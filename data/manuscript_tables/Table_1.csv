@@ -1,0 +1,5 @@
+﻿Study,Model set,Population,Budget
+Timestamp,QSNN-v3 and compact SNN,100 joint clean-correct validation examples; seed 42,ε = fraction of recording duration
+Controlled grid,"Custom SNN, ConvNet, spiking ResNet18, VGGSNN","1,000 joint clean-correct official-test examples per representation; seed 42",B∞ = 1 bin or B₀ = 200 packets
+Historical grid,Earlier custom SNN checkpoints,Separate test manifests and preprocessing,"B∞, B₁ and B₀ sweeps"
+Iris diagnostics,Earlier product-state classifier,Small held-out subsets across five model seeds,Timing-window fractions

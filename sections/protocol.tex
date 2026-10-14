@@ -1,0 +1,45 @@
+\section{Experimental protocol}\label{sec:protocol}
+\subsection{Training and model selection}
+N-MNIST contains event recordings of handwritten digits \cite{orchard2015}. The hybrid campaign uses a frozen stratified partition of 55,000 training and 5,000 validation examples from the official training set. Architecture selection was performed with seed 42 and validation data. The chosen wide4 frontend and project\_measure2 circuit were then held fixed across model seeds 42, 123, 777, 2026 and 6543. The official test partition was not instantiated for the final QSNN campaign [R1]. Consequently, its reported clean accuracy is validation accuracy after model selection.
+
+All five hybrid runs load the same hash-verified, seed-42 classical frontend checkpoint. The frontend is frozen for the first two epochs, then optimized with its BatchNorm layers kept in evaluation mode. The random seeds vary subsequent initialization and training stochasticity; they do not represent five independently pretrained frontends or five data splits. This conditional design limits the scope of the reported between-seed standard deviation.
+
+
+Training uses AdamW with weight decay $10^{-4}$ and batch size 256 for at most 40 epochs. Learning rates are $5\times10^{-5}$ for the extractor, $2.5\times10^{-4}$ for the projection/circuit, and $10^{-3}$ for the classifier. A ReduceLROnPlateau scheduler uses factor 0.5, patience 2 and minimum rate $10^{-5}$. The highest validation accuracy selects a checkpoint, with validation loss breaking ties; early stopping uses patience 6 after at least eight epochs. Gradients are clipped at norm 1. The frontend uses float16 autocast; circuit inputs and amplitudes use float32 and complex64. Seed 42 was externally interrupted during epoch 38; its saved epoch-37 checkpoint was re-evaluated [R1].
+
+\subsection{Populations and attack budgets}
+The timestamp protocol freezes 100 validation examples, with ten examples per class, correctly classified by both models before attack. It reuses their identities across conditions. This joint-correct restriction permits paired attack comparisons but excludes examples that only one model classifies correctly. It is not a population-wide robust-accuracy estimate. The compact SNN checkpoint in this study differs from the retrained custom-SNN checkpoint in the controlled grid study.
+
+PGD evaluates 21 candidate timestamps, including the clean candidate. Its implementation makes 41 attack-internal forward passes and 20 backward evaluations because candidate scoring and gradient computation use separate forwards. TEMP uses Q forward evaluations and no backwards. The first matched condition gives TEMP 21 candidates; the second gives it 41 forwards. Neither converts a backward pass into an assumed number of forward passes. Verification adds two forwards per new record and is excluded from attack timing.
+
+Elapsed-time calibration selects Q = 4,000 for QSNN and Q = 1,600 for SNN. The reported median TEMP/PGD timing ratios are 0.978 and 1.083, respectively [R3]. Candidate matching, forward matching and elapsed-time matching answer different computational questions. Exact equality of elapsed time is not asserted, and no throughput or latency claim is inferred from the ratios alone.
+
+The controlled grid campaign trains four architectures under a common local recipe, data split, seed, optimizer settings and validation-selected checkpoint rule [R4]. For each representation it selects the first 1,000 official-test examples that all four models classify correctly. The joint-correct pools contain 9,522 binary and 9,495 integer examples. Within each representation the same frozen manifest is used for every architecture and budget. The two representations use different manifests.
+
+
+\begin{table*}[t]\centering
+\caption{Experimental populations and budget units. These regimes are analyzed separately.}\label{tab:populations}
+\small\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{.15\textwidth}L L >{\raggedright\arraybackslash}p{.21\textwidth}}\toprule
+\textbf{Study} & \textbf{Models} & \textbf{Attack population} & \textbf{Budget}\\\midrule
+Native timestamps & QSNN-v3 and compact SNN & 100 common clean-correct validation examples; 10/class; seed 42 & $\epsilon_f\in\{0.05,0.10\}$ of recording duration\\
+Controlled grid & Custom SNN, ConvNet, spiking ResNet18, VGGSNN & First 1,000 common clean-correct official-test examples per representation; seed 42 & $B_\infty=1$ bin or $B_0=200$ packets\\
+Supporting studies & Earlier models/checkpoints & Study-specific subsets stated in the supplement & Study-specific timing or packet budgets\\\bottomrule
+\end{tabularx}
+\vspace{3pt}\begin{minipage}{\textwidth}\footnotesize
+The compact timestamp SNN and retrained grid custom SNN are different checkpoints. Binary and integer grid attacks use separate manifests, drawn from joint-correct pools of 9,522 and 9,495 test examples, respectively [R2--R5].
+\end{minipage}\end{table*}
+
+\subsection{Metrics, paired tests and evidence}
+Clean accuracy is measured on the stated complete validation or test partition. Attack success rate (ASR) is conditioned on clean correctness. In joint-model studies the denominator is the shared clean-correct subset. A success is an untargeted misclassification after retiming.
+
+
+ASR is conditional on the stated clean-correct attack population. Consequently, $1-\mathrm{ASR}$ describes survival under the evaluated attack on that selected population; it is not an unconditional robust accuracy on the full validation or test set. Reusing a joint-correct population improves within-study comparability but changes the estimand relative to evaluation on all examples.
+
+For the stated clean-correct attack population $\mathcal{P}$, we use
+\begin{equation}\label{eq:asr}
+\operatorname{ASR}(\mathcal{P})=
+\frac{1}{|\mathcal{P}|}\sum_{i\in\mathcal{P}}\mathbf{1}\!\left[f(X_i')\neq y_i\right].
+\end{equation}
+We report arithmetic means and sample standard deviations across the stated model seeds. For paired timestamp comparisons, $b$ counts examples broken only by PGD and $c$ counts examples broken only by TEMP. The exact two-sided McNemar test uses a $\operatorname{Binomial}(b+c,1/2)$ null distribution, with $p=1$ for $b+c=0$. It assesses observed paired discordance, not equality of all possible attack strengths. Reused examples across seeds and conditions are not treated as independent additional subjects.
+
+All numerical results are taken from preserved reports and source files at repository snapshot \texttt{80d02f5733d4} \cite{repository}; the full commit identifier is recorded in the supplement. We checked parameter arithmetic, aggregate statistics, paired counts and exact paired $p$-values. Model execution and per-example bootstrap resampling were not repeated. Missing raw outputs and provenance boundaries are documented in Sec.~\ref{sec:discussion} and the supplement.

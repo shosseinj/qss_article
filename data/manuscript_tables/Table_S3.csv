@@ -1,0 +1,7 @@
+﻿Dataset,Representation,Mean ± SD,Evaluation scope
+N-MNIST,Binary-grid,98.5167% ± 0.2203%,Official test
+N-MNIST,Integer-grid,98.3867% ± 0.2146%,Official test
+DVS-Gesture,Binary-grid,81.3131% ± 2.8930%,Official test
+DVS-Gesture,Integer-grid,83.0808% ± 4.6289%,Legacy normalized counts
+CIFAR10-DVS,Binary-grid,50.4000% ± 2.0075%,Frozen 10% test split
+CIFAR10-DVS,Integer-grid,46.2000% ± 6.1733%,Legacy normalized counts

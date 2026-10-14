@@ -1,0 +1,6 @@
+﻿Component,Dimensions,Parameters
+Conv/LIF extractor,16/32 channels; 4 × 4 summaries; 32D latent,"37,792"
+Latent projection,Linear 32 → 8,264
+Quantum head,8 → 8 angle map; two upload blocks; learned basis,136
+Classifier,Linear 256 → 10,"2,570"
+Total,Eight qubits,"40,762"

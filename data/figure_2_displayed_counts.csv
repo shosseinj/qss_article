@@ -1,0 +1,13 @@
+condition,model,epsilon_fraction,n,PGD_successes,TEMP_successes,PGD_only_b,TEMP_only_c,both,neither,exact_two_sided_p
+access_candidates_21,SNN,0.05,100,0,0,0,0,0,100,1.0
+access_candidates_21,SNN,0.1,100,0,0,0,0,0,100,1.0
+access_candidates_21,QSNN,0.05,100,3,4,0,1,3,96,1.0
+access_candidates_21,QSNN,0.1,100,3,3,0,0,3,97,1.0
+access_forwards_41,SNN,0.05,100,0,0,0,0,0,100,1.0
+access_forwards_41,SNN,0.1,100,0,0,0,0,0,100,1.0
+access_forwards_41,QSNN,0.05,100,3,4,0,1,3,96,1.0
+access_forwards_41,QSNN,0.1,100,3,3,0,0,3,97,1.0
+wallclock_snn,SNN,0.05,100,0,0,0,0,0,100,1.0
+wallclock_snn,SNN,0.1,100,0,1,0,1,0,99,1.0
+wallclock_qsnn,QSNN,0.05,100,3,4,0,1,3,96,1.0
+wallclock_qsnn,QSNN,0.1,100,3,5,0,2,3,95,0.5

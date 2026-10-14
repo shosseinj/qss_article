@@ -1,0 +1,4 @@
+pca_dimension,explained_variance_fraction,validation_accuracy_fraction,macro_f1_fraction,validation_CE,selected_epoch,reported_runtime_noncomparable,source
+16,0.876441,0.8680,0.8675,0.4432,400,2763.0 s*,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/mnist_8x8_pca_dimension_seed42_report.md
+24,0.954152,0.8530,0.8524,0.4912,336,7200.2 s**,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/mnist_8x8_pca_dimension_seed42_report.md
+32,0.984184,0.8355,0.8346,0.5218,351,7923.8 s,https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/mnist_8x8_pca_dimension_seed42_report.md

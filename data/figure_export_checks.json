@@ -1,0 +1,57 @@
+{
+  "fig01_overview": {
+    "pdf_inches": [
+      7.0075,
+      4.2515
+    ],
+    "pages": 1,
+    "PNG_pixels": [
+      2102,
+      1276
+    ],
+    "PNG_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "pdf_image_xobjects": []
+  },
+  "fig02_matched_evaluation": {
+    "pdf_inches": [
+      6.9881,
+      4.2888
+    ],
+    "pages": 1,
+    "PNG_pixels": [
+      2096,
+      1287
+    ],
+    "PNG_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "pdf_image_xobjects": []
+  },
+  "fig03_grid_comparison": {
+    "pdf_inches": [
+      6.9791,
+      4.791
+    ],
+    "pages": 1,
+    "PNG_pixels": [
+      2083,
+      1438
+    ],
+    "PNG_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "pdf_image_xobjects": []
+  },
+  "source_check": {
+    "timestamp_displayed_rows": 12,
+    "paired_count_totals_checked": true,
+    "source_reports_crosschecked": true,
+    "experiments_rerun": false,
+    "visual_review": "All three PDF exports rendered with Poppler and inspected; no clipping or overlap observed."
+  }
+}

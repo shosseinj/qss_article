@@ -1,0 +1,13 @@
+﻿Matching,Model,εf %,PGD n,TEMP n,Exact p
+21 candidates,SNN,5,0,0,1
+21 candidates,SNN,10,0,0,1
+21 candidates,QSNN,5,3,4,1
+21 candidates,QSNN,10,3,3,1
+41 forwards,SNN,5,0,0,1
+41 forwards,SNN,10,0,0,1
+41 forwards,QSNN,5,3,4,1
+41 forwards,QSNN,10,3,3,1
+Elapsed time,SNN,5,0,0,1
+Elapsed time,SNN,10,0,1,1
+Elapsed time,QSNN,5,3,4,1
+Elapsed time,QSNN,10,3,5,0.5

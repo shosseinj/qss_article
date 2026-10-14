@@ -1,0 +1,5 @@
+﻿Configuration,Validation %,Parameters,Scope
+Quantum v1,86.16,"7,026",Earlier 8D frontend
+Selected quantum head v2,92.60,"7,130",Earlier 8D frontend
+wide4 classical control,97.80,"38,122",32D frontend; seed 42
+Final QSNN-v3,97.06,"40,762",32D frontend; seed 42

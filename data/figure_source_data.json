@@ -1,0 +1,435 @@
+{
+  "artwork": {
+    "creation": "Matplotlib vector drawing; no generated imagery",
+    "width_inches": 7.25,
+    "formats": [
+      "PDF (vector)",
+      "SVG (vector, editable text)",
+      "PNG (300 dpi)"
+    ],
+    "palette": {
+      "navy": "#17324B",
+      "teal": "#147D86",
+      "orange": "#CB7229"
+    },
+    "figure1_events": "Schematic event positions and correspondence, not observations",
+    "schematic_unit_interval_times": {
+      "clean": [
+        0.0,
+        0.2,
+        0.37,
+        0.56,
+        0.72,
+        1.0
+      ],
+      "retimed": [
+        0.0,
+        0.25,
+        0.33,
+        0.62,
+        0.68,
+        1.0
+      ]
+    }
+  },
+  "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+  "validation": {
+    "seeds": [
+      42,
+      123,
+      777,
+      2026,
+      6543
+    ],
+    "accuracy_percent": [
+      97.06,
+      97.28,
+      97.52,
+      97.44,
+      97.06
+    ],
+    "mean_percent": 97.272,
+    "sample_sd_percentage_points": 0.21194338866782056,
+    "validation_n": 5000,
+    "shared_pretrained_frontend": true,
+    "shared_split": true
+  },
+  "timestamp_displayed_data": [
+    {
+      "condition": "access_candidates_21",
+      "model": "SNN",
+      "epsilon_fraction": 0.05,
+      "n": 100,
+      "PGD_successes": 0,
+      "TEMP_successes": 0,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 0,
+      "both": 0,
+      "neither": 100,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "access_candidates_21",
+      "model": "SNN",
+      "epsilon_fraction": 0.1,
+      "n": 100,
+      "PGD_successes": 0,
+      "TEMP_successes": 0,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 0,
+      "both": 0,
+      "neither": 100,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "access_candidates_21",
+      "model": "QSNN",
+      "epsilon_fraction": 0.05,
+      "n": 100,
+      "PGD_successes": 3,
+      "TEMP_successes": 4,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 1,
+      "both": 3,
+      "neither": 96,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "access_candidates_21",
+      "model": "QSNN",
+      "epsilon_fraction": 0.1,
+      "n": 100,
+      "PGD_successes": 3,
+      "TEMP_successes": 3,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 0,
+      "both": 3,
+      "neither": 97,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "access_forwards_41",
+      "model": "SNN",
+      "epsilon_fraction": 0.05,
+      "n": 100,
+      "PGD_successes": 0,
+      "TEMP_successes": 0,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 0,
+      "both": 0,
+      "neither": 100,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "access_forwards_41",
+      "model": "SNN",
+      "epsilon_fraction": 0.1,
+      "n": 100,
+      "PGD_successes": 0,
+      "TEMP_successes": 0,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 0,
+      "both": 0,
+      "neither": 100,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "access_forwards_41",
+      "model": "QSNN",
+      "epsilon_fraction": 0.05,
+      "n": 100,
+      "PGD_successes": 3,
+      "TEMP_successes": 4,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 1,
+      "both": 3,
+      "neither": 96,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "access_forwards_41",
+      "model": "QSNN",
+      "epsilon_fraction": 0.1,
+      "n": 100,
+      "PGD_successes": 3,
+      "TEMP_successes": 3,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 0,
+      "both": 3,
+      "neither": 97,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "wallclock_snn",
+      "model": "SNN",
+      "epsilon_fraction": 0.05,
+      "n": 100,
+      "PGD_successes": 0,
+      "TEMP_successes": 0,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 0,
+      "both": 0,
+      "neither": 100,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "wallclock_snn",
+      "model": "SNN",
+      "epsilon_fraction": 0.1,
+      "n": 100,
+      "PGD_successes": 0,
+      "TEMP_successes": 1,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 1,
+      "both": 0,
+      "neither": 99,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "wallclock_qsnn",
+      "model": "QSNN",
+      "epsilon_fraction": 0.05,
+      "n": 100,
+      "PGD_successes": 3,
+      "TEMP_successes": 4,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 1,
+      "both": 3,
+      "neither": 96,
+      "exact_two_sided_p": 1.0
+    },
+    {
+      "condition": "wallclock_qsnn",
+      "model": "QSNN",
+      "epsilon_fraction": 0.1,
+      "n": 100,
+      "PGD_successes": 3,
+      "TEMP_successes": 5,
+      "PGD_only_b": 0,
+      "TEMP_only_c": 2,
+      "both": 3,
+      "neither": 95,
+      "exact_two_sided_p": 0.5
+    }
+  ],
+  "grid_displayed_data": [
+    {
+      "representation": "Binary",
+      "model": "custom",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 97.99,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 100.0,
+      "attack_successes": 1000,
+      "seed": 42
+    },
+    {
+      "representation": "Binary",
+      "model": "custom",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 97.99,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 99.5,
+      "attack_successes": 995,
+      "seed": 42
+    },
+    {
+      "representation": "Binary",
+      "model": "convnet",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 96.9,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 1.9,
+      "attack_successes": 19,
+      "seed": 42
+    },
+    {
+      "representation": "Binary",
+      "model": "convnet",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 96.9,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 1.2,
+      "attack_successes": 12,
+      "seed": 42
+    },
+    {
+      "representation": "Binary",
+      "model": "resnet18",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 98.61,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.1,
+      "attack_successes": 1,
+      "seed": 42
+    },
+    {
+      "representation": "Binary",
+      "model": "resnet18",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 98.61,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.0,
+      "attack_successes": 0,
+      "seed": 42
+    },
+    {
+      "representation": "Binary",
+      "model": "vggsnn",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 99.21,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.0,
+      "attack_successes": 0,
+      "seed": 42
+    },
+    {
+      "representation": "Binary",
+      "model": "vggsnn",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 99.21,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.0,
+      "attack_successes": 0,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "custom",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 98.14,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 99.9,
+      "attack_successes": 999,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "custom",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 98.14,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 98.0,
+      "attack_successes": 980,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "convnet",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 96.58,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.6,
+      "attack_successes": 6,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "convnet",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 96.58,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 1.1,
+      "attack_successes": 11,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "resnet18",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 98.12,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.2,
+      "attack_successes": 2,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "resnet18",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 98.12,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.1,
+      "attack_successes": 1,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "vggsnn",
+      "budget": "$B_\\infty=1$ bin",
+      "clean_accuracy_percent": 99.3,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.0,
+      "attack_successes": 0,
+      "seed": 42
+    },
+    {
+      "representation": "Integer",
+      "model": "vggsnn",
+      "budget": "$B_0=200$ packets",
+      "clean_accuracy_percent": 99.3,
+      "clean_n": 10000,
+      "attack_n": 1000,
+      "asr_percent": 0.0,
+      "attack_successes": 0,
+      "seed": 42
+    }
+  ],
+  "grid_manifest_sha256": {
+    "Binary": "ecb866405e191304f36d3de3f8447d08b02913ffee7079f3b0f3b8a63f2b46a5",
+    "Integer": "b784862be9f353691cd1902466331ab5e53f9dde4f3dfa39de5a0d5932587a34"
+  },
+  "sources": [
+    {
+      "path": "manuscript_content.json",
+      "sha256": "67f148bac8f5b58aedbf0b90b2baee0c537f309d14e4661ade88b1551317e9d5"
+    },
+    {
+      "path": "tables/qsnn_validation.csv",
+      "sha256": "5efc7c33cf25959048a1756b1955270e97972b8cd5125fb200a61399e3f4d148"
+    },
+    {
+      "path": "tables/timestamp_paired.csv",
+      "sha256": "74df4e6ce480547cb2750c9863ce5564fdb2a5e18fec2bff3ca161743f472c2a"
+    },
+    {
+      "path": "tables/controlled_four_models.csv",
+      "sha256": "3d683e3e570fb1645ab3ee584486d9c69ddd1ce02c381e0b1cb1ce30eb77ef79"
+    },
+    {
+      "path": "evidence_source_snapshot/results/nmnist_budget_matched_comparison_v2_seed42/report.md",
+      "sha256": "97fd6cf3f09cc2ede832137bf2ea42ccaf6bad56ff858cef79fec3ffa3d20d07"
+    },
+    {
+      "path": "evidence_source_snapshot/Reports/nmnist_controlled_four_models_lr1e4_comparison.md",
+      "sha256": "0b4a535ee421496c092a74f7f12091a398000e13d4f405381085e3f9274082a9"
+    },
+    {
+      "path": "evidence_source_snapshot/results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md",
+      "sha256": "ddcbc2e9f13ca0e2d7634b9662229ff1a4c41f7445d65c2da90ee34b4dbeeafa"
+    }
+  ],
+  "caveats": [
+    "Reported data and code were checked; experiments and per-example attack reconstruction were not rerun.",
+    "Five QSNN seeds share one pretrained frontend and one validation split.",
+    "Timestamp ASR uses n=100 joint clean-correct validation examples; grid ASR uses n=1000 joint clean-correct official-test examples per representation.",
+    "Binary and integer controlled-grid manifests differ.",
+    "Budget units differ between timestamp and grid tracks.",
+    "No attack-superiority, quantum-advantage or evaluated-defense claim is made."
+  ]
+}

@@ -1,0 +1,8 @@
+﻿Setting,Value
+Optimizer,AdamW; weight decay 10⁻⁴
+Learning rates,Extractor 5 × 10⁻⁵; latent projection and circuit 2.5 × 10⁻⁴; classifier 10⁻³
+Training,Batch size 256; maximum 40 epochs; two-epoch frontend warm-up; gradient clipping at norm 1
+Schedule,ReduceLROnPlateau; factor 0.5; patience 2; minimum rate 10⁻⁵
+Selection,"Highest validation accuracy, then lowest validation loss; early-stop patience 6 after at least eight epochs"
+Precision,Float16 frontend autocast; float32 circuit inputs and complex64 state
+Seed 42 termination,Best checkpoint at epoch 37; external timeout during epoch 38; saved checkpoint re-evaluated

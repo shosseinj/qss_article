@@ -1,0 +1,5 @@
+﻿Measure,Baseline,Regularized model,Interpretation
+Clean accuracy %,84.00 ± 9.25,84.00 ± 8.63,Mean change 0; one seed improves and one degrades
+PGD 10% paired ASR %,25.58 ± 10.07,24.09 ± 8.45,Two rescued and zero broken across 125 repeated observations
+Reference TEMP 10%,—,One rescued observation,Improvement confined to seed 42
+Gradient TEMP,—,One rescued observation per τ,No improvement in the other four seeds

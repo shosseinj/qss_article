@@ -1,0 +1,35 @@
+\section{Related work}\label{sec:related}
+\paragraph{Raw-event attacks and constrained retiming.}
+Surrogate-gradient learning provides a practical route through the nondifferentiable dynamics of spiking networks \cite{neftci2019}. However, an attack on an aggregated tensor and an attack on the underlying event stream need not have the same feasible set. Yao et al. attack raw event data using a probabilistic treatment of discrete event values and sparsity control \cite{yao2024rawevent}. Their construction permits event-value and support changes, whereas our native-event threat model preserves event identities, coordinates, polarities and count. Du et al. investigate raw-event attacks with configurable latencies \cite{du2026latencies}, providing a particularly relevant connection to temporal manipulation. These works motivate attacks at the event interface without making their constraints interchangeable with ours.
+
+\paragraph{Capacity constraints and representation-specific budgets.}
+Yu et al. formalize capacity-one spike retiming and budgets on maximum displacement, total delay and the number of retimed spikes \cite{yu2026}. Our classical packet-grid comparison uses a local implementation of this framework, with completed results for maximum displacement and retimed-packet count. The native-timestamp experiment instead permits multiple events to contribute to a frame cell. Its duration-scaled timestamp radius cannot be identified with a one-bin packet displacement. We consequently compare attacks within each stated regime and do not rank the regimes by their raw ASR values.
+
+\paragraph{Hybrid spiking and quantum models.}
+Quantum temporal models encompass distinct computational constructions. Brand and Petruccione develop a quantum leaky integrate-and-fire neuron and network \cite{brand2024}; Jha et al. combine SNN-derived EEG features with quantum-kernel classification \cite{jha2025hybrid}; and SPATE studies spike-derived temporal quantum encodings \cite{spate2026}. QSNN-v3 instead composes classical Conv/LIF dynamics, a learned angle map, a data-re-uploading variational circuit \cite{perez2020}, and a linear classifier on the complete measurement-probability vector. These differences concern the model and interface, so accuracy or security claims do not transfer directly between the constructions.
+
+\paragraph{Adversarial robustness of quantum classifiers.}
+Wendlinger et al. compare quantum and classical classifiers using transfer attacks, perturbation structure and Lipschitz-based analysis \cite{wendlinger2024comparative}. Gong et al. investigate randomized encodings under specified adversarial-access assumptions \cite{gong2024randomized}, while Dowling et al. establish robustness guarantees for particular quantum-classifier settings \cite{dowling2026guarantees}. Together, these studies motivate stating the encoding and adversary explicitly. Their guarantees and defenses cannot be assigned to QSNN-v3 without checking the corresponding assumptions, especially because our perturbation enters before a classical event-processing frontend.
+
+\paragraph{Evaluation strength and computational controls.}
+PGD is a standard iterative baseline \cite{madry2018}, but the failure of one optimizer is insufficient evidence of robustness \cite{carlini2019,athalye2018obfuscated}. Diverse attacks and improved optimization can expose failures missed by an individual configuration \cite{croce2020reliable}. We therefore report paired outcomes under candidate, forward-pass and elapsed-time controls. These controls answer different resource questions and do not establish optimality of either attack. Standard image-space attack ensembles also require adaptation before they respect our order, timing and packet constraints.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Conceptual positioning of related work. Entries describe research scope, not a common benchmark or an experimental ranking.}
+\label{tab:literature_scope}
+\begin{tabular}{p{0.20\textwidth}p{0.32\textwidth}p{0.39\textwidth}}
+\hline
+Work & Studied interface or construction & Relation to the present study \\
+\hline
+Yao et al.\ \cite{yao2024rawevent} & Raw-event attacks with discrete-value optimization and sparsity control & Motivates the raw-event interface; not restricted to our identity-preserving retiming. \\
+Du et al.\ \cite{du2026latencies} & Raw-event attacks with configurable latencies & Related temporal attack setting; constraints and budgets require separate specification. \\
+Yu et al.\ \cite{yu2026} & Capacity-one spike-retiming constraints & Protocol reference for the separate classical packet-grid study. \\
+Jha et al.\ \cite{jha2025hybrid} & SNN features followed by quantum kernels for EEG & Hybrid temporal classification; distinct from our variational probability readout. \\
+Gong et al.\ \cite{gong2024randomized} & Randomized quantum encodings with specified attacker access & Defense assumptions differ from an attack before our classical frontend. \\
+Dowling et al.\ \cite{dowling2026guarantees} & Guarantees for specified quantum-classifier scenarios & Motivates assumption-aware interpretation; not a certificate for our timing budgets. \\
+This work & End-to-end timestamp attacks on QSNN-v3; separate classical grid controls & Paired computational controls, explicit populations and report-grounded evidence. \\
+\hline
+\end{tabular}
+\end{table*}

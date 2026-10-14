@@ -1,0 +1,9 @@
+﻿Grid,Architecture,Clean test %,ASR B∞ = 1 %,ASR B₀ = 200 %
+Binary,Custom SNN,97.99,100.0,99.5
+Binary,ConvNet,96.90,1.9,1.2
+Binary,Spiking ResNet18,98.61,0.1,0.0
+Binary,VGGSNN,99.21,0.0,0.0
+Integer,Custom SNN,98.14,99.9,98.0
+Integer,ConvNet,96.58,0.6,1.1
+Integer,Spiking ResNet18,98.12,0.2,0.1
+Integer,VGGSNN,99.30,0.0,0.0

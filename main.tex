@@ -1,0 +1,29 @@
+\documentclass[10pt,twocolumn,a4paper]{article}
+\usepackage[margin=0.68in,top=0.65in,bottom=0.7in]{geometry}
+\input{preamble}
+\pagestyle{plain}
+\begin{document}
+\twocolumn[{
+\begin{center}
+{\LARGE\bfseries Temporal Retiming Attacks on\\[3pt]
+Hybrid Quantum Spiking Classifiers\par}
+\vspace{9pt}
+{\normalsize Author names withheld for review\par}
+\vspace{12pt}
+\end{center}
+\begin{minipage}{\textwidth}
+\small\textbf{Abstract.} Retiming can alter an event-driven classifier while preserving event identities, coordinates, polarity and count. We study this attack surface in an implemented hybrid quantum spiking neural network and a separate controlled classical experiment. QSNN-v3 combines a convolutional leaky integrate-and-fire frontend with an eight-qubit data re-uploading circuit and a learned probability readout. Across five training seeds it reaches 97.272\% $\pm$ 0.212\% validation accuracy, conditional on one pretrained frontend and one split. On 100 jointly clean-correct seed-42 validation examples, timestamp PGD succeeds on three QSNN examples at both 5\% and 10\% duration budgets. Derivative-free TEMP-DRIFT-v2 succeeds on four and three under candidate or forward-pass matching, and four and five under calibrated elapsed-time matching. No paired comparison establishes significant TEMP superiority. In a separate ten-bin packet-retiming study on 1,000 jointly clean-correct official-test examples per representation, the custom SNN has 98.0--100\% attack success, whereas three locally trained controls have 0--1.9\% under the two completed budgets. The results identify timing-only vulnerability and show why computational matching and temporal representation are necessary for interpreting observed failure rates. The quantum circuit is simulated analytically; official-test hybrid robustness and tomography-based defenses remain open empirical questions.
+\par\vspace{5pt}\textbf{Keywords:} event-driven classification; adversarial retiming; hybrid quantum classifiers; spiking neural networks; matched attack evaluation.
+\end{minipage}
+\vspace{16pt}
+}]
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/models}
+\input{sections/attacks}
+\input{sections/protocol}
+\input{sections/results}
+\input{sections/discussion}
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

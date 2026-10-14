@@ -1,0 +1,233 @@
+[
+  {
+    "path": "AGENTS.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/AGENTS.md",
+    "sha256": "23c6a58adf30b99d5870d5b6823c94d16a32ff292fc53ad30be6bd73aee9cee2",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "Reports/clean_accuracy_report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/clean_accuracy_report.md",
+    "sha256": "c3bad8fabd24c24c831097ee193c43db53143dce80513e879088d266744c936f",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "Reports/nmnist_controlled_four_models_lr1e4_comparison.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_controlled_four_models_lr1e4_comparison.md",
+    "sha256": "0b4a535ee421496c092a74f7f12091a398000e13d4f405381085e3f9274082a9",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "Reports/nmnist_integer_corrected_report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_integer_corrected_report.md",
+    "sha256": "ea6e5f3a8ad4bf9e0eb960e5e961bff747ffac863b9038fac5ccba73e19dac43",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "Reports/nmnist_seed42_verification.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/Reports/nmnist_seed42_verification.md",
+    "sha256": "1d3dfe8471f8435579ddadc8d4631316525b219f75124844defe6aa5aad3c18a",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "attacks/pil_pgd.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/attacks/pil_pgd.py",
+    "sha256": "f490cff2946e4da4343f1a289e552815d537b4b3c1d7876148953215ed8cfbde",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "defenses/quantum_temp.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/defenses/quantum_temp.py",
+    "sha256": "919fb1c48d1c5d9cb687b8870daad9f2ad774f8ffa08eead834a7754e6f30865",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "encoding/quantum.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/encoding/quantum.py",
+    "sha256": "f6adbc94bbcd1ef9f54868d27a458e2f362b9b83c3557106a64ff76d968ff2ea",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "metrics/quantum_drift.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/metrics/quantum_drift.py",
+    "sha256": "a1937fd402cff34a57bd7a5f90b3f60cbea876fd715fa2fedff4c93a1d030704",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "metrics/spike_statistics.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/metrics/spike_statistics.py",
+    "sha256": "3637a807bd6e6951d418038971260ed6cecb2e76d879b95e3a6cc593f4b05fb7",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "models/nmnist_hybrid_qsnn.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/models/nmnist_hybrid_qsnn.py",
+    "sha256": "818b082bd81c9de3bfb540349e66f87be750f4a700d4972919dc56b74a6e1f91",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "models/nmnist_snn.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/models/nmnist_snn.py",
+    "sha256": "be5cc98c0adb97a7a05fdc7901bc74dc169cbfab8a252a9163a5b11c62b8aa32",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "models/qsnn.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/models/qsnn.py",
+    "sha256": "2840603cbb3f9d9ff60602c940793729d4ca97dad6fbb308bd26f5eaf6221caa",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "paper_revision_audit/hardware_software_versions.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/paper_revision_audit/hardware_software_versions.md",
+    "sha256": "5176d3ed957fa5e69bfa07b2fdde5efb3c0505992b0db6c089f8edc27c1f387a",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "paper_revision_audit/verified_experimental_results.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/paper_revision_audit/verified_experimental_results.md",
+    "sha256": "f707ce8a3fc673f230938536365b0fc9497146d0e93e3621725bd8d56c1f87be",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "readme_jafar.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/readme_jafar.md",
+    "sha256": "bcc44288b863aca9a2740492a76235136b7f8e1dfa152ae4b8adf27728ce011c",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "requirements.txt",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/requirements.txt",
+    "sha256": "342d12fa3b0438d116c16472e817f57ba98c18a0172b55b145c2d3b5dc76c871",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/final_attack_report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/final_attack_report.md",
+    "sha256": "377d8c27827b98ee526305abbe75562edb05f83184ed072d434a3a6a3991bdb8",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/iris_phase21_scientific_audit.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/iris_phase21_scientific_audit.md",
+    "sha256": "cdc3d256d3e7cd327df0c7db74f8eed0180b3c50fec72d9e0ed28acd59cbdeb8",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/mnist_8x8_pca_dimension_seed42_report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/mnist_8x8_pca_dimension_seed42_report.md",
+    "sha256": "9452162fbce6a4caee891d02a2de9466f6ca2a62fe14bff116d4e392966c007f",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/nmnist_budget_matched_comparison_v2_seed42/README.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_budget_matched_comparison_v2_seed42/README.md",
+    "sha256": "c889ae5d10e138660b56a34fd0a351d7711c9d0b849bc250d0d71d1bf98a44da",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/nmnist_budget_matched_comparison_v2_seed42/report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_budget_matched_comparison_v2_seed42/report.md",
+    "sha256": "97fd6cf3f09cc2ede832137bf2ea42ccaf6bad56ff858cef79fec3ffa3d20d07",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/nmnist_hybrid_qsnn_seed42/frontend_v3_report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/frontend_v3_report.md",
+    "sha256": "c1ed2327d739e331cb7dc97eb1d5b835ed2c8f03eca6c3f74fd439b3e48f118f",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/nmnist_qsnn_v3_multiseed/report.md",
+    "sha256": "ddcbc2e9f13ca0e2d7634b9662229ff1a4c41f7445d65c2da90ee34b4dbeeafa",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/nmnist_hybrid_qsnn_seed42/quantum_head_v2_report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_hybrid_qsnn_seed42/quantum_head_v2_report.md",
+    "sha256": "7024d76b75b9f394f4a4baa7beb8d0048500df87e1135a7e25d0382b23403667",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/phase153_results.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/phase153_results.md",
+    "sha256": "b7216823b0b382fd5a0fb7c344fca1fec92f2630d74d3dfb7089882b65df5990",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/phase21_results.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/phase21_results.md",
+    "sha256": "100a01d91d89b2b608176e47d5ac8dd25a611fca12f9ceeff1cb2208a427e383",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "results/shd_snn_test_reaudit_report.md",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/shd_snn_test_reaudit_report.md",
+    "sha256": "417022314d53f8d492fc6793709285aac31882b474daae2c256f9f4e6ab68d33",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "scripts/run_nmnist_attack_protocol_v3_auditable_seed42.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_attack_protocol_v3_auditable_seed42.py",
+    "sha256": "3249b715b63f100b731c9058d1369c49157ab6a8f9a0281e8463415cd08fe75a",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "scripts/run_nmnist_budget_matched_comparison_v2_seed42.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_budget_matched_comparison_v2_seed42.py",
+    "sha256": "2c1080dc2f5e24fd5ddc7b20b97fe46c2981afe4e019384d56dae1acdcec3345",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "scripts/run_nmnist_common_attack_protocol_seed42.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_common_attack_protocol_seed42.py",
+    "sha256": "8ca84c7e59d6ed91a11f8cd62eb812bd27f47cadd1653a1240f4ce108a86e1e6",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "scripts/run_nmnist_qsnn_v3_multiseed.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_qsnn_v3_multiseed.py",
+    "sha256": "0cc0025df107467f8be9388363d383836ddf4547cd570f6031acef1af41b7635",
+    "evidence_level": "available_source_or_report"
+  },
+  {
+    "path": "scripts/run_nmnist_temp_drift_v2_seed42.py",
+    "commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://github.com/shosseinj/ABC_def1/blob/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_temp_drift_v2_seed42.py",
+    "sha256": "5d9492594fad215b6f17b8db49154e26011a352e1c3a50c43529f6b368a54e1b",
+    "evidence_level": "available_source_or_report"
+  }
+]
