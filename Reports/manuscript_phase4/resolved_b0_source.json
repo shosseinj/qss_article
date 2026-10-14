@@ -1,0 +1,47 @@
+{
+  "status": "source_resolved_runtime_unverified",
+  "upstream_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+  "upstream_sha256": "e2f76fc6b4796d9cece0dbf498ced5f62c4f9581c17476da34ab41a1087e11ea",
+  "class_name": "PGDTimeShiftAfterEncoder_L0",
+  "constructor_defaults": {
+    "reduction": "mean",
+    "steps": 40,
+    "alpha_phi": 1.0,
+    "lambda_cap": 20.0,
+    "temperature": 1.0,
+    "random_start": false,
+    "cap_limit": 1.0,
+    "l0_moves_budget": 1000,
+    "lambda_B": 0.0,
+    "dual_lr": 0.1
+  },
+  "forward_defaults": {
+    "return_disp": false,
+    "use_PIL": true,
+    "use_cap": true,
+    "use_penalty": true,
+    "target_label": -1
+  },
+  "local_explicit_constructor": {
+    "steps": 40,
+    "alpha_phi": 1,
+    "lambda_cap": 20,
+    "temperature": 1,
+    "random_start": false,
+    "cap_limit": 1,
+    "l0_moves_budget": 200
+  },
+  "local_explicit_forward": {
+    "return_disp": true,
+    "use_PIL": true,
+    "use_cap": true,
+    "use_penalty": true,
+    "target_label": -1
+  },
+  "budget_penalty_expression": "5 * over_b.mean() / max(1, self.l0_moves_budget)",
+  "budget_penalty_source_line": 3112,
+  "capacity_penalty_is_budget_penalty": false,
+  "historical_resolved_runtime": null,
+  "historical_runtime_artifact_hash": null,
+  "warning": "Source-level values do not prove every historical run used these bytes/configuration."
+}

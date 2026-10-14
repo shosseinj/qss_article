@@ -1,0 +1,148 @@
+[
+  {
+    "key": "saxena2024encoding",
+    "url": "https://api.crossref.org/works/10.1109/QCE60285.2024.00184",
+    "doi": "10.1109/qce60285.2024.00184",
+    "title": [
+      "Certifiably Robust Encoding Schemes"
+    ],
+    "authors": [
+      {
+        "given": "Aman",
+        "family": "Saxena",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computation, Information &#x0026; Technology, Technical Univ. of Munich,Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Tom",
+        "family": "Wollschläger",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computation, Information &#x0026; Technology, Technical Univ. of Munich,Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Nicola",
+        "family": "Franco",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Fraunhofer Institute for Cognitive Systems IKS,Munich,Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jeanette Miriam",
+        "family": "Lorenz",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Fraunhofer Institute for Cognitive Systems IKS,Munich,Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Stephan",
+        "family": "Günnemann",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computation, Information &#x0026; Technology, Technical Univ. of Munich,Germany"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2024,
+          9,
+          15
+        ]
+      ]
+    },
+    "page": "1571-1582",
+    "container": [
+      "2024 IEEE International Conference on Quantum Computing and Engineering (QCE)"
+    ]
+  },
+  {
+    "key": "wilson1927",
+    "url": "https://api.crossref.org/works/10.1080/01621459.1927.10502953",
+    "doi": "10.1080/01621459.1927.10502953",
+    "title": [
+      "Probable Inference, the Law of Succession, and Statistical Inference"
+    ],
+    "authors": [
+      {
+        "given": "Edwin B.",
+        "family": "Wilson",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1927,
+          6
+        ]
+      ]
+    },
+    "page": "209-212",
+    "container": [
+      "Journal of the American Statistical Association"
+    ]
+  },
+  {
+    "key": "lun2025surrogate",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Lun_Towards_Effective_and_Sparse_Adversarial_Attack_on_Spiking_Neural_Networks_CVPR_2025_paper.pdf",
+    "bytes": 1299761,
+    "sha256": "f8c9c79a18c40205e4e8d568cc5eb7b0ad326e9553f9d7450bed252a253b0a42",
+    "pdf_pages": 12,
+    "printed_page_first": 3540,
+    "printed_page_last": 3551
+  }
+]

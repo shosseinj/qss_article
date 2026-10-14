@@ -1,0 +1,54 @@
+[
+  {
+    "label": "Custom SNN",
+    "local_class": "NMNISTConvSNN",
+    "spiking": true,
+    "quantum": false,
+    "temporal_aggregation": "mean of classifier outputs across frames",
+    "parameters_source_architecture": 25482,
+    "parameter_count_verification": "constructor verified without trained weights",
+    "parameters_historical_checkpoint": null,
+    "source_path": "results/phase3/recovery/source/models/nmnist_snn.py",
+    "source_sha256": "be5cc98c0adb97a7a05fdc7901bc74dc169cbfab8a252a9163a5b11c62b8aa32",
+    "historical_checkpoint_linkage": "unverified"
+  },
+  {
+    "label": "ConvNet (spiking SimpleNet_v2)",
+    "local_class": "SimpleNet_v2",
+    "spiking": true,
+    "quantum": false,
+    "temporal_aggregation": "reference T,B,10 logits -> mean(0) in BatchMajorReference",
+    "parameters_source_architecture": null,
+    "parameter_count_verification": "not runtime verified in this revision",
+    "parameters_historical_checkpoint": null,
+    "source_path": "results/phase3/recovery/source/experiments/nmnist/reference_models/simplenet.py",
+    "source_sha256": "88cb8521fcaaad42f42e3ffbf4b13c6bfc24df4c149e3245cbee7aae3d5b2aff",
+    "historical_checkpoint_linkage": "unverified"
+  },
+  {
+    "label": "Spiking ResNet18",
+    "local_class": "ResNet18",
+    "spiking": true,
+    "quantum": false,
+    "temporal_aggregation": "reference T,B,10 logits -> mean(0) in BatchMajorReference",
+    "parameters_source_architecture": null,
+    "parameter_count_verification": "not runtime verified in this revision",
+    "parameters_historical_checkpoint": null,
+    "source_path": "results/phase3/recovery/source/experiments/nmnist/reference_models/resnet.py",
+    "source_sha256": "8a40beb21a3508d6fa9031f5fb24e2c93513edfe377b54453d2053421c931e6a",
+    "historical_checkpoint_linkage": "unverified"
+  },
+  {
+    "label": "VGGSNN",
+    "local_class": "VGGSNN",
+    "spiking": true,
+    "quantum": false,
+    "temporal_aggregation": "reference T,B,10 logits -> mean(0) in BatchMajorReference",
+    "parameters_source_architecture": null,
+    "parameter_count_verification": "not runtime verified in this revision",
+    "parameters_historical_checkpoint": null,
+    "source_path": "results/phase3/recovery/source/experiments/nmnist/reference_models/vgg.py",
+    "source_sha256": "dd7fc72f333581f73a06f30611ddd5789e88670a724b57cf662120e0b1d43f69",
+    "historical_checkpoint_linkage": "unverified"
+  }
+]

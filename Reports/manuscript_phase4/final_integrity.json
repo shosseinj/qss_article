@@ -1,0 +1,20 @@
+{
+  "original_bibliography_keys_preserved": 20,
+  "added_keys_exactly_match_review": [
+    "andriushchenko2020square",
+    "ilyas2018queries",
+    "liu2020vulnerability",
+    "lu2020quantumadv",
+    "lun2025surrogate",
+    "mcnemar1947",
+    "saxena2024encoding",
+    "schmolli2025sparse",
+    "schuld2021encoding",
+    "tramer2020adaptive",
+    "wang2026rte",
+    "wilson1927"
+  ],
+  "head_unchanged": true,
+  "review_evidence_paths_verified": 21,
+  "real_experiments_completed": 0
+}

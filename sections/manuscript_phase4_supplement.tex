@@ -1,0 +1,67 @@
+\section{Additional provenance and accounting audit}
+\label{sec:phase4_availability}
+This manuscript revision inspected additional source, not trained victims. The manuscript base is commit \texttt{e46a09e89af4}; the historical research source remains pinned to \texttt{80d02f5733d4}. Full SHA-256 hashes, exact paths and upstream URLs are in the accompanying \path{Reports/manuscript_phase4/} manifests. The original evidence manifest and numerical CSVs are preserved.
+
+\subsection{Baseline identity and availability}
+\begin{table}[H]\centering\small
+\caption{Controlled-grid source identities. Hashes are SHA-256 prefixes of the recovered model files, not checkpoint hashes. Counts marked unverified are not copied from a paper's architecture table.}
+\begin{tabularx}{\linewidth}{L L l L r l}\toprule
+Report label & Local class & Spiking & Temporal output & Params. & Source hash\\\midrule
+Custom SNN & \texttt{NMNISTConvSNN} & LIF & Mean of ten per-step classifier outputs & 25,482 & \texttt{be5cc98c0adb}\\
+ConvNet & \texttt{SimpleNet\_v2} & LIF & Mean of time-major logits via wrapper & Unverified & \texttt{88cb8521fcaa}\\
+Spiking ResNet18 & \texttt{ResNet18} & LIF & Same wrapper & Unverified & \texttt{8a40beb21a35}\\
+VGGSNN & \texttt{VGGSNN} & LIF & Same wrapper & Unverified & \texttt{dd7fc72f3335}\\\bottomrule
+\end{tabularx}
+\par\smallskip\footnotesize Source-derived custom count: 25,482. Reference runtime counts are unverified in this revision; historical checkpoint-specific counts are unavailable. ``Classical'' means nonquantum, not necessarily nonspiking.
+\end{table}
+The loader maps \texttt{convnet} to \texttt{SimpleNet\_v2}, not \texttt{SimpleNet\_v2\_CNN}. All three reference files are byte-identical to \texttt{yuyi-sd/Spike-Retiming-Attacks} commit \texttt{f16738f80be9}. The wrapper permutes $[B,T,C,H,W]$ to $[T,B,C,H,W]$, requires $[T,B,10]$ outputs and averages logits over $T$. The reference forwards reset neuron state explicitly. These static observations do not establish order/batch invariance for historical checkpoints or supply an experimental gradient-masking diagnosis.
+
+\begin{table}[H]\centering\small
+\caption{Availability in the supplied local evidence package as of 14 October 2026. Absence here does not assert absence on other branches or external storage.}
+\begin{tabularx}{\linewidth}{l L L}\toprule
+Artifact & Available & Remaining limit\\\midrule
+Source & Models, loaders, attack/training scripts; hashed upstream source & No proof each historical cell executed these exact bytes\\
+Config & Protocol descriptions and draft Phase 3 configs & Resolved historical training/attack config files missing\\
+Weights & No original trained checkpoints & No independent clean/attack inference\\
+Data & Aggregate CSVs and report snapshots & Raw N-MNIST and original caches/manifests absent\\
+Results & Historical aggregate counts and source reports & Per-example trajectories, logits and timing arrays absent\\
+Audit & Attributed historical PASS summaries; new arithmetic/software checks & Original runtime audit outputs not recovered\\\bottomrule
+\end{tabularx}
+\end{table}
+The budget-comparison README's ``no results'' statement is stale relative to its populated report. Both originals remain unchanged; a dated reconciliation note accompanies this revision. Numerical values follow the completed report, not the stale status sentence.
+
+\subsection{Test-access risk and fresh-run policy}
+The recovered controlled-training script chooses the best checkpoint by validation accuracy, breaking ties with loss. Separately, lines 74--79 use final test accuracy to skip or request recipe revision; lines 143--156 set PASS at 0.95 and request revision below it. Thus validation checkpoint selection and possible test-dependent recipe development coexist in the code. No per-run config chronology, training history or test-access log was recovered. The branch establishes a risk, not proof that a historical recipe was changed, and does not justify declaring the historical test untouched.
+
+A new completion-policy utility accepts a completed run independently of test accuracy only when its configuration/source/split identity, validation checkpoint selection, validity/leakage/frozen-recipe gates and checkpoint/history/prediction hashes pass. It is covered by software tests; integration into a full fresh training campaign remains pending. The historical script is preserved. A new campaign must fix recipe and quality criteria on validation, report test outcomes without recipe feedback and retain scientific integrity gates. If the test was used for development, rerunning it does not restore independence; new untouched evaluation data or a defensible external design is needed.
+
+\subsection{Resolved source-level B0 settings}
+The local batched adapter subclasses upstream \texttt{PGDTimeShiftAfterEncoder\_L0}. Its explicit constructor values are 40 steps, \texttt{alpha\_phi=1}, \texttt{lambda\_cap=20}, temperature 1, no random start, capacity 1 and the requested packet budget. The upstream constructor defaults \texttt{lambda\_B} to zero, but its forward loss separately hard-codes
+\[
+ 5\,\operatorname{mean}\!\left[\max(S_{\rm soft}-B_0,0)\right]/\max(1,B_0).
+\]
+Here $S_{\rm soft}$ is the expected number of moved packets. This is the coefficient compared with ten by the historical report; it is not the capacity penalty. The upstream attack-file SHA-256 is
+\begin{center}\path{e2f76fc6b4796d9cece0dbf498ced5f62c4f9581c17476da34ab41a1087e11ea}.\end{center}
+Source resolution is now available; historical runtime objects, overrides and raw attack/audit artifacts are not. The grid remains contextual rather than a causal architecture ranking.
+
+\subsection{Hard-forward adapter and exact paired calculation}
+For each retimed event define $u_i=10(t_i'-t_1)/D$. The hard adapter assigns it to $\operatorname{clip}(\lfloor u_i\rfloor,0,9)$; the surrogate uses triangular weights $w_{ib}=\max(0,1-|u_i-(b+1/2)|)$ for $b=0,\ldots,9$. The straight-through count is $X_{\rm soft}+\operatorname{stopgrad}(X_{\rm hard}-X_{\rm soft})$, followed by the count cap. Hard verification uses the actual classifier argmax and full timestamp validity. Finite differences can be zero strictly inside a hard bin even when the chosen surrogate derivative is nonzero; that observation alone is not an implementation error.
+
+For discordant counts $b$ (PGD only) and $c$ (TEMP only), let $d=b+c$. The exact two-sided conditional convention used here is
+\begin{equation}
+p_{\rm exact}=\begin{cases}
+1,&d=0,\\
+\min\!\left(1,2\displaystyle\sum_{j=0}^{\min(b,c)}{d\choose j}2^{-d}\right),&d>0.
+\end{cases}
+\end{equation}
+This states the implementation explicitly; citing McNemar's original framework \cite{mcnemar1947} does not by itself specify an exact-test convention. The marginal Wilson intervals \cite{wilson1927} are not paired-difference intervals. Conditions reuse subjects; they are not pooled as independent repeats.
+
+\subsection{Compute units and remaining measurement}
+``Forward-example count'' means the sum of model-call batch sizes; ``model calls'' counts actual forward invocations. For PGD these are 41 and 41, with 21 scored candidate proposals and 20 backwards. Repeated gradient inputs are computational work. For TEMP the sum is $Q_{\rm act}$ and calls are $\lceil n_0/64\rceil+4\lceil n_g/64\rceil$: 5, 5, 64 and 26 for the four reported schedules. Unique timestamp vectors were not recovered. Two final verification calls per new historical record are separate. No guessed backward conversion or equal-FLOP assertion is made. The requested 400-proposal warm-up actually generates $150+4(62)=398$ proposals. Standalone radius searches are distinct from cumulative best-so-far analyses; prior search and warm-start costs must be included in the latter.
+
+Fresh Phase 3 code records proposals, unique vectors, model calls, sum of batch sizes, backward and verification costs, dtype, device, chunk and separate elapsed times. Its synthetic tests are software checks, not historical timing measurements. Same-device warm-up/synchronized serial-versus-chunk pilots and raw time dispersion remain blocked by missing weights/data. A current hardware inspection cannot replace a historical runtime snapshot.
+
+\subsection{Ablation identity and reproducible entry points}
+The recovered old QSNN development report covers 154--274-parameter models with local Pauli-Z readout and a different representation. It is not a fixed-frontend classical-head/no-entangler ablation of the final 40,762-parameter, 256-probability model. That controlled experiment, official-test QSNN evaluation, empirical selection audit and real exemplars remain future work.
+
+The package README distinguishes dependency-pinned software checks from model execution. A portable pilot command is \texttt{python -m scripts.phase3.runner pilot --config <resolved.yaml>}; it requires real checkpoint and metadata hashes plus a raw-event manifest with provenance. The supplied configuration deliberately leaves these unset and yields blocked status with null metrics. No historical Windows interpreter, absent ResearchLoop contract or unexecuted test unlock is claimed to exist on this system.

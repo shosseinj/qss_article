@@ -1,0 +1,2015 @@
+diff --git a/README.md b/README.md
+index d66a356..df23d29 100644
+--- a/README.md
++++ b/README.md
+@@ -1,46 +1,64 @@
+ # Temporal Retiming Attacks on Hybrid Quantum Spiking Classifiers
+ 
+-LaTeX manuscript, supplementary material, figures, and preserved supporting evidence.
++LaTeX manuscript, supplement, vector figures and preserved evidence for `qss_article`.
+ 
+-## Build
++## Current revision — 14 October 2026
+ 
+-Requires a TeX distribution with pdfLaTeX, BibTeX, and latexmk.
++[Manuscript Phase 4 response](Reports/manuscript_phase4/response_to_review.md) tracks R1–R8 and M1–M13. Editorial, reference and source-audit changes are complete; empirical validation remains incomplete. No new trained-model experiment was performed. The user confirmed that data/checkpoints are unavailable and deferred dependent experiments to [future work](Reports/manuscript_phase4/remaining_work.md).
+ 
+-```bash
+-latexmk -pdf -outdir=build main.tex
+-latexmk -pdf -outdir=build supplement.tex
+-```
++The bibliography contains 32 entries, including 12 additions cited in the main text. Baseline definitions and attack/training source are available; resolved historical configs, trained weights, raw N-MNIST, manifests, per-example outputs and original run-audit artifacts are absent locally. See the [availability matrix](Reports/manuscript_phase4/repository_availability.json) and [source manifest](Reports/manuscript_phase4/source-manifest.json). Source recovery is not replay of historical results.
+ 
+-Compiled documents: [paper](build/main.pdf) and [supplement](build/supplement.pdf).
++## Build and manuscript checks
+ 
+-The manuscript sections are in `sections/`, references in `references.bib`, and figures in `figures/`. Supporting tables and preserved implementation/report excerpts are in `data/`. The latest enrichment change report and diff are in `build/review/`.
+-
+-The reported results derive from preserved evidence; manuscript preparation did not rerun training or attacks. Missing original artifacts and evaluation limitations are documented in the paper and supplement.
+-# qss_article
++Requires pdfLaTeX, BibTeX and latexmk. The existing TeX backend and numeric citation order are retained; `unsrtlinks.bst` extends standard `unsrt` to print DOI/URL fields. TinyTeX in this workspace provides the required packages. No venue-specific page limit was supplied.
+ 
++```bash
++latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
++latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build supplement.tex
++python3 -m scripts.manuscript_phase4.verify
++```
+ 
+-## Phase 2 revision and figure sources
++Outputs: [paper](build/main.pdf) and [supplement](build/supplement.pdf). The verification command checks hashes, aggregate arithmetic, source-level costs, actual citations, duplicate DOI/title, cross references, TeX logs and vector exports. It does not train a model or execute an attack.
+ 
+-The current rewrite, static code audit and outstanding experiments are documented in `Reports/phase2-report.txt`. Machine checks are in `Reports/phase2-verification.json`. The original evidence and CSV files in `data/` are unchanged. The older `data/figure_source_data.json` and figure-export checks describe the earlier artwork; current figure provenance is in `Reports/phase2-figure-provenance.json`.
++## Figure regeneration
+ 
+-Figures 2 and 3 can be regenerated with Python 3 and Matplotlib:
++The current figure-2 renderer preserves the CSV counts and separates paired counts from marginal Wilson intervals:
+ 
+ ```bash
+-python3 scripts/render_phase2_figures.py
++python3 -m scripts.manuscript_phase4.render_figure2
+ ```
+ 
+-Figure 1 is a TikZ circuit/pipeline diagram. With TikZ, standalone and the required fonts installed:
++Its figure dependencies are pinned in [requirements-figures.txt](scripts/manuscript_phase4/requirements-figures.txt); exports in this revision used Python 3.14. Figure 3 is unchanged and derives from `data/controlled_four_models.csv`; its short ConvNet label means **spiking SimpleNet_v2**. Figure 1 is a TikZ diagram:
+ 
+ ```bash
+-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build figures/fig01_overview.tex
++latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build figures/fig01_overview.tex
+ cp build/fig01_overview.pdf figures/fig01_overview.pdf
+ pdftocairo -svg figures/fig01_overview.pdf figures/fig01_overview.svg
+ pdftoppm -r 300 -singlefile -png figures/fig01_overview.pdf figures/fig01_overview
+ ```
+ 
+-After building both documents, run `python3 scripts/verify_phase2.py` to check the aggregate counts, paired p-values, derived intervals, citations/references, build logs and vector exports. This check does not run training or attacks.
++Original numerical CSVs, evidence snapshots and prior phase reports remain unchanged. The Phase 2 renderer regenerates older artwork and writes historical reports; its checker expects 20 references. Use the current commands above for the current manuscript. Prior work is recorded in [Phase 2](Reports/phase2-report.txt) and [Phase 3](Reports/phase3/report.md).
++
++## Portable software checks and future real-data execution
++
++Use Python 3.12 with [pinned CPU dependencies](configs/phase3/requirements-cpu.txt). A separate environment is recommended for figure rendering. The CPU environment is a new correctness environment, not a historical runtime reconstruction.
++
++```bash
++python3.12 -m venv /tmp/qsnn-cpu
++/tmp/qsnn-cpu/bin/python -m pip install -r configs/phase3/requirements-cpu.txt
++/tmp/qsnn-cpu/bin/python -W error::ResourceWarning -m unittest discover -v
++```
++
++Tests use synthetic inputs and untrained constructors. They validate software contracts, not scientific results. The new [training completion policy](scripts/manuscript_phase4/training_gate.py) ignores test accuracy but retains identity, validation selection, validity/leakage/frozen-recipe gates and artifact hashes. Integration into a full fresh grid training runner remains pending. The [test-access audit](Reports/manuscript_phase4/test_access_audit.md) distinguishes confirmed source risk from unknown historical behavior.
++
++The [Phase 3 runner instructions](scripts/phase3/README.md) specify event NPZ/manifest schemas and checkpoint metadata. For a real pilot, supply an actual checkpoint, metadata, raw-event manifest, all SHA-256 hashes and a new run ID in a copy of `configs/phase3/pilot.yaml`:
++
++```bash
++/tmp/qsnn-cpu/bin/python -m scripts.phase3.runner pilot --config /absolute/path/to/resolved-pilot.yaml
++```
+ 
++The shipped config deliberately has null prerequisites and reports `blocked_resource` with null metrics. It does not download data automatically. Obtain N-MNIST through its original distribution or Tonic's `NMNIST` loader (historical source specifies `tonic==1.6.0`), respecting dataset terms; retain archive hashes, official train/test identities and timestamps when exporting. A download or new training run must not be labeled a replay of unavailable historical weights. The original source requirements are preserved in `data/evidence_source_snapshot/requirements.txt`; they are not a complete resolved environment for every campaign.
+ 
+-## Phase 3 status
++Development and recipe selection must use validation. The supplied final-test lock remains draft; no final-test evaluation is authorized by an import check or an unset configuration. No new best-so-far curve, real exemplar, final-model ablation or independent official-test QSNN result is included.
+ 
+-The artifact inventory, CPU correctness tests, recovered source and versioned runner are documented in [Reports/phase3/report.md](Reports/phase3/report.md). Real checkpoint/data-dependent experiments are deferred; see [the future-work checklist](Reports/phase3/future-work.md). No Phase 3 empirical results have been added to the paper. Runner instructions: [scripts/phase3/README.md](scripts/phase3/README.md).
++Historical research source is pinned to `80d02f5733d4cbe7c3e69b828dff66d50ba5c211`. Additional baseline source matches upstream `f16738f80be94067223f4968c1c318a125b9a321`; full hashes and paths are in the manifests. [Dated README reconciliation](Reports/manuscript_phase4/readme_reconciliation.md) explains stale/contradictory historical status statements without editing the original snapshots.
+diff --git a/figures/fig01_overview.tex b/figures/fig01_overview.tex
+index 08ad42d..a34ecb8 100644
+--- a/figures/fig01_overview.tex
++++ b/figures/fig01_overview.tex
+@@ -51,6 +51,6 @@
+  \draw[ink](\xx-.085,\yt)--(\xx+.085,\yt);
+  \draw[ink](\xx,\yt-.085)--(\xx,\yt+.085);
+ }
+-\node[anchor=west,font=\fontsize{8}{9}\selectfont] at(0,.2){Circuit rotations and the final measurement basis are learned; all 256 outcomes feed the classifier.\quad Total: 40,762 parameters.};
++\node[anchor=west,font=\fontsize{8}{9}\selectfont] at(0,.2){$i=0,\ldots,7$ indexes wires $q_i$. Angles $a_i$ depend on input; $\lambda,\theta,\beta$ are trained, fixed at inference. Total: 40,762 parameters.};
+ \end{tikzpicture}
+ \end{document}
+diff --git a/main.tex b/main.tex
+index 43c6a21..ebcef24 100644
+--- a/main.tex
++++ b/main.tex
+@@ -12,7 +12,7 @@ Hybrid Quantum Spiking Classifiers\par}
+ \vspace{12pt}
+ \end{center}
+ \begin{minipage}{\textwidth}
+-\small\textbf{Abstract.} Event timing is an adversarial input dimension, but attack comparisons depend on both the feasible retiming and the computation allocated to the search. We study this issue in QSNN-v3, an implemented hybrid of a classical Conv/LIF frontend and an analytically simulated eight-qubit probability readout. The model achieves 97.272\% $\pm$ 0.212\% validation accuracy across five seeds conditional on shared pretraining and split. On 100 jointly clean-correct seed-42 validation examples, timestamp PGD succeeds on three examples at each tested radius. Derivative-free margin search produces zero to two additional successes depending on candidate, forward-pass or elapsed-time matching; no paired comparison establishes significant superiority. Separate classical packet-grid controls show that similar clean accuracy can accompany sharply different outcomes under one attack recipe, without isolating a representation or quantum effect. The evidence supports protocol-specific temporal vulnerability; official-test hybrid robustness and a quantum-specific mechanism remain unmeasured.
++\small\textbf{Abstract.} Event timing is an adversarial input dimension, but attack comparisons depend on both the feasible retiming and the computation allocated to the search. We study this issue in QSNN-v3, an implemented hybrid of a classical Conv/LIF frontend and an analytically simulated eight-qubit probability readout. The model achieves 97.27\% $\pm$ 0.21\% validation accuracy across five seeds conditional on shared pretraining and split. On 100 jointly clean-correct seed-42 validation examples, timestamp PGD succeeds on three examples at each tested radius. Derivative-free margin search produces zero to two additional successes depending on candidate, forward-pass or elapsed-time matching; no paired comparison establishes significant superiority. Separate classical packet-grid controls show that similar clean accuracy can accompany sharply different outcomes under one attack recipe, without isolating a representation or quantum effect. The evidence supports protocol-specific temporal vulnerability; official-test hybrid robustness and a quantum-specific mechanism remain unmeasured.
+ \par\vspace{5pt}\textbf{Keywords:} event-driven classification; adversarial retiming; hybrid quantum classifiers; spiking neural networks; matched attack evaluation.
+ \end{minipage}
+ \vspace{16pt}
+@@ -24,6 +24,6 @@ Hybrid Quantum Spiking Classifiers\par}
+ \input{sections/protocol}
+ \input{sections/results}
+ \input{sections/discussion}
+-\bibliographystyle{unsrt}
++\bibliographystyle{unsrtlinks}
+ \bibliography{references}
+ \end{document}
+diff --git a/preamble.tex b/preamble.tex
+index 20fb2cb..e543378 100644
+--- a/preamble.tex
++++ b/preamble.tex
+@@ -13,6 +13,13 @@
+ \hypersetup{colorlinks=true,urlcolor=accent,citecolor=ink,linkcolor=ink,pdftitle={Temporal Retiming Attacks on Hybrid Quantum Spiking Classifiers}}
+ \usepackage{url}
+ \urlstyle{same}
++\Urlmuskip=0mu plus 2mu\relax
++\makeatletter
++\g@addto@macro\UrlBreaks{\do\-\do\_\do\?\do\&\do\=}
++\makeatother
++% Keep one bibliography entry together across columns/pages.
++\let\originalthebibliography\thebibliography
++\renewcommand{\thebibliography}[1]{\originalthebibliography{#1}\interlinepenalty=10000\relax}
+ \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+ \newcolumntype{C}{>{\centering\arraybackslash}X}
+ \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+diff --git a/references.bib b/references.bib
+index 3bdb8fa..6b44653 100644
+--- a/references.bib
++++ b/references.bib
+@@ -5,7 +5,7 @@
+ @misc{yu2026,
+  author={Yu, Yi and Zhang, Qixin and Ye, Shuhan and Lin, Xun and Wei, Qianshan and Wang, Kun and Yang, Wenhan and Tao, Dacheng and Jiang, Xudong},
+  title={Time Is All It Takes: Spike-Retiming Attacks on Event-Driven Spiking Neural Networks},
+- year={2026}, howpublished={\url{https://arxiv.org/abs/2602.03284v1}}, note={Frozen protocol reference: v1}, url={https://arxiv.org/abs/2602.03284v1}}
++ year={2026}, note={Frozen protocol reference: v1}, url={https://arxiv.org/abs/2602.03284v1}}
+ @article{brand2024,
+  author={Brand, Daniel and Petruccione, Francesco},
+  title={A Quantum Leaky Integrate-and-Fire Spiking Neuron and Network},
+@@ -13,7 +13,7 @@
+ @misc{spate2026,
+  author={Innan, Nouhaila and Putra, Rachmad Vidya Wicaksana and Shafique, Muhammad},
+  title={{SPATE}: Spiking-Phase Adaptive Temporal Encoding for Quantum Machine Learning},
+- year={2026}, howpublished={\url{https://arxiv.org/abs/2604.11022}}, url={https://arxiv.org/abs/2604.11022}}
++ year={2026}, url={https://arxiv.org/abs/2604.11022}}
+ @article{perez2020,
+  author={P{\'e}rez-Salinas, Adri{\'a}n and Cervera-Lierta, Alba and Gil-Fuster, Elies and Latorre, Jos{\'e} I.},
+  title={Data Re-Uploading for a Universal Quantum Classifier},
+@@ -24,7 +24,7 @@
+  booktitle={International Conference on Learning Representations}, year={2018}, url={https://arxiv.org/abs/1706.06083}}
+ @misc{carlini2019,
+  author={Carlini, Nicholas and Athalye, Anish and Papernot, Nicolas and Brendel, Wieland and Rauber, Jonas and Tsipras, Dimitris and Goodfellow, Ian and Madry, Aleksander and Kurakin, Alexey},
+- title={On Evaluating Adversarial Robustness}, year={2019}, howpublished={\url{https://arxiv.org/abs/1902.06705}}, url={https://arxiv.org/abs/1902.06705}}
++ title={On Evaluating Adversarial Robustness}, year={2019}, url={https://arxiv.org/abs/1902.06705}}
+ @article{orchard2015,
+  author={Orchard, Garrick and Jayawant, Ajinkya and Cohen, Gregory K. and Thakor, Nitish},
+  title={Converting Static Image Datasets to Spiking Neuromorphic Datasets Using Saccades},
+@@ -32,7 +32,7 @@
+ @misc{repository,
+  author={{ABC\_def1 research implementation}},
+  title={Preserved implementation and experimental reports},
+- year={2026}, howpublished={\url{https://github.com/shosseinj/ABC_def1}},
++ year={2026},
+  note={Snapshot 80d02f5733d4, 28 September 2026},
+  url={https://github.com/shosseinj/ABC_def1}}
+ 
+@@ -41,8 +41,7 @@
+   title = {Exploring Vulnerabilities in Spiking Neural Networks: Direct Adversarial Attacks on Raw Event Data},
+   booktitle = {Computer Vision -- ECCV 2024},
+   year = {2024},
+-  note = {Official ECCV 2024 conference version, \url{https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09164.pdf}},
+-  url = {https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09164.pdf}
++    url = {https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09164.pdf}
+ }
+ 
+ @article{du2026latencies,
+@@ -93,7 +92,7 @@
+   eprint = {2404.16154},
+   archivePrefix = {arXiv},
+   primaryClass = {cs.LG},
+-  note = {Preprint, \url{https://arxiv.org/abs/2404.16154}},
++  note = {Preprint},
+   url = {https://arxiv.org/abs/2404.16154}
+ }
+ 
+@@ -134,5 +133,128 @@
+ @book{watrous2018theory,
+  author={Watrous, John}, title={The Theory of Quantum Information},
+  publisher={Cambridge University Press}, year={2018},
+- note={Author manuscript, \url{https://cs.uwaterloo.ca/~watrous/TQI/}},
++ note={Author manuscript},
+  url={https://cs.uwaterloo.ca/~watrous/TQI/}}
++
++@inproceedings{lun2025surrogate,
++  author = {Lun, Li and Feng, Kunyu and Ni, Qinglong and Liang, Ling and Wang, Yuan and Li, Ying and Yu, Dunshan and Cui, Xiaoxin},
++  title = {Towards Effective and Sparse Adversarial Attack on Spiking Neural Networks via Breaking Invisible Surrogate Gradients},
++  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
++  pages = {3540--3551},
++  year = {2025},
++  url = {https://arxiv.org/abs/2503.03272}
++}
++
++@article{wang2026rte,
++  author = {Wang, Jihang and Zhao, Dongcheng and Chen, Ruolin and Zhang, Qian and Zeng, Yi},
++  title = {Boosting the Robustness-Accuracy Trade-off of {SNNs} by Robust Temporal Self-Ensemble},
++  journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
++  volume = {40},
++  number = {31},
++  pages = {26285--26293},
++  year = {2026},
++  doi = {10.1609/aaai.v40i31.39833},
++  url = {https://ojs.aaai.org/index.php/AAAI/article/view/39833}
++}
++
++@inproceedings{schmolli2025sparse,
++  author = {Schmolli, Mathias and Baronig, Maximilian and Legenstein, Robert and Ozdenizci, Ozan},
++  title = {Adversarially Robust Spiking Neural Networks with Sparse Connectivity},
++  booktitle = {Conference on Parsimony and Learning},
++  series = {Proceedings of Machine Learning Research},
++  volume = {280},
++  pages = {865--883},
++  year = {2025},
++  publisher = {PMLR},
++  url = {https://proceedings.mlr.press/v280/schmolli25a.html}
++}
++
++@inproceedings{saxena2024encoding,
++  author = {Saxena, Aman and Wollschl{\"a}ger, Tom and Franco, Nicola and Lorenz, Jeanette Miriam and G{\"u}nnemann, Stephan},
++  title = {Certifiably Robust Encoding Schemes},
++  booktitle = {2024 IEEE International Conference on Quantum Computing and Engineering (QCE)},
++  pages = {1571--1582},
++  year = {2024},
++  doi = {10.1109/QCE60285.2024.00184},
++  url = {https://arxiv.org/abs/2408.01200}
++}
++
++@article{lu2020quantumadv,
++  author = {Lu, Sirui and Duan, Lu-Ming and Deng, Dong-Ling},
++  title = {Quantum adversarial machine learning},
++  journal = {Physical Review Research},
++  volume = {2},
++  pages = {033212},
++  year = {2020},
++  doi = {10.1103/PhysRevResearch.2.033212}
++}
++
++@article{liu2020vulnerability,
++  author = {Liu, Nana and Wittek, Peter},
++  title = {Vulnerability of quantum classification to adversarial perturbations},
++  journal = {Physical Review A},
++  volume = {101},
++  pages = {062331},
++  year = {2020},
++  doi = {10.1103/PhysRevA.101.062331}
++}
++
++@article{schuld2021encoding,
++  author = {Schuld, Maria and Sweke, Ryan and Meyer, Johannes Jakob},
++  title = {Effect of data encoding on the expressive power of variational quantum-machine-learning models},
++  journal = {Physical Review A},
++  volume = {103},
++  pages = {032430},
++  year = {2021},
++  doi = {10.1103/PhysRevA.103.032430}
++}
++
++@inproceedings{ilyas2018queries,
++  author = {Ilyas, Andrew and Engstrom, Logan and Athalye, Anish and Lin, Jessy},
++  title = {Black-box Adversarial Attacks with Limited Queries and Information},
++  booktitle = {Proceedings of the 35th International Conference on Machine Learning},
++  series = {Proceedings of Machine Learning Research},
++  volume = {80},
++  pages = {2137--2146},
++  year = {2018},
++  publisher = {PMLR},
++  url = {https://proceedings.mlr.press/v80/ilyas18a.html}
++}
++
++@inproceedings{andriushchenko2020square,
++  author = {Andriushchenko, Maksym and Croce, Francesco and Flammarion, Nicolas and Hein, Matthias},
++  title = {Square Attack: A Query-Efficient Black-Box Adversarial Attack via Random Search},
++  booktitle = {Computer Vision -- ECCV 2020},
++  year = {2020},
++  url = {https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123680477.pdf}
++}
++
++@inproceedings{tramer2020adaptive,
++  author = {Tram{\`e}r, Florian and Carlini, Nicholas and Brendel, Wieland and Madry, Aleksander},
++  title = {On Adaptive Attacks to Adversarial Example Defenses},
++  booktitle = {Advances in Neural Information Processing Systems},
++  volume = {33},
++  year = {2020},
++  url = {https://proceedings.neurips.cc/paper_files/paper/2020/hash/11f38f8ecd71867b42433548d1078e38-Abstract.html}
++}
++
++@article{wilson1927,
++  author = {Wilson, Edwin B.},
++  title = {Probable Inference, the Law of Succession, and Statistical Inference},
++  journal = {Journal of the American Statistical Association},
++  volume = {22},
++  number = {158},
++  pages = {209--212},
++  year = {1927},
++  doi = {10.1080/01621459.1927.10502953}
++}
++
++@article{mcnemar1947,
++  author = {McNemar, Quinn},
++  title = {Note on the sampling error of the difference between correlated proportions or percentages},
++  journal = {Psychometrika},
++  volume = {12},
++  pages = {153--157},
++  year = {1947},
++  doi = {10.1007/BF02295996}
++}
+diff --git a/sections/attacks.tex b/sections/attacks.tex
+index 15c13c7..9ae96c3 100644
+--- a/sections/attacks.tex
++++ b/sections/attacks.tex
+@@ -19,7 +19,7 @@ Timestamp PGD uses white-box gradients of cross-entropy through the hard-forward
+ 
+ \begin{equation}\label{eq:pgd}
+ \begin{aligned}
+-g^{(k)}&=\operatorname{sign}\!\left(\nabla_t\mathrm{CE}(z(t^{(k)}),y)\right),\\
++g^{(k)}&=\operatorname{sign}\!\left(\nabla_t\mathrm{CE}(z(t^{(k)}),c)\right),\\
+ t^{(k+1)}&=\Pi_{\epsilon}\!\left[t^{(k)}+\frac{\epsilon}{5}g^{(k)}\right].
+ \end{aligned}
+ \end{equation}
+@@ -29,15 +29,15 @@ TEMP-DRIFT-v2 is a derivative-free search using model logits and the true label.
+ 
+ \begin{equation}\label{eq:margin}
+ \min_{t'\in\mathcal{F}_{\epsilon}} m(t'),\qquad
+-m(t)=z_y(t)-\max_{j\neq y}z_j(t).
++m(t)=z_c(t)-\max_{j\neq c}z_j(t).
+ \end{equation}
+ The preserved full-budget implementation evaluates 600 uniformly perturbed feasible candidates. It retains the 12 candidates with lowest margin, then runs four generations of 250 children. Each child combines an elite parent, half the difference between two elite candidates and Gaussian noise at scales 0.50, 0.30, 0.18 and 0.10 times $\epsilon$. Every proposal is made feasible before evaluation. The final candidate with lowest margin is returned. This configuration uses 1,600 candidate evaluations [R2]. The matched implementation uses 13 initial candidates plus four generations of two children for $Q=21$, and 13 plus four generations of seven for $Q=41$. It always keeps 12 elites; the four noise scales are unchanged. For elapsed-time budgets it sets $n_0=\max(12,\operatorname{round}(0.375Q))$ and $n_g=\operatorname{round}((Q-n_0)/4)$, recording the actual total $n_0+4n_g$. The selected $Q=4{,}000$ and $1{,}600$ give $1{,}500+4\times625$ and $600+4\times250$, respectively. The supplement gives the complete schedule and pseudocode [R3].
+ 
+ 
+-TEMP-DRIFT-v2 is the historical implementation name; throughout the final timestamp comparison it denotes margin search.
++A finite search need not find more successes at a larger allowed radius; the observed 4-to-3 decrease under access matching is not evidence of a smaller feasible set. Each reported radius is a standalone search. Any future cumulative best-so-far curve must count the earlier searches and warm starts. TEMP-DRIFT-v2 is the historical implementation name; throughout the final timestamp comparison it denotes margin search.
+ 
+ \paragraph{Inference state.}
+-Both timestamp victims are loaded in evaluation mode, fixing BatchNorm statistics. Their forward methods initialize membrane and output accumulators locally on every call; the preserved code has no cross-candidate persistent neuron state. This static inspection covers the timestamp models, not the missing four-model grid implementations.
++Both timestamp victims are loaded in evaluation mode, fixing BatchNorm statistics. Their forward methods initialize membrane and output accumulators locally on every call; the preserved code has no cross-candidate persistent neuron state. The recovered grid reference forwards also call \texttt{reset\_net}; this is static evidence, not a batching/order/reset experiment on the saved victims.
+ 
+ \subsection{Discrete packet retiming}
+ In the second study, let $s_i$ and $s_i'$ denote a source packet bin and its destination. Budgets count packet displacements independently of amplitude. A packet carrying amplitude five and shifted by two bins contributes two to $B_1$ and one to $B_0$. Capacity-one projection preserves packet identity, amplitude, event line and total represented mass.
+@@ -49,4 +49,4 @@ B_{\infty}&=\max_i|s_i'-s_i|, & B_1&=\sum_i|s_i'-s_i|,\\
+ B_0&=\sum_i\mathbf{1}[s_i'\neq s_i].
+ \end{aligned}
+ \end{equation}
+-The local projected-in-the-loop attack uses differentiable shift probabilities and evaluates feasible hard schedules. Only $B_\infty$ = 1 and $B_0$ = 200 are complete in the controlled four-model campaign [R4]. The comparison report attributes a $B_0$ penalty coefficient of five to the implementation, whereas the reference paper states ten; the campaign override source is absent from the accessible snapshot. This discrepancy limits exact-replication claims. Historical sweeps from other checkpoints appear in the supplement.
++The local projected-in-the-loop attack uses differentiable shift probabilities and evaluates feasible hard schedules. Only $B_\infty$ = 1 and $B_0$ = 200 are complete in the controlled four-model campaign [R4]. The recovered adapter selects the pinned upstream L0 class, whose loss hard-codes a normalized budget-penalty coefficient of five. Its separate capacity penalty is \texttt{lambda\_cap=20}; the constructor default \texttt{lambda\_B=0} does not set the hard-coded coefficient. The report compares five with the reference description of ten [R4]. This source-level finding does not reconstruct the historical runtime configuration. Historical sweeps from other checkpoints appear in the supplement.
+diff --git a/sections/discussion.tex b/sections/discussion.tex
+index 90ef3ca..9e5fd25 100644
+--- a/sections/discussion.tex
++++ b/sections/discussion.tex
+@@ -8,7 +8,7 @@ The quantum circuit is one stage of an attacked composition. Timestamp changes c
+ Low or zero ASR can reflect optimizer limitations. PGD uses one start and 20 steps, with cross-entropy-based output selection; TEMP uses a finite margin search. The large classical architecture gap requires gradient, preprocessing and search-strength diagnostics before interpretation as an intrinsic robustness difference. Alternative surrogates, restarts and derivative-free budget curves should be checked with valid hard-forward candidates \cite{athalye2018obfuscated,croce2020reliable}. Image-space attack ensembles and defenses, including classical distillation of quantum manipulations \cite{khatun2025distillation}, require adaptation to event constraints.
+ 
+ \paragraph{Evaluation and evidence boundary.}
+-Five hybrid seeds share pretraining and split, while attacks use one victim seed and a selected validation population. Official-test QSNN robustness, independently pretrained pipelines and a larger attack population remain unmeasured. The populated comparison report conflicts with its README's statement that results are absent; we use the report and disclose that inconsistency. Most checkpoints, raw arrays, manifests and logs referenced by reports are missing. Our arithmetic and static code checks do not reproduce model runs or independently repeat their attributed audits. The grid penalty ambiguity and incomplete baseline provenance remain unresolved.
++Five hybrid seeds share pretraining and split, while attacks use one victim seed and a selected validation population. Official-test QSNN robustness, independently pretrained pipelines and a larger attack population remain unmeasured. The populated comparison report conflicts with its README's statement that results are absent; we use the report and disclose that inconsistency. Most checkpoints, raw arrays, manifests and logs referenced by reports are missing. Our arithmetic and static code checks do not reproduce model runs or independently repeat their attributed audits. Recovered baseline source and the upstream fixed penalty clarify implementation provenance; resolved runtime settings and their historical linkage remain incomplete. The test-dependent training gate is an additional limitation: validation-selected weights alone do not establish that recipe development was independent of test outcomes.
+ 
+ \paragraph{Next empirical steps.}
+ After validation-based model selection, evaluate QSNN clean and attacked performance on the official test set across independently trained frontend/head seeds, retaining sample IDs and clean errors. Sweep steps, step size, restarts, cross-entropy/margin losses and surrogate choices, recording the best valid success by budget and reconfirming it with hard forwards. Hold frontend, split and training budget fixed for capacity-matched classical heads and circuit variants with/without entanglement, including parameter counts and training cost. To test the state/margin interpretation, retain per-example states, probabilities and margins and control clean margin and realized distortion; mean fidelity alone would not establish a mechanism.
+@@ -19,4 +19,4 @@ A future monitor must specify eight-qubit observables, shot budget, clean-only c
+ Computational matching changes the numerical attack comparison on the implemented QSNN-v3, but none of the paired conditions establishes TEMP superiority. Constrained retiming changes 3--5 of 100 examined joint-correct validation predictions. Separate classical controls show why clean accuracy and a common recipe are insufficient summaries of attack behavior. The resulting evidence is specific to the stated protocols; independent official-test hybrid evaluation is the principal missing validation.
+ 
+ \section*{Data and code availability}
+-The \texttt{ABC\_def1} repository \cite{repository} and supplied snapshot contain implementation excerpts and preserved reports. The supplement maps source paths and the pinned commit. Tables transcribe those reports; figures reorganize their documented counts. Full reproduction requires omitted artifacts and original datasets. Author details remain withheld for review.
++The \texttt{ABC\_def1} repository \cite{repository} and supplied snapshots contain model/attack/training source and preserved reports. Source hashes and a source/config/weights/data/results/audit availability matrix accompany the supplement and manuscript revision report. Resolved historical configs, weights, raw data, per-example results and run-audit artifacts are missing locally. Tables transcribe reports; figures reorganize their counts. Reproduction instructions specify the missing prerequisites and portable software-only checks. Author details remain withheld for review.
+diff --git a/sections/models.tex b/sections/models.tex
+index 6bdaf10..c46da59 100644
+--- a/sections/models.tex
++++ b/sections/models.tex
+@@ -1,13 +1,24 @@
+ \section{Models and representations}\label{sec:model}
+ Figure~\ref{fig:overview} traces the attacked timestamp-to-logit composition; Table~\ref{tab:populations} separates the experimental regimes.
+ \subsection{Native events and temporal-grid packets}
+-The timestamp study uses native N-MNIST events $e_i=(x_i,y_i,p_i,t_i)$. Event identities, coordinates, polarity, labels and event count are immutable. Timestamps are assigned to ten equal-duration bins using the clean recording endpoints. The differentiable adapter has hard count accumulation in the forward pass and triangular interpolation weights for the backward pass. Counts are capped at 255 by the adapter. The hybrid frontend then applies $\min(X/8,1)$. These input transformations are model preprocessing; the preservation claim refers to the underlying events.
++The timestamp study uses native N-MNIST events $e_i=(x_i,y_i,\pi_i,t_i)$. Event identities, coordinates, polarity, labels and event count are immutable. Timestamps are assigned to ten equal-duration bins using the clean recording endpoints. The differentiable adapter has hard count accumulation in the forward pass and triangular interpolation weights for the backward pass. Counts are capped at 255 by the adapter. The hybrid frontend then applies $\min(X/8,1)$. These input transformations are model preprocessing; the preservation claim refers to the underlying events.
+ 
+ The grid study instead freezes a ten-bin equal-event-count representation. Each nonzero cell on a fixed spatial/polarity line is one amplitude-bearing packet. A binary packet has value one; an integer packet carries its complete cell count. A packet with count five remains a single packet carrying five during retiming. Collision-free capacity-one projection prevents packet splitting, merging, deletion, creation and amplitude changes. This distinction matters because multiple raw events can occupy one cell in the timestamp study, while one grid packet is indivisible in the second study.
+ 
+ 
++\begin{table}[t]\centering\small
++\caption{Notation used in the timestamp composition.}\label{tab:notation}
++\begin{tabularx}{\linewidth}{l L}\toprule
++Symbol & Meaning\\\midrule
++$(x_i,y_i),\pi_i,t_i$ & Event coordinates, polarity and time\\
++$c$, $\widehat c$ & True class and predicted class\\
++$q$, $z$ & Measurement probabilities and logits\\
++$D$, $\epsilon_f$ & Inclusive duration and relative timing radius\\
++$Q_{\rm req}$, $Q_{\rm act}$ & Requested and generated TEMP proposals\\\bottomrule
++\end{tabularx}\end{table}
++
+ \subsection{The implemented hybrid classifier}
+-The Conv/LIF extractor uses two $3\!\times\!3$ bias-free convolutions with 16 and 32 output channels, batch normalization and average pooling. LIF dynamics use decay 0.5. Time-averaged spike activations and the final membrane state are pooled to $4\!\times\!4$ spatial summaries and concatenated. A learned projection followed by tanh produces 32 latent features. A learned 32-to-8 projection and another tanh feed the circuit head. An additional learned 8-to-8 projection, initialized to the identity, produces bounded rotation angles.
++The Conv/LIF extractor uses two $3\!\times\!3$ bias-free convolutions with 16 and 32 output channels, batch normalization and average pooling. LIF dynamics use decay 0.5. Temporal information reaches the circuit through this classical frontend: time-averaged spike activations and the final membrane state are pooled to $4\!\times\!4$ spatial summaries and concatenated. A learned projection followed by tanh produces 32 latent features. A learned 32-to-8 projection and another tanh feed the circuit head. An additional learned 8-to-8 projection, initialized to the identity, produces bounded rotation angles.
+ 
+ 
+ For the latent vector $h\in\mathbb{R}^{32}$, the learned angle map is
+@@ -22,9 +33,9 @@ The eight-qubit register starts in $|0\rangle^{\otimes 8}$. Each of two blocks a
+ 
+ \begin{equation}\label{eq:readout}
+ \begin{aligned}
+-p_k&=\left|\langle k|U_{\theta}(a)|0\rangle^{\otimes 8}\right|^2,
++q_k&=\left|\langle k|U_{\theta}(a)|0\rangle^{\otimes 8}\right|^2,
+ && k=0,\ldots,255,\\
+-z&=W_{\mathrm{out}}p+b_{\mathrm{out}}.
++z&=W_{\mathrm{out}}q+b_{\mathrm{out}}.
+ \end{aligned}
+ \end{equation}
+ The backend is an analytic batched PyTorch state-vector simulation with complex64 amplitudes. Probabilities are computed exactly within numerical precision. The experiments do not involve quantum hardware, finite-shot readout or hardware noise. The name QSNN-v3 identifies this hybrid implementation and should not be interpreted as a network of physical quantum LIF neurons [R1].
+@@ -51,12 +62,12 @@ The quantum head includes the learned $8\to8$ angle map, two upload blocks and l
+ \begin{samepage}
+ \subsection{Readout-specific margin observation}
+ \label{sec:margin_interpretation}
+-For the fixed trained affine readout $z(q)=Wq+b$, let $q,q'$ be clean and retimed measurement probabilities and $m_{yk}(q)=z_y(q)-z_k(q)$ for the clean predicted class $y$. With states $\rho,\rho'$ before the fixed measurement and $D_{\rm tr}=\frac12\|\rho-\rho'\|_1$, measurement contraction \cite{watrous2018theory} and H\"older's inequality imply
++For the fixed trained affine readout $z(q)=Wq+b$, let $q,q'$ be clean and retimed measurement probabilities. On the attacked clean-correct subset, $c=\widehat c(q)$ is both the true and clean predicted class; define $m_{ck}(q)=z_c(q)-z_k(q)$. With states $\rho,\rho'$ before the fixed measurement and $D_{\rm tr}=\frac12\|\rho-\rho'\|_1$, measurement contraction \cite{watrous2018theory} and H\"older's inequality imply
+ \begin{equation}\label{eq:state_margin}
+ \begin{split}
+-m_{yk}(q')\geq m_{yk}(q)\\
+-{}-2\|w_y-w_k\|_\infty D_{\rm tr}(\rho,\rho').
++m_{ck}(q')\geq m_{ck}(q)\\
++{}-2\|w_c-w_k\|_\infty D_{\rm tr}(\rho,\rho').
+ \end{split}
+ \end{equation}
+-Here $w_k$ is row $k$ of $W$ and the state norm is the trace norm. Strict positivity of the right-hand side for every $k\ne y$ suffices to preserve the label. The supplement gives the derivation. No uniform retiming-to-state bound or final-model per-example state measurements are available, so this is an analytical interpretation, not a certified timestamp radius.
++Here $w_k$ is row $k$ of $W$ and the state norm is the trace norm. Strict positivity of the right-hand side for every $k\ne c$ suffices to preserve the label. The supplement gives the derivation. No uniform retiming-to-state bound or final-model per-example state measurements are available, so this is an analytical interpretation, not a certified timestamp radius.
+ \end{samepage}
+diff --git a/sections/phase2_supplement.tex b/sections/phase2_supplement.tex
+index 27ee976..681ec02 100644
+--- a/sections/phase2_supplement.tex
++++ b/sections/phase2_supplement.tex
+@@ -33,7 +33,7 @@ This work & End-to-end timestamp attacks on QSNN-v3; separate classical grid con
+ 777 & 97.52 & 40\\
+ 2026 & 97.44 & 38\\
+ 6543 & 97.06 & 40\\\midrule
+-Mean $\pm$ SD & $97.272\pm0.212$ & ---\\\bottomrule
++Mean $\pm$ SD & $97.2720\pm0.2119$ & ---\\\bottomrule
+ \end{tabularx}
+ \vspace{3pt}\begin{minipage}{\linewidth}\footnotesize
+ All seeds reuse one pretrained frontend and one split. Reported macro-F1 is $97.2736\%\pm0.2119\%$ [R1].
+@@ -65,11 +65,11 @@ Integer & VGGSNN & 99.30 & 0.0 & 0.0\\
+ \end{table}
+ \subsection{Derivation for the fixed probability readout}
+ \label{sec:supp_margin}
+-For the fixed trained model, let $\rho$ and $\rho'$ denote the clean and retimed quantum states before the fixed readout measurement, and let $q,q'\in\mathbb{R}^{256}$ be the corresponding outcome-probability vectors. Write the logits as $z(q)=Wq+b$, and define the clean pairwise margin against class $k\ne y$ by
++For the fixed trained model, let $\rho$ and $\rho'$ denote the clean and retimed quantum states before the fixed readout measurement, and let $q,q'\in\mathbb{R}^{256}$ be the corresponding outcome-probability vectors. Write the logits as $z(q)=Wq+b$, and define the clean pairwise margin against class $k\ne c$ by
+ \begin{equation}
+-m_{yk}(q)=(w_y-w_k)^\top q+b_y-b_k.
++m_{ck}(q)=(w_c-w_k)^\top q+b_c-b_k.
+ \end{equation}
+-Here $y$ is the clean predicted class, equal to the label on the attacked clean-correct subset, and $w_k$ is row $k$ of $W$. Measurement cannot increase trace distance \cite[Corollary 3.40]{watrous2018theory}, hence
++Here we restrict to the attacked clean-correct subset, so the true class $c=\widehat c(q)$ is also the clean predicted class, and $w_k$ is row $k$ of $W$. Measurement cannot increase trace distance \cite[Corollary 3.40]{watrous2018theory}, hence
+ \begin{equation}
+ \tfrac12\|q-q'\|_1\leq D_{\mathrm{tr}}(\rho,\rho'),
+ \qquad
+@@ -78,17 +78,17 @@ D_{\mathrm{tr}}(\rho,\rho')=\tfrac12\|\rho-\rho'\|_1.
+ The state norm is the trace norm; for probability vectors it is the ordinary $\ell_1$ norm. Combining this inequality with H\"older's inequality gives
+ \begin{equation}
+ \begin{split}
+-m_{yk}(q')\geq m_{yk}(q)\\
+-{}-2\|w_y-w_k\|_\infty D_{\mathrm{tr}}(\rho,\rho').
++m_{ck}(q')\geq m_{ck}(q)\\
++{}-2\|w_c-w_k\|_\infty D_{\mathrm{tr}}(\rho,\rho').
+ \end{split}
+ \label{eq:supp_state_margin}
+ \end{equation}
+-Thus a sufficient condition for retaining class $y$ is that the right-hand side remain strictly positive for every $k\ne y$. To see this, subtract the two affine margins and bound the resulting inner product by $\|w_y-w_k\|_\infty\|q'-q\|_1$; positivity of all pairwise margins then preserves the argmax.
++Thus a sufficient condition for retaining class $c$ is that the right-hand side remain strictly positive for every $k\ne c$. To see this, subtract the two affine margins and bound the resulting inner product by $\|w_c-w_k\|_\infty\|q'-q\|_1$; positivity of all pairwise margins then preserves the argmax.
+ 
+ This observation separates state displacement from decision failure. A larger state distance need not cause a label change, and a small clean margin can make a smaller displacement consequential. Equation~\eqref{eq:supp_state_margin} is a conditional interpretation of the implemented readout, not a certified timestamp radius: no uniform bound from admissible event retiming through the classical frontend to $D_{\mathrm{tr}}$ has been established here. The final-model campaign also does not report the per-example states needed to evaluate this condition. Its connection to quantum robustness theory is therefore conceptual rather than an application of an existing certificate \cite{dowling2026guarantees}.
+ 
+ \subsection{Descriptive binomial score intervals}
+-For a reported $s$ successes among $n$ selected examples, let $\widehat p=s/n$ and $z=1.959963984540054$. The plotted 95\% Wilson score interval is
++For a reported $s$ successes among $n$ selected examples, let $\widehat p=s/n$ and $z=1.959963984540054$. The plotted 95\% Wilson score interval \cite{wilson1927} is
+ \begin{equation}
+ \frac{\widehat p+z^2/(2n)\ \pm\ z\sqrt{\widehat p(1-\widehat p)/n+z^2/(4n^2)}}{1+z^2/n}.
+ \end{equation}
+@@ -129,7 +129,7 @@ Q\in\{800,1200,1600,2000,2400,3200,4000,4800,5600,6400\},
+ \]
+ recording actual totals after the scaling helper rounds initialization and generation sizes, then choosing the median TEMP/PGD ratio closest to one and accepting a $\pm10\%$ band. TEMP candidate chunks are at most 64; PGD forwards contain one event example. Evaluation alternates PGD/TEMP order by sample position and excludes two verification forwards from attack timing. Timestamp tensors use float32 and the quantum backend uses complex64; the attack code does not apply the training loop's float16 autocast. Saved calibration arrays are absent, so absolute times, dispersion and historical device identity cannot be newly verified. The environment note's RTX 4090 observation is a later inspection, not a run-specific timing snapshot.
+ 
+-The timestamp loader calls \texttt{eval()} for both victims. The compact SNN and spatial LIF extractor initialize membrane/accumulator tensors inside each forward, with no persistent cross-call neuron state. BatchNorm consequently uses fixed evaluation statistics. This finding does not extend to the missing four-model grid definitions.
++The timestamp loader calls \texttt{eval()} for both victims. The compact SNN and spatial LIF extractor initialize membrane/accumulator tensors inside each forward, with no persistent cross-call neuron state. BatchNorm consequently uses fixed evaluation statistics. The recovered grid reference forwards also explicitly call \texttt{functional.reset\_net(self)}. Their \texttt{PiecewiseLeakyReLU(c=0.0)} surrogate is static evidence about backward choice, not proof of gradient masking. Runtime gradient coverage, alternative surrogates and serial/chunk/order checks remain unexecuted.
+ 
+ \subsection{Unresolved baseline and artifact provenance}
+-The controlled-grid report gives local architecture labels, seed 42, a common recipe, complete counts and manifest hashes. Exact ConvNet, spiking ResNet18 and VGGSNN implementations, training configs and checkpoint files are absent. A name alone does not establish that a published residual or VGG spiking architecture was used; no such reference is assigned without code verification. The reported $B_0$ coefficient discrepancy (5 versus 10) remains unresolved because the applicable override/configuration is absent. No real clean/retimed event example or state--margin scatter is constructed without its timestamps, probabilities, logits and prediction evidence.
++The controlled-grid loader, three reference definitions, training script and attack adapters are available at the pinned source commit. Their static findings and remaining runtime linkage are recorded in Section~\ref{sec:phase4_availability}; a published architecture citation is not inferred from a class name. No real clean/retimed exemplar or final-model state--margin scatter is constructed without its raw timestamps, probabilities and logits.
+diff --git a/sections/protocol.tex b/sections/protocol.tex
+index 4d34652..bba3dd4 100644
+--- a/sections/protocol.tex
++++ b/sections/protocol.tex
+@@ -10,11 +10,27 @@ Training uses AdamW with weight decay $10^{-4}$ and batch size 256 for at most 4
+ \subsection{Populations and attack budgets}
+ The timestamp protocol freezes 100 validation examples, with ten examples per class, correctly classified by both models before attack. It reuses their identities across conditions. This joint-correct restriction permits paired attack comparisons but excludes examples that only one model classifies correctly. It is not a population-wide robust-accuracy estimate. The compact SNN checkpoint in this study differs from the retrained custom-SNN checkpoint in the controlled grid study.
+ 
+-PGD evaluates 21 candidate timestamps, including the clean candidate. Its implementation makes 41 attack-internal forward passes and 20 backward evaluations because candidate scoring and gradient computation use separate forwards. TEMP uses Q forward evaluations and no backwards. The first matched condition gives TEMP 21 candidates; the second gives it 41 forwards. Neither converts a backward pass into an assumed number of forward passes. Verification adds two forwards per new record and is excluded from attack timing.
++PGD evaluates 21 candidate timestamps, including the clean candidate. Its implementation makes 41 attack-internal forward passes and 20 backward evaluations because candidate scoring and gradient computation use separate forwards. TEMP scores $Q$ proposed examples in batched model calls and uses no backwards. The first matched condition gives TEMP 21 candidates; the second matches 41 evaluated examples, not 41 batched Python model calls (Table~\ref{tab:cost}). Neither converts a backward pass into an assumed number of forward passes. Verification adds two forwards per new record and is excluded from attack timing.
+ 
+ Elapsed-time calibration selects Q = 4,000 for QSNN and Q = 1,600 for SNN. The reported median TEMP/PGD timing ratios are 0.978 and 1.083, respectively [R3]. Candidate matching, forward matching and elapsed-time matching answer different computational questions. Exact equality of elapsed time is not asserted, and no throughput or latency claim is inferred from the ratios alone. The source synchronizes CUDA around timing, warms up PGD and TEMP, and uses ten disjoint training calibration examples (one per class), two repeats and $\epsilon_f=0.10$. TEMP evaluates candidate chunks of at most 64; PGD handles one example per forward. Timestamp tensors are float32 and circuit amplitudes complex64; training autocast settings are not assumed to describe attack timing. Saved timing arrays and a run-specific hardware/precision snapshot are unavailable. The supplement records calibration details and remaining provenance limits.
+ 
+-The controlled grid campaign trains four architectures under a common local recipe, data split, seed, optimizer settings and validation-selected checkpoint rule [R4]. For each representation it selects the first 1,000 official-test examples that all four models classify correctly. The joint-correct pools contain 9,522 binary and 9,495 integer examples. Within each representation the same frozen manifest is used for every architecture and budget. The two representations use different manifests. Exact baseline definitions, training configs and checkpoint files are absent from this snapshot; architecture names alone do not verify a particular published implementation. We therefore retain the report labels without assigning an unverified architecture citation.
++\begin{table}[t]\centering\small
++\caption{Historical search accounting per attacked example. Batched calls follow the source schedule; measured counters are unavailable.}\label{tab:cost}
++\begin{tabularx}{\linewidth}{L r r r}\toprule
++Search & Proposals & Model calls & Backwards\\\midrule
++PGD (20 steps) & 21 & 41 & 20\\
++TEMP, $Q=21$ & 21 & 5 & 0\\
++TEMP, $Q=41$ & 41 & 5 & 0\\
++TEMP, QSNN time & 4,000 & 64 & 0\\
++TEMP, SNN time & 1,600 & 26 & 0\\\bottomrule
++\end{tabularx}
++\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize
++PGD scores 21 proposals and repeats 20 inputs for gradients (sum of forward batch sizes 41). TEMP's sum is $Q$; chunk size is at most 64, applied separately to initialization and each generation. Unique proposals are unknown. Two additional verification calls are excluded from historical timing. These are inferred costs, not recovered counters or equal total compute [R2--R3].
++\end{minipage}\end{table}
++
++The controlled grid campaign trains four architectures under a common local recipe, data split, seed, optimizer settings and validation-selected checkpoint rule [R4]. For each representation it selects the first 1,000 official-test examples that all four models classify correctly. The joint-correct pools contain 9,522 binary and 9,495 integer examples. Within each representation the same frozen manifest is used for every architecture and budget. The two representations use different manifests. The public source snapshot contains the controlled-model loader, reference definitions, training and attack scripts. ConvNet denotes spiking \texttt{SimpleNet\_v2}, not the separate ReLU CNN class; classical here means nonquantum. The reference source files match the pinned upstream implementation. Exact reconstruction still requires the missing resolved training configurations, checkpoints, manifests and recorded hashes. Source availability does not establish replay of every historical result. The supplement records classes, aggregation and source hashes.
++
++The recovered grid training script selects checkpoints by validation accuracy/loss but uses final test accuracy $\geq0.95$ to mark a run PASS and decide skip/revise actions. This creates a possible test-dependent recipe gate. Logs establishing whether that branch actually changed historical recipes are absent; test independence of recipe development therefore remains unverified. Fresh campaigns must freeze the recipe on validation and report test outcomes without a test-accuracy completion threshold, retaining validity, leakage and hash gates.
+ 
+ 
+ \begin{table*}[t]\centering
+@@ -35,8 +51,8 @@ Clean accuracy uses the complete stated partition. ASR is the fraction of the st
+ For the stated clean-correct attack population $\mathcal{P}$, we use
+ \begin{equation}\label{eq:asr}
+ \operatorname{ASR}(\mathcal{P})=
+-\frac{1}{|\mathcal{P}|}\sum_{i\in\mathcal{P}}\mathbf{1}\!\left[f(X_i')\neq y_i\right].
++\frac{1}{|\mathcal{P}|}\sum_{i\in\mathcal{P}}\mathbf{1}\!\left[f(X_i')\neq c_i\right].
+ \end{equation}
+-Figure~\ref{fig:matched} uses 95\% Wilson score intervals computed from the reported numerator and $n=100$; the formula is given in the supplement. These are descriptive binomial-model intervals, with no sampling-based claim for the deterministically selected population or across reused conditions. They are not intervals for the paired difference. We report arithmetic means and sample standard deviations across the stated model seeds. For paired timestamp comparisons, $b$ counts examples broken only by PGD and $c$ counts examples broken only by TEMP. The exact two-sided McNemar test uses a $\operatorname{Binomial}(b+c,1/2)$ null distribution, with $p=1$ for $b+c=0$. It assesses observed paired discordance, not equality of all possible attack strengths. Reused examples across seeds and conditions are not treated as independent additional subjects.
++Figure~\ref{fig:matched} uses 95\% Wilson score intervals \cite{wilson1927} computed from the reported numerator and $n=100$; the formula is given in the supplement. These are descriptive binomial-model intervals, with no sampling-based claim for the deterministically selected population or across reused conditions. They are not intervals for the paired difference. We report arithmetic means and sample standard deviations across the stated model seeds. For paired timestamp comparisons, $b$ counts examples broken only by PGD and $c$ counts examples broken only by TEMP. The exact two-sided McNemar framework \cite{mcnemar1947} uses a $\operatorname{Binomial}(b+c,1/2)$ null distribution, with $p=1$ for $b+c=0$. It assesses observed paired discordance, not equality of all possible attack strengths. Reused examples across seeds and conditions are not treated as independent additional subjects.
+ 
+ All numerical results are taken from preserved reports and source files at repository snapshot \texttt{80d02f5733d4} \cite{repository}; the full commit identifier is recorded in the supplement. We checked parameter arithmetic, aggregate statistics, paired counts and exact paired $p$-values. Model execution and per-example bootstrap resampling were not repeated. Missing raw outputs and provenance boundaries are documented in Sec.~\ref{sec:discussion} and the supplement.
+diff --git a/sections/related_work.tex b/sections/related_work.tex
+index 0c98751..12a9153 100644
+--- a/sections/related_work.tex
++++ b/sections/related_work.tex
+@@ -1,18 +1,15 @@
+ \section{Related work}\label{sec:related}
+ \paragraph{Raw-event attacks and constrained retiming.}
+-Surrogate-gradient learning provides a practical route through the nondifferentiable dynamics of spiking networks \cite{neftci2019}. B\"uchel et al. study event additions and removals in spiking vision models \cite{buchel2022attacks}, a different feasible set from identity-preserving retiming. An attack on an aggregated tensor and an attack on the underlying event stream need not have the same feasible set. Yao et al. attack raw event data using a probabilistic treatment of discrete event values and sparsity control \cite{yao2024rawevent}. Their construction permits event-value and support changes, whereas our native-event threat model preserves event identities, coordinates, polarities and count. Du et al. investigate raw-event attacks with configurable latencies \cite{du2026latencies}, providing a particularly relevant connection to temporal manipulation. These works motivate attacks at the event interface without making their constraints interchangeable with ours.
++Surrogate-gradient learning enables optimization through spiking dynamics \cite{neftci2019}. Event additions/removals \cite{buchel2022attacks} and raw-event value/support attacks \cite{yao2024rawevent} have different feasible sets from identity-preserving retiming. Configurable-latency attacks provide a closer temporal connection \cite{du2026latencies}. Yu et al. formalize capacity-one retiming with maximum displacement, total delay and retimed-spike budgets \cite{yu2026}; our packet-grid controls use a local implementation. Native timestamp retiming instead permits frame-cell collisions and uses duration-scaled radii, so the two regimes require separate interpretation.
+ 
+-\paragraph{Capacity constraints and representation-specific budgets.}
+-Yu et al. formalize capacity-one spike retiming and budgets on maximum displacement, total delay and the number of retimed spikes \cite{yu2026}. Our classical packet-grid comparison uses a local implementation of this framework, with completed results for maximum displacement and retimed-packet count. The native-timestamp experiment instead permits multiple events to contribute to a frame cell. Its duration-scaled timestamp radius cannot be identified with a one-bin packet displacement. We consequently compare attacks within each stated regime and do not rank the regimes by their raw ASR values.
++\paragraph{Surrogates and temporal robustness in SNNs.}
++Lun et al. study inference-invisible surrogate gradients and propose potential-dependent surrogates and sparse attacks \cite{lun2025surrogate}. Robust temporal self-ensembling \cite{wang2026rte} and sparse ANN-to-SNN conversion \cite{schmolli2025sparse} examine training and construction choices affecting adversarial behavior. These motivate architecture-aware optimization diagnostics, with perturbation sets and training interventions distinct from timing-only evaluation.
+ 
+-\paragraph{Hybrid spiking and quantum models.}
+-Quantum temporal models encompass distinct computational constructions. Brand and Petruccione develop a quantum leaky integrate-and-fire neuron and network \cite{brand2024}; Jha et al. combine SNN-derived EEG features with quantum-kernel classification \cite{jha2025hybrid}; and SPATE studies spike-derived temporal quantum encodings \cite{spate2026}. QSNN-v3 instead composes classical Conv/LIF dynamics, a learned angle map, a data-re-uploading variational circuit \cite{perez2020}, and a linear classifier on the complete measurement-probability vector. These differences concern the model and interface, so accuracy or security claims do not transfer directly between the constructions.
+-
+-\paragraph{Adversarial robustness of quantum classifiers.}
+-Wendlinger et al. compare quantum and classical classifiers using transfer attacks, perturbation structure and Lipschitz-based analysis \cite{wendlinger2024comparative}. Gong et al. investigate randomized encodings under specified adversarial-access assumptions \cite{gong2024randomized}, while Dowling et al. establish robustness guarantees for particular quantum-classifier settings \cite{dowling2026guarantees}. Khatun and Usman use classical autoencoders to distill quantum adversarial manipulations on image benchmarks \cite{khatun2025distillation}; this is neither an implemented defense here nor evidence for temporal-retiming protection. These studies motivate stating the encoding and adversary explicitly. Their guarantees and defenses cannot be assigned to QSNN-v3 without checking the corresponding assumptions, especially because our perturbation enters before a classical event-processing frontend.
+-
+-\paragraph{Evaluation strength and computational controls.}
+-PGD is a standard iterative baseline \cite{madry2018}, but the failure of one optimizer is insufficient evidence of robustness \cite{carlini2019,athalye2018obfuscated}. Diverse attacks and improved optimization can expose failures missed by an individual configuration \cite{croce2020reliable}. We therefore report paired outcomes under candidate, forward-pass and elapsed-time controls. These controls answer different resource questions and do not establish optimality of either attack. Standard image-space attack ensembles also require adaptation before they respect our order, timing and packet constraints.
++\paragraph{Adversarial access and derivative-free search.}
++PGD is a standard iterative baseline \cite{madry2018}. Query-limited, partial-information and label-only attacks expose different interfaces \cite{ilyas2018queries}. TEMP uses logits and the true label without backward gradients: it is a score-based, not label-only, attack. Random-search precedents include Square Attack \cite{andriushchenko2020square}, although its image-space proposals do not directly respect temporal feasibility. Robustness evaluation \cite{carlini2019}, obfuscated-gradient analysis \cite{athalye2018obfuscated}, diverse attack ensembles \cite{croce2020reliable} and adaptive attacks \cite{tramer2020adaptive} motivate checking the implemented pipeline beyond one optimizer.
+ 
++\paragraph{Hybrid spiking and quantum models.}
++Brand and Petruccione develop quantum LIF neurons \cite{brand2024}; Jha et al. use SNN-derived EEG features with quantum kernels \cite{jha2025hybrid}; SPATE investigates spike-derived temporal encodings \cite{spate2026}. QSNN-v3 instead combines classical Conv/LIF summaries, learned angles, a data-re-uploading circuit \cite{perez2020} and an affine classifier on joint probabilities. The temporal features originate in the classical frontend; the circuit does not directly implement raw-event quantum LIF dynamics.
+ 
+-The supplementary conceptual-positioning table distinguishes these interfaces without ranking external ASRs.
++\paragraph{Quantum vulnerability, encoding and guarantees.}
++Quantum adversarial learning considers classical and quantum input manipulations \cite{lu2020quantumadv}, while high-dimensional vulnerability analysis emphasizes state-space geometry \cite{liu2020vulnerability}. Encoding gates constrain variational expressivity \cite{schuld2021encoding}. Comparative quantum/classical attacks \cite{wendlinger2024comparative}, randomized encodings \cite{gong2024randomized} and quantum robustness guarantees \cite{dowling2026guarantees} depend on encoding and access assumptions. Certifiably robust encodings explicitly connect classical inputs, noise and classifiers \cite{saxena2024encoding}. Classical autoencoder distillation of quantum manipulations is another distinct intervention \cite{khatun2025distillation}. Our fixed-readout margin observation lacks the additional retiming-to-state bound needed for a timestamp certificate. The supplement compares these interfaces without ranking external ASRs.
+diff --git a/sections/results.tex b/sections/results.tex
+index ead8e4d..e4883d4 100644
+--- a/sections/results.tex
++++ b/sections/results.tex
+@@ -2,7 +2,7 @@
+ The primary result is the paired timestamp comparison on QSNN-v3. Clean validation establishes the victim's predictive performance; separate packet-grid controls delimit its interpretation. Full seed, overlap and grid tables are retained in the supplement.
+ 
+ \subsection{Clean validation of the hybrid classifier}
+-QSNN-v3 reaches 97.2720\% $\pm$ 0.2119\% validation accuracy and reported macro-F1 of 97.2736\% $\pm$ 0.2119\% across five training seeds [R1]. The sample SD is conditional on shared pretraining and split, as specified in Sec.~\ref{sec:protocol}; it is not attack-rate uncertainty. The preserved SNN validation reference reaches 98.1320\% $\pm$ 0.2407\% accuracy, a descriptive QSNN-minus-SNN difference of -0.8600 percentage points. A matched validation-F1 comparison is unavailable.
++QSNN-v3 reaches 97.27\% $\pm$ 0.21\% validation accuracy and reported macro-F1 of 97.27\% $\pm$ 0.21\% across five training seeds [R1]. The sample SD is conditional on shared pretraining and split, as specified in Sec.~\ref{sec:protocol}; it is not attack-rate uncertainty. The preserved SNN validation reference reaches 98.13\% $\pm$ 0.24\% accuracy, a descriptive QSNN-minus-SNN difference of -0.86 percentage points. A matched validation-F1 comparison is unavailable.
+ 
+ The seed-42 wide4 classical frontend reaches 97.80\% validation accuracy with 38,122 parameters, compared with 97.06\% and 40,762 parameters for its hybrid continuation. Different training stages and budgets prevent attributing this difference to an isolated circuit component. The supplement retains individual accuracies, selected epochs and development records; no quantum accuracy advantage or official-test hybrid result is established.
+ 
+@@ -20,7 +20,7 @@ For the compact SNN, candidate and forward matching produce no successes at eith
+ \end{figure*}
+ 
+ \subsection{Separate packet-grid controls}
+-The grid study uses different victims, capacity-one packets and its own 1,000-example joint clean-correct test manifest for each representation (Sec.~\ref{sec:protocol}). Under the two completed budgets, custom-SNN ASR spans 98.0--100\%, whereas the three reference architectures span 0--1.9\% (Fig.~\ref{fig:grid}). Clean test accuracy, measured on all 10,000 examples, is shown separately in Table~\ref{tab:grid_clean}; the supplement supplies all sixteen attack cells.
++The historical grid study includes ConvNet (spiking \texttt{SimpleNet\_v2}) and uses different victims, capacity-one packets and its own 1,000-example joint clean-correct test manifest for each representation (Sec.~\ref{sec:protocol}). Under the two completed budgets, custom-SNN ASR spans 98.0--100\%, whereas the three reference architectures span 0--1.9\% (Fig.~\ref{fig:grid}). Clean test accuracy, measured on all 10,000 examples, is shown separately in Table~\ref{tab:grid_clean}; the supplement supplies all sixteen attack cells.
+ 
+ The integer custom SNN and spiking ResNet18 differ by only 0.02 percentage points in clean accuracy, yet by 99.7 and 97.9 ASR points under $B_\infty=1$ and $B_0=200$. Clean accuracy therefore does not summarize the failure profile under this recipe. Common settings do not guarantee equally strong optimization across architectures, and zero observed successes are not robustness certificates \cite{athalye2018obfuscated,croce2020reliable}. These are single-seed local controls, not values copied from external benchmarks or a representation ablation.
+ 
+@@ -41,5 +41,5 @@ VGGSNN & 99.21 & 99.30\\\bottomrule
+ \begin{figure*}[t]
+ \centering
+ \includegraphics[width=\textwidth]{figures/fig03_grid_comparison.pdf}
+-\caption{Separate classical controls under maximum displacement ($B_\infty=1$ bin) and retimed-packet count ($B_0=200$). Each cell uses $n=1{,}000$ joint clean-correct test examples, seed 42. Insets explicitly expand 0--2.1\% for the three low-ASR controls. Binary and integer panels use different manifests; the panels are not paired representation comparisons. Source: [R4].}\label{fig:grid}
++\caption{Historical nonquantum controls; ConvNet is spiking \texttt{SimpleNet\_v2}. Maximum displacement ($B_\infty=1$ bin) and retimed-packet count ($B_0=200$). Each cell uses $n=1{,}000$ joint clean-correct test examples, seed 42. Insets explicitly expand 0--2.1\% for the three low-ASR controls. Binary and integer panels use different manifests; the panels are not paired representation comparisons. Source: [R4].}\label{fig:grid}
+ \end{figure*}
+diff --git a/supplement.tex b/supplement.tex
+index 9bb8787..3ee3f12 100644
+--- a/supplement.tex
++++ b/supplement.tex
+@@ -311,7 +311,7 @@ D=t_N-t_1+1,\qquad \epsilon=\epsilon_fD,\qquad
+ \end{equation}
+ The added unit matches the code's inclusive duration convention; it should not be dropped when reproducing budgets. The ten-bin adapter uses the clean recording endpoints and this duration, with hard accumulation in the forward pass and a surrogate backward interpolation \rref{2}.
+ 
+-PGD uses 21 candidate evaluations, 41 attack-internal forwards and 20 backwards. TEMP uses $Q$ candidate/forward evaluations and zero backwards. Candidate matching sets $Q=21$; forward matching sets $Q=41$. Elapsed-time calibration chooses $Q=4{,}000$ for QSNN-v3 and $Q=1{,}600$ for SNN, yielding median TEMP/PGD runtime ratios 0.978 and 1.083. Two verification forwards per new record are excluded from attack timing. No backward-to-forward conversion factor is assumed \rref{3}.
++PGD scores 21 candidates and repeats 20 inputs for gradients: 41 attack-internal model calls with batch size one and 20 backwards. TEMP evaluates $Q$ proposals in chunks (zero backwards); the number of calls is $\lceil n_0/64\rceil+4\lceil n_g/64\rceil$, not $Q$. Candidate matching sets $Q=21$; forward-example matching sets $Q=41$. Elapsed-time calibration chooses $Q=4{,}000$ for QSNN-v3 and $Q=1{,}600$ for SNN, yielding median TEMP/PGD runtime ratios 0.978 and 1.083. Two verification forwards per new record are excluded from attack timing. No backward-to-forward conversion factor is assumed \rref{3}.
+ 
+ \begin{table}[!htbp]
+ \centering
+@@ -374,10 +374,11 @@ The reported bin-change difference is 24.44 percentage points. Larger realized p
+ \subsection{Scope of report audit claims}
+ The repository reports 2,400 passing canonical timestamp records and 1,600 completed new budget-comparison records, with reused canonical rows where specified. These are record-accounting statements about the timestamp study, not extra independent attacked subjects and not validation of the separate grid campaign. The budget-comparison README still says that no experiment results exist, while its populated report states completion. Numerical results here follow the completed report \rref{3}. Restoring underlying arrays, logs, manifests and audit outputs is necessary for full independent reproduction.
+ 
+-The controlled grid report separately states that all sixteen of its attack cells passed raw-data reconstruction and prediction audits. It also reports a source/description ambiguity: a $B_0$ penalty coefficient of 5 in the referenced implementation versus 10 in the paper's general description. The applicable override source is absent from the recovered snapshot, so this discrepancy is attributed to the report rather than claimed as a new inspection of that source \rref{4}.
++The controlled grid report states that all sixteen attack cells passed raw-data reconstruction and prediction audits \rref{4}; those audits were not rerun here. New static inspection confirms a coefficient of 5 in the pinned upstream L0 loss and a separate capacity penalty of 20 in the local adapter. The report compares the former with 10 in the paper description. Resolved historical execution settings remain unavailable; see Section~\ref{sec:phase4_availability}.
+ 
+ \clearpage
+ \input{sections/phase2_supplement}
++\input{sections/manuscript_phase4_supplement}
+ 
+ \clearpage
+ \section{Repository evidence map and reporting boundary}
+@@ -437,7 +438,6 @@ The environment observations are a September 2026 snapshot, not a saved runtime
+ \end{description}
+ 
+ \noindent The accompanying main paper cites the research literature separately. The bibliography below is shared with that paper; repository evidence identifiers above are preserved for exact artifact provenance.
+-\nocite{*}
+-\bibliographystyle{unsrt}
++\bibliographystyle{unsrtlinks}
+ \bibliography{references}
+ \end{document}
+--- /dev/null
++++ sections/manuscript_phase4_supplement.tex
+@@ -0,0 +1,67 @@
++\section{Additional provenance and accounting audit}
++\label{sec:phase4_availability}
++This manuscript revision inspected additional source, not trained victims. The manuscript base is commit \texttt{e46a09e89af4}; the historical research source remains pinned to \texttt{80d02f5733d4}. Full SHA-256 hashes, exact paths and upstream URLs are in the accompanying \path{Reports/manuscript_phase4/} manifests. The original evidence manifest and numerical CSVs are preserved.
++
++\subsection{Baseline identity and availability}
++\begin{table}[H]\centering\small
++\caption{Controlled-grid source identities. Hashes are SHA-256 prefixes of the recovered model files, not checkpoint hashes. Counts marked unverified are not copied from a paper's architecture table.}
++\begin{tabularx}{\linewidth}{L L l L r l}\toprule
++Report label & Local class & Spiking & Temporal output & Params. & Source hash\\\midrule
++Custom SNN & \texttt{NMNISTConvSNN} & LIF & Mean of ten per-step classifier outputs & 25,482 & \texttt{be5cc98c0adb}\\
++ConvNet & \texttt{SimpleNet\_v2} & LIF & Mean of time-major logits via wrapper & Unverified & \texttt{88cb8521fcaa}\\
++Spiking ResNet18 & \texttt{ResNet18} & LIF & Same wrapper & Unverified & \texttt{8a40beb21a35}\\
++VGGSNN & \texttt{VGGSNN} & LIF & Same wrapper & Unverified & \texttt{dd7fc72f3335}\\\bottomrule
++\end{tabularx}
++\par\smallskip\footnotesize Source-derived custom count: 25,482. Reference runtime counts are unverified in this revision; historical checkpoint-specific counts are unavailable. ``Classical'' means nonquantum, not necessarily nonspiking.
++\end{table}
++The loader maps \texttt{convnet} to \texttt{SimpleNet\_v2}, not \texttt{SimpleNet\_v2\_CNN}. All three reference files are byte-identical to \texttt{yuyi-sd/Spike-Retiming-Attacks} commit \texttt{f16738f80be9}. The wrapper permutes $[B,T,C,H,W]$ to $[T,B,C,H,W]$, requires $[T,B,10]$ outputs and averages logits over $T$. The reference forwards reset neuron state explicitly. These static observations do not establish order/batch invariance for historical checkpoints or supply an experimental gradient-masking diagnosis.
++
++\begin{table}[H]\centering\small
++\caption{Availability in the supplied local evidence package as of 14 October 2026. Absence here does not assert absence on other branches or external storage.}
++\begin{tabularx}{\linewidth}{l L L}\toprule
++Artifact & Available & Remaining limit\\\midrule
++Source & Models, loaders, attack/training scripts; hashed upstream source & No proof each historical cell executed these exact bytes\\
++Config & Protocol descriptions and draft Phase 3 configs & Resolved historical training/attack config files missing\\
++Weights & No original trained checkpoints & No independent clean/attack inference\\
++Data & Aggregate CSVs and report snapshots & Raw N-MNIST and original caches/manifests absent\\
++Results & Historical aggregate counts and source reports & Per-example trajectories, logits and timing arrays absent\\
++Audit & Attributed historical PASS summaries; new arithmetic/software checks & Original runtime audit outputs not recovered\\\bottomrule
++\end{tabularx}
++\end{table}
++The budget-comparison README's ``no results'' statement is stale relative to its populated report. Both originals remain unchanged; a dated reconciliation note accompanies this revision. Numerical values follow the completed report, not the stale status sentence.
++
++\subsection{Test-access risk and fresh-run policy}
++The recovered controlled-training script chooses the best checkpoint by validation accuracy, breaking ties with loss. Separately, lines 74--79 use final test accuracy to skip or request recipe revision; lines 143--156 set PASS at 0.95 and request revision below it. Thus validation checkpoint selection and possible test-dependent recipe development coexist in the code. No per-run config chronology, training history or test-access log was recovered. The branch establishes a risk, not proof that a historical recipe was changed, and does not justify declaring the historical test untouched.
++
++A new completion-policy utility accepts a completed run independently of test accuracy only when its configuration/source/split identity, validation checkpoint selection, validity/leakage/frozen-recipe gates and checkpoint/history/prediction hashes pass. It is covered by software tests; integration into a full fresh training campaign remains pending. The historical script is preserved. A new campaign must fix recipe and quality criteria on validation, report test outcomes without recipe feedback and retain scientific integrity gates. If the test was used for development, rerunning it does not restore independence; new untouched evaluation data or a defensible external design is needed.
++
++\subsection{Resolved source-level B0 settings}
++The local batched adapter subclasses upstream \texttt{PGDTimeShiftAfterEncoder\_L0}. Its explicit constructor values are 40 steps, \texttt{alpha\_phi=1}, \texttt{lambda\_cap=20}, temperature 1, no random start, capacity 1 and the requested packet budget. The upstream constructor defaults \texttt{lambda\_B} to zero, but its forward loss separately hard-codes
++\[
++ 5\,\operatorname{mean}\!\left[\max(S_{\rm soft}-B_0,0)\right]/\max(1,B_0).
++\]
++Here $S_{\rm soft}$ is the expected number of moved packets. This is the coefficient compared with ten by the historical report; it is not the capacity penalty. The upstream attack-file SHA-256 is
++\begin{center}\path{e2f76fc6b4796d9cece0dbf498ced5f62c4f9581c17476da34ab41a1087e11ea}.\end{center}
++Source resolution is now available; historical runtime objects, overrides and raw attack/audit artifacts are not. The grid remains contextual rather than a causal architecture ranking.
++
++\subsection{Hard-forward adapter and exact paired calculation}
++For each retimed event define $u_i=10(t_i'-t_1)/D$. The hard adapter assigns it to $\operatorname{clip}(\lfloor u_i\rfloor,0,9)$; the surrogate uses triangular weights $w_{ib}=\max(0,1-|u_i-(b+1/2)|)$ for $b=0,\ldots,9$. The straight-through count is $X_{\rm soft}+\operatorname{stopgrad}(X_{\rm hard}-X_{\rm soft})$, followed by the count cap. Hard verification uses the actual classifier argmax and full timestamp validity. Finite differences can be zero strictly inside a hard bin even when the chosen surrogate derivative is nonzero; that observation alone is not an implementation error.
++
++For discordant counts $b$ (PGD only) and $c$ (TEMP only), let $d=b+c$. The exact two-sided conditional convention used here is
++\begin{equation}
++p_{\rm exact}=\begin{cases}
++1,&d=0,\\
++\min\!\left(1,2\displaystyle\sum_{j=0}^{\min(b,c)}{d\choose j}2^{-d}\right),&d>0.
++\end{cases}
++\end{equation}
++This states the implementation explicitly; citing McNemar's original framework \cite{mcnemar1947} does not by itself specify an exact-test convention. The marginal Wilson intervals \cite{wilson1927} are not paired-difference intervals. Conditions reuse subjects; they are not pooled as independent repeats.
++
++\subsection{Compute units and remaining measurement}
++``Forward-example count'' means the sum of model-call batch sizes; ``model calls'' counts actual forward invocations. For PGD these are 41 and 41, with 21 scored candidate proposals and 20 backwards. Repeated gradient inputs are computational work. For TEMP the sum is $Q_{\rm act}$ and calls are $\lceil n_0/64\rceil+4\lceil n_g/64\rceil$: 5, 5, 64 and 26 for the four reported schedules. Unique timestamp vectors were not recovered. Two final verification calls per new historical record are separate. No guessed backward conversion or equal-FLOP assertion is made. The requested 400-proposal warm-up actually generates $150+4(62)=398$ proposals. Standalone radius searches are distinct from cumulative best-so-far analyses; prior search and warm-start costs must be included in the latter.
++
++Fresh Phase 3 code records proposals, unique vectors, model calls, sum of batch sizes, backward and verification costs, dtype, device, chunk and separate elapsed times. Its synthetic tests are software checks, not historical timing measurements. Same-device warm-up/synchronized serial-versus-chunk pilots and raw time dispersion remain blocked by missing weights/data. A current hardware inspection cannot replace a historical runtime snapshot.
++
++\subsection{Ablation identity and reproducible entry points}
++The recovered old QSNN development report covers 154--274-parameter models with local Pauli-Z readout and a different representation. It is not a fixed-frontend classical-head/no-entangler ablation of the final 40,762-parameter, 256-probability model. That controlled experiment, official-test QSNN evaluation, empirical selection audit and real exemplars remain future work.
++
++The package README distinguishes dependency-pinned software checks from model execution. A portable pilot command is \texttt{python -m scripts.phase3.runner pilot --config <resolved.yaml>}; it requires real checkpoint and metadata hashes plus a raw-event manifest with provenance. The supplied configuration deliberately leaves these unset and yields blocked status with null metrics. No historical Windows interpreter, absent ResearchLoop contract or unexecuted test unlock is claimed to exist on this system.
+--- /dev/null
++++ unsrtlinks.bst
+@@ -0,0 +1,968 @@
++% unsrtlinks: derived from standard unsrt, with DOI/URL/eprint output; 2026-10-14
++   % Version 0.99b (8-Dec-10 release) for BibTeX versions 0.99a or later.
++   % Copyright (C) 1984, 1985, 1988, 2010 Howard Trickey and Oren Patashnik.
++   % Unlimited copying and redistribution of this file are permitted as long as
++   % it is unmodified.  Modifications (and redistribution of modified versions)
++   % are also permitted, but only if the resulting file is renamed to something
++   % besides btxbst.doc, plain.bst, unsrt.bst, alpha.bst, and abbrv.bst.
++   % This restriction helps ensure that all standard styles are identical.
++   % The file btxbst.doc has the documentation for this style.
++
++ENTRY
++  { address
++    author
++    booktitle
++    chapter
++    edition
++    editor
++    howpublished
++    institution
++    journal
++    key
++    month
++    note
++    number
++    organization
++    pages
++    publisher
++    school
++    series
++    title
++    type
++    volume
++    year
++    doi
++    url
++    eprint
++    archivePrefix
++  }
++  {}
++  { label }
++
++INTEGERS { output.state before.all mid.sentence after.sentence after.block }
++
++FUNCTION {init.state.consts}
++{ #0 'before.all :=
++  #1 'mid.sentence :=
++  #2 'after.sentence :=
++  #3 'after.block :=
++}
++
++STRINGS { s t }
++
++FUNCTION {output.nonnull}
++{ 's :=
++  output.state mid.sentence =
++    { ", " * write$ }
++    { output.state after.block =
++        { add.period$ write$
++          newline$
++          "\newblock " write$
++        }
++        { output.state before.all =
++            'write$
++            { add.period$ " " * write$ }
++          if$
++        }
++      if$
++      mid.sentence 'output.state :=
++    }
++  if$
++  s
++}
++
++FUNCTION {output}
++{ duplicate$ empty$
++    'pop$
++    'output.nonnull
++  if$
++}
++
++FUNCTION {output.check}
++{ 't :=
++  duplicate$ empty$
++    { pop$ "empty " t * " in " * cite$ * warning$ }
++    'output.nonnull
++  if$
++}
++
++FUNCTION {output.bibitem}
++{ newline$
++  "\bibitem{" write$
++  cite$ write$
++  "}" write$
++  newline$
++  ""
++  before.all 'output.state :=
++}
++
++FUNCTION {format.links}
++{ doi empty$
++    { url empty$
++        { eprint empty$ { "" } { "arXiv:" eprint * } if$ }
++        { "\url{" url * "}" * }
++      if$
++    }
++    { "doi: \url{https://doi.org/" doi * "}" * }
++  if$
++}
++
++FUNCTION {fin.entry}
++{ after.block 'output.state :=
++  format.links output
++  add.period$
++  write$
++  newline$
++}
++
++FUNCTION {new.block}
++{ output.state before.all =
++    'skip$
++    { after.block 'output.state := }
++  if$
++}
++
++FUNCTION {new.sentence}
++{ output.state after.block =
++    'skip$
++    { output.state before.all =
++        'skip$
++        { after.sentence 'output.state := }
++      if$
++    }
++  if$
++}
++
++FUNCTION {not}
++{   { #0 }
++    { #1 }
++  if$
++}
++
++FUNCTION {and}
++{   'skip$
++    { pop$ #0 }
++  if$
++}
++
++FUNCTION {or}
++{   { pop$ #1 }
++    'skip$
++  if$
++}
++
++FUNCTION {new.block.checka}
++{ empty$
++    'skip$
++    'new.block
++  if$
++}
++
++FUNCTION {new.block.checkb}
++{ empty$
++  swap$ empty$
++  and
++    'skip$
++    'new.block
++  if$
++}
++
++FUNCTION {new.sentence.checka}
++{ empty$
++    'skip$
++    'new.sentence
++  if$
++}
++
++FUNCTION {new.sentence.checkb}
++{ empty$
++  swap$ empty$
++  and
++    'skip$
++    'new.sentence
++  if$
++}
++
++FUNCTION {field.or.null}
++{ duplicate$ empty$
++    { pop$ "" }
++    'skip$
++  if$
++}
++
++FUNCTION {emphasize}
++{ duplicate$ empty$
++    { pop$ "" }
++    { "{\em " swap$ * "}" * }
++  if$
++}
++
++INTEGERS { nameptr namesleft numnames }
++
++FUNCTION {format.names}
++{ 's :=
++  #1 'nameptr :=
++  s num.names$ 'numnames :=
++  numnames 'namesleft :=
++    { namesleft #0 > }
++    { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't :=
++      nameptr #1 >
++        { namesleft #1 >
++            { ", " * t * }
++            { numnames #2 >
++                { "," * }
++                'skip$
++              if$
++              t "others" =
++                { " et~al." * }
++                { " and " * t * }
++              if$
++            }
++          if$
++        }
++        't
++      if$
++      nameptr #1 + 'nameptr :=
++      namesleft #1 - 'namesleft :=
++    }
++  while$
++}
++
++FUNCTION {format.authors}
++{ author empty$
++    { "" }
++    { author format.names }
++  if$
++}
++
++FUNCTION {format.editors}
++{ editor empty$
++    { "" }
++    { editor format.names
++      editor num.names$ #1 >
++        { ", editors" * }
++        { ", editor" * }
++      if$
++    }
++  if$
++}
++
++FUNCTION {format.title}
++{ title empty$
++    { "" }
++    { title "t" change.case$ }
++  if$
++}
++
++FUNCTION {n.dashify}
++{ 't :=
++  ""
++    { t empty$ not }
++    { t #1 #1 substring$ "-" =
++        { t #1 #2 substring$ "--" = not
++            { "--" *
++              t #2 global.max$ substring$ 't :=
++            }
++            {   { t #1 #1 substring$ "-" = }
++                { "-" *
++                  t #2 global.max$ substring$ 't :=
++                }
++              while$
++            }
++          if$
++        }
++        { t #1 #1 substring$ *
++          t #2 global.max$ substring$ 't :=
++        }
++      if$
++    }
++  while$
++}
++
++FUNCTION {format.date}
++{ year empty$
++    { month empty$
++        { "" }
++        { "there's a month but no year in " cite$ * warning$
++          month
++        }
++      if$
++    }
++    { month empty$
++        'year
++        { month " " * year * }
++      if$
++    }
++  if$
++}
++
++FUNCTION {format.btitle}
++{ title emphasize
++}
++
++FUNCTION {tie.or.space.connect}
++{ duplicate$ text.length$ #3 <
++    { "~" }
++    { " " }
++  if$
++  swap$ * *
++}
++
++FUNCTION {either.or.check}
++{ empty$
++    'pop$
++    { "can't use both " swap$ * " fields in " * cite$ * warning$ }
++  if$
++}
++
++FUNCTION {format.bvolume}
++{ volume empty$
++    { "" }
++    { "volume" volume tie.or.space.connect
++      series empty$
++        'skip$
++        { " of " * series emphasize * }
++      if$
++      "volume and number" number either.or.check
++    }
++  if$
++}
++
++FUNCTION {format.number.series}
++{ volume empty$
++    { number empty$
++        { series field.or.null }
++        { output.state mid.sentence =
++            { "number" }
++            { "Number" }
++          if$
++          number tie.or.space.connect
++          series empty$
++            { "there's a number but no series in " cite$ * warning$ }
++            { " in " * series * }
++          if$
++        }
++      if$
++    }
++    { "" }
++  if$
++}
++
++FUNCTION {format.edition}
++{ edition empty$
++    { "" }
++    { output.state mid.sentence =
++        { edition "l" change.case$ " edition" * }
++        { edition "t" change.case$ " edition" * }
++      if$
++    }
++  if$
++}
++
++INTEGERS { multiresult }
++
++FUNCTION {multi.page.check}
++{ 't :=
++  #0 'multiresult :=
++    { multiresult not
++      t empty$ not
++      and
++    }
++    { t #1 #1 substring$
++      duplicate$ "-" =
++      swap$ duplicate$ "," =
++      swap$ "+" =
++      or or
++        { #1 'multiresult := }
++        { t #2 global.max$ substring$ 't := }
++      if$
++    }
++  while$
++  multiresult
++}
++
++FUNCTION {format.pages}
++{ pages empty$
++    { "" }
++    { pages multi.page.check
++        { "pages" pages n.dashify tie.or.space.connect }
++        { "page" pages tie.or.space.connect }
++      if$
++    }
++  if$
++}
++
++FUNCTION {format.vol.num.pages}
++{ volume field.or.null
++  number empty$
++    'skip$
++    { "(" number * ")" * *
++      volume empty$
++        { "there's a number but no volume in " cite$ * warning$ }
++        'skip$
++      if$
++    }
++  if$
++  pages empty$
++    'skip$
++    { duplicate$ empty$
++        { pop$ format.pages }
++        { ":" * pages n.dashify * }
++      if$
++    }
++  if$
++}
++
++FUNCTION {format.chapter.pages}
++{ chapter empty$
++    'format.pages
++    { type empty$
++        { "chapter" }
++        { type "l" change.case$ }
++      if$
++      chapter tie.or.space.connect
++      pages empty$
++        'skip$
++        { ", " * format.pages * }
++      if$
++    }
++  if$
++}
++
++FUNCTION {format.in.ed.booktitle}
++{ booktitle empty$
++    { "" }
++    { editor empty$
++        { "In " booktitle emphasize * }
++        { "In " format.editors * ", " * booktitle emphasize * }
++      if$
++    }
++  if$
++}
++
++FUNCTION {empty.misc.check}
++{ author empty$ title empty$ howpublished empty$
++  month empty$ year empty$ note empty$
++  and and and and and
++    { "all relevant fields are empty in " cite$ * warning$ }
++    'skip$
++  if$
++}
++
++FUNCTION {format.thesis.type}
++{ type empty$
++    'skip$
++    { pop$
++      type "t" change.case$
++    }
++  if$
++}
++
++FUNCTION {format.tr.number}
++{ type empty$
++    { "Technical Report" }
++    'type
++  if$
++  number empty$
++    { "t" change.case$ }
++    { number tie.or.space.connect }
++  if$
++}
++
++FUNCTION {format.article.crossref}
++{ key empty$
++    { journal empty$
++        { "need key or journal for " cite$ * " to crossref " * crossref *
++          warning$
++          ""
++        }
++        { "In {\em " journal * "\/}" * }
++      if$
++    }
++    { "In " key * }
++  if$
++  " \cite{" * crossref * "}" *
++}
++
++FUNCTION {format.crossref.editor}
++{ editor #1 "{vv~}{ll}" format.name$
++  editor num.names$ duplicate$
++  #2 >
++    { pop$ " et~al." * }
++    { #2 <
++        'skip$
++        { editor #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
++            { " et~al." * }
++            { " and " * editor #2 "{vv~}{ll}" format.name$ * }
++          if$
++        }
++      if$
++    }
++  if$
++}
++
++FUNCTION {format.book.crossref}
++{ volume empty$
++    { "empty volume in " cite$ * "'s crossref of " * crossref * warning$
++      "In "
++    }
++    { "Volume" volume tie.or.space.connect
++      " of " *
++    }
++  if$
++  editor empty$
++  editor field.or.null author field.or.null =
++  or
++    { key empty$
++        { series empty$
++            { "need editor, key, or series for " cite$ * " to crossref " *
++              crossref * warning$
++              "" *
++            }
++            { "{\em " * series * "\/}" * }
++          if$
++        }
++        { key * }
++      if$
++    }
++    { format.crossref.editor * }
++  if$
++  " \cite{" * crossref * "}" *
++}
++
++FUNCTION {format.incoll.inproc.crossref}
++{ editor empty$
++  editor field.or.null author field.or.null =
++  or
++    { key empty$
++        { booktitle empty$
++            { "need editor, key, or booktitle for " cite$ * " to crossref " *
++              crossref * warning$
++              ""
++            }
++            { "In {\em " booktitle * "\/}" * }
++          if$
++        }
++        { "In " key * }
++      if$
++    }
++    { "In " format.crossref.editor * }
++  if$
++  " \cite{" * crossref * "}" *
++}
++
++FUNCTION {article}
++{ output.bibitem
++  format.authors "author" output.check
++  new.block
++  format.title "title" output.check
++  new.block
++  crossref missing$
++    { journal emphasize "journal" output.check
++      format.vol.num.pages output
++      format.date "year" output.check
++    }
++    { format.article.crossref output.nonnull
++      format.pages output
++    }
++  if$
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {book}
++{ output.bibitem
++  author empty$
++    { format.editors "author and editor" output.check }
++    { format.authors output.nonnull
++      crossref missing$
++        { "author and editor" editor either.or.check }
++        'skip$
++      if$
++    }
++  if$
++  new.block
++  format.btitle "title" output.check
++  crossref missing$
++    { format.bvolume output
++      new.block
++      format.number.series output
++      new.sentence
++      publisher "publisher" output.check
++      address output
++    }
++    { new.block
++      format.book.crossref output.nonnull
++    }
++  if$
++  format.edition output
++  format.date "year" output.check
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {booklet}
++{ output.bibitem
++  format.authors output
++  new.block
++  format.title "title" output.check
++  howpublished address new.block.checkb
++  howpublished output
++  address output
++  format.date output
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {inbook}
++{ output.bibitem
++  author empty$
++    { format.editors "author and editor" output.check }
++    { format.authors output.nonnull
++      crossref missing$
++        { "author and editor" editor either.or.check }
++        'skip$
++      if$
++    }
++  if$
++  new.block
++  format.btitle "title" output.check
++  crossref missing$
++    { format.bvolume output
++      format.chapter.pages "chapter and pages" output.check
++      new.block
++      format.number.series output
++      new.sentence
++      publisher "publisher" output.check
++      address output
++    }
++    { format.chapter.pages "chapter and pages" output.check
++      new.block
++      format.book.crossref output.nonnull
++    }
++  if$
++  format.edition output
++  format.date "year" output.check
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {incollection}
++{ output.bibitem
++  format.authors "author" output.check
++  new.block
++  format.title "title" output.check
++  new.block
++  crossref missing$
++    { format.in.ed.booktitle "booktitle" output.check
++      format.bvolume output
++      format.number.series output
++      format.chapter.pages output
++      new.sentence
++      publisher "publisher" output.check
++      address output
++      format.edition output
++      format.date "year" output.check
++    }
++    { format.incoll.inproc.crossref output.nonnull
++      format.chapter.pages output
++    }
++  if$
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {inproceedings}
++{ output.bibitem
++  format.authors "author" output.check
++  new.block
++  format.title "title" output.check
++  new.block
++  crossref missing$
++    { format.in.ed.booktitle "booktitle" output.check
++      format.bvolume output
++      format.number.series output
++      format.pages output
++      address empty$
++        { organization publisher new.sentence.checkb
++          organization output
++          publisher output
++          format.date "year" output.check
++        }
++        { address output.nonnull
++          format.date "year" output.check
++          new.sentence
++          organization output
++          publisher output
++        }
++      if$
++    }
++    { format.incoll.inproc.crossref output.nonnull
++      format.pages output
++    }
++  if$
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {conference} { inproceedings }
++
++FUNCTION {manual}
++{ output.bibitem
++  author empty$
++    { organization empty$
++        'skip$
++        { organization output.nonnull
++          address output
++        }
++      if$
++    }
++    { format.authors output.nonnull }
++  if$
++  new.block
++  format.btitle "title" output.check
++  author empty$
++    { organization empty$
++        { address new.block.checka
++          address output
++        }
++        'skip$
++      if$
++    }
++    { organization address new.block.checkb
++      organization output
++      address output
++    }
++  if$
++  format.edition output
++  format.date output
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {mastersthesis}
++{ output.bibitem
++  format.authors "author" output.check
++  new.block
++  format.title "title" output.check
++  new.block
++  "Master's thesis" format.thesis.type output.nonnull
++  school "school" output.check
++  address output
++  format.date "year" output.check
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {misc}
++{ output.bibitem
++  format.authors output
++  title howpublished new.block.checkb
++  format.title output
++  howpublished new.block.checka
++  howpublished output
++  format.date output
++  new.block
++  note output
++  fin.entry
++  empty.misc.check
++}
++
++FUNCTION {phdthesis}
++{ output.bibitem
++  format.authors "author" output.check
++  new.block
++  format.btitle "title" output.check
++  new.block
++  "PhD thesis" format.thesis.type output.nonnull
++  school "school" output.check
++  address output
++  format.date "year" output.check
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {proceedings}
++{ output.bibitem
++  editor empty$
++    { organization output }
++    { format.editors output.nonnull }
++  if$
++  new.block
++  format.btitle "title" output.check
++  format.bvolume output
++  format.number.series output
++  address empty$
++    { editor empty$
++        { publisher new.sentence.checka }
++        { organization publisher new.sentence.checkb
++          organization output
++        }
++      if$
++      publisher output
++      format.date "year" output.check
++    }
++    { address output.nonnull
++      format.date "year" output.check
++      new.sentence
++      editor empty$
++        'skip$
++        { organization output }
++      if$
++      publisher output
++    }
++  if$
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {techreport}
++{ output.bibitem
++  format.authors "author" output.check
++  new.block
++  format.title "title" output.check
++  new.block
++  format.tr.number output.nonnull
++  institution "institution" output.check
++  address output
++  format.date "year" output.check
++  new.block
++  note output
++  fin.entry
++}
++
++FUNCTION {unpublished}
++{ output.bibitem
++  format.authors "author" output.check
++  new.block
++  format.title "title" output.check
++  new.block
++  note "note" output.check
++  format.date output
++  fin.entry
++}
++
++FUNCTION {default.type} { misc }
++
++MACRO {jan} {"January"}
++
++MACRO {feb} {"February"}
++
++MACRO {mar} {"March"}
++
++MACRO {apr} {"April"}
++
++MACRO {may} {"May"}
++
++MACRO {jun} {"June"}
++
++MACRO {jul} {"July"}
++
++MACRO {aug} {"August"}
++
++MACRO {sep} {"September"}
++
++MACRO {oct} {"October"}
++
++MACRO {nov} {"November"}
++
++MACRO {dec} {"December"}
++
++MACRO {acmcs} {"ACM Computing Surveys"}
++
++MACRO {acta} {"Acta Informatica"}
++
++MACRO {cacm} {"Communications of the ACM"}
++
++MACRO {ibmjrd} {"IBM Journal of Research and Development"}
++
++MACRO {ibmsj} {"IBM Systems Journal"}
++
++MACRO {ieeese} {"IEEE Transactions on Software Engineering"}
++
++MACRO {ieeetc} {"IEEE Transactions on Computers"}
++
++MACRO {ieeetcad}
++ {"IEEE Transactions on Computer-Aided Design of Integrated Circuits"}
++
++MACRO {ipl} {"Information Processing Letters"}
++
++MACRO {jacm} {"Journal of the ACM"}
++
++MACRO {jcss} {"Journal of Computer and System Sciences"}
++
++MACRO {scp} {"Science of Computer Programming"}
++
++MACRO {sicomp} {"SIAM Journal on Computing"}
++
++MACRO {tocs} {"ACM Transactions on Computer Systems"}
++
++MACRO {tods} {"ACM Transactions on Database Systems"}
++
++MACRO {tog} {"ACM Transactions on Graphics"}
++
++MACRO {toms} {"ACM Transactions on Mathematical Software"}
++
++MACRO {toois} {"ACM Transactions on Office Information Systems"}
++
++MACRO {toplas} {"ACM Transactions on Programming Languages and Systems"}
++
++MACRO {tcs} {"Theoretical Computer Science"}
++
++READ
++
++STRINGS { longest.label }
++
++INTEGERS { number.label longest.label.width }
++
++FUNCTION {initialize.longest.label}
++{ "" 'longest.label :=
++  #1 'number.label :=
++  #0 'longest.label.width :=
++}
++
++FUNCTION {longest.label.pass}
++{ number.label int.to.str$ 'label :=
++  number.label #1 + 'number.label :=
++  label width$ longest.label.width >
++    { label 'longest.label :=
++      label width$ 'longest.label.width :=
++    }
++    'skip$
++  if$
++}
++
++EXECUTE {initialize.longest.label}
++
++ITERATE {longest.label.pass}
++
++FUNCTION {begin.bib}
++{ preamble$ empty$
++    'skip$
++    { preamble$ write$ newline$ }
++  if$
++  "\begin{thebibliography}{"  longest.label  * "}" * write$ newline$
++}
++
++EXECUTE {begin.bib}
++
++EXECUTE {init.state.consts}
++
++ITERATE {call.type$}
++
++FUNCTION {end.bib}
++{ newline$
++  "\end{thebibliography}" write$ newline$
++}
++
++EXECUTE {end.bib}
+--- /dev/null
++++ scripts/manuscript_phase4/__init__.py
+@@ -0,0 +1 @@
++"""Manuscript revision checks; independent of ResearchLoop experiment numbering."""
+--- /dev/null
++++ scripts/manuscript_phase4/render_figure2.py
+@@ -0,0 +1,38 @@
++"""Manuscript Phase 4 figure-2 caption simplification only: same preserved counts, no new experiments."""
++from pathlib import Path
++import csv
++import matplotlib
++matplotlib.use('Agg')
++import matplotlib.pyplot as plt
++from matplotlib.lines import Line2D
++from scripts.phase3.core import wilson
++ROOT=Path(__file__).resolve().parents[2]
++with (ROOT/'data/timestamp_paired.csv').open(newline='') as f:allrows=list(csv.DictReader(f))
++rows=[x for x in allrows if x['model']=='QSNN' and x['condition'] in ['access_candidates_21','wallclock_qsnn']]
++for row in rows[:2]:
++ other=next(r for r in allrows if r['model']=='QSNN' and r['condition']=='access_forwards_41' and r['epsilon_fraction']==row['epsilon_fraction'])
++ assert all(row[k]==other[k] for k in ['pgd_only','temp_only','both','neither'])
++plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'pdf.fonttype':42,'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False,'text.color':'#17324B','axes.labelcolor':'#17324B'})
++fig,(ax,table)=plt.subplots(1,2,figsize=(7.25,2.9),gridspec_kw={'width_ratios':[1.15,1.2]})
++fig.subplots_adjust(left=.21,right=.98,bottom=.17,top=.78,wspace=.21)
++labels=['Cand./fwd.: 5%','Cand./fwd.: 10%','Time: 5%','Time: 10%'];ys=[3,2,1,0]
++for row,y in zip(rows,ys):
++ for method,col,color,marker,dy in [('PGD','pgd_asr_fraction','#17324B','o',.11),('TEMP','temp_asr_fraction','#AA3377','s',-.11)]:
++  n=round(float(row[col])*100);lo,hi=[v*100 for v in wilson(n,100)]
++  ax.errorbar(n,y+dy,xerr=[[n-lo],[hi-n]],fmt=marker,color=color,ms=4,capsize=2,lw=1)
++  ax.text(n+.22,y+dy+.055,str(n),fontsize=7,color=color)
++ax.set(yticks=ys,yticklabels=labels,xlim=(0,12.5),ylim=(-.55,3.55),xlabel='ASR (%) · 95% Wilson score interval')
++ax.tick_params(labelsize=7.5);ax.grid(axis='x',color='#E3E9EE',lw=.65);ax.set_axisbelow(True)
++ax.set_title('a  Success rates',loc='left',fontweight='bold',fontsize=9,pad=24)
++ax.legend(handles=[Line2D([],[],color=c,marker=m,label=l) for c,m,l in [('#17324B','o','PGD'),('#AA3377','s','TEMP')]],loc='upper left',bbox_to_anchor=(0,1.12),ncol=2,frameon=False,fontsize=7)
++table.set(xlim=(-.5,3.5),ylim=(-.55,3.55));table.axis('off')
++for x,label in enumerate(['Both','PGD-only','TEMP-only','Neither']):table.text(x,3.55,label,ha='center',va='bottom',fontsize=7)
++for row,y in zip(rows,ys):
++ vals=[int(row[k]) for k in ['both','pgd_only','temp_only','neither']];assert sum(vals)==100
++ table.axhspan(y-.36,y+.36,color='#F0F4F7',zorder=0)
++ for x,v in enumerate(vals):table.text(x,y,str(v),ha='center',va='center',fontsize=9,color='#AA3377' if x==2 else '#17324B',fontweight='bold' if x==2 and v else 'normal')
++table.set_title('b  Paired counts (n=100 per row)',loc='left',fontweight='bold',fontsize=9,pad=24)
++for ext in ['pdf','svg','png']:
++ p=ROOT/'figures'/f'fig02_matched_evaluation.{ext}';fig.savefig(p,facecolor='white',dpi=300)
++ if ext=='svg':p.write_text('\n'.join(line.rstrip() for line in p.read_text().splitlines())+'\n')
++plt.close(fig)
+--- /dev/null
++++ scripts/manuscript_phase4/training_gate.py
+@@ -0,0 +1,56 @@
++"""Completion policy for future runs; no test-accuracy quality threshold.
++
++This validates receipt evidence, not the truth of an upstream leakage audit.
++Historical training code is preserved. Integration into a real fresh training
++campaign is pending; a successful receipt check is not a new experiment.
++"""
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import re
++
++
++def completion_status(record, identity, root):
++    required = {"config_sha256", "source_sha256", "train_manifest_sha256",
++                "validation_manifest_sha256"}
++    if not required <= identity.keys() or not all(
++        isinstance(identity[k], str) and re.fullmatch(r"[0-9a-f]{64}", identity[k])
++        for k in required
++    ):
++        return False
++    if record.get("status") != "completed" or record.get("identity") != identity:
++        return False
++    if record.get("checkpoint_selection_split") != "validation":
++        return False
++    gates = record.get("gates", {})
++    if any(gates.get(k) is not True for k in
++           ("validity", "split_disjoint", "validation_recipe_frozen")):
++        return False
++    artifacts = record.get("artifacts", {})
++    if not {"checkpoint", "history", "predictions"} <= artifacts.keys():
++        return False
++    for item in artifacts.values():
++        if not isinstance(item, dict) or not item.get("path") or not item.get("sha256"):
++            return False
++        path = Path(root) / item["path"]
++        try:
++            with path.open("rb") as stream:
++                actual = hashlib.file_digest(stream, "sha256").hexdigest()
++        except OSError:
++            return False
++        if actual != item["sha256"]:
++            return False
++    return True
++
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--receipt", required=True, type=Path)
++    parser.add_argument("--identity", required=True, type=Path)
++    parser.add_argument("--artifact-root", required=True, type=Path)
++    args = parser.parse_args()
++    result = completion_status(json.loads(args.receipt.read_text()),
++                               json.loads(args.identity.read_text()), args.artifact_root)
++    print(json.dumps({"can_resume_completed": result, "test_accuracy_used": False}))
++    raise SystemExit(0 if result else 1)
+--- /dev/null
++++ scripts/manuscript_phase4/verify.py
+@@ -0,0 +1,144 @@
++"""Verify manuscript artifacts and static evidence; never run training/attacks.
++
++Run with Python 3.12+ from the repository root after building both PDFs.
++"""
++from pathlib import Path
++import ast
++import csv
++import hashlib
++import json
++import math
++import re
++import statistics
++import subprocess
++
++ROOT = Path(__file__).resolve().parents[2]
++OUT = ROOT / 'Reports/manuscript_phase4'
++
++
++def sha(path):
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++
++def csv_rows(path):
++    with (ROOT / path).open(newline='') as stream:
++        return list(csv.DictReader(stream))
++
++
++def expand(path):
++    return re.sub(r'\\input\{([^}]+)\}', lambda m: expand(ROOT / (m[1] + '.tex')),
++                  path.read_text())
++
++
++def document(name, keys):
++    text = expand(ROOT / (name + '.tex'))
++    labels = re.findall(r'\\label\{([^}]+)\}', text)
++    assert len(labels) == len(set(labels)), (name, 'duplicate labels')
++    refs = re.findall(r'\\(?:eqref|ref)\{([^}]+)\}', text)
++    assert set(refs) <= set(labels), (name, set(refs) - set(labels))
++    cites = {k for group in re.findall(r'\\cite(?:\[[^]]*\])*\{([^}]+)\}', text)
++             for k in group.split(',')}
++    assert cites <= keys, (name, cites - keys)
++    assert '\\nocite{*}' not in text
++    bbl = (ROOT / 'build' / (name + '.bbl')).read_text()
++    printed = set(re.findall(r'\\bibitem\{([^}]+)\}', bbl))
++    assert cites == printed, (name, 'uncited/missing bibliography items', cites ^ printed)
++    # pdfTeX may emit T1 font bytes in box diagnostics; error markers are ASCII.
++    log = (ROOT / 'build' / (name + '.log')).read_text(encoding='latin-1')
++    assert not re.search(r'undefined|multiply defined|Overfull|LaTeX Error|LaTeX Warning', log)
++    assert 'Output written on' in log
++    biblog = (ROOT / 'build' / (name + '.blg')).read_text(encoding='latin-1')
++    assert not re.search(r'Warning--|error message|unknown function', biblog)
++    pdf = ROOT / 'build' / (name + '.pdf')
++    info = subprocess.check_output(['pdfinfo', str(pdf)], text=True)
++    extracted = subprocess.check_output(['pdftotext', str(pdf), '-'], text=True)
++    assert '??' not in extracted
++    return {'pages': int(re.search(r'Pages:\s+(\d+)', info)[1]),
++            'citations': len(cites), 'labels': len(labels), 'pdf_sha256': sha(pdf),
++            'underfull_boxes': len(re.findall('Underfull', log)),
++            'nonblocking_package_warnings': re.findall(r'Package .* Warning:.*', log)}
++
++
++def main():
++    baseline = json.loads((OUT / 'baseline.json').read_text())
++    for path, expected in baseline['protected_sha256'].items():
++        assert sha(ROOT / path) == expected, ('protected artifact changed', path)
++    for item in json.loads((OUT / 'source-manifest.json').read_text()):
++        assert sha(ROOT / item['path']) == item['sha256'], ('source damage', item['path'])
++    bib = (ROOT / 'references.bib').read_text()
++    keys = re.findall(r'@\w+\{([^,]+),', bib)
++    assert len(keys) == len(set(keys)) == 32
++    ledger = csv_rows('Reports/manuscript_phase4/citation_ledger.csv')
++    assert {r['key'] for r in ledger} == set(keys)
++    assert sum(r['added_phase4'] == 'True' for r in ledger) == 12
++    for field in ['doi', 'title']:
++        values = [re.sub(r'[^a-z0-9]', '', r[field].lower()) for r in ledger if r[field]]
++        assert len(values) == len(set(values)), ('duplicate', field)
++    docs = {name: document(name, set(keys)) for name in ['main', 'supplement']}
++    assert docs['main']['citations'] == 32
++    for row in csv_rows('data/timestamp_paired.csv'):
++        b, c, both, neither = [int(row[k]) for k in ['pgd_only','temp_only','both','neither']]
++        assert b+c+both+neither == 100
++        assert math.isclose(float(row['pgd_asr_fraction']), (b+both)/100)
++        assert math.isclose(float(row['temp_asr_fraction']), (c+both)/100)
++        d = b+c
++        p = min(1, 2*sum(math.comb(d,j) for j in range(min(b,c)+1))/2**d) if d else 1
++        assert math.isclose(p, float(row['reported_exact_p']))
++        assert math.isclose(p, float(row['recomputed_exact_p']))
++    validation = [float(r['validation_accuracy_percent']) for r in csv_rows('data/qsnn_validation.csv')]
++    assert math.isclose(statistics.mean(validation), 97.272)
++    assert round(statistics.stdev(validation), 4) == .2119
++    grid = csv_rows('data/controlled_four_models.csv')
++    assert len(grid) == 8 and all(int(r['attack_denominator']) == 1000 for r in grid)
++    for row in grid:
++        for field in ['asr_Binf_1_percent', 'asr_B0_200_percent']:
++            assert math.isclose(float(row[field])*10, round(float(row[field])*10))
++    for row in csv_rows('Reports/manuscript_phase4/compute_accounting.csv'):
++        if row['method'] != 'TEMP':
++            continue
++        n0, ng = int(row['initial']), int(row['children_per_generation'])
++        assert n0+4*ng == int(row['actual_proposed_candidates'])
++        assert math.ceil(n0/64)+4*math.ceil(ng/64) == int(row['inferred_search_model_calls'])
++    # Independent static check of the actual upstream loss and baseline source identity.
++    resolved = json.loads((OUT / 'resolved_b0_source.json').read_text())
++    upstream = OUT / 'upstream/utils/attack.py'
++    tree = ast.parse(upstream.read_text())
++    l0 = next(x for x in tree.body if isinstance(x, ast.ClassDef) and x.name == resolved['class_name'])
++    penalties = [x.value for x in ast.walk(l0) if isinstance(x, ast.Assign)
++                 and any(isinstance(t, ast.Name) and t.id == 'penalty_budget' for t in x.targets)]
++    expression = next(x for x in penalties if isinstance(x, ast.BinOp) and isinstance(x.op, ast.Div))
++    assert isinstance(expression.left, ast.BinOp) and expression.left.left.value == 5
++    for entry in json.loads((OUT / 'upstream-source.json').read_text()):
++        if entry['path'].startswith('models/'):
++            local = ROOT / 'results/phase3/recovery/source/experiments/nmnist/reference_models' / Path(entry['path']).name
++            assert sha(local) == entry['sha256']
++    vectors = {}
++    for name in ['fig01_overview','fig02_matched_evaluation','fig03_grid_comparison']:
++        listing = subprocess.check_output(['pdfimages','-list',str(ROOT/'figures'/f'{name}.pdf')], text=True)
++        assert len(listing.strip().splitlines()) == 2, (name, 'embedded raster')
++        assert '<image' not in (ROOT/'figures'/f'{name}.svg').read_text()
++        vectors[name] = {ext:sha(ROOT/'figures'/f'{name}.{ext}') for ext in ['pdf','svg','png']}
++    review = csv_rows('Reports/manuscript_phase4/response_to_review.csv')
++    assert {r['comment_id'] for r in review} == {f'R{i}' for i in range(1,9)} | {f'M{i}' for i in range(1,14)}
++    status = json.loads((OUT/'execution_status.json').read_text())
++    assert status['real_experiments_completed'] == 0 and not status['manuscript_phase4_complete']
++    tests = (OUT/'unit-tests.log').read_text()
++    assert re.search(r'Ran 34 tests',tests) and tests.rstrip().endswith('OK')
++    assert not re.search(r'Warning|FAIL|ERROR',tests)
++    local_artifacts = [str(p.relative_to(ROOT)) for p in ROOT.rglob('*') if p.is_file()
++                       and '.git' not in p.parts and p.suffix.lower() in {'.pt','.pth','.ckpt','.npz','.npy','.parquet'}]
++    assert not local_artifacts, ('data/checkpoints availability changed; update blockers',local_artifacts)
++    result = dict(status='passed',documents=docs,bibliography_entries=32,new_references=12,
++                  citation_duplicates=0,protected_files_verified=len(baseline['protected_sha256']),
++                  historical_data_and_phase3_unchanged=True,paired_rows_checked=16,grid_cells_checked=16,
++                  source_files_hashed=37,unit_tests=34,unit_test_failures=0,
++                  software_tests_only=True,real_experiments_completed=0,
++                  local_candidate_data_or_weight_artifacts=local_artifacts,vector_figures=vectors,
++                  source_level_B0_penalty=5,historical_runtime_B0=None,
++                  visual_review='Reports/manuscript_phase4/visual_review.md')
++    (OUT/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
++    print(json.dumps({k:v for k,v in result.items() if k!='vector_figures'},indent=2))
++
++
++if __name__ == '__main__':
++    main()
+--- /dev/null
++++ tests/manuscript_phase4/test_training_gate.py
+@@ -0,0 +1,72 @@
++"""Catch test-dependent completion, provenance bypass and missing audit gates."""
++import copy
++import hashlib
++from pathlib import Path
++import tempfile
++import unittest
++
++from scripts.manuscript_phase4.training_gate import completion_status
++
++
++class CompletionTests(unittest.TestCase):
++    def setUp(self):
++        self.directory = tempfile.TemporaryDirectory()
++        self.addCleanup(self.directory.cleanup)
++        self.root = Path(self.directory.name)
++        self.identity = {key: hashlib.sha256(key.encode()).hexdigest() for key in
++                         ("config_sha256", "source_sha256", "train_manifest_sha256",
++                          "validation_manifest_sha256")}
++        self.artifacts = {}
++        for name in ("checkpoint", "history", "predictions"):
++            path = self.root / name
++            path.write_bytes(name.encode())
++            self.artifacts[name] = {"path": name,
++                                    "sha256": hashlib.sha256(name.encode()).hexdigest()}
++        self.record = {"status": "completed", "identity": self.identity,
++                       "checkpoint_selection_split": "validation",
++                       "gates": {"validity": True, "split_disjoint": True,
++                                 "validation_recipe_frozen": True},
++                       "artifacts": self.artifacts, "test": {"accuracy": 0.01}}
++
++    def test_low_test_accuracy_is_a_completed_run(self):
++        self.assertTrue(completion_status(self.record, self.identity, self.root))
++        self.record["test"]["accuracy"] = 0.99
++        self.assertTrue(completion_status(self.record, self.identity, self.root))
++        del self.record["test"]
++        self.assertTrue(completion_status(self.record, self.identity, self.root))
++
++    def test_hash_damage_rejects_resume_even_with_high_accuracy(self):
++        self.record["test"]["accuracy"] = 1.0
++        (self.root / "checkpoint").write_bytes(b"damaged")
++        self.assertFalse(completion_status(self.record, self.identity, self.root))
++
++    def test_recipe_change_cannot_reuse_completed_run(self):
++        changed = copy.deepcopy(self.identity)
++        changed["config_sha256"] = "f" * 64
++        self.assertFalse(completion_status(self.record, changed, self.root))
++
++    def test_missing_or_failed_scientific_gates_reject_completion(self):
++        for name in ("validity", "split_disjoint", "validation_recipe_frozen"):
++            record = copy.deepcopy(self.record)
++            record["gates"][name] = False
++            self.assertFalse(completion_status(record, self.identity, self.root))
++            del record["gates"][name]
++            self.assertFalse(completion_status(record, self.identity, self.root))
++
++    def test_test_selected_checkpoint_cannot_complete(self):
++        self.record["checkpoint_selection_split"] = "official_test"
++        self.assertFalse(completion_status(self.record, self.identity, self.root))
++
++    def test_incomplete_missing_artifacts_and_invalid_identity_reject(self):
++        record = copy.deepcopy(self.record)
++        record["status"] = "running"
++        self.assertFalse(completion_status(record, self.identity, self.root))
++        for name in ("checkpoint", "history", "predictions"):
++            record = copy.deepcopy(self.record)
++            del record["artifacts"][name]
++            self.assertFalse(completion_status(record, self.identity, self.root))
++        self.assertFalse(completion_status(self.record, {}, self.root))
++
++
++if __name__ == "__main__":
++    unittest.main()

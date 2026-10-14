@@ -1,0 +1,14 @@
+{
+  "status": "blocked",
+  "reason_code": "blocked_resource",
+  "deferred_by_user": true,
+  "reused_artifact": "Reports/phase3/selection_audit.json",
+  "reused_artifact_sha256": "66195e972f310c4c47c7ae5cc327c01546445fac37b3e39509e7a2130242d962",
+  "actual_examples_compared": null,
+  "legacy_output_missed_successes": null,
+  "first_success_example_ids": null,
+  "asr_difference": null,
+  "real_results_completed": 0,
+  "software_checks": "Reports/manuscript_phase4/unit-tests.log",
+  "limit": "Synthetic tests are not empirical selection evidence."
+}

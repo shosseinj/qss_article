@@ -1,0 +1,6 @@
+{
+  "source_architecture_trainable_parameters": 25482,
+  "real_checkpoint_loaded": false,
+  "training_performed": false,
+  "method": "instantiate recovered constructor and sum trainable numel"
+}

@@ -1,0 +1,29 @@
+# Response to manuscript Phase 4 review
+
+Editorial/source/reference work is complete within available artifacts. Scientific validation is incomplete. Real experiments completed in this revision: **0**.
+
+Status does not equate software implementation with empirical resolution. The user explicitly deferred work requiring unavailable data/checkpoints.
+
+| ID | Status | Action and files | Evidence | Remaining limit |
+|---|---|---|---|---|
+| R1 | blocked | Preserve validation-only scope; defer official-test/independent-pipeline evaluation; main.tex; sections/discussion.tex | Reports/phase3/execution_status.json | Missing real data/checkpoints/manifests; no test inference |
+| R2 | blocked | Reuse verified selection-audit software and null empirical audit; scripts/phase3/; Reports/manuscript_phase4/selection_audit.json | Reports/phase3/selection_audit.json | No real trajectories; zero empirical examples compared |
+| R3 | partially_resolved | Separate candidate, call and sum-of-batch-size units; infer literal schedule costs; sections/protocol.tex; sections/manuscript_phase4_supplement.tex | Reports/manuscript_phase4/compute_accounting.csv | Same-device measured timing/chunk sensitivity and raw counters blocked |
+| R4 | resolved | Recover/hash source and correct source/config/weights/historical-linkage wording; sections/protocol.tex; sections/discussion.tex; sections/phase2_supplement.tex | Reports/manuscript_phase4/source-manifest.json | Source availability does not establish replay |
+| R5 | resolved | Define ConvNet as spiking SimpleNet_v2; classes, aggregation and source hashes; sections/results.tex; sections/protocol.tex; sections/manuscript_phase4_supplement.tex | Reports/manuscript_phase4/baseline-models.json | Reference runtime/checkpoint-specific parameter counts explicitly unverified |
+| R6 | partially_resolved | Disclose test-gate source risk; implement/test test-independent completion receipt utility; sections/protocol.tex; scripts/manuscript_phase4/training_gate.py | Reports/manuscript_phase4/test_access_audit.md | No historical chronology; full fresh training-runner integration and empirical campaign pending |
+| R7 | partially_resolved | Explain temporal frontend and distinguish old local-Z study from final circuit ablation; sections/models.tex; sections/related_work.tex; sections/manuscript_phase4_supplement.tex | Reports/manuscript_phase4/source/results/nmnist_qsnn_ablation_report.md | Final fixed-frontend trained ablations blocked |
+| R8 | partially_resolved | Trace pinned B0 loss/defaults and matching baseline sources; disclose static reset/surrogate evidence; sections/attacks.tex; sections/manuscript_phase4_supplement.tex | Reports/manuscript_phase4/resolved_b0_source.json | Historical resolved runtime/gradient/reset/search audits blocked |
+| M1 | resolved | Round main clean aggregates to two decimals; retain exact supplement/data; main.tex; sections/results.tex; sections/phase2_supplement.tex | data/qsnn_validation.csv | Same shared frontend/split uncertainty scope |
+| M2 | resolved | Keep Wilson intervals descriptive and separate from paired difference; sections/protocol.tex; sections/results.tex | data/timestamp_paired.csv | No full-population coverage claim |
+| M3 | resolved | Give exact two-sided conditional binomial formula and avoid independent pooling; sections/manuscript_phase4_supplement.tex | Reports/manuscript_phase4/verification.json | No raw-record bootstrap replay |
+| M4 | resolved | Retain numerical-on-this-population matching qualification; sections/discussion.tex; sections/results.tex | data/timestamp_paired.csv | No superiority or causal conclusion |
+| M5 | resolved | Retain fixed-affine sufficient condition, factor2, trace norm and all-class strict positivity; sections/models.tex; sections/phase2_supplement.tex | tests/phase3/test_core.py | No uniform retiming-to-state certificate |
+| M6 | resolved | Use event polarity pi, probability q and class c; add notation table; sections/models.tex; sections/attacks.tex; sections/protocol.tex | sections/models.tex | Scalar p in p-values/score interval has a separate statistical role |
+| M7 | resolved | Specify feasibility operator and centered triangular straight-through adapter; sections/attacks.tex; sections/manuscript_phase4_supplement.tex | results/phase3/recovery/source/scripts/run_nmnist_attack_protocol_v2_canonical_seed42.py | Runtime attack-strength checks remain R8 |
+| M8 | resolved | Clarify finite-search nonmonotonicity and standalone versus cumulative costs; sections/attacks.tex; sections/manuscript_phase4_supplement.tex | data/timestamp_paired.csv | No unmeasured best-so-far curve added |
+| M9 | resolved | Record requested400 and actual398 warm-up plus complete schedules; sections/phase2_supplement.tex; sections/manuscript_phase4_supplement.tex | Reports/manuscript_phase4/compute_accounting.csv | Rounded source schedule, not recovered timing data |
+| M10 | resolved | Rewrite related work around interfaces and consolidate evidence limits; sections/related_work.tex; sections/discussion.tex | Reports/manuscript_phase4/source.diff | No comparative external ASRs inserted |
+| M11 | resolved | Render DOI/URL from standard fields with line breaking; preserve BibTeX/numeric style; references.bib; unsrtlinks.bst; preamble.tex | build/main.pdf; build/supplement.pdf | Main now9 pages; no supplied venue page limit |
+| M12 | resolved | Maintain attributed historical audit PASS versus current software/arithmetic checks; supplement.tex; sections/discussion.tex | Reports/manuscript_phase4/claim_evidence.csv | No independently rerun historical model audits |
+| M13 | resolved | Add matrix, portable prerequisites/commands and dated stale-README reconciliation; README.md; sections/manuscript_phase4_supplement.tex | Reports/manuscript_phase4/repository_availability.json | Raw data, weights and resolved historical artifacts still absent |

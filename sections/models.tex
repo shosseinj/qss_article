@@ -1,13 +1,24 @@
 \section{Models and representations}\label{sec:model}
 Figure~\ref{fig:overview} traces the attacked timestamp-to-logit composition; Table~\ref{tab:populations} separates the experimental regimes.
 \subsection{Native events and temporal-grid packets}
-The timestamp study uses native N-MNIST events $e_i=(x_i,y_i,p_i,t_i)$. Event identities, coordinates, polarity, labels and event count are immutable. Timestamps are assigned to ten equal-duration bins using the clean recording endpoints. The differentiable adapter has hard count accumulation in the forward pass and triangular interpolation weights for the backward pass. Counts are capped at 255 by the adapter. The hybrid frontend then applies $\min(X/8,1)$. These input transformations are model preprocessing; the preservation claim refers to the underlying events.
+The timestamp study uses native N-MNIST events $e_i=(x_i,y_i,\pi_i,t_i)$. Event identities, coordinates, polarity, labels and event count are immutable. Timestamps are assigned to ten equal-duration bins using the clean recording endpoints. The differentiable adapter has hard count accumulation in the forward pass and triangular interpolation weights for the backward pass. Counts are capped at 255 by the adapter. The hybrid frontend then applies $\min(X/8,1)$. These input transformations are model preprocessing; the preservation claim refers to the underlying events.
 
 The grid study instead freezes a ten-bin equal-event-count representation. Each nonzero cell on a fixed spatial/polarity line is one amplitude-bearing packet. A binary packet has value one; an integer packet carries its complete cell count. A packet with count five remains a single packet carrying five during retiming. Collision-free capacity-one projection prevents packet splitting, merging, deletion, creation and amplitude changes. This distinction matters because multiple raw events can occupy one cell in the timestamp study, while one grid packet is indivisible in the second study.
 
 
+\begin{table}[t]\centering\small
+\caption{Notation used in the timestamp composition.}\label{tab:notation}
+\begin{tabularx}{\linewidth}{l L}\toprule
+Symbol & Meaning\\\midrule
+$(x_i,y_i),\pi_i,t_i$ & Event coordinates, polarity and time\\
+$c$, $\widehat c$ & True class and predicted class\\
+$q$, $z$ & Measurement probabilities and logits\\
+$D$, $\epsilon_f$ & Inclusive duration and relative timing radius\\
+$Q_{\rm req}$, $Q_{\rm act}$ & Requested and generated TEMP proposals\\\bottomrule
+\end{tabularx}\end{table}
+
 \subsection{The implemented hybrid classifier}
-The Conv/LIF extractor uses two $3\!\times\!3$ bias-free convolutions with 16 and 32 output channels, batch normalization and average pooling. LIF dynamics use decay 0.5. Time-averaged spike activations and the final membrane state are pooled to $4\!\times\!4$ spatial summaries and concatenated. A learned projection followed by tanh produces 32 latent features. A learned 32-to-8 projection and another tanh feed the circuit head. An additional learned 8-to-8 projection, initialized to the identity, produces bounded rotation angles.
+The Conv/LIF extractor uses two $3\!\times\!3$ bias-free convolutions with 16 and 32 output channels, batch normalization and average pooling. LIF dynamics use decay 0.5. Temporal information reaches the circuit through this classical frontend: time-averaged spike activations and the final membrane state are pooled to $4\!\times\!4$ spatial summaries and concatenated. A learned projection followed by tanh produces 32 latent features. A learned 32-to-8 projection and another tanh feed the circuit head. An additional learned 8-to-8 projection, initialized to the identity, produces bounded rotation angles.
 
 
 For the latent vector $h\in\mathbb{R}^{32}$, the learned angle map is
@@ -22,9 +33,9 @@ The eight-qubit register starts in $|0\rangle^{\otimes 8}$. Each of two blocks a
 
 \begin{equation}\label{eq:readout}
 \begin{aligned}
-p_k&=\left|\langle k|U_{\theta}(a)|0\rangle^{\otimes 8}\right|^2,
+q_k&=\left|\langle k|U_{\theta}(a)|0\rangle^{\otimes 8}\right|^2,
 && k=0,\ldots,255,\\
-z&=W_{\mathrm{out}}p+b_{\mathrm{out}}.
+z&=W_{\mathrm{out}}q+b_{\mathrm{out}}.
 \end{aligned}
 \end{equation}
 The backend is an analytic batched PyTorch state-vector simulation with complex64 amplitudes. Probabilities are computed exactly within numerical precision. The experiments do not involve quantum hardware, finite-shot readout or hardware noise. The name QSNN-v3 identifies this hybrid implementation and should not be interpreted as a network of physical quantum LIF neurons [R1].
@@ -51,12 +62,12 @@ The quantum head includes the learned $8\to8$ angle map, two upload blocks and l
 \begin{samepage}
 \subsection{Readout-specific margin observation}
 \label{sec:margin_interpretation}
-For the fixed trained affine readout $z(q)=Wq+b$, let $q,q'$ be clean and retimed measurement probabilities and $m_{yk}(q)=z_y(q)-z_k(q)$ for the clean predicted class $y$. With states $\rho,\rho'$ before the fixed measurement and $D_{\rm tr}=\frac12\|\rho-\rho'\|_1$, measurement contraction \cite{watrous2018theory} and H\"older's inequality imply
+For the fixed trained affine readout $z(q)=Wq+b$, let $q,q'$ be clean and retimed measurement probabilities. On the attacked clean-correct subset, $c=\widehat c(q)$ is both the true and clean predicted class; define $m_{ck}(q)=z_c(q)-z_k(q)$. With states $\rho,\rho'$ before the fixed measurement and $D_{\rm tr}=\frac12\|\rho-\rho'\|_1$, measurement contraction \cite{watrous2018theory} and H\"older's inequality imply
 \begin{equation}\label{eq:state_margin}
 \begin{split}
-m_{yk}(q')\geq m_{yk}(q)\\
-{}-2\|w_y-w_k\|_\infty D_{\rm tr}(\rho,\rho').
+m_{ck}(q')\geq m_{ck}(q)\\
+{}-2\|w_c-w_k\|_\infty D_{\rm tr}(\rho,\rho').
 \end{split}
 \end{equation}
-Here $w_k$ is row $k$ of $W$ and the state norm is the trace norm. Strict positivity of the right-hand side for every $k\ne y$ suffices to preserve the label. The supplement gives the derivation. No uniform retiming-to-state bound or final-model per-example state measurements are available, so this is an analytical interpretation, not a certified timestamp radius.
+Here $w_k$ is row $k$ of $W$ and the state norm is the trace norm. Strict positivity of the right-hand side for every $k\ne c$ suffices to preserve the label. The supplement gives the derivation. No uniform retiming-to-state bound or final-model per-example state measurements are available, so this is an analytical interpretation, not a certified timestamp radius.
 \end{samepage}

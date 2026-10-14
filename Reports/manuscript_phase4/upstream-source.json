@@ -1,0 +1,34 @@
+[
+  {
+    "path": "utils/attack.py",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/utils/attack.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "sha256": "e2f76fc6b4796d9cece0dbf498ced5f62c4f9581c17476da34ab41a1087e11ea",
+    "local_path": "Reports/manuscript_phase4/upstream/utils/attack.py",
+    "matches_local_reference": null
+  },
+  {
+    "path": "models/simplenet.py",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/models/simplenet.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "sha256": "88cb8521fcaaad42f42e3ffbf4b13c6bfc24df4c149e3245cbee7aae3d5b2aff",
+    "local_path": "Reports/manuscript_phase4/upstream/models/simplenet.py",
+    "matches_local_reference": true
+  },
+  {
+    "path": "models/resnet.py",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/models/resnet.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "sha256": "8a40beb21a3508d6fa9031f5fb24e2c93513edfe377b54453d2053421c931e6a",
+    "local_path": "Reports/manuscript_phase4/upstream/models/resnet.py",
+    "matches_local_reference": true
+  },
+  {
+    "path": "models/vgg.py",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/models/vgg.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "sha256": "dd7fc72f333581f73a06f30611ddd5789e88670a724b57cf662120e0b1d43f69",
+    "local_path": "Reports/manuscript_phase4/upstream/models/vgg.py",
+    "matches_local_reference": true
+  }
+]

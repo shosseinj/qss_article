@@ -12,7 +12,7 @@ Hybrid Quantum Spiking Classifiers\par}
 \vspace{12pt}
 \end{center}
 \begin{minipage}{\textwidth}
-\small\textbf{Abstract.} Event timing is an adversarial input dimension, but attack comparisons depend on both the feasible retiming and the computation allocated to the search. We study this issue in QSNN-v3, an implemented hybrid of a classical Conv/LIF frontend and an analytically simulated eight-qubit probability readout. The model achieves 97.272\% $\pm$ 0.212\% validation accuracy across five seeds conditional on shared pretraining and split. On 100 jointly clean-correct seed-42 validation examples, timestamp PGD succeeds on three examples at each tested radius. Derivative-free margin search produces zero to two additional successes depending on candidate, forward-pass or elapsed-time matching; no paired comparison establishes significant superiority. Separate classical packet-grid controls show that similar clean accuracy can accompany sharply different outcomes under one attack recipe, without isolating a representation or quantum effect. The evidence supports protocol-specific temporal vulnerability; official-test hybrid robustness and a quantum-specific mechanism remain unmeasured.
+\small\textbf{Abstract.} Event timing is an adversarial input dimension, but attack comparisons depend on both the feasible retiming and the computation allocated to the search. We study this issue in QSNN-v3, an implemented hybrid of a classical Conv/LIF frontend and an analytically simulated eight-qubit probability readout. The model achieves 97.27\% $\pm$ 0.21\% validation accuracy across five seeds conditional on shared pretraining and split. On 100 jointly clean-correct seed-42 validation examples, timestamp PGD succeeds on three examples at each tested radius. Derivative-free margin search produces zero to two additional successes depending on candidate, forward-pass or elapsed-time matching; no paired comparison establishes significant superiority. Separate classical packet-grid controls show that similar clean accuracy can accompany sharply different outcomes under one attack recipe, without isolating a representation or quantum effect. The evidence supports protocol-specific temporal vulnerability; official-test hybrid robustness and a quantum-specific mechanism remain unmeasured.
 \par\vspace{5pt}\textbf{Keywords:} event-driven classification; adversarial retiming; hybrid quantum classifiers; spiking neural networks; matched attack evaluation.
 \end{minipage}
 \vspace{16pt}
@@ -24,6 +24,6 @@ Hybrid Quantum Spiking Classifiers\par}
 \input{sections/protocol}
 \input{sections/results}
 \input{sections/discussion}
-\bibliographystyle{unsrt}
+\bibliographystyle{unsrtlinks}
 \bibliography{references}
 \end{document}

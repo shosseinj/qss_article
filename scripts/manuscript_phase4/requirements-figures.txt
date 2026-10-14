@@ -1,0 +1,4 @@
+# Figure environment used here: Python 3.14, separate from the Python 3.12 CPU checks.
+matplotlib==3.11.2
+numpy==2.5.4
+Pillow==12.3.0

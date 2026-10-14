@@ -1,0 +1,65 @@
+[
+  {
+    "path": "README.md",
+    "local_path": "Reports/manuscript_phase4/source/README.md",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/README.md",
+    "git_blob_sha1": "4f7025d981c6121dad6d4a813559de01dabd9ce4",
+    "sha256": "cf3146910adea57b733d06d596c836f7692fb6b7d38790ea2dc17b2ecc384017",
+    "bytes": 25495
+  },
+  {
+    "path": "README_FA.md",
+    "local_path": "Reports/manuscript_phase4/source/README_FA.md",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/README_FA.md",
+    "git_blob_sha1": "3b031219a57428beb7252011751ecad76a1cc1eb",
+    "sha256": "4baa47b555ab265641f9ff98d8c5b0f07a46b0c5c1aab4a8d75e43ba774e8c9f",
+    "bytes": 3418
+  },
+  {
+    "path": "requirements.txt",
+    "local_path": "Reports/manuscript_phase4/source/requirements.txt",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/requirements.txt",
+    "git_blob_sha1": "61e8abd119c0c436c4f5bcde047aaaaec69fa9a1",
+    "sha256": "342d12fa3b0438d116c16472e817f57ba98c18a0172b55b145c2d3b5dc76c871",
+    "bytes": 162
+  },
+  {
+    "path": "experiments/nmnist/official_pil_adapter.py",
+    "local_path": "Reports/manuscript_phase4/source/experiments/nmnist/official_pil_adapter.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/official_pil_adapter.py",
+    "git_blob_sha1": "187a3e367efc276ad55eb53ccbaaa347a43c9324",
+    "sha256": "e494c9d4180419a688f6ef98b50349712dc5c3f7c41c6ac73b8380d50043898c",
+    "bytes": 5950
+  },
+  {
+    "path": "experiments/nmnist/official_pil_adapter_batched.py",
+    "local_path": "Reports/manuscript_phase4/source/experiments/nmnist/official_pil_adapter_batched.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/official_pil_adapter_batched.py",
+    "git_blob_sha1": "9f44155e7bdf145906a5606ab83f61598b3c7193",
+    "sha256": "0daa6132bdd9e1606e31cdbe45e650fb740df8b5171aa90b48afd6e0fa0356ef",
+    "bytes": 12055
+  },
+  {
+    "path": "scripts/run_nmnist_controlled_attack.py",
+    "local_path": "Reports/manuscript_phase4/source/scripts/run_nmnist_controlled_attack.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_controlled_attack.py",
+    "git_blob_sha1": "3916158a13bf9feb44edc3333e814e20a7ac9847",
+    "sha256": "56ad9bed8110817f726a2eb3e242587de576bc4f50127608625317c4c31252a9",
+    "bytes": 9854
+  },
+  {
+    "path": "results/nmnist_qsnn_ablation_report.md",
+    "local_path": "Reports/manuscript_phase4/source/results/nmnist_qsnn_ablation_report.md",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_qsnn_ablation_report.md",
+    "git_blob_sha1": "fa4673f6938738ca6ece091c42ece92901321bd2",
+    "sha256": "a40bb1f7c5df5e9d1e2de8900d46e8a765b09bd78402bf5ad69a7e84311a066e",
+    "bytes": 1286
+  }
+]

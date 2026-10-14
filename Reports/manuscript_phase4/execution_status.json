@@ -1,0 +1,205 @@
+{
+  "manuscript_phase4_complete": false,
+  "editorial_source_reference_work": "completed",
+  "empirical_validation": "blocked_resource",
+  "real_experiments_completed": 0,
+  "real_checkpoint_loaded": false,
+  "real_data_loaded": false,
+  "user_deferred_dependent_experiments": true,
+  "review_status_counts": {
+    "resolved": 15,
+    "partially_resolved": 4,
+    "open": 0,
+    "blocked": 2
+  },
+  "review_items": [
+    {
+      "comment_id": "R1",
+      "action": "Preserve validation-only scope; defer official-test/independent-pipeline evaluation",
+      "changed_files": "main.tex; sections/discussion.tex",
+      "evidence": "Reports/phase3/execution_status.json",
+      "status": "blocked",
+      "remaining_limit": "Missing real data/checkpoints/manifests; no test inference"
+    },
+    {
+      "comment_id": "R2",
+      "action": "Reuse verified selection-audit software and null empirical audit",
+      "changed_files": "scripts/phase3/; Reports/manuscript_phase4/selection_audit.json",
+      "evidence": "Reports/phase3/selection_audit.json",
+      "status": "blocked",
+      "remaining_limit": "No real trajectories; zero empirical examples compared"
+    },
+    {
+      "comment_id": "R3",
+      "action": "Separate candidate, call and sum-of-batch-size units; infer literal schedule costs",
+      "changed_files": "sections/protocol.tex; sections/manuscript_phase4_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/compute_accounting.csv",
+      "status": "partially_resolved",
+      "remaining_limit": "Same-device measured timing/chunk sensitivity and raw counters blocked"
+    },
+    {
+      "comment_id": "R4",
+      "action": "Recover/hash source and correct source/config/weights/historical-linkage wording",
+      "changed_files": "sections/protocol.tex; sections/discussion.tex; sections/phase2_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/source-manifest.json",
+      "status": "resolved",
+      "remaining_limit": "Source availability does not establish replay"
+    },
+    {
+      "comment_id": "R5",
+      "action": "Define ConvNet as spiking SimpleNet_v2; classes, aggregation and source hashes",
+      "changed_files": "sections/results.tex; sections/protocol.tex; sections/manuscript_phase4_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/baseline-models.json",
+      "status": "resolved",
+      "remaining_limit": "Reference runtime/checkpoint-specific parameter counts explicitly unverified"
+    },
+    {
+      "comment_id": "R6",
+      "action": "Disclose test-gate source risk; implement/test test-independent completion receipt utility",
+      "changed_files": "sections/protocol.tex; scripts/manuscript_phase4/training_gate.py",
+      "evidence": "Reports/manuscript_phase4/test_access_audit.md",
+      "status": "partially_resolved",
+      "remaining_limit": "No historical chronology; full fresh training-runner integration and empirical campaign pending"
+    },
+    {
+      "comment_id": "R7",
+      "action": "Explain temporal frontend and distinguish old local-Z study from final circuit ablation",
+      "changed_files": "sections/models.tex; sections/related_work.tex; sections/manuscript_phase4_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/source/results/nmnist_qsnn_ablation_report.md",
+      "status": "partially_resolved",
+      "remaining_limit": "Final fixed-frontend trained ablations blocked"
+    },
+    {
+      "comment_id": "R8",
+      "action": "Trace pinned B0 loss/defaults and matching baseline sources; disclose static reset/surrogate evidence",
+      "changed_files": "sections/attacks.tex; sections/manuscript_phase4_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/resolved_b0_source.json",
+      "status": "partially_resolved",
+      "remaining_limit": "Historical resolved runtime/gradient/reset/search audits blocked"
+    },
+    {
+      "comment_id": "M1",
+      "action": "Round main clean aggregates to two decimals; retain exact supplement/data",
+      "changed_files": "main.tex; sections/results.tex; sections/phase2_supplement.tex",
+      "evidence": "data/qsnn_validation.csv",
+      "status": "resolved",
+      "remaining_limit": "Same shared frontend/split uncertainty scope"
+    },
+    {
+      "comment_id": "M2",
+      "action": "Keep Wilson intervals descriptive and separate from paired difference",
+      "changed_files": "sections/protocol.tex; sections/results.tex",
+      "evidence": "data/timestamp_paired.csv",
+      "status": "resolved",
+      "remaining_limit": "No full-population coverage claim"
+    },
+    {
+      "comment_id": "M3",
+      "action": "Give exact two-sided conditional binomial formula and avoid independent pooling",
+      "changed_files": "sections/manuscript_phase4_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/verification.json",
+      "status": "resolved",
+      "remaining_limit": "No raw-record bootstrap replay"
+    },
+    {
+      "comment_id": "M4",
+      "action": "Retain numerical-on-this-population matching qualification",
+      "changed_files": "sections/discussion.tex; sections/results.tex",
+      "evidence": "data/timestamp_paired.csv",
+      "status": "resolved",
+      "remaining_limit": "No superiority or causal conclusion"
+    },
+    {
+      "comment_id": "M5",
+      "action": "Retain fixed-affine sufficient condition, factor2, trace norm and all-class strict positivity",
+      "changed_files": "sections/models.tex; sections/phase2_supplement.tex",
+      "evidence": "tests/phase3/test_core.py",
+      "status": "resolved",
+      "remaining_limit": "No uniform retiming-to-state certificate"
+    },
+    {
+      "comment_id": "M6",
+      "action": "Use event polarity pi, probability q and class c; add notation table",
+      "changed_files": "sections/models.tex; sections/attacks.tex; sections/protocol.tex",
+      "evidence": "sections/models.tex",
+      "status": "resolved",
+      "remaining_limit": "Scalar p in p-values/score interval has a separate statistical role"
+    },
+    {
+      "comment_id": "M7",
+      "action": "Specify feasibility operator and centered triangular straight-through adapter",
+      "changed_files": "sections/attacks.tex; sections/manuscript_phase4_supplement.tex",
+      "evidence": "results/phase3/recovery/source/scripts/run_nmnist_attack_protocol_v2_canonical_seed42.py",
+      "status": "resolved",
+      "remaining_limit": "Runtime attack-strength checks remain R8"
+    },
+    {
+      "comment_id": "M8",
+      "action": "Clarify finite-search nonmonotonicity and standalone versus cumulative costs",
+      "changed_files": "sections/attacks.tex; sections/manuscript_phase4_supplement.tex",
+      "evidence": "data/timestamp_paired.csv",
+      "status": "resolved",
+      "remaining_limit": "No unmeasured best-so-far curve added"
+    },
+    {
+      "comment_id": "M9",
+      "action": "Record requested400 and actual398 warm-up plus complete schedules",
+      "changed_files": "sections/phase2_supplement.tex; sections/manuscript_phase4_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/compute_accounting.csv",
+      "status": "resolved",
+      "remaining_limit": "Rounded source schedule, not recovered timing data"
+    },
+    {
+      "comment_id": "M10",
+      "action": "Rewrite related work around interfaces and consolidate evidence limits",
+      "changed_files": "sections/related_work.tex; sections/discussion.tex",
+      "evidence": "Reports/manuscript_phase4/source.diff",
+      "status": "resolved",
+      "remaining_limit": "No comparative external ASRs inserted"
+    },
+    {
+      "comment_id": "M11",
+      "action": "Render DOI/URL from standard fields with line breaking; preserve BibTeX/numeric style",
+      "changed_files": "references.bib; unsrtlinks.bst; preamble.tex",
+      "evidence": "build/main.pdf; build/supplement.pdf",
+      "status": "resolved",
+      "remaining_limit": "Main now9 pages; no supplied venue page limit"
+    },
+    {
+      "comment_id": "M12",
+      "action": "Maintain attributed historical audit PASS versus current software/arithmetic checks",
+      "changed_files": "supplement.tex; sections/discussion.tex",
+      "evidence": "Reports/manuscript_phase4/claim_evidence.csv",
+      "status": "resolved",
+      "remaining_limit": "No independently rerun historical model audits"
+    },
+    {
+      "comment_id": "M13",
+      "action": "Add matrix, portable prerequisites/commands and dated stale-README reconciliation",
+      "changed_files": "README.md; sections/manuscript_phase4_supplement.tex",
+      "evidence": "Reports/manuscript_phase4/repository_availability.json",
+      "status": "resolved",
+      "remaining_limit": "Raw data, weights and resolved historical artifacts still absent"
+    }
+  ],
+  "completed_work": [
+    "7 additional pinned repository files recovered and Git-blob verified",
+    "4 pinned upstream files SHA256 checked; 3 model files match local reference source",
+    "baseline source, test-access gate and B0 static audits",
+    "12 proposed references merged and cited,32 total",
+    "cost/notation/availability/statistical/caption changes",
+    "completion-receipt policy implemented and tested; not full training campaign integration"
+  ],
+  "blocked_units": [
+    "P0_real_smoke_and_pilot",
+    "P1_real_selection_audit",
+    "P2_validation_tuning",
+    "P2_timing_calibration",
+    "P3_official_test",
+    "P3_independent_frontend_pipelines",
+    "P4_trained_ablations",
+    "P5_real_exemplars_and_state_margin"
+  ],
+  "historical_artifacts_preserved": true,
+  "no_commit_push_or_submission": true
+}

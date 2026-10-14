@@ -13,6 +13,13 @@
 \hypersetup{colorlinks=true,urlcolor=accent,citecolor=ink,linkcolor=ink,pdftitle={Temporal Retiming Attacks on Hybrid Quantum Spiking Classifiers}}
 \usepackage{url}
 \urlstyle{same}
+\Urlmuskip=0mu plus 2mu\relax
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\-\do\_\do\?\do\&\do\=}
+\makeatother
+% Keep one bibliography entry together across columns/pages.
+\let\originalthebibliography\thebibliography
+\renewcommand{\thebibliography}[1]{\originalthebibliography{#1}\interlinepenalty=10000\relax}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}

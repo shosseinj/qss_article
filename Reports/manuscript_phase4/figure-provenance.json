@@ -1,0 +1,96 @@
+[
+  {
+    "figure": 1,
+    "kind": "computation diagram, no measured attack example",
+    "sources": [
+      {
+        "path": "figures/fig01_overview.tex",
+        "sha256": "bc93ff2b6cf556be75172cd371c762ad99ff8c86d5d833b8872b9fb016cf5583"
+      },
+      {
+        "path": "results/phase3/recovery/source/models/nmnist_hybrid_qsnn.py",
+        "sha256": "818b082bd81c9de3bfb540349e66f87be750f4a700d4972919dc56b74a6e1f91"
+      }
+    ],
+    "regeneration": "latexmk figure source; pdftocairo SVG; pdftoppm PNG",
+    "outputs": [
+      {
+        "path": "figures/fig01_overview.pdf",
+        "sha256": "b2d5e007575699e812afd4cbabccfd15399af2c94ea5075deaf1e4428bea67df"
+      },
+      {
+        "path": "figures/fig01_overview.svg",
+        "sha256": "f0c772aa4d0ce9d05bd1fb432037ed321620f4df91bfc75edf075910cef4a061"
+      },
+      {
+        "path": "figures/fig01_overview.png",
+        "sha256": "b6e1c82e75ae86db4c88e6b139bcbfaab0a9c65df3860769b6d59adddf8a31b0"
+      }
+    ]
+  },
+  {
+    "figure": 2,
+    "kind": "preserved QSNN counts, paired categories, descriptive Wilson intervals",
+    "sources": [
+      {
+        "path": "data/timestamp_paired.csv",
+        "sha256": "74df4e6ce480547cb2750c9863ce5564fdb2a5e18fec2bff3ca161743f472c2a"
+      },
+      {
+        "path": "scripts/manuscript_phase4/render_figure2.py",
+        "sha256": "67b8bf89ded13604fb3f04ceef899409815f476e218426274fe282b51b6a3a57"
+      },
+      {
+        "path": "scripts/phase3/core.py",
+        "sha256": "ea387bb33377677d55187241d7218d37913bdf9150a131916594b36c0c2f6c5c"
+      }
+    ],
+    "regeneration": "python -m scripts.manuscript_phase4.render_figure2",
+    "experiments_added": 0,
+    "outputs": [
+      {
+        "path": "figures/fig02_matched_evaluation.pdf",
+        "sha256": "aa6bf826d5261427d274061f2b40647cf88a73b178c81a7e982799d63288d4b4"
+      },
+      {
+        "path": "figures/fig02_matched_evaluation.svg",
+        "sha256": "ac7c8c6bb4425cb533276fbfd1d98794e68c1339b015a246968ca349af43a6f0"
+      },
+      {
+        "path": "figures/fig02_matched_evaluation.png",
+        "sha256": "3d88d370656095bf045e4b4d8168f9cff438204d5c51be32a918c27599574f90"
+      }
+    ]
+  },
+  {
+    "figure": 3,
+    "kind": "historical contextual grid controls; artwork unchanged this revision",
+    "sources": [
+      {
+        "path": "data/controlled_four_models.csv",
+        "sha256": "3d683e3e570fb1645ab3ee584486d9c69ddd1ce02c381e0b1cb1ce30eb77ef79"
+      },
+      {
+        "path": "scripts/render_phase2_figures.py",
+        "sha256": "7f63bf1fb4ae5af976ecc0f66f02cc2f97ac5be58afe4b54d8210509050c2d6f"
+      }
+    ],
+    "regeneration": "historical Phase2 renderer figure3 block; whole script would also overwrite older figure2/report outputs",
+    "caption_definition": "ConvNet is spiking SimpleNet_v2",
+    "experiments_added": 0,
+    "outputs": [
+      {
+        "path": "figures/fig03_grid_comparison.pdf",
+        "sha256": "aeaba861804570364147b9268ee5009927cead0eee0c43f02d3a5bd7a875d0b4"
+      },
+      {
+        "path": "figures/fig03_grid_comparison.svg",
+        "sha256": "9ef5e53ee420ad5756a991c2bf618ee5bbde4b298cc24f4eef81638d83e984db"
+      },
+      {
+        "path": "figures/fig03_grid_comparison.png",
+        "sha256": "ae22d7edb8d1a5a0cdb632b8074893351c20288b794bbf3140a83d97d84db8b7"
+      }
+    ]
+  }
+]

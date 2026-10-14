@@ -311,7 +311,7 @@ D=t_N-t_1+1,\qquad \epsilon=\epsilon_fD,\qquad
 \end{equation}
 The added unit matches the code's inclusive duration convention; it should not be dropped when reproducing budgets. The ten-bin adapter uses the clean recording endpoints and this duration, with hard accumulation in the forward pass and a surrogate backward interpolation \rref{2}.
 
-PGD uses 21 candidate evaluations, 41 attack-internal forwards and 20 backwards. TEMP uses $Q$ candidate/forward evaluations and zero backwards. Candidate matching sets $Q=21$; forward matching sets $Q=41$. Elapsed-time calibration chooses $Q=4{,}000$ for QSNN-v3 and $Q=1{,}600$ for SNN, yielding median TEMP/PGD runtime ratios 0.978 and 1.083. Two verification forwards per new record are excluded from attack timing. No backward-to-forward conversion factor is assumed \rref{3}.
+PGD scores 21 candidates and repeats 20 inputs for gradients: 41 attack-internal model calls with batch size one and 20 backwards. TEMP evaluates $Q$ proposals in chunks (zero backwards); the number of calls is $\lceil n_0/64\rceil+4\lceil n_g/64\rceil$, not $Q$. Candidate matching sets $Q=21$; forward-example matching sets $Q=41$. Elapsed-time calibration chooses $Q=4{,}000$ for QSNN-v3 and $Q=1{,}600$ for SNN, yielding median TEMP/PGD runtime ratios 0.978 and 1.083. Two verification forwards per new record are excluded from attack timing. No backward-to-forward conversion factor is assumed \rref{3}.
 
 \begin{table}[!htbp]
 \centering
@@ -374,10 +374,11 @@ The reported bin-change difference is 24.44 percentage points. Larger realized p
 \subsection{Scope of report audit claims}
 The repository reports 2,400 passing canonical timestamp records and 1,600 completed new budget-comparison records, with reused canonical rows where specified. These are record-accounting statements about the timestamp study, not extra independent attacked subjects and not validation of the separate grid campaign. The budget-comparison README still says that no experiment results exist, while its populated report states completion. Numerical results here follow the completed report \rref{3}. Restoring underlying arrays, logs, manifests and audit outputs is necessary for full independent reproduction.
 
-The controlled grid report separately states that all sixteen of its attack cells passed raw-data reconstruction and prediction audits. It also reports a source/description ambiguity: a $B_0$ penalty coefficient of 5 in the referenced implementation versus 10 in the paper's general description. The applicable override source is absent from the recovered snapshot, so this discrepancy is attributed to the report rather than claimed as a new inspection of that source \rref{4}.
+The controlled grid report states that all sixteen attack cells passed raw-data reconstruction and prediction audits \rref{4}; those audits were not rerun here. New static inspection confirms a coefficient of 5 in the pinned upstream L0 loss and a separate capacity penalty of 20 in the local adapter. The report compares the former with 10 in the paper description. Resolved historical execution settings remain unavailable; see Section~\ref{sec:phase4_availability}.
 
 \clearpage
 \input{sections/phase2_supplement}
+\input{sections/manuscript_phase4_supplement}
 
 \clearpage
 \section{Repository evidence map and reporting boundary}
@@ -437,7 +438,6 @@ The environment observations are a September 2026 snapshot, not a saved runtime 
 \end{description}
 
 \noindent The accompanying main paper cites the research literature separately. The bibliography below is shared with that paper; repository evidence identifiers above are preserved for exact artifact provenance.
-\nocite{*}
-\bibliographystyle{unsrt}
+\bibliographystyle{unsrtlinks}
 \bibliography{references}
 \end{document}

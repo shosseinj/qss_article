@@ -33,7 +33,7 @@ This work & End-to-end timestamp attacks on QSNN-v3; separate classical grid con
 777 & 97.52 & 40\\
 2026 & 97.44 & 38\\
 6543 & 97.06 & 40\\\midrule
-Mean $\pm$ SD & $97.272\pm0.212$ & ---\\\bottomrule
+Mean $\pm$ SD & $97.2720\pm0.2119$ & ---\\\bottomrule
 \end{tabularx}
 \vspace{3pt}\begin{minipage}{\linewidth}\footnotesize
 All seeds reuse one pretrained frontend and one split. Reported macro-F1 is $97.2736\%\pm0.2119\%$ [R1].
@@ -65,11 +65,11 @@ Integer & VGGSNN & 99.30 & 0.0 & 0.0\\
 \end{table}
 \subsection{Derivation for the fixed probability readout}
 \label{sec:supp_margin}
-For the fixed trained model, let $\rho$ and $\rho'$ denote the clean and retimed quantum states before the fixed readout measurement, and let $q,q'\in\mathbb{R}^{256}$ be the corresponding outcome-probability vectors. Write the logits as $z(q)=Wq+b$, and define the clean pairwise margin against class $k\ne y$ by
+For the fixed trained model, let $\rho$ and $\rho'$ denote the clean and retimed quantum states before the fixed readout measurement, and let $q,q'\in\mathbb{R}^{256}$ be the corresponding outcome-probability vectors. Write the logits as $z(q)=Wq+b$, and define the clean pairwise margin against class $k\ne c$ by
 \begin{equation}
-m_{yk}(q)=(w_y-w_k)^\top q+b_y-b_k.
+m_{ck}(q)=(w_c-w_k)^\top q+b_c-b_k.
 \end{equation}
-Here $y$ is the clean predicted class, equal to the label on the attacked clean-correct subset, and $w_k$ is row $k$ of $W$. Measurement cannot increase trace distance \cite[Corollary 3.40]{watrous2018theory}, hence
+Here we restrict to the attacked clean-correct subset, so the true class $c=\widehat c(q)$ is also the clean predicted class, and $w_k$ is row $k$ of $W$. Measurement cannot increase trace distance \cite[Corollary 3.40]{watrous2018theory}, hence
 \begin{equation}
 \tfrac12\|q-q'\|_1\leq D_{\mathrm{tr}}(\rho,\rho'),
 \qquad
@@ -78,17 +78,17 @@ D_{\mathrm{tr}}(\rho,\rho')=\tfrac12\|\rho-\rho'\|_1.
 The state norm is the trace norm; for probability vectors it is the ordinary $\ell_1$ norm. Combining this inequality with H\"older's inequality gives
 \begin{equation}
 \begin{split}
-m_{yk}(q')\geq m_{yk}(q)\\
-{}-2\|w_y-w_k\|_\infty D_{\mathrm{tr}}(\rho,\rho').
+m_{ck}(q')\geq m_{ck}(q)\\
+{}-2\|w_c-w_k\|_\infty D_{\mathrm{tr}}(\rho,\rho').
 \end{split}
 \label{eq:supp_state_margin}
 \end{equation}
-Thus a sufficient condition for retaining class $y$ is that the right-hand side remain strictly positive for every $k\ne y$. To see this, subtract the two affine margins and bound the resulting inner product by $\|w_y-w_k\|_\infty\|q'-q\|_1$; positivity of all pairwise margins then preserves the argmax.
+Thus a sufficient condition for retaining class $c$ is that the right-hand side remain strictly positive for every $k\ne c$. To see this, subtract the two affine margins and bound the resulting inner product by $\|w_c-w_k\|_\infty\|q'-q\|_1$; positivity of all pairwise margins then preserves the argmax.
 
 This observation separates state displacement from decision failure. A larger state distance need not cause a label change, and a small clean margin can make a smaller displacement consequential. Equation~\eqref{eq:supp_state_margin} is a conditional interpretation of the implemented readout, not a certified timestamp radius: no uniform bound from admissible event retiming through the classical frontend to $D_{\mathrm{tr}}$ has been established here. The final-model campaign also does not report the per-example states needed to evaluate this condition. Its connection to quantum robustness theory is therefore conceptual rather than an application of an existing certificate \cite{dowling2026guarantees}.
 
 \subsection{Descriptive binomial score intervals}
-For a reported $s$ successes among $n$ selected examples, let $\widehat p=s/n$ and $z=1.959963984540054$. The plotted 95\% Wilson score interval is
+For a reported $s$ successes among $n$ selected examples, let $\widehat p=s/n$ and $z=1.959963984540054$. The plotted 95\% Wilson score interval \cite{wilson1927} is
 \begin{equation}
 \frac{\widehat p+z^2/(2n)\ \pm\ z\sqrt{\widehat p(1-\widehat p)/n+z^2/(4n^2)}}{1+z^2/n}.
 \end{equation}
@@ -129,7 +129,7 @@ Q\in\{800,1200,1600,2000,2400,3200,4000,4800,5600,6400\},
 \]
 recording actual totals after the scaling helper rounds initialization and generation sizes, then choosing the median TEMP/PGD ratio closest to one and accepting a $\pm10\%$ band. TEMP candidate chunks are at most 64; PGD forwards contain one event example. Evaluation alternates PGD/TEMP order by sample position and excludes two verification forwards from attack timing. Timestamp tensors use float32 and the quantum backend uses complex64; the attack code does not apply the training loop's float16 autocast. Saved calibration arrays are absent, so absolute times, dispersion and historical device identity cannot be newly verified. The environment note's RTX 4090 observation is a later inspection, not a run-specific timing snapshot.
 
-The timestamp loader calls \texttt{eval()} for both victims. The compact SNN and spatial LIF extractor initialize membrane/accumulator tensors inside each forward, with no persistent cross-call neuron state. BatchNorm consequently uses fixed evaluation statistics. This finding does not extend to the missing four-model grid definitions.
+The timestamp loader calls \texttt{eval()} for both victims. The compact SNN and spatial LIF extractor initialize membrane/accumulator tensors inside each forward, with no persistent cross-call neuron state. BatchNorm consequently uses fixed evaluation statistics. The recovered grid reference forwards also explicitly call \texttt{functional.reset\_net(self)}. Their \texttt{PiecewiseLeakyReLU(c=0.0)} surrogate is static evidence about backward choice, not proof of gradient masking. Runtime gradient coverage, alternative surrogates and serial/chunk/order checks remain unexecuted.
 
 \subsection{Unresolved baseline and artifact provenance}
-The controlled-grid report gives local architecture labels, seed 42, a common recipe, complete counts and manifest hashes. Exact ConvNet, spiking ResNet18 and VGGSNN implementations, training configs and checkpoint files are absent. A name alone does not establish that a published residual or VGG spiking architecture was used; no such reference is assigned without code verification. The reported $B_0$ coefficient discrepancy (5 versus 10) remains unresolved because the applicable override/configuration is absent. No real clean/retimed event example or state--margin scatter is constructed without its timestamps, probabilities, logits and prediction evidence.
+The controlled-grid loader, three reference definitions, training script and attack adapters are available at the pinned source commit. Their static findings and remaining runtime linkage are recorded in Section~\ref{sec:phase4_availability}; a published architecture citation is not inferred from a class name. No real clean/retimed exemplar or final-model state--margin scatter is constructed without its raw timestamps, probabilities and logits.

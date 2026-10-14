@@ -19,7 +19,7 @@ Timestamp PGD uses white-box gradients of cross-entropy through the hard-forward
 
 \begin{equation}\label{eq:pgd}
 \begin{aligned}
-g^{(k)}&=\operatorname{sign}\!\left(\nabla_t\mathrm{CE}(z(t^{(k)}),y)\right),\\
+g^{(k)}&=\operatorname{sign}\!\left(\nabla_t\mathrm{CE}(z(t^{(k)}),c)\right),\\
 t^{(k+1)}&=\Pi_{\epsilon}\!\left[t^{(k)}+\frac{\epsilon}{5}g^{(k)}\right].
 \end{aligned}
 \end{equation}
@@ -29,15 +29,15 @@ TEMP-DRIFT-v2 is a derivative-free search using model logits and the true label.
 
 \begin{equation}\label{eq:margin}
 \min_{t'\in\mathcal{F}_{\epsilon}} m(t'),\qquad
-m(t)=z_y(t)-\max_{j\neq y}z_j(t).
+m(t)=z_c(t)-\max_{j\neq c}z_j(t).
 \end{equation}
 The preserved full-budget implementation evaluates 600 uniformly perturbed feasible candidates. It retains the 12 candidates with lowest margin, then runs four generations of 250 children. Each child combines an elite parent, half the difference between two elite candidates and Gaussian noise at scales 0.50, 0.30, 0.18 and 0.10 times $\epsilon$. Every proposal is made feasible before evaluation. The final candidate with lowest margin is returned. This configuration uses 1,600 candidate evaluations [R2]. The matched implementation uses 13 initial candidates plus four generations of two children for $Q=21$, and 13 plus four generations of seven for $Q=41$. It always keeps 12 elites; the four noise scales are unchanged. For elapsed-time budgets it sets $n_0=\max(12,\operatorname{round}(0.375Q))$ and $n_g=\operatorname{round}((Q-n_0)/4)$, recording the actual total $n_0+4n_g$. The selected $Q=4{,}000$ and $1{,}600$ give $1{,}500+4\times625$ and $600+4\times250$, respectively. The supplement gives the complete schedule and pseudocode [R3].
 
 
-TEMP-DRIFT-v2 is the historical implementation name; throughout the final timestamp comparison it denotes margin search.
+A finite search need not find more successes at a larger allowed radius; the observed 4-to-3 decrease under access matching is not evidence of a smaller feasible set. Each reported radius is a standalone search. Any future cumulative best-so-far curve must count the earlier searches and warm starts. TEMP-DRIFT-v2 is the historical implementation name; throughout the final timestamp comparison it denotes margin search.
 
 \paragraph{Inference state.}
-Both timestamp victims are loaded in evaluation mode, fixing BatchNorm statistics. Their forward methods initialize membrane and output accumulators locally on every call; the preserved code has no cross-candidate persistent neuron state. This static inspection covers the timestamp models, not the missing four-model grid implementations.
+Both timestamp victims are loaded in evaluation mode, fixing BatchNorm statistics. Their forward methods initialize membrane and output accumulators locally on every call; the preserved code has no cross-candidate persistent neuron state. The recovered grid reference forwards also call \texttt{reset\_net}; this is static evidence, not a batching/order/reset experiment on the saved victims.
 
 \subsection{Discrete packet retiming}
 In the second study, let $s_i$ and $s_i'$ denote a source packet bin and its destination. Budgets count packet displacements independently of amplitude. A packet carrying amplitude five and shifted by two bins contributes two to $B_1$ and one to $B_0$. Capacity-one projection preserves packet identity, amplitude, event line and total represented mass.
@@ -49,4 +49,4 @@ B_{\infty}&=\max_i|s_i'-s_i|, & B_1&=\sum_i|s_i'-s_i|,\\
 B_0&=\sum_i\mathbf{1}[s_i'\neq s_i].
 \end{aligned}
 \end{equation}
-The local projected-in-the-loop attack uses differentiable shift probabilities and evaluates feasible hard schedules. Only $B_\infty$ = 1 and $B_0$ = 200 are complete in the controlled four-model campaign [R4]. The comparison report attributes a $B_0$ penalty coefficient of five to the implementation, whereas the reference paper states ten; the campaign override source is absent from the accessible snapshot. This discrepancy limits exact-replication claims. Historical sweeps from other checkpoints appear in the supplement.
+The local projected-in-the-loop attack uses differentiable shift probabilities and evaluates feasible hard schedules. Only $B_\infty$ = 1 and $B_0$ = 200 are complete in the controlled four-model campaign [R4]. The recovered adapter selects the pinned upstream L0 class, whose loss hard-codes a normalized budget-penalty coefficient of five. Its separate capacity penalty is \texttt{lambda\_cap=20}; the constructor default \texttt{lambda\_B=0} does not set the hard-coded coefficient. The report compares five with the reference description of ten [R4]. This source-level finding does not reconstruct the historical runtime configuration. Historical sweeps from other checkpoints appear in the supplement.

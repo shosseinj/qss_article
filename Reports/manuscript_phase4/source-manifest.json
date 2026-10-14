@@ -1,0 +1,261 @@
+[
+  {
+    "path": "results/phase3/recovery/source/experiments/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/__init__.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/__init__.py",
+    "sha256": "0a9fa314407af1d5017ede40c7fb76755f1ae256b61cc4b9a2e96459ee21b4c7",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/__init__.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/controlled_models.py",
+    "sha256": "18b40accdbdf14b07f88f9655f84be8688f79c82f680074d76465b14ff14829b",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/controlled_models.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/data.py",
+    "sha256": "abb39cb97726191a9ba7048c75ca301660d7d1e555ba20a9d32e76ce69cd7c80",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/data.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/hybrid_data.py",
+    "sha256": "c2364aece6e8ac6bb7be3b455a0b0edd0241d68ce69407abe379661d9a1db545",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/hybrid_data.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/reference_models/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/reference_models/__init__.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/reference_models/resnet.py",
+    "sha256": "8a40beb21a3508d6fa9031f5fb24e2c93513edfe377b54453d2053421c931e6a",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/reference_models/resnet.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/reference_models/simplenet.py",
+    "sha256": "88cb8521fcaaad42f42e3ffbf4b13c6bfc24df4c149e3245cbee7aae3d5b2aff",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/reference_models/simplenet.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/reference_models/vgg.py",
+    "sha256": "dd7fc72f333581f73a06f30611ddd5789e88670a724b57cf662120e0b1d43f69",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/reference_models/vgg.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/snn_baseline.py",
+    "sha256": "e8490bb78dd0b4c665e9546277536ccc2818d4fabfa28ee7dae29178b9fd2f04",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/snn_baseline.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/experiments/nmnist/training.py",
+    "sha256": "f14b10c63393751c13fe52ead27ad13f901516744d96bf9c73565a546cc08ee1",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/training.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/models/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/models/__init__.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/models/nmnist_hybrid_qsnn.py",
+    "sha256": "818b082bd81c9de3bfb540349e66f87be750f4a700d4972919dc56b74a6e1f91",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/models/nmnist_hybrid_qsnn.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/models/nmnist_snn.py",
+    "sha256": "be5cc98c0adb97a7a05fdc7901bc74dc169cbfab8a252a9163a5b11c62b8aa32",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/models/nmnist_snn.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_attack_protocol_v2_canonical_seed42.py",
+    "sha256": "8d52e7e63192ed4dcb0b029760fb4eb8a4a4cbe7c7596ad367db3e5a6a150a69",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_attack_protocol_v2_canonical_seed42.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_budget_matched_comparison_v2_seed42.py",
+    "sha256": "2c1080dc2f5e24fd5ddc7b20b97fe46c2981afe4e019384d56dae1acdcec3345",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_budget_matched_comparison_v2_seed42.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_common_attack_protocol_seed42.py",
+    "sha256": "8ca84c7e59d6ed91a11f8cd62eb812bd27f47cadd1653a1240f4ce108a86e1e6",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_common_attack_protocol_seed42.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_frontend_v3_seed42.py",
+    "sha256": "2744ebd32f985c00069eb07ef68b8054dc37ad965217a46c3ad5621711f6449e",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_frontend_v3_seed42.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_hybrid_qsnn_seed42.py",
+    "sha256": "7571c26d81d89be9054abda75663241e7dbb9d8ec1989f5494902b1c8175479c",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_hybrid_qsnn_seed42.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_qsnn_controlled_ablation.py",
+    "sha256": "f2853bfe2e1f53ab4dcb38926ba3b7293919182a5086e670f03903f06a8bc93a",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_qsnn_controlled_ablation.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_qsnn_v3_multiseed.py",
+    "sha256": "0cc0025df107467f8be9388363d383836ddf4547cd570f6031acef1af41b7635",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_qsnn_v3_multiseed.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_snn_multiseed.py",
+    "sha256": "a08d9726aa6f779d1b18c52f169d360d324599a656271c9b6180845848f5c5be",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_snn_multiseed.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/run_nmnist_temp_drift_v2_seed42.py",
+    "sha256": "5d9492594fad215b6f17b8db49154e26011a352e1c3a50c43529f6b368a54e1b",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_temp_drift_v2_seed42.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/summarize_nmnist_controlled_four_models.py",
+    "sha256": "76df262679054994a38597eb76a4ead52a6c77a304ad3f1d168c4b61b08c2b4a",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/summarize_nmnist_controlled_four_models.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/train_nmnist_controlled_four_models.py",
+    "sha256": "dec65fc1971d9c59b2bfa6d6ab249b536de9b81bd30a9e3eae288093b9228f22",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/train_nmnist_controlled_four_models.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "results/phase3/recovery/source/scripts/train_nmnist_snn_seed42.py",
+    "sha256": "f8bdda1e2b933f6842b297b524da2adf65bef545729cd07906be232fa43e58ae",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/train_nmnist_snn_seed42.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase3_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/source/README.md",
+    "sha256": "cf3146910adea57b733d06d596c836f7692fb6b7d38790ea2dc17b2ecc384017",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/README.md",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/source/README_FA.md",
+    "sha256": "4baa47b555ab265641f9ff98d8c5b0f07a46b0c5c1aab4a8d75e43ba774e8c9f",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/README_FA.md",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/source/requirements.txt",
+    "sha256": "342d12fa3b0438d116c16472e817f57ba98c18a0172b55b145c2d3b5dc76c871",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/requirements.txt",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/source/experiments/nmnist/official_pil_adapter.py",
+    "sha256": "e494c9d4180419a688f6ef98b50349712dc5c3f7c41c6ac73b8380d50043898c",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/official_pil_adapter.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/source/experiments/nmnist/official_pil_adapter_batched.py",
+    "sha256": "0daa6132bdd9e1606e31cdbe45e650fb740df8b5171aa90b48afd6e0fa0356ef",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/experiments/nmnist/official_pil_adapter_batched.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/source/scripts/run_nmnist_controlled_attack.py",
+    "sha256": "56ad9bed8110817f726a2eb3e242587de576bc4f50127608625317c4c31252a9",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/scripts/run_nmnist_controlled_attack.py",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/source/results/nmnist_qsnn_ablation_report.md",
+    "sha256": "a40bb1f7c5df5e9d1e2de8900d46e8a765b09bd78402bf5ad69a7e84311a066e",
+    "url": "https://raw.githubusercontent.com/shosseinj/ABC_def1/80d02f5733d4cbe7c3e69b828dff66d50ba5c211/results/nmnist_qsnn_ablation_report.md",
+    "source_commit": "80d02f5733d4cbe7c3e69b828dff66d50ba5c211",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/upstream/utils/attack.py",
+    "sha256": "e2f76fc6b4796d9cece0dbf498ced5f62c4f9581c17476da34ab41a1087e11ea",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/utils/attack.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/upstream/models/simplenet.py",
+    "sha256": "88cb8521fcaaad42f42e3ffbf4b13c6bfc24df4c149e3245cbee7aae3d5b2aff",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/models/simplenet.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/upstream/models/resnet.py",
+    "sha256": "8a40beb21a3508d6fa9031f5fb24e2c93513edfe377b54453d2053421c931e6a",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/models/resnet.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "role": "phase4_source"
+  },
+  {
+    "path": "Reports/manuscript_phase4/upstream/models/vgg.py",
+    "sha256": "dd7fc72f333581f73a06f30611ddd5789e88670a724b57cf662120e0b1d43f69",
+    "url": "https://raw.githubusercontent.com/yuyi-sd/Spike-Retiming-Attacks/f16738f80be94067223f4968c1c318a125b9a321/models/vgg.py",
+    "source_commit": "f16738f80be94067223f4968c1c318a125b9a321",
+    "role": "phase4_source"
+  }
+]

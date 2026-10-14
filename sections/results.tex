@@ -2,7 +2,7 @@
 The primary result is the paired timestamp comparison on QSNN-v3. Clean validation establishes the victim's predictive performance; separate packet-grid controls delimit its interpretation. Full seed, overlap and grid tables are retained in the supplement.
 
 \subsection{Clean validation of the hybrid classifier}
-QSNN-v3 reaches 97.2720\% $\pm$ 0.2119\% validation accuracy and reported macro-F1 of 97.2736\% $\pm$ 0.2119\% across five training seeds [R1]. The sample SD is conditional on shared pretraining and split, as specified in Sec.~\ref{sec:protocol}; it is not attack-rate uncertainty. The preserved SNN validation reference reaches 98.1320\% $\pm$ 0.2407\% accuracy, a descriptive QSNN-minus-SNN difference of -0.8600 percentage points. A matched validation-F1 comparison is unavailable.
+QSNN-v3 reaches 97.27\% $\pm$ 0.21\% validation accuracy and reported macro-F1 of 97.27\% $\pm$ 0.21\% across five training seeds [R1]. The sample SD is conditional on shared pretraining and split, as specified in Sec.~\ref{sec:protocol}; it is not attack-rate uncertainty. The preserved SNN validation reference reaches 98.13\% $\pm$ 0.24\% accuracy, a descriptive QSNN-minus-SNN difference of -0.86 percentage points. A matched validation-F1 comparison is unavailable.
 
 The seed-42 wide4 classical frontend reaches 97.80\% validation accuracy with 38,122 parameters, compared with 97.06\% and 40,762 parameters for its hybrid continuation. Different training stages and budgets prevent attributing this difference to an isolated circuit component. The supplement retains individual accuracies, selected epochs and development records; no quantum accuracy advantage or official-test hybrid result is established.
 
@@ -20,7 +20,7 @@ For the compact SNN, candidate and forward matching produce no successes at eith
 \end{figure*}
 
 \subsection{Separate packet-grid controls}
-The grid study uses different victims, capacity-one packets and its own 1,000-example joint clean-correct test manifest for each representation (Sec.~\ref{sec:protocol}). Under the two completed budgets, custom-SNN ASR spans 98.0--100\%, whereas the three reference architectures span 0--1.9\% (Fig.~\ref{fig:grid}). Clean test accuracy, measured on all 10,000 examples, is shown separately in Table~\ref{tab:grid_clean}; the supplement supplies all sixteen attack cells.
+The historical grid study includes ConvNet (spiking \texttt{SimpleNet\_v2}) and uses different victims, capacity-one packets and its own 1,000-example joint clean-correct test manifest for each representation (Sec.~\ref{sec:protocol}). Under the two completed budgets, custom-SNN ASR spans 98.0--100\%, whereas the three reference architectures span 0--1.9\% (Fig.~\ref{fig:grid}). Clean test accuracy, measured on all 10,000 examples, is shown separately in Table~\ref{tab:grid_clean}; the supplement supplies all sixteen attack cells.
 
 The integer custom SNN and spiking ResNet18 differ by only 0.02 percentage points in clean accuracy, yet by 99.7 and 97.9 ASR points under $B_\infty=1$ and $B_0=200$. Clean accuracy therefore does not summarize the failure profile under this recipe. Common settings do not guarantee equally strong optimization across architectures, and zero observed successes are not robustness certificates \cite{athalye2018obfuscated,croce2020reliable}. These are single-seed local controls, not values copied from external benchmarks or a representation ablation.
 
@@ -41,5 +41,5 @@ VGGSNN & 99.21 & 99.30\\\bottomrule
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig03_grid_comparison.pdf}
-\caption{Separate classical controls under maximum displacement ($B_\infty=1$ bin) and retimed-packet count ($B_0=200$). Each cell uses $n=1{,}000$ joint clean-correct test examples, seed 42. Insets explicitly expand 0--2.1\% for the three low-ASR controls. Binary and integer panels use different manifests; the panels are not paired representation comparisons. Source: [R4].}\label{fig:grid}
+\caption{Historical nonquantum controls; ConvNet is spiking \texttt{SimpleNet\_v2}. Maximum displacement ($B_\infty=1$ bin) and retimed-packet count ($B_0=200$). Each cell uses $n=1{,}000$ joint clean-correct test examples, seed 42. Insets explicitly expand 0--2.1\% for the three low-ASR controls. Binary and integer panels use different manifests; the panels are not paired representation comparisons. Source: [R4].}\label{fig:grid}
 \end{figure*}
